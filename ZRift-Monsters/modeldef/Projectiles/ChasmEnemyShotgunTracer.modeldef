@@ -1,0 +1,13 @@
+Model ChasmEnemyShotgunTracer
+{
+   Path "models/projectiles/ChasmShotgunTracer"   	
+   Model 0 "MedBolt.md2"   
+   Skin 0 "MedBolt.png"    
+   Scale 0.17 0.17 0.17 
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame CRS1 Y 0 "IdleA1"   
+   
+}

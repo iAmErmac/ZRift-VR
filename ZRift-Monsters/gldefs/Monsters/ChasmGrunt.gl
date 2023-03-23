@@ -1,0 +1,10 @@
+//MONG GRUNT
+material texture "Models/Monsters/MongGrunt/MongGrunt.png"  
+{
+    normal "Models/Monsters/MongGrunt/materials/MongGrunt_normal.png" 
+    specular "Models/Monsters/MongGrunt/materials/MongGrunt_specular.png"
+    brightmap "Models/Monsters/MongGrunt/materials/MongGrunt_brightmap.png"  
+    glossiness 5
+	specularlevel 5
+}
+

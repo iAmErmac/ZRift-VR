@@ -1,0 +1,279 @@
+// custom md2 file...  
+
+
+MODEL MummyLord1
+{ 
+Path "Models/Monsters/HexenMonsters" 
+MODEL 0 "Mummy.md2" 
+SKIN 0 "MummySkin1.PNG"  
+
+Scale 1.5 1.5 1.5 
+  
+
+
+//IDLE
+// mstafA1 set 2 
+frame mst0 A 0 "mstafA1" 
+frame mst0 B 0 "mstafA2" 
+frame mst0 C 0 "mstafA3"
+frame mst0 D 0 "mstafA4" 
+frame mst0 E 0 "mstafA5" 
+frame mst0 F 0 "mstafA6" 
+frame mst0 G 0 "mstafA7" 
+frame mst0 H 0 "mstafA8" 
+frame mst0 I 0 "mstafA9" 
+frame mst0 J 0 "mstafA10" 
+frame mst0 K 0 "mstafA11" 
+frame mst0 L 0 "mstafA12" 
+frame mst0 M 0 "mstafA13" 
+frame mst0 N 0 "mstafA14" 
+frame mst0 O 0 "mstafA15" 
+frame mst0 P 0 "mstafA16" 
+frame mst0 Q 0 "mstafA17" 
+frame mst0 R 0 "mstafA18" 
+frame mst0 S 0 "mstafA19" 
+frame mst0 T 0 "mstafA20"
+frame mst0 U 0 "mstafA21" 
+frame mst0 V 0 "mstafA22" 
+frame mst0 W 0 "mstafA23" 
+frame mst0 X 0 "mstafA24" 
+
+
+// mwalkA1 set 6 WALKING
+frame mwa0 A 0 "mwalkA1" 
+frame mwa0 B 0 "mwalkA2" 
+frame mwa0 C 0 "mwalkA3" 
+frame mwa0 D 0 "mwalkA4" 
+frame mwa0 E 0 "mwalkA5" 
+frame mwa0 F 0 "mwalkA6" 
+frame mwa0 G 0 "mwalkA7" 
+frame mwa0 H 0 "mwalkA8" 
+frame mwa0 I 0 "mwalkA9" 
+frame mwa0 J 0 "mwalkA10" 
+frame mwa0 K 0 "mwalkA11" 
+frame mwa0 L 0 "mwalkA12" 
+frame mwa0 M 0 "mwalkA13" 
+frame mwa0 N 0 "mwalkA14" 
+
+// shoota1 set 9  SHOOTING
+frame sho0 A 0 "shoota1" 
+frame sho0 B 0 "shoota2" 
+frame sho0 C 0 "shoota3" 
+frame sho0 D 0 "shoota4" 
+frame sho0 E 0 "shoota5" 
+frame sho0 F 0 "shoota6" 
+frame sho0 G 0 "shoota7" 
+frame sho0 H 0 "shoota8" 
+frame sho0 I 0 "shoota9" 
+frame sho0 J 0 "shoota10" 
+frame sho0 K 0 "shoota11" 
+frame sho0 L 0 "shoota12" 
+frame sho0 M 0 "shoota13" 
+frame sho0 N 0 "shoota14" 
+frame sho0 O 0 "shoota15" 
+frame sho0 P 0 "shoota16" 
+
+// mswngA1 set 4  MELEE
+frame swn0 A 0 "mswngA1" 
+frame swn0 B 0 "mswngA2" 
+frame swn0 C 0 "mswngA3" 
+frame swn0 D 0 "mswngA4" 
+frame swn0 E 0 "mswngA5" 
+frame swn0 F 0 "mswngA6" 
+frame swn0 G 0 "mswngA7" 
+frame swn0 H 0 "mswngA8" 
+frame swn0 I 0 "mswngA9" 
+frame swn0 J 0 "mswngA10" 
+frame swn0 K 0 "mswngA11" 
+frame swn0 L 0 "mswngA12" 
+frame swn0 M 0 "mswngA13" 
+frame swn0 N 0 "mswngA14" 
+frame swn0 O 0 "mswngA15" 
+frame swn0 P 0 "mswngA16" 
+frame swn0 Q 0 "mswngA17" 
+frame swn0 R 0 "mswngA18" 
+}
+
+
+//===============ONE ARMED================//
+
+MODEL MummyLord2
+{ 
+Path "Models/Monsters/HexenMonsters" 
+SKIN 0 "MummySkin1.png"  
+MODEL 0 "Mummy.md2" 
+Scale 1.5 1.5 1.5 
+
+// staffb1 set 11 IDLE
+frame sta0 A 0 "staffb1" 
+frame sta0 B 0 "staffb2" 
+frame sta0 C 0 "staffb3" 
+frame sta0 D 0 "staffb4" 
+frame sta0 E 0 "staffb5" 
+frame sta0 F 0 "staffb6" 
+frame sta0 G 0 "staffb7" 
+frame sta0 H 0 "staffb8" 
+frame sta0 I 0 "staffb9" 
+frame sta0 J 0 "staffb10" 
+frame sta0 K 0 "staffb11" 
+frame sta0 L 0 "staffb12" 
+frame sta0 M 0 "staffb13" 
+frame sta0 N 0 "staffb14" 
+frame sta0 O 0 "staffb15" 
+frame sta0 P 0 "staffb16" 
+frame sta0 Q 0 "staffb17" 
+frame sta0 R 0 "staffb18" 
+frame sta0 S 0 "staffb19" 
+frame sta0 T 0 "staffb20"
+frame sta0 U 0 "staffb21" 
+frame sta0 V 0 "staffb22" 
+frame sta0 W 0 "staffb23" 
+frame sta0 X 0 "staffb24" 
+frame sta0 Y 0 "staffb25" 
+frame sta0 Z 0 "staffb26" 
+//frame sta0 A 0 "staffb27"
+
+
+// mwalkB1 set 7 WALKING
+frame wal0 A 0 "mwalkB1" 
+frame wal0 B 0 "mwalkB2" 
+frame wal0 C 0 "mwalkB3" 
+frame wal0 D 0 "mwalkB4" 
+frame wal0 E 0 "mwalkB5" 
+frame wal0 F 0 "mwalkB6" 
+frame wal0 G 0 "mwalkB7" 
+frame wal0 H 0 "mwalkB8" 
+frame wal0 I 0 "mwalkB9" 
+frame wal0 J 0 "mwalkB10" 
+frame wal0 K 0 "mwalkB11" 
+frame wal0 L 0 "mwalkB12" 
+frame wal0 M 0 "mwalkB13" 
+frame wal0 N 0 "mwalkB14" 
+frame wal0 O 0 "mwalkB15" 
+frame wal0 P 0 "mwalkB16" 
+
+// shootb1 set 10 SHOOTING
+frame hoo0 A 0 "shootb1" 
+frame hoo0 B 0 "shootb2" 
+frame hoo0 C 0 "shootb3" 
+frame hoo0 D 0 "shootb4" 
+frame hoo0 E 0 "shootb5" 
+frame hoo0 F 0 "shootb6" 
+frame hoo0 G 0 "shootb7" 
+frame hoo0 H 0 "shootb8" 
+frame hoo0 I 0 "shootb9" 
+frame hoo0 J 0 "shootb10" 
+frame hoo0 K 0 "shootb11" 
+frame hoo0 L 0 "shootb12" 
+frame hoo0 M 0 "shootb13" 
+frame hoo0 N 0 "shootb14" 
+frame hoo0 O 0 "shootb15" 
+frame hoo0 P 0 "shootb16" 
+
+// mswngB1 set 5 MELEE
+frame msw0 A 0 "mswngB1" 
+frame msw0 B 0 "mswngB2" 
+frame msw0 C 0 "mswngB3" 
+frame msw0 D 0 "mswngB4" 
+frame msw0 E 0 "mswngB5" 
+frame msw0 F 0 "mswngB6" 
+frame msw0 G 0 "mswngB7" 
+frame msw0 H 0 "mswngB8" 
+frame msw0 I 0 "mswngB9" 
+frame msw0 J 0 "mswngB10" 
+frame msw0 K 0 "mswngB11" 
+frame msw0 L 0 "mswngB12" 
+frame msw0 M 0 "mswngB13" 
+frame msw0 N 0 "mswngB14" 
+frame msw0 O 0 "mswngB15" 
+frame msw0 P 0 "mswngB16" 
+frame msw0 Q 0 "mswngB17" 
+frame msw0 R 0 "mswngB18" 
+
+}
+
+//===============UNARMED==============//
+
+MODEL MummyLord3
+{ 
+Path "Models/Monsters/HexenMonsters" 
+SKIN 0 "MummySkin1.png"  
+MODEL 0 "Mummy.md2" 
+Scale 1.5 1.5 1.5 
+
+
+// mwalkC1 set 8 WALKING
+frame mwa0 A 0 "mwalkC1" 
+frame mwa0 B 0 "mwalkC2" 
+frame mwa0 C 0 "mwalkC3" 
+frame mwa0 D 0 "mwalkC4" 
+frame mwa0 E 0 "mwalkC5" 
+frame mwa0 F 0 "mwalkC6" 
+frame mwa0 G 0 "mwalkC7" 
+frame mwa0 H 0 "mwalkC8" 
+frame mwa0 I 0 "mwalkC9" 
+frame mwa0 J 0 "mwalkC10" 
+frame mwa0 K 0 "mwalkC11" 
+frame mwa0 L 0 "mwalkC12" 
+frame mwa0 M 0 "mwalkC13" 
+frame mwa0 N 0 "mwalkC14" 
+frame mwa0 O 0 "mwalkC15" 
+frame mwa0 P 0 "mwalkC16" 
+frame mwa0 Q 0 "mwalkC17" 
+frame mwa0 R 0 "mwalkC18" 
+
+// mswingC1 set 3 MELEE
+frame msw0 A 0 "mswingC1" 
+frame msw0 B 0 "mswingC2" 
+frame msw0 C 0 "mswingC3" 
+frame msw0 D 0 "mswingC4" 
+frame msw0 E 0 "mswingC5" 
+frame msw0 F 0 "mswingC6" 
+frame msw0 G 0 "mswingC7" 
+frame msw0 H 0 "mswingC8" 
+frame msw0 I 0 "mswingC9" 
+frame msw0 J 0 "mswingC10" 
+
+// mdeath1 set 1 DEATH/FALLING
+frame mde0 A 0 "mdeath1" 
+frame mde0 B 0 "mdeath2" 
+frame mde0 C 0 "mdeath3" 
+frame mde0 D 0 "mdeath4" 
+frame mde0 E 0 "mdeath5" 
+frame mde0 F 0 "mdeath6" 
+frame mde0 G 0 "mdeath7" 
+frame mde0 H 0 "mdeath8" 
+frame mde0 I 0 "mdeath9" 
+frame mde0 J 0 "mdeath10" 
+frame mde0 K 0 "mdeath11" 
+frame mde0 L 0 "mdeath12" 
+frame mde0 M 0 "mdeath13" 
+
+}
+
+
+MODEL MummyLordCrawl
+{ 
+Path "Models/Monsters/HexenMonsters" 
+SKIN 0 "MummySkin1"  
+MODEL 0 "Mummy.md2" 
+Scale 1.5 1.5 1.5 
+
+
+// crawl1 set 12 CRAWL
+frame cra0 A 0 "crawl1" 
+frame cra0 B 0 "crawl2" 
+frame cra0 C 0 "crawl3" 
+frame cra0 D 0 "crawl4" 
+frame cra0 E 0 "crawl5" 
+frame cra0 F 0 "crawl6" 
+Frame cra0 G 0 "crawl7" 
+frame cra0 H 0 "crawl8" 
+frame cra0 I 0 "crawl9" 
+frame cra0 J 0 "crawl10" 
+frame cra0 K 0 "crawl11" 
+frame cra0 L 0 "crawl12" 
+frame cra0 M 0 "crawl13" 
+frame cra0 N 0 "crawl14" 
+} 
+

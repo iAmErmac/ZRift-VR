@@ -1,0 +1,65 @@
+Model ChasmRifle
+{
+   Path "models/weapons/rifle"   	
+   Model 0 "Rifleanim.md3"   
+   SurfaceSkin 0 0 "Rifle.png"  
+   SurfaceSkin 0 1 "Rifle.png"  //Barrel
+   SurfaceSkin 0 2 "Rifle.png"  //grip
+   SurfaceSkin 0 3 "Hands.png"  //hands
+   OFFSET 5 -15 -10	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset 0              //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 90             //roll Up-Down  
+   Scale -0.08 0.06 0.08   //Scale (negative value is to mirror left right)
+
+//Idle
+  
+   FrameIndex RIFX Z 0 0
+   
+}
+
+Model ChasmRifle
+{
+   Path "models/weapons/rifle"   	
+   Model 0 "Rifleanim.md3"   
+   SurfaceSkin 0 0 "Rifle.png"  
+   SurfaceSkin 0 1 "Rifle.png"  //Barrel
+   SurfaceSkin 0 2 "Rifle.png"  //grip
+   SurfaceSkin 0 3 "Hands.png"  //hands
+   OFFSET 5 -15 -10	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset 0         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 90 //roll Up-Down  
+   Scale -0.08 0.06 0.08   //Scale (negative value is to mirror left right)
+
+
+//Firing
+   FrameIndex RIFX A 0 0    	
+   FrameIndex RIFX B 0 1      
+}
+
+Model ChasmRifle
+{
+   Path "models/weapons/rifle"   	
+   Model 0 "Rifleanim.md3"   
+   SurfaceSkin 0 0 "Rifle.png"  
+   SurfaceSkin 0 1 "Rifle.png"  //Barrel
+   SurfaceSkin 0 2 "Rifle.png"  //grip   
+   SurfaceSkin 0 3 "Hands.png"  //hands
+   OFFSET 5 -15 -10	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset 0         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 90 //roll Up-Down  
+   Scale -0.08 0.06 0.08   //Scale (negative value is to mirror left right)
+
+//Recoil  
+   FrameIndex RIFX C 0 2   
+   FrameIndex RIFX D 0 3
+   FrameIndex RIFX E 0 4
+   FrameIndex RIFX F 0 5
+   FrameIndex RIFX G 0 6
+   FrameIndex RIFX H 0 7
+   FrameIndex RIFX I 0 8
+   FrameIndex RIFX J 0 9
+     
+}

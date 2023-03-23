@@ -1,0 +1,118 @@
+////////////////////////////////////////////////////
+actor ChasmBlueTorchSpawner : RandomSpawner replaces BlueTorch
+{
+DropItem "ChasmBlueTorch", 256, 1
+}
+
+ACTOR ChasmBlueTorch
+{
+  Radius 16
+  Height 68
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    TORB ABCDE 3 Bright
+    Loop
+  }
+}
+
+////////////////////////////////////////////////////
+actor ChasmGreenTorchSpawner : RandomSpawner replaces GreenTorch
+{
+DropItem "ChasmGreenTorch", 256, 1
+}
+
+ACTOR ChasmGreenTorch
+{
+  Radius 16
+  Height 68
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    TORG ABCDE 3 Bright
+    Loop
+  }
+}
+
+////////////////////////////////////////////////////
+actor ChasmRedTorchSpawner : RandomSpawner replaces RedTorch
+{
+DropItem "ChasmRedTorch", 256, 1
+}
+
+ACTOR ChasmRedTorch
+{
+  Radius 16
+  Height 68
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    TORR ABCDE 3 Bright
+    Loop
+  }
+}
+
+////////////////////////////////////////////////////
+actor ChasmShortBlueTorchSpawner : RandomSpawner replaces ShortBlueTorch
+{
+DropItem "ChasmShortBlueTorch", 256, 1
+}
+
+ACTOR ChasmShortBlueTorch
+{
+  Radius 16
+  Height 37
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    TOSB ABCDE 3 Bright
+    Loop
+  }
+}
+
+////////////////////////////////////////////////////
+actor ChasmShortGreenTorchSpawner : RandomSpawner replaces ShortGreenTorch
+{
+DropItem "ChasmShortGreenTorch", 256, 1
+}
+
+ACTOR ChasmShortGreenTorch
+{
+  Radius 16
+  Height 37
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    TOSG ABCDE 3 Bright
+    Loop
+  }
+}
+
+////////////////////////////////////////////////////
+actor ChasmShortRedTorchSpawner : RandomSpawner replaces ShortRedTorch
+{
+DropItem "ChasmShortRedTorch", 256, 1
+}
+ACTOR ChasmShortRedTorch
+{
+  Radius 16
+  Height 37
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    TOSR ABCDE 3 Bright
+    Loop
+  }
+}

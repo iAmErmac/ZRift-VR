@@ -1,0 +1,12 @@
+Model SmallHealth
+{
+   Path "models/items"   	
+   Model 0 "SmallHealth.md2"   
+   Skin 0 "SmallHealth.png"    
+   Scale 0.24 0.24 0.24  
+   AngleOffset 90 
+
+//IdleA
+   Frame SMHE A 0 "IdleA1"   
+   
+}

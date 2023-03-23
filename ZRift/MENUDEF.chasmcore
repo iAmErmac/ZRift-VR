@@ -1,0 +1,378 @@
+//-------------------------------------------------------------------------------------------
+//
+// Note:
+// Much of the menu structure defined here is accessed internally by CCMDs
+// and menu generation code. If you want to design your own menus make sure
+// that they are named identically and that links to all important submenus
+// are present.
+//
+//-------------------------------------------------------------------------------------------
+
+DEFAULTLISTMENU
+{
+	Font "BigFont", "Untranslated"
+	IfGame(Doom, Chex)
+	{
+		Selector "CH_SIG00", -14, -5
+		Linespacing 16
+		Font "BigFont", "Red"
+	}
+	IfGame(Strife)
+	{
+		Selector "CH_SIG00", -14, -5
+		Linespacing 16
+		Font "BigFont", "Red"
+	}
+	IfGame(Heretic, Hexen)
+	{
+		Selector "CH_SIG00", -14, -5
+		Linespacing 16
+		Font "BigFont", "Red"
+	}
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// The main menu. There's a lot of differences here between the games
+//
+//-------------------------------------------------------------------------------------------
+
+LISTMENU "MainMenu"
+{
+	IfGame(Doom)
+	{   
+        StaticPatchCentered  160, 60, "CH_BACK"
+        StaticPatchCentered  160, 20, "M_CHASM"
+        StaticPatchCentered  160, 69, "CH_INDO"
+		Position 115, 90
+		IfOption(ReadThis)
+
+		{
+			Position 115, 90
+		}
+	}
+    
+    IfGame(Chex, Chex3)
+	{   
+        StaticPatchCentered  160, 60, "CH_BACK"
+        StaticPatchCentered  160, 20, "M_CHASM1"
+        StaticPatchCentered  160, 69, "CH_INCX"
+		Position 115, 90
+		IfOption(ReadThis)
+
+		{
+			Position 115, 90
+		}
+	}   
+    
+    
+	IfGame(Strife)
+	{
+
+        StaticPatchCentered  160, 60, "CH_BACK"
+        StaticPatchCentered  160, 20, "M_CHASM2"
+        StaticPatchCentered  160, 69, "CH_INST"
+		Position 115, 90
+	}
+    
+	IfGame(Heretic)
+	{
+        StaticPatchCentered  160, 60, "CH_BACK"
+        StaticPatchCentered  160, 20, "M_CHASM3"
+        StaticPatchCentered  160, 69, "CH_INHE"
+		Position 115, 90
+	}
+    
+	IfGame(Hexen)
+	{
+        StaticPatchCentered  160, 60, "CH_BACK"
+        StaticPatchCentered  160, 20, "M_CHASM4"
+        StaticPatchCentered  160, 69, "CH_INHX"
+		Position 115, 90
+	}
+//-------------------------------------------------------------------------------------------
+//
+// The main menu. There's a lot of differences here between the games
+//
+//-------------------------------------------------------------------------------------------   
+    Font "BigFont", "Untranslated"
+	IfGame(Doom, Strife, Chex)
+        
+	{
+		PatchItem "CH_NEWG", "n", "PlayerclassMenu"
+        
+		ifOption(SwapMenu)
+		{
+			PatchItem "CH_LOAD", "l", "LoadGameMenu"
+			PatchItem "CH_SAVE", "s", "SaveGameMenu"
+			PatchItem "CH_OPTI","o", "OptionsMenu"
+   
+		}
+		else
+		{
+    
+			PatchItem "CH_LOAD", "l", "LoadGameMenu"
+			PatchItem "CH_SAVE", "s", "SaveGameMenu"
+			PatchItem "CH_OPTI","o", "OptionsMenu"
+            PatchItem "CH_ZRIFT","z", "Zriftmenu"
+		}
+		ifOption(ReadThis)
+		{
+			PatchItem "CH_READ","r", "ReadThisMenu"
+		}
+		PatchItem "CH_QUIT", "q", "QuitMenu"
+	}
+
+	IfGame(Heretic, Hexen)
+	{
+		PatchItem "CH_NEWG", "n", "PlayerclassMenu"
+		PatchItem "CH_OPTI","o", "OptionsMenu"
+		PatchItem "CH_FILE", "f", "GameFilesMenu"
+		PatchItem "CH_READ","r", "ReadThisMenu"
+		PatchItem "CH_QUIT", "q", "QuitMenu"
+	}
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// Important note about the following template menus:
+// Don't even think about replacing them with something that's not an empty menu
+// with some static elements only. Proper function is not guaranteed then.
+//
+//-------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------
+//
+// The player class menu
+// The init code will set the first item to 'autoselect' if it's the only one.
+//
+//-------------------------------------------------------------------------------------------
+
+ListMenu "PlayerclassMenu"
+{
+	IfGame(Doom, Heretic, Hexen, Strife)
+	{
+		NetgameMessage "$NEWGAME"
+	}
+	IfGame(Chex)
+	{
+		NetgameMessage "$CNEWGAME"
+	}
+
+	IfGame(Doom, Strife, Chex)
+	{
+		StaticTextCentered 160, 15, "SELECT SKIN"
+		Position 40, 60
+		PlayerDisplay 130, -60, "20 00 00", "80 00 40"
+		MouseWindow 0, 220
+        Selector "CH_SIG00", -30, -5
+
+
+	}
+	IfGame(Heretic)
+	{
+		StaticTextCentered 160, 15, "$MNU_CHOOSECLASS"
+		Position 80, 50
+		PlayerDisplay 120, -60, "20 00 00", "80 00 40"
+		MouseWindow 0, 220
+	}
+	IfGame(Hexen)
+	{
+		StaticText 34, 24, "$MNU_CHOOSECLASS"
+		Position 66, 58
+		PlayerDisplay 174, 8, "00 07 00", "40 53 40"
+		MouseWindow 0, 174
+	}
+	// The rest of this menu will be set up based on the actual player definitions.
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// The episode menu
+// The init code will set the first item to 'autoselect' if it's the only one.
+//
+//-------------------------------------------------------------------------------------------
+
+ListMenu "EpisodeMenu"
+{
+	IfGame(Doom, Heretic, Hexen, Strife)
+	{
+		NetgameMessage "$NEWGAME"
+	}
+	IfGame(Chex)
+	{
+		NetgameMessage "$CNEWGAME"
+	}
+
+	IfGame(Doom, Chex)
+	{
+		Position 48, 63
+		StaticPatch 54, 38, "M_EPISOD"
+	}
+	IfGame(Strife)
+	{
+		Position 48, 63
+		StaticText 54, 38, "$MNU_EPISODE"
+	}
+	IfGame(Heretic, Hexen)
+	{
+		Position 80, 50
+	}
+	// items will be filled in by MAPINFO
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// The skill menu
+// Most of this will be filled in at runtime
+//
+//-------------------------------------------------------------------------------------------
+
+ListMenu "SkillMenu"
+{
+
+	IfGame(Doom, Chex)
+	{
+		StaticPatch 96, 14, "M_NEWG"
+	}
+	IfGame(Strife)
+	{
+		StaticPatch 96, 14, "M_NGAME"
+	}
+	IfGame(Doom, Strife, Chex)
+	{
+        StaticPatchCentered  160, 60, "CH_BACK"
+		StaticPatch 54, 38, "M_SKILL"
+		Position 115, 95
+	}
+	IfGame (Heretic)
+	{
+		Position 38, 30
+	}
+	IfGame (Hexen)
+	{
+		StaticText 74, 16, "$MNU_CHOOSESKILL"
+		Position 160, 44
+		centermenu
+	}
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// Raven's game files menu
+//
+//-------------------------------------------------------------------------------------------
+
+ListMenu "GameFilesMenu"
+{
+	Position 110, 60
+	TextItem "$MNU_LOADGAME", "l", "LoadGameMenu"
+	TextItem "$MNU_SAVEGAME", "s", "SaveGameMenu"
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// Base definition for load game menu. Only the configurable part is done here
+//
+//-------------------------------------------------------------------------------------------
+
+ListMenu "LoadGameMenu"
+{
+	IfGame(Doom, Heretic, Hexen, Strife)
+	{
+		NetgameMessage "$LOADNET"
+	}
+	IfGame(Chex)
+	{
+		NetgameMessage "$CLOADNET"
+	}
+	IfGame(Doom, Strife, Chex)
+	{
+		StaticPatchCentered 160, -20, "M_LOADG"
+	}
+	IfGame(Heretic, Hexen)
+	{
+		StaticTextCentered 160, -10, "$MNU_LOADGAME"
+	}
+	Position 80,54
+	Class "LoadMenu"	// uses its own implementation
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// Base definition for save game menu. Only the configurable part is done here
+//
+//-------------------------------------------------------------------------------------------
+
+ListMenu "SaveGameMenu"
+{
+	IfGame(Doom, Strife, Chex)
+	{
+		StaticPatchCentered 160, -20, "M_SAVEG"
+	}
+	IfGame(Heretic, Hexen)
+	{
+		StaticTextCentered 160, -10, "$MNU_SAVEGAME"
+	}
+	Position 80,54
+	Class "SaveMenu"	// uses its own implementation
+}
+
+
+//-------------------------------------------------------------------------------------------
+//
+// The player menu
+//
+//-------------------------------------------------------------------------------------------
+
+OptionValue "Gender"
+{
+	0, "$OPTVAL_MALE"
+	1, "$OPTVAL_FEMALE"
+	2, "$OPTVAL_OTHER"
+}
+
+ListMenu "PlayerMenu"
+{
+	StaticTextCentered 160, 6, "$MNU_PLAYERSETUP"
+	Font "SmallFont"
+	Linespacing 14
+	Position 48, 36
+        
+	IfGame (Doom, Strife, Chex)
+	{
+		PlayerNameBox "$PLYRMNU_NAME", 0, "Playerbox"
+		Selector "-", -16, -1
+	}
+	IfGame(Heretic, Hexen)
+	{
+		PlayerNameBox "$PLYRMNU_NAME", 5, "Playerbox"
+		Selector "-", -16, 1
+	}
+	IfGame(Doom, Heretic, Strife, Chex)
+	{
+		MouseWindow 0, 220
+		PlayerDisplay 220, 80, "20 00 00", "80 00 40", 1, "PlayerDisplay"
+	}
+	IfGame(Hexen)
+	{
+		MouseWindow 0, 220
+		PlayerDisplay 220, 80, "00 07 00", "40 53 40", 1, "PlayerDisplay"
+	}
+
+	ValueText "$PLYRMNU_TEAM", "Team"
+	ValueText "$PLYRMNU_PLAYERCOLOR", "Color"
+	Linespacing 10
+	Slider "$PLYRMNU_RED", "Red", 0, 255, 16
+	Slider "$PLYRMNU_GREEN", "Green", 0, 255, 16
+	Linespacing 14
+	Slider "$PLYRMNU_BLUE", "Blue", 0, 255, 16
+	ValueText "$PLYRMNU_PLAYERCLASS", "Class"
+	ValueText "$PLYRMNU_PLAYERSKIN", "Skin"
+	ValueText "$PLYRMNU_PLAYERGENDER", "Gender", "Gender"
+	Slider "$PLYRMNU_AUTOAIM", "Autoaim", 0, 35, 1
+	ValueText "$PLYRMNU_SWITCHONPICKUP", "Switch", "OffOn"
+	ValueText "$PLYRMNU_ALWAYSRUN", "AlwaysRun", "OnOff"
+	Class "PlayerMenu"
+}
+

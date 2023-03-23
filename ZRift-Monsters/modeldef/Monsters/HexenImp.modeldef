@@ -1,0 +1,531 @@
+Model HexenIMP
+{
+   Path "models/monsters/HexenMonsters"   
+   Model 0 "IMP.md2"   
+   Skin 0 "IMPSkin0.png"    
+   Scale 1.0 1.0 1.0    
+
+   FrameIndex IMP1 A 0 0
+   FrameIndex IMP1 B 0 1
+   FrameIndex IMP1 C 0 2
+   FrameIndex IMP1 D 0 3
+   FrameIndex IMP1 E 0 4
+   FrameIndex IMP1 F 0 5
+   FrameIndex IMP1 G 0 6
+   FrameIndex IMP1 H 0 7
+   FrameIndex IMP1 I 0 8
+   FrameIndex IMP1 J 0 9
+   FrameIndex IMP1 I 0 10
+   FrameIndex IMP1 L 0 11
+   FrameIndex IMP1 M 0 12
+   FrameIndex IMP1 N 0 13
+
+   FrameIndex IMP2 A 0 14
+   FrameIndex IMP2 B 0 15
+   FrameIndex IMP2 C 0 16
+   FrameIndex IMP2 D 0 17
+   FrameIndex IMP2 E 0 18
+   FrameIndex IMP2 F 0 19
+   FrameIndex IMP2 G 0 20
+   FrameIndex IMP2 H 0 21
+   FrameIndex IMP2 I 0 22
+   FrameIndex IMP2 J 0 23
+   FrameIndex IMP2 K 0 24
+   FrameIndex IMP2 L 0 25
+   FrameIndex IMP2 M 0 26
+   FrameIndex IMP2 N 0 27
+   FrameIndex IMP2 O 0 28
+   FrameIndex IMP2 P 0 29
+   FrameIndex IMP2 Q 0 30
+   FrameIndex IMP2 R 0 31
+   FrameIndex IMP2 S 0 32
+   FrameIndex IMP2 T 0 33
+   FrameIndex IMP2 U 0 34
+
+
+   FrameIndex IMP3 A 0 103
+   FrameIndex IMP3 B 0 104
+   FrameIndex IMP3 C 0 105
+   FrameIndex IMP3 D 0 106
+   FrameIndex IMP3 E 0 107
+   FrameIndex IMP3 F 0 108
+   FrameIndex IMP3 G 0 109
+   FrameIndex IMP3 H 0 110
+   FrameIndex IMP3 I 0 111
+   FrameIndex IMP3 J 0 112
+   FrameIndex IMP3 K 0 113
+   FrameIndex IMP3 L 0 114
+   FrameIndex IMP3 M 0 115
+   FrameIndex IMP3 N 0 116
+   FrameIndex IMP3 O 0 117
+   FrameIndex IMP3 P 0 118
+   FrameIndex IMP3 Q 0 119
+   FrameIndex IMP3 R 0 120
+
+   FrameIndex IMP3 S 0 121
+   FrameIndex IMP3 T 0 122
+   FrameIndex IMP3 U 0 123
+   FrameIndex IMP3 V 0 124
+   FrameIndex IMP3 W 0 125
+   FrameIndex IMP3 X 0 126
+   FrameIndex IMP3 Y 0 127
+
+   FrameIndex IMP4 A 0 128
+   FrameIndex IMP4 B 0 129
+   FrameIndex IMP4 C 0 130
+   FrameIndex IMP4 D 0 131
+   FrameIndex IMP4 E 0 132
+   FrameIndex IMP4 F 0 133
+   FrameIndex IMP4 G 0 134
+   FrameIndex IMP4 H 0 135
+   FrameIndex IMP4 I 0 136
+   FrameIndex IMP4 J 0 137
+   FrameIndex IMP4 K 0 138
+   FrameIndex IMP4 L 0 139
+   FrameIndex IMP4 M 0 140
+
+
+   FrameIndex IMP5 A 0 36
+   FrameIndex IMP5 B 0 37
+   FrameIndex IMP5 C 0 38
+   FrameIndex IMP5 D 0 39
+   FrameIndex IMP5 E 0 40
+   FrameIndex IMP5 F 0 41
+   FrameIndex IMP5 G 0 42
+   FrameIndex IMP5 H 0 43
+   FrameIndex IMP5 I 0 44
+   FrameIndex IMP5 J 0 45
+   FrameIndex IMP5 K 0 46
+   FrameIndex IMP5 L 0 47
+   FrameIndex IMP5 M 0 48
+   FrameIndex IMP5 N 0 49
+   FrameIndex IMP5 O 0 50
+   FrameIndex IMP5 P 0 51
+   FrameIndex IMP5 Q 0 52
+   FrameIndex IMP5 R 0 53
+   FrameIndex IMP5 S 0 54
+
+   FrameIndex IMP6 A 0 79
+   FrameIndex IMP6 B 0 80
+   FrameIndex IMP6 C 0 81
+   FrameIndex IMP6 D 0 82
+   FrameIndex IMP6 E 0 83
+   FrameIndex IMP6 F 0 84
+   FrameIndex IMP6 G 0 85
+   FrameIndex IMP6 H 0 86
+   FrameIndex IMP6 I 0 87
+   FrameIndex IMP6 J 0 88
+   FrameIndex IMP6 K 0 89
+   FrameIndex IMP6 L 0 90
+   FrameIndex IMP6 M 0 91
+   FrameIndex IMP6 N 0 92
+   FrameIndex IMP6 O 0 93
+   FrameIndex IMP6 P 0 94
+   FrameIndex IMP6 Q 0 95
+   FrameIndex IMP6 R 0 96
+   FrameIndex IMP6 S 0 97
+   FrameIndex IMP6 T 0 98
+   FrameIndex IMP6 U 0 99
+   FrameIndex IMP6 V 0 100
+   FrameIndex IMP6 W 0 101
+
+}
+
+Model HexenIMP2
+{
+   Path "models/monsters/HexenMonsters"   
+   Model 0 "IMP.md2"   
+   Skin 0 "IMPSkin1.png"    
+   Scale 1.0 1.0 1.0    
+
+   FrameIndex IMP1 A 0 0
+   FrameIndex IMP1 B 0 1
+   FrameIndex IMP1 C 0 2
+   FrameIndex IMP1 D 0 3
+   FrameIndex IMP1 E 0 4
+   FrameIndex IMP1 F 0 5
+   FrameIndex IMP1 G 0 6
+   FrameIndex IMP1 H 0 7
+   FrameIndex IMP1 I 0 8
+   FrameIndex IMP1 J 0 9
+   FrameIndex IMP1 I 0 10
+   FrameIndex IMP1 L 0 11
+   FrameIndex IMP1 M 0 12
+   FrameIndex IMP1 N 0 13
+
+   FrameIndex IMP2 A 0 14
+   FrameIndex IMP2 B 0 15
+   FrameIndex IMP2 C 0 16
+   FrameIndex IMP2 D 0 17
+   FrameIndex IMP2 E 0 18
+   FrameIndex IMP2 F 0 19
+   FrameIndex IMP2 G 0 20
+   FrameIndex IMP2 H 0 21
+   FrameIndex IMP2 I 0 22
+   FrameIndex IMP2 J 0 23
+   FrameIndex IMP2 K 0 24
+   FrameIndex IMP2 L 0 25
+   FrameIndex IMP2 M 0 26
+   FrameIndex IMP2 N 0 27
+   FrameIndex IMP2 O 0 28
+   FrameIndex IMP2 P 0 29
+   FrameIndex IMP2 Q 0 30
+   FrameIndex IMP2 R 0 31
+   FrameIndex IMP2 S 0 32
+   FrameIndex IMP2 T 0 33
+   FrameIndex IMP2 U 0 34
+
+
+   FrameIndex IMP3 A 0 103
+   FrameIndex IMP3 B 0 104
+   FrameIndex IMP3 C 0 105
+   FrameIndex IMP3 D 0 106
+   FrameIndex IMP3 E 0 107
+   FrameIndex IMP3 F 0 108
+   FrameIndex IMP3 G 0 109
+   FrameIndex IMP3 H 0 110
+   FrameIndex IMP3 I 0 111
+   FrameIndex IMP3 J 0 112
+   FrameIndex IMP3 K 0 113
+   FrameIndex IMP3 L 0 114
+   FrameIndex IMP3 M 0 115
+   FrameIndex IMP3 N 0 116
+   FrameIndex IMP3 O 0 117
+   FrameIndex IMP3 P 0 118
+   FrameIndex IMP3 Q 0 119
+   FrameIndex IMP3 R 0 120
+
+   FrameIndex IMP3 S 0 121
+   FrameIndex IMP3 T 0 122
+   FrameIndex IMP3 U 0 123
+   FrameIndex IMP3 V 0 124
+   FrameIndex IMP3 W 0 125
+   FrameIndex IMP3 X 0 126
+   FrameIndex IMP3 Y 0 127
+
+   FrameIndex IMP4 A 0 128
+   FrameIndex IMP4 B 0 129
+   FrameIndex IMP4 C 0 130
+   FrameIndex IMP4 D 0 131
+   FrameIndex IMP4 E 0 132
+   FrameIndex IMP4 F 0 133
+   FrameIndex IMP4 G 0 134
+   FrameIndex IMP4 H 0 135
+   FrameIndex IMP4 I 0 136
+   FrameIndex IMP4 J 0 137
+   FrameIndex IMP4 K 0 138
+   FrameIndex IMP4 L 0 139
+   FrameIndex IMP4 M 0 140
+
+
+   FrameIndex IMP5 A 0 36
+   FrameIndex IMP5 B 0 37
+   FrameIndex IMP5 C 0 38
+   FrameIndex IMP5 D 0 39
+   FrameIndex IMP5 E 0 40
+   FrameIndex IMP5 F 0 41
+   FrameIndex IMP5 G 0 42
+   FrameIndex IMP5 H 0 43
+   FrameIndex IMP5 I 0 44
+   FrameIndex IMP5 J 0 45
+   FrameIndex IMP5 K 0 46
+   FrameIndex IMP5 L 0 47
+   FrameIndex IMP5 M 0 48
+   FrameIndex IMP5 N 0 49
+   FrameIndex IMP5 O 0 50
+   FrameIndex IMP5 P 0 51
+   FrameIndex IMP5 Q 0 52
+   FrameIndex IMP5 R 0 53
+   FrameIndex IMP5 S 0 54
+
+   FrameIndex IMP6 A 0 79
+   FrameIndex IMP6 B 0 80
+   FrameIndex IMP6 C 0 81
+   FrameIndex IMP6 D 0 82
+   FrameIndex IMP6 E 0 83
+   FrameIndex IMP6 F 0 84
+   FrameIndex IMP6 G 0 85
+   FrameIndex IMP6 H 0 86
+   FrameIndex IMP6 I 0 87
+   FrameIndex IMP6 J 0 88
+   FrameIndex IMP6 K 0 89
+   FrameIndex IMP6 L 0 90
+   FrameIndex IMP6 M 0 91
+   FrameIndex IMP6 N 0 92
+   FrameIndex IMP6 O 0 93
+   FrameIndex IMP6 P 0 94
+   FrameIndex IMP6 Q 0 95
+   FrameIndex IMP6 R 0 96
+   FrameIndex IMP6 S 0 97
+   FrameIndex IMP6 T 0 98
+   FrameIndex IMP6 U 0 99
+   FrameIndex IMP6 V 0 100
+   FrameIndex IMP6 W 0 101
+
+}
+
+Model HexenIMP3
+{
+   Path "models/monsters/HexenMonsters"   
+   Model 0 "IMP.md2"   
+   Skin 0 "IMPSkin2.png"    
+   Scale 1.0 1.0 1.0    
+
+   FrameIndex IMP1 A 0 0
+   FrameIndex IMP1 B 0 1
+   FrameIndex IMP1 C 0 2
+   FrameIndex IMP1 D 0 3
+   FrameIndex IMP1 E 0 4
+   FrameIndex IMP1 F 0 5
+   FrameIndex IMP1 G 0 6
+   FrameIndex IMP1 H 0 7
+   FrameIndex IMP1 I 0 8
+   FrameIndex IMP1 J 0 9
+   FrameIndex IMP1 I 0 10
+   FrameIndex IMP1 L 0 11
+   FrameIndex IMP1 M 0 12
+   FrameIndex IMP1 N 0 13
+
+   FrameIndex IMP2 A 0 14
+   FrameIndex IMP2 B 0 15
+   FrameIndex IMP2 C 0 16
+   FrameIndex IMP2 D 0 17
+   FrameIndex IMP2 E 0 18
+   FrameIndex IMP2 F 0 19
+   FrameIndex IMP2 G 0 20
+   FrameIndex IMP2 H 0 21
+   FrameIndex IMP2 I 0 22
+   FrameIndex IMP2 J 0 23
+   FrameIndex IMP2 K 0 24
+   FrameIndex IMP2 L 0 25
+   FrameIndex IMP2 M 0 26
+   FrameIndex IMP2 N 0 27
+   FrameIndex IMP2 O 0 28
+   FrameIndex IMP2 P 0 29
+   FrameIndex IMP2 Q 0 30
+   FrameIndex IMP2 R 0 31
+   FrameIndex IMP2 S 0 32
+   FrameIndex IMP2 T 0 33
+   FrameIndex IMP2 U 0 34
+
+
+   FrameIndex IMP3 A 0 103
+   FrameIndex IMP3 B 0 104
+   FrameIndex IMP3 C 0 105
+   FrameIndex IMP3 D 0 106
+   FrameIndex IMP3 E 0 107
+   FrameIndex IMP3 F 0 108
+   FrameIndex IMP3 G 0 109
+   FrameIndex IMP3 H 0 110
+   FrameIndex IMP3 I 0 111
+   FrameIndex IMP3 J 0 112
+   FrameIndex IMP3 K 0 113
+   FrameIndex IMP3 L 0 114
+   FrameIndex IMP3 M 0 115
+   FrameIndex IMP3 N 0 116
+   FrameIndex IMP3 O 0 117
+   FrameIndex IMP3 P 0 118
+   FrameIndex IMP3 Q 0 119
+   FrameIndex IMP3 R 0 120
+
+   FrameIndex IMP3 S 0 121
+   FrameIndex IMP3 T 0 122
+   FrameIndex IMP3 U 0 123
+   FrameIndex IMP3 V 0 124
+   FrameIndex IMP3 W 0 125
+   FrameIndex IMP3 X 0 126
+   FrameIndex IMP3 Y 0 127
+
+   FrameIndex IMP4 A 0 128
+   FrameIndex IMP4 B 0 129
+   FrameIndex IMP4 C 0 130
+   FrameIndex IMP4 D 0 131
+   FrameIndex IMP4 E 0 132
+   FrameIndex IMP4 F 0 133
+   FrameIndex IMP4 G 0 134
+   FrameIndex IMP4 H 0 135
+   FrameIndex IMP4 I 0 136
+   FrameIndex IMP4 J 0 137
+   FrameIndex IMP4 K 0 138
+   FrameIndex IMP4 L 0 139
+   FrameIndex IMP4 M 0 140
+
+
+   FrameIndex IMP5 A 0 36
+   FrameIndex IMP5 B 0 37
+   FrameIndex IMP5 C 0 38
+   FrameIndex IMP5 D 0 39
+   FrameIndex IMP5 E 0 40
+   FrameIndex IMP5 F 0 41
+   FrameIndex IMP5 G 0 42
+   FrameIndex IMP5 H 0 43
+   FrameIndex IMP5 I 0 44
+   FrameIndex IMP5 J 0 45
+   FrameIndex IMP5 K 0 46
+   FrameIndex IMP5 L 0 47
+   FrameIndex IMP5 M 0 48
+   FrameIndex IMP5 N 0 49
+   FrameIndex IMP5 O 0 50
+   FrameIndex IMP5 P 0 51
+   FrameIndex IMP5 Q 0 52
+   FrameIndex IMP5 R 0 53
+   FrameIndex IMP5 S 0 54
+
+   FrameIndex IMP6 A 0 79
+   FrameIndex IMP6 B 0 80
+   FrameIndex IMP6 C 0 81
+   FrameIndex IMP6 D 0 82
+   FrameIndex IMP6 E 0 83
+   FrameIndex IMP6 F 0 84
+   FrameIndex IMP6 G 0 85
+   FrameIndex IMP6 H 0 86
+   FrameIndex IMP6 I 0 87
+   FrameIndex IMP6 J 0 88
+   FrameIndex IMP6 K 0 89
+   FrameIndex IMP6 L 0 90
+   FrameIndex IMP6 M 0 91
+   FrameIndex IMP6 N 0 92
+   FrameIndex IMP6 O 0 93
+   FrameIndex IMP6 P 0 94
+   FrameIndex IMP6 Q 0 95
+   FrameIndex IMP6 R 0 96
+   FrameIndex IMP6 S 0 97
+   FrameIndex IMP6 T 0 98
+   FrameIndex IMP6 U 0 99
+   FrameIndex IMP6 V 0 100
+   FrameIndex IMP6 W 0 101
+
+}
+
+Model HexenIMP4
+{
+   Path "models/monsters/HexenMonsters"   
+   Model 0 "IMP.md2"   
+   Skin 0 "IMPSkin3.png"    
+   Scale 1.0 1.0 1.0    
+
+   FrameIndex IMP1 A 0 0
+   FrameIndex IMP1 B 0 1
+   FrameIndex IMP1 C 0 2
+   FrameIndex IMP1 D 0 3
+   FrameIndex IMP1 E 0 4
+   FrameIndex IMP1 F 0 5
+   FrameIndex IMP1 G 0 6
+   FrameIndex IMP1 H 0 7
+   FrameIndex IMP1 I 0 8
+   FrameIndex IMP1 J 0 9
+   FrameIndex IMP1 I 0 10
+   FrameIndex IMP1 L 0 11
+   FrameIndex IMP1 M 0 12
+   FrameIndex IMP1 N 0 13
+
+   FrameIndex IMP2 A 0 14
+   FrameIndex IMP2 B 0 15
+   FrameIndex IMP2 C 0 16
+   FrameIndex IMP2 D 0 17
+   FrameIndex IMP2 E 0 18
+   FrameIndex IMP2 F 0 19
+   FrameIndex IMP2 G 0 20
+   FrameIndex IMP2 H 0 21
+   FrameIndex IMP2 I 0 22
+   FrameIndex IMP2 J 0 23
+   FrameIndex IMP2 K 0 24
+   FrameIndex IMP2 L 0 25
+   FrameIndex IMP2 M 0 26
+   FrameIndex IMP2 N 0 27
+   FrameIndex IMP2 O 0 28
+   FrameIndex IMP2 P 0 29
+   FrameIndex IMP2 Q 0 30
+   FrameIndex IMP2 R 0 31
+   FrameIndex IMP2 S 0 32
+   FrameIndex IMP2 T 0 33
+   FrameIndex IMP2 U 0 34
+
+
+   FrameIndex IMP3 A 0 103
+   FrameIndex IMP3 B 0 104
+   FrameIndex IMP3 C 0 105
+   FrameIndex IMP3 D 0 106
+   FrameIndex IMP3 E 0 107
+   FrameIndex IMP3 F 0 108
+   FrameIndex IMP3 G 0 109
+   FrameIndex IMP3 H 0 110
+   FrameIndex IMP3 I 0 111
+   FrameIndex IMP3 J 0 112
+   FrameIndex IMP3 K 0 113
+   FrameIndex IMP3 L 0 114
+   FrameIndex IMP3 M 0 115
+   FrameIndex IMP3 N 0 116
+   FrameIndex IMP3 O 0 117
+   FrameIndex IMP3 P 0 118
+   FrameIndex IMP3 Q 0 119
+   FrameIndex IMP3 R 0 120
+
+   FrameIndex IMP3 S 0 121
+   FrameIndex IMP3 T 0 122
+   FrameIndex IMP3 U 0 123
+   FrameIndex IMP3 V 0 124
+   FrameIndex IMP3 W 0 125
+   FrameIndex IMP3 X 0 126
+   FrameIndex IMP3 Y 0 127
+
+   FrameIndex IMP4 A 0 128
+   FrameIndex IMP4 B 0 129
+   FrameIndex IMP4 C 0 130
+   FrameIndex IMP4 D 0 131
+   FrameIndex IMP4 E 0 132
+   FrameIndex IMP4 F 0 133
+   FrameIndex IMP4 G 0 134
+   FrameIndex IMP4 H 0 135
+   FrameIndex IMP4 I 0 136
+   FrameIndex IMP4 J 0 137
+   FrameIndex IMP4 K 0 138
+   FrameIndex IMP4 L 0 139
+   FrameIndex IMP4 M 0 140
+
+
+   FrameIndex IMP5 A 0 36
+   FrameIndex IMP5 B 0 37
+   FrameIndex IMP5 C 0 38
+   FrameIndex IMP5 D 0 39
+   FrameIndex IMP5 E 0 40
+   FrameIndex IMP5 F 0 41
+   FrameIndex IMP5 G 0 42
+   FrameIndex IMP5 H 0 43
+   FrameIndex IMP5 I 0 44
+   FrameIndex IMP5 J 0 45
+   FrameIndex IMP5 K 0 46
+   FrameIndex IMP5 L 0 47
+   FrameIndex IMP5 M 0 48
+   FrameIndex IMP5 N 0 49
+   FrameIndex IMP5 O 0 50
+   FrameIndex IMP5 P 0 51
+   FrameIndex IMP5 Q 0 52
+   FrameIndex IMP5 R 0 53
+   FrameIndex IMP5 S 0 54
+
+   FrameIndex IMP6 A 0 79
+   FrameIndex IMP6 B 0 80
+   FrameIndex IMP6 C 0 81
+   FrameIndex IMP6 D 0 82
+   FrameIndex IMP6 E 0 83
+   FrameIndex IMP6 F 0 84
+   FrameIndex IMP6 G 0 85
+   FrameIndex IMP6 H 0 86
+   FrameIndex IMP6 I 0 87
+   FrameIndex IMP6 J 0 88
+   FrameIndex IMP6 K 0 89
+   FrameIndex IMP6 L 0 90
+   FrameIndex IMP6 M 0 91
+   FrameIndex IMP6 N 0 92
+   FrameIndex IMP6 O 0 93
+   FrameIndex IMP6 P 0 94
+   FrameIndex IMP6 Q 0 95
+   FrameIndex IMP6 R 0 96
+   FrameIndex IMP6 S 0 97
+   FrameIndex IMP6 T 0 98
+   FrameIndex IMP6 U 0 99
+   FrameIndex IMP6 V 0 100
+   FrameIndex IMP6 W 0 101
+
+}

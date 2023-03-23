@@ -1,0 +1,45 @@
+Model LionArm1
+{
+  Path "Models/Gibs/ChasmLion"   
+  Model 0 "LIMB07A-LionGuy-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB07-LionGuy-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI07 A 0 0 
+}
+
+   
+Model LionArm2
+{
+  Path "Models/Gibs/ChasmLion"  
+  Model 0 "LIMB07B-LionGuyHand2.md3"   
+  SurfaceSkin 0 0 "LIMB07-LionGuy-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI07 B 0 0 
+}
+
+   Model LionHead
+{
+  Path "Models/Gibs/ChasmLion"   
+  Model 0 "LIMB07C-LionGuyHead.md3"   
+  SurfaceSkin 0 0 "LIMB07-LionGuy-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI07 C 0 0 
+}

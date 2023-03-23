@@ -1,0 +1,11 @@
+// custom md2 file...  
+MODEL Yakball 
+{ 
+Path "Models\Projectiles\Yakball" 
+SKIN 0 "Yakball.png"  
+MODEL 0 "Yakball.md2" 
+Scale 1.0 1.0 1.0 
+// POLY1 set 1 
+
+frame POL0 A 0 "POLY1" 
+} 

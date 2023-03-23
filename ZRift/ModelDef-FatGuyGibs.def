@@ -1,0 +1,30 @@
+Model FatGuyArm1
+{
+  Path "Models/Misc"   
+  Model 0 "LIMB10A-FatGuy-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB10-FatGuy-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI10 A 0 0 
+}
+
+   
+Model FatGuyArm2
+{
+  Path "Models/Misc"   
+  Model 0 "LIMB10B-FatGuy-Hand2.md3"   
+  SurfaceSkin 0 0 "LIMB10-FatGuy-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI10 B 0 0 
+}

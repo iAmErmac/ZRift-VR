@@ -1,0 +1,138 @@
+Actor DeadGuySpawner: RandomSpawner Replaces DoomImp
+{
+dropitem "ChasmDeadGuy", 255, 1
+dropitem "ChasmMummy", 255, 1
+dropitem "ChasmJoker", 255, 1
+dropitem "ChasmGoblin", 255, 1
+}
+
+Actor ChasmDeadGuy
+{
+//$Category ChasmMonsterEgypt
+    Health 160
+    Radius 18
+    Height 54
+    Speed 3
+    PainChance 2
+	PainChance "Laser", 136
+	Scale 1.00
+	Mass 200
+    Monster
+    +FLOORCLIP
+	+DONTHARMSPECIES
+	Species "Undead"
+    SeeSound "Zombie/See"
+    PainSound "Zombie/Pain"
+    DeathSound "Zombie/Death"
+	ActiveSound "Zombie/Active"
+    Obituary "%o was killed by a Zombie."
+	BloodColor "Red"
+	BloodType "RedBlood", "RedBlood"
+	MaxTargetRange 400
+	Tag "Zombie"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay
+		TNT1 A 0 A_Jump(10, "Idle1")
+        DGI1 ABCDEFGHIJKLMNOPQRSTUVWXYZ 2 A_Look
+        Loop
+    See:
+        DGW1 ABCDEFGHIJKL 2 A_Chase
+		TNT1 A 0 A_PlaySound("Joker/Walk", 4)
+		DGW1 MNOPQRSTUVWX 2 A_Chase
+		TNT1 A 0 A_PlaySound("Joker/Walk", 4)
+        Loop
+	Idle1:
+	    TNT1 A 0
+	    TNT1 A 0 A_PlaySound("Zombie/Idle",3)
+		DGI1 Z 1 A_Look
+		Goto Spawn
+	Missile:
+		DGA1 ABCDEFG 2 A_FaceTarget
+		TNT1 A 0 A_PlaySound("Zombie/Scream", 4)
+		DGA1 HHHHHHHH 1 Bright A_CustomMissile("ZombieBreath",26,random(5,-5),random(5,-5),CMF_AIMOFFSET)
+		DGA1 H 2 BRIGHT
+		DGA1 IJKLMNOPQRST 2
+		Goto See
+	Melee:
+		DGA2 ABCDEFGHIJKL 2 A_FaceTarget
+		DGA2 M 0 A_CustomBulletAttack(1, 1, 1, 6, "ZombieMeleePuff", 50, CBAF_AIMFACING)
+		DGA2 M 3 BRIGHT
+		DGA2 NOPQRSTUV 1
+		Goto See
+  Pain:
+    TNT1 A 0 A_Jump(20, "BigPain")
+	TNT1 A 0 A_Jump(60, "Pain1")
+	TNT1 A 0 A_Jump(60, "Pain2")
+    DGP1 A 2 A_Pain
+    DGP1 BCDEFGHIJKLMNOPQRSTUVWX 2
+    Goto See
+  BigPain:
+	DGP2 A 2 A_Pain
+    DGP2 BCDEFGHIJKLMNOPQRSTUVW 2
+    Goto See
+  Pain1:
+	DGP3 A 2 A_Pain
+    DGP3 BCDEFGHIJKLMNOPQRSTUVWX 2
+    Goto See
+  Pain2:
+	DGP4 A 2 A_Pain
+    DGP4 BCDEFGHIJKLMNOPQRSTUVWX 2
+    Goto See
+  Death:
+    DGD1 A 2
+    DGD1 B 2 A_Scream
+    DGD1 C 3 A_NoBlocking
+	DGD1 EFGHIJKLMNOP 3
+	TNT1 A 0 A_PlaySound("Zombie/Fall", 4, 0.50)
+    DGD1 QRSTU 2
+    DGD1 U -1
+    Stop
+  Death.Explosive:
+    TNT1 A 0
+	Goto XDeath
+  XDeath:
+    TNT1 A 0
+	TNT1 A 0 A_NoBlocking
+    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+    TNT1 A 0 A_CustomMissile("DeadGuyHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("DeadGuyArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("DeadGuyArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+	Stop
+  Raise:
+    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+	DGI1 A 1 A_SetTranslucent(0.10, 0)
+	DGI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+  Goto See
+    }
+}
+
+actor ZombieMeleePuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  Scale 0.3
+  RenderStyle Add
+  Alpha 0.95
+  seesound "Zombie/Smack"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    stop
+  Crash:
+    TNT1 A 0
+    stop
+  Melee:
+	TNT1 A 0
+    stop
+  }
+}

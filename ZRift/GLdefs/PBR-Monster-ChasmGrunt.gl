@@ -1,0 +1,20 @@
+//////////////////////////
+//Chasm Monster Grunt Brightmap
+////////////////////////// 
+
+material texture "models/monsters/MongGrunt.png" {
+	brightmap "materials/monsters/MongGrunt_brightmap.png"        
+}
+
+
+//////////////////////////
+//Chasm Monster Grunt PNR (specular workflow)
+//////////////////////////
+material texture "models/monsters/MongGrunt.png" {
+    normal "materials/monsters/MongGrunt_normal.png" 
+    specular "materials/monsters/MongGrunt_specular.png"
+    glossiness 5
+	specularlevel 5
+	//disablefullbright
+}
+

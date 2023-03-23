@@ -1,0 +1,12 @@
+//GIBS And FLESH
+
+Flesh/Gib GIB2
+Gib/Bounce GIB1
+
+
+$random Bullet/Flesh { Bullet/Flesh1 Bullet/Flesh2 Bullet/Flesh3 }
+Bullet/Flesh1 FLESH1
+Bullet/Flesh2 FLESH2
+Bullet/Flesh3 FLESH3
+$volume Bullet/Flesh 0.15
+

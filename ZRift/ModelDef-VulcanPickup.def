@@ -1,0 +1,16 @@
+Model ChasmChaingun
+{
+   Path "models/weapons"   	
+   Model 0 "VulcanPickup.md2"   
+   Skin 0 "VulcanPickup.png"    
+   Scale 0.23 0.23 0.23 
+   AngleOffset 90 
+   ZOffset 20
+   ROTATING
+   Rotation-Speed 2
+   RollOffset 20
+
+//IdleA
+   Frame CHNX A 0 "IdleA1"   
+   
+}

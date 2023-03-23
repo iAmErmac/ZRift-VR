@@ -1,0 +1,42 @@
+
+pointlight LIGHT-ZombieBreath
+{
+    color 0.0 0.3 0.0
+    size 15
+    offset 0 0 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+
+    
+object ZombieBreath
+{
+	frame POIXA { light LIGHT-ZombieBreath }
+	frame POIXB { light LIGHT-ZombieBreath }
+	frame POIXC { light LIGHT-ZombieBreath }
+	frame POIXD { light LIGHT-ZombieBreath }
+	frame POIXE { light LIGHT-ZombieBreath }
+    }
+
+
+
+pointlight LIGHT-MummyBreath
+{
+    color 0.3 0.3 0.0
+    size 15
+    offset 0 0 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+
+    
+object MummyBreath
+{
+	frame POIXF { light LIGHT-MummyBreath }
+	frame POIXG { light LIGHT-MummyBreath }
+	frame POIXH { light LIGHT-MummyBreath }
+	frame POIXI { light LIGHT-MummyBreath }
+	frame POIXJ { light LIGHT-MummyBreath }
+    }

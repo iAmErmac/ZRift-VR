@@ -1,0 +1,164 @@
+ACTOR HexenSkullWiz
+{
+  Health 180
+  Radius 16
+  Height 68
+  Mass 100
+  Speed 4
+  PainChance 64
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +DONTOVERLAP
+  SeeSound "wizard/sight"
+  AttackSound "wizard/attack"
+  PainSound "wizard/pain"
+  DeathSound "wizard/death"
+  ActiveSound "wizard/active"
+  Obituary "$OB_WIZARD"
+  HitObituary "$OB_WIZARDHIT"
+//  DropItem "BlasterAmmo", 84, 10
+//  DropItem "ArtiTomeOfPower", 4, 0
+
+//  action native A_GhostOff();
+//  action native A_WizAtk1();
+//  action native A_WizAtk2();
+//  action native A_WizAtk3();
+
+   States
+  {
+  Spawn:
+    Idle:
+	TNT1 A 0 NoDelay
+    KWA0 ABCDEFGHIJKLMNOPQRSQPONMLKJIHGFEDCBA 2 A_Look
+    Loop
+
+  See:
+    SKW0 A 2 A_Chase //("Melee", "")
+    SKW0 BCDEFGHIJKLMNOPQRSTUVW 2 A_Chase
+    Loop
+
+//  Melee:
+//    SKWZ C 8 A_FaceTarget
+//    SKWZ D 8 Bright A_FaceTarget
+//    SKWZ D 0 Bright A_PlaySound("H2SkullWizard/Melee")
+//    SKWZ D 8 Bright A_CustomBulletAttack(0, 0, 1, 8, "SkullWizardPuff")
+//    Goto See
+
+  Missile:
+    SKS0 A 0 A_Jump(96, "Teleport")
+    SKS0 ABCDEFGHI 2 A_FaceTarget
+    SKS0 JK 3 Bright A_FaceTarget
+    SKS0 L 2 Bright A_CustomMissile("SkullWizardProjectile", 40, 0, 0)
+    SKS0 A 0 Bright A_Jump(80, 2)
+    SKS0 M 3 Bright A_SpidReFire
+    Goto Missile+1
+    SKS0 NO 2
+    Goto See
+
+  Teleport:
+    SKT0 A 2 A_JumpIfCloser(512, 1)
+    Goto See
+    SKT0 BC 2 A_ChangeFlag("NoPain", 1)
+    SKT0 D 4 A_PlaySoundEx("H2SkullWizard/Teleport", "SoundSlot7", 0)
+    SKT0 EFGHIJKLMNO 2 Bright
+    TNT1 A 0 A_Stop
+    TNT1 A 0 A_StopSoundEx("SoundSlot7")
+    TNT1 A 0 A_SpawnItemEx("TeleportFog", 0, 0, 0, 0, 0, 0, 0, 128) 
+    TNT1 A 0 A_ChangeFlag(Invulnerable, 1)
+    TNT1 A 0 A_UnSetShootable
+    TNT1 A 0 A_ChangeFlag("NonShootable", 1)
+    TNT1 A 0 A_ChangeFlag("NoRadiusDMG", 1)
+    TNT1 A 0 A_ChangeFlag("NoTeleport", 1)
+    TNT1 A 0 A_ChangeFlag("NoDropOff", 0)
+    TNT1 A 0 A_ChangeFlag("FloorHugger", 1)
+    TNT1 A 0 A_ChangeFlag("Float", 1)
+    TNT1 A 0 A_ChangeFlag("NoGravity", 1)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Wander
+    TNT1 AAA 2 A_Wander
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Wander
+    TNT1 AAA 2 A_Wander
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Wander
+    TNT1 AAA 2 A_Wander
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Wander
+    TNT1 AAA 2 A_Wander
+    KTR0 A 0 A_SpawnItemEx("TeleportFog", 0, 0, 0, 0, 0, 0, 0, 128) 
+    KTR0 A 0 A_ChangeFlag("NoDropOff", 1)
+    KTR0 A 0 A_ChangeFlag("FloorHugger", 0)
+    KTR0 A 0 A_ChangeFlag("Float", 0)
+    KTR0 A 0 A_ChangeFlag("NoGravity", 0)
+    KTR0 A 0 A_ChangeFlag(Invulnerable, 0)
+    KTR0 A 0 A_SetShootable
+    KTR0 A 0 A_ChangeFlag(Shootable, 1)
+    KTR0 A 0 A_ChangeFlag("NonShootable", 0)
+    KTR0 A 0 A_ChangeFlag("NoRadiusDMG", 0)
+    KTR0 A 0 A_ChangeFlag("NoTeleport", 0)
+    KTR0 A 0 A_ChangeFlag("NoPain", 0)
+    KTR0 ABCDEFG 2
+        Goto See
+
+  Pain:
+    SKP0 A 2
+    SKP0 BCDEFGHIJKL 2 A_Pain
+    SKP0 L 0 A_Jump(96, "Teleport")
+    Goto See
+
+  Death:
+    SKD0 ABCDEFG 3 A_Scream
+    SKD0 HIJKLM 4 bright
+    SKD0 N 4
+    SKD0 O 4 A_NoBlocking
+    SKD0 O -1
+    Stop
+   }
+}
+
+Actor SkullWizardProjectile
+{
+  Radius 8
+  Height 14
+  Speed 12
+  Damage 6
+  RenderStyle Add
+  DamageType Fire
+  Projectile
+  -ActivatePCross
+  -ActivateImpact
+  +SeekerMissile
+  SeeSound "H2SkullWizard/Fire"
+  DeathSound "H2SkullWizard/Hit"
+  States
+  {
+  Spawn:
+    SWPJ A 5 Bright A_SpawnItemEx("LionGuyFireBallTrail",0,0,0,0,0,0,0,2)
+    Loop
+  Death:
+ 	TNT1 A 0 A_Scream
+	TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(1,2), random(10,-10), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(2,4), random(18,-18), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(4,6), random(10,-10), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("EnemyExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+    TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+
+
+    Stop
+  }
+}
+
+Actor SkullWizardPuff : BulletPuff
+{
+  Radius 1
+  Height 1
+  +NoClip
+  +PuffOnActors
+  -BloodSplatter
+  +BloodLessImpact
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1 A_RadiusThrust(10000, 6, 0)
+    Stop
+  }
+}

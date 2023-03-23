@@ -1,0 +1,531 @@
+Actor AlienGuysSpawner : RandomSpawner replaces Arachnotron
+{
+dropitem "ChasmAlienTrooper",255, 10
+dropitem "ChasmAlienCaptain",255, 4
+}
+
+Actor ChasmAlienTrooper
+{
+    Health 525
+    Radius 36
+    Height 64
+    Speed 8
+    PainChance 24
+	PainChance "Laser", 76
+	Scale 1.00
+	Mass 800
+    Monster
+    +FLOORCLIP
+	+BOSSDEATH
+	+DONTHARMSPECIES
+	Species "Alien"
+	Dropitem "CCellAmmo", 50
+    SeeSound "Alien/See"
+    PainSound "Alien/Pain"
+    DeathSound "Alien/Death"
+	ActiveSound "Alien/Active"
+    Obituary "%o was killed by an Alien Warrior."
+	BloodColor "Red"
+	BloodType "RedBlood", "RedBlood"
+	Tag "AlienTrooper"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay
+		TNT1 A 0 A_Jump(10, "Idle1")
+        ATI1 ABCDEFGHIJKLMNOPQ 2 A_Look
+        Loop
+	Idle1:
+	    TNT1 A 0 A_PlaySound("Alien/Idle",3)
+		ATI1 Q 1 A_Look
+		Goto Spawn
+    See:
+        ATW1 ABCDEF 2 A_Chase
+		TNT1 A 0 A_PlaySound("Alien/Walk", 4)
+		ATW1 GHIJKL 2 A_Chase
+		TNT1 A 0 A_PlaySound("Alien/Walk", 4)
+        Loop
+	Missile:
+		ATA1 ABCDE 3 A_FaceTarget
+		ATA1 E 3 A_FaceTarget
+		TNT1 A 0 A_PlaySound("Alien/Fire", 1)
+		ATA1 F 0 A_CustomMissile("AlienPrimeLaser",36,20,0)
+		ATA1 E 0 A_SpawnItemEx("GreenMuzzleFlash", 24, 14, 24)
+		ATA1 F 0 A_CustomMissile("AlienMinorLaser",36,20,4)
+		ATA1 F 0 A_CustomMissile("AlienMinorLaser",36,20,8)
+		ATA1 F 0 A_CustomMissile("AlienMinorLaser",36,20,-4)
+		ATA1 F 0 A_CustomMissile("AlienMinorLaser",36,20,-8)
+		ATA1 F 6 BRIGHT
+		ATA1 GHIJKLMNOPQ 2 A_FaceTarget
+		Goto See
+	Melee:
+	    TNT1 A 0 A_Jump(76, "Melee1")
+	    ATA2 ABCDEFGHI 2 A_FaceTarget
+		ATA2 I 0 A_CustomBulletAttack(1, 1, 1, 10, "AlienMeleePuff", 50, CBAF_AIMFACING)
+		ATA2 I 2
+		ATA2 JKLMOPQ 2
+		Goto See
+	Melee1:
+	    ATA3 ABCDEFGHI 2 A_FaceTarget
+		ATA3 I 0 A_CustomBulletAttack(1, 1, 1, 10, "AlienMeleePuff", 50, CBAF_AIMFACING)
+		ATA3 I 2
+		ATA3 JKLMOPQ 2
+		Goto See
+  Pain:
+    ATP1 A 2 A_Pain
+    ATP1 BCDEFGHI 2
+    Goto See
+  Death:
+    TNT1 A 0 A_Jump(80, "Death1")
+    ATD1 A 2
+    ATD1 B 4 A_Scream
+    ATD1 CDEF 2 
+    ATD1 G 2 A_NoBlocking
+	TNT1 A 0 A_PlaySound("Alien/Fall", 4)
+    ATD1 H 2 A_BossDeath
+	ATD1 IJKLMNOPQRSTUVW 2
+    ATD1 W -1
+    Stop
+  Death1:
+    ATD2 A 2
+    ATD2 B 4 A_Scream
+    ATD2 CDEF 2 
+    ATD2 G 2 A_NoBlocking
+	TNT1 A 0 A_PlaySound("Alien/Fall", 4)
+    ATD2 H 2 A_BossDeath
+	ATD2 IJKLMNOPQRSTU 2
+    ATD2 U -1
+    Stop
+  Death.Explosive:
+    TNT1 A 0
+	Goto XDeath
+  XDeath:
+	TNT1 A 0 A_BossDeath
+    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+	TNT1 A 0 A_CustomMissile("TrooperHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("TrooperArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("TrooperArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(20,60), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(20,60), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("GoreSpawner", random(20,50), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("GoreSpawner", random(20,50), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, -20), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, 20), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("AlienGibSpawner", random(10,50), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("AlienGibSpawner", random(10,50), random(0,20), random (0, 360), 2, random (0, 160))
+	Stop
+  Raise:
+    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+	ATI1 A 1 A_SetTranslucent(0.10, 0)
+	ATI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+  Goto See
+    }
+}
+
+//Effects
+
+ACTOR AlienPrimeLaser
+{
+  Radius 12
+  Height 8
+  Speed 25
+  Damage 5
+  Projectile
+  +RANDOMIZE
+  Alpha 0.97
+  RenderStyle Add
+  DeathSound "Alien/LaserExp"
+  States
+  {
+  Spawn:
+  	TNT1 A 0 NoDelay
+    LAS1 X 1 Bright A_SpawnParticle ("Green", SPF_FULLBRIGHT | SPF_RELATIVE, random(15,30), random(2,3), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.98, -1)
+    LAS1 X 1 Bright A_SpawnParticle ("White", SPF_FULLBRIGHT | SPF_RELATIVE, random(15,30), random(2,3), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.98, -1)
+	Loop
+  Death:
+	TNT1 A 0 A_Scream
+	TNT1 AAAAAAAA 0 A_SpawnParticle ("Green", SPF_FULLBRIGHT | SPF_RELATIVE, random(35,45), random(1,4), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
+    TNT1 AAAAAAAA 0 A_SpawnParticle ("White", SPF_FULLBRIGHT | SPF_RELATIVE, random(35,45), random(1,4), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
+	TNT1 A 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+    LAXP ABCDEFGH 2 BRIGHT
+	Stop
+  }
+}
+
+ACTOR AlienMinorLaser
+{
+  Radius 12
+  Height 8
+  Speed 25
+  Damage 1
+  Projectile
+  +RANDOMIZE
+  Alpha 0.97
+  RenderStyle Add
+  DeathSound ""
+  States
+  {
+  Spawn:
+  	TNT1 A 0 NoDelay
+    LAS1 X 1 Bright A_SpawnParticle ("Green", SPF_FULLBRIGHT | SPF_RELATIVE, random(15,20), random(1,2), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.98, -1)
+    LAS1 X 1 Bright A_SpawnParticle ("White", SPF_FULLBRIGHT | SPF_RELATIVE, random(15,20), random(1,2), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.98, -1)
+    Loop
+  Death:
+	TNT1 A 0 A_Scream
+	TNT1 A 0 A_SetScale(0.50)
+    LAXP ABCDEFGH 1 BRIGHT
+	Stop
+  }
+}
+
+actor AlienMeleePuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  Scale 0.3
+  RenderStyle Add
+  Alpha 0.95
+  seesound "Alien/Stab"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    stop
+  Crash:
+    TNT1 A 0
+    stop
+  Melee:
+	TNT1 A 0
+    stop
+  }
+}
+
+Actor AlienGibSpawner : RandomSpawner
+{
+dropitem "AlienGib1",255, 10
+dropitem "AlienGib2",255, 10
+dropitem "AlienGib3",255, 10
+dropitem "AlienGib4",255, 10
+}
+
+ACTOR AlienGib1
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+    DeathSound "Flesh/Splat"
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        GI02 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       GI02 AAAAA 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       GI02 A 5 A_SetTranslucent(0.8)
+       GI02 A 5 A_SetTranslucent(0.6)
+       GI02 A 5 A_SetTranslucent(0.4)
+       GI02 A 5 A_SetTranslucent(0.2)
+       GI02 A 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR AlienGib2
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+    DeathSound "Flesh/Splat"
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        GI02 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       GI02 BBBBB 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       GI02 B 5 A_SetTranslucent(0.8)
+       GI02 B 5 A_SetTranslucent(0.6)
+       GI02 B 5 A_SetTranslucent(0.4)
+       GI02 B 5 A_SetTranslucent(0.2)
+       GI02 B 5 A_SetTranslucent(0.1)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR AlienGib3
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+    DeathSound "Flesh/Splat"
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        GI02 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       GI02 CCCCC 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       GI02 C 5 A_SetTranslucent(0.8)
+       GI02 C 5 A_SetTranslucent(0.6)
+       GI02 C 5 A_SetTranslucent(0.4)
+       GI02 C 5 A_SetTranslucent(0.2)
+       GI02 C 5 A_SetTranslucent(0.1)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR AlienGib4
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+    DeathSound "Flesh/Splat"
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        GI02 D 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       GI02 DDDDD 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       GI02 D 5 A_SetTranslucent(0.8)
+       GI02 D 5 A_SetTranslucent(0.6)
+       GI02 D 5 A_SetTranslucent(0.4)
+       GI02 D 5 A_SetTranslucent(0.2)
+       GI02 D 5 A_SetTranslucent(0.1)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+//////////////////GIBS
+
+ACTOR TrooperArm1
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI01 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI01 AAAAA 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI01 A 5 A_SetTranslucent(0.8)
+       LI01 A 5 A_SetTranslucent(0.6)
+       LI01 A 5 A_SetTranslucent(0.4)
+       LI01 A 5 A_SetTranslucent(0.2)
+       LI01 A 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR TrooperArm2
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI01 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI01 BBBBB 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI01 B 5 A_SetTranslucent(0.8)
+       LI01 B 5 A_SetTranslucent(0.6)
+       LI01 B 5 A_SetTranslucent(0.4)
+       LI01 B 5 A_SetTranslucent(0.2)
+       LI01 B 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR TrooperHead
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI01 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI01 CCCCC 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI01 C 5 A_SetTranslucent(0.8)
+       LI01 C 5 A_SetTranslucent(0.6)
+       LI01 C 5 A_SetTranslucent(0.4)
+       LI01 C 5 A_SetTranslucent(0.2)
+       LI01 C 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}

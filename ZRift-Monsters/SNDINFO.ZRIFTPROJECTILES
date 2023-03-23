@@ -1,0 +1,18 @@
+//ROCKET AND GRENADE
+$random ChasmRocketL/Fire { ChasmRocketL/Fire1 ChasmRocketL/Fire2 ChasmRocketL/Fire3 }
+ChasmRocketL/Fire1 GRENA1
+ChasmRocketL/Fire2 GRENB1
+ChasmRocketL/Fire3 GRENC1
+RocketL/Up GRENUP1
+ChasmRocketL/Bounce GBOUN1
+$random ChasmRocketL/Exp { ChasmRocketL/Exp1 ChasmRocketL/Exp2 ChasmRocketL/Exp3 }
+ChasmRocketL/Exp1 GEXP1
+ChasmRocketL/Exp2 GEXP2
+ChasmRocketL/Exp3 GEXP3
+ChasmRocketL/Fly GFLY1
+ChasmRocketL/ClusterFire CLUFIR1
+ChasmRocketL/ClusterBreak CLUBRK1
+$random ChasmRocketL/ClusterExp { ChasmRocketL/ClusterExp1 ChasmRocketL/ClusterExp2 ChasmRocketL/ClusterExp3 }
+ChasmRocketL/ClusterExp1 CLUEXP1
+ChasmRocketL/ClusterExp2 CLUEXP2
+ChasmRocketL/ClusterExp3 CLUEXP3

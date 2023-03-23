@@ -1,0 +1,13 @@
+Model CPlasmaCell
+{
+   Path "models/items"   	
+   Model 0 "FlakAmmo.md2"   
+   Skin 0 "FlakGunAmmo-Green.png"    
+   Scale 0.70 0.70 0.70  
+   AngleOffset 90 
+   ZOffset 8
+
+//IdleA
+   Frame PLWA X 0 "IdleA1"   
+   
+}

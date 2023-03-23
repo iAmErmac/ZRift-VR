@@ -1,0 +1,12 @@
+Model CCellBox
+{
+   Path "models/items"   	
+   Model 0 "AlienCellBox.md2"   
+   Skin 0 "AlienCellBox.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+
+//IdleA
+   Frame CCLA Y 0 "IdleA1"   
+   
+}

@@ -1,0 +1,14 @@
+Model ChasmStratosBolt
+{
+   Path "models/effects"   	
+   Model 0 "TriBolt.md2"   
+   Skin 0 "TriBolt.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset -90
+   ZOffSet -1
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame CRS1 Y 0 "IdleA1"   
+   
+}

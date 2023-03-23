@@ -1,0 +1,12 @@
+Model LaserBoltAmmo
+{
+   Path "models/items"   	
+   Model 0 "BoltAmmo.md2"   
+   Skin 0 "BoltAmmo.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset 90 
+
+//IdleA
+   Frame BOLA X 0 "IdleA1"   
+   
+}

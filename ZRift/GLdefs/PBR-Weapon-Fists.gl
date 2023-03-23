@@ -1,0 +1,6 @@
+//////////////////////////
+//Chasm Fists Brightmap
+
+material texture "models/weapons/Newfists.png" {
+	brightmap "materials/weapons/Newfists_brightmap.png"
+}

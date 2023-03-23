@@ -1,0 +1,475 @@
+
+///////////////////////////////////////////
+// Explosion1  - 15 FRAMES from bright to dark
+// Explosion1 Multiskin part1
+///////////////////////////////////////////
+Model Explosion1
+{
+  Path "Models/misc"  
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin0.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin1.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin2.png" 
+  
+  Model 3 "Explosion.md2"   
+  Skin 3 "Explosionskin3.png" 
+  
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0           //Scale 
+
+
+   Frame EX00 A 0 "Explode1"   
+   Frame EX00 B 0 "Explode2" 
+   Frame EX00 C 0 "Explode3"   
+   
+   Frame EX00 D 1 "Explode4" 
+   Frame EX00 E 1 "Explode5"
+   
+   Frame EX00 F 2 "Explode6" 
+   Frame EX00 G 2 "Explode7"
+   
+   Frame EX00 H 3 "Explode8" 
+   Frame EX00 I 3 "Explode9"
+   }
+   
+   ///////////////////////////////////////////
+   //Explosion1 Multiskin part2
+   ///////////////////////////////////////////
+   Model Explosion1
+{
+  Path "Models/misc"  
+  Model 0 "Explosion.md2" 
+  Skin 0 "Explosionskin3.png" 
+  
+  Model 1 "Explosion.md2"  
+  Skin 1 "Explosionskin3.png"
+  
+  Model 2 "Explosion.md2"  
+  Skin 2 "Explosionskin3.png" 
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0             //Scale 
+
+  
+   Frame EX01 A 0 "Explode10" 
+   Frame EX01 B 0 "Explode11"
+   
+   Frame EX01 C 1 "Explode12" 
+   Frame EX01 D 1 "Explode13"
+   
+   Frame EX01 E 2 "Explode14"
+   Frame EX01 F 2 "Explode15"
+   }
+   
+   
+
+
+///////////////////////////////////////////
+// Explosion1TOXIC  - 15 FRAMES from bright to dark
+// Explosion1TOXIC Multiskin part1
+///////////////////////////////////////////
+Model Explosion1Toxic
+{
+  Path "Models/misc"   
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin0-Toxic.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin1-Toxic.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin2-Toxic.png" 
+  
+  Model 3 "Explosion.md2"   
+  Skin 3 "Explosionskin3-Toxic.png" 
+  
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0           //Scale 
+
+
+   Frame EX02 A 0 "Explode1"   
+   Frame EX02 B 0 "Explode2" 
+   Frame EX02 C 0 "Explode3"   
+   
+   Frame EX02 D 1 "Explode4" 
+   Frame EX02 E 1 "Explode5"
+   
+   Frame EX02 F 2 "Explode6" 
+   Frame EX02 G 2 "Explode7"
+   
+   Frame EX02 H 3 "Explode8" 
+   Frame EX02 I 3 "Explode9"
+   }
+   
+   ///////////////////////////////////////////
+   //Explosion1TOXIC Multiskin part2
+   ///////////////////////////////////////////
+   Model Explosion1Toxic
+{
+  Path "Models/misc"   
+  Model 0 "Explosion.md2" 
+  Skin 0 "Explosionskin3-Toxic.png" 
+  
+  Model 1 "Explosion.md2"  
+  Skin 1 "Explosionskin3-Toxic.png"
+  
+  Model 2 "Explosion.md2"  
+  Skin 2 "Explosionskin3-Toxic.png" 
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0             //Scale 
+
+  
+   Frame EX03 A 0 "Explode10" 
+   Frame EX03 B 0 "Explode11"
+   
+   Frame EX03 C 1 "Explode12" 
+   Frame EX03 D 1 "Explode13"
+   
+   Frame EX03 E 2 "Explode14"
+   Frame EX03 F 2 "Explode15"
+   }
+   
+   
+///////////////////////////////////////////
+// Explosion2  - 15 FRAMES from bright to dark
+// Explosion2 Multiskin part1
+///////////////////////////////////////////
+Model Explosion2
+{
+  Path "Models/misc"     
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin0.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin1.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin2.png" 
+  
+  Model 3 "Explosion.md2"   
+  Skin 3 "Explosionskin3.png" 
+  
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0     //Scale 
+
+
+   Frame EX04 A 0 "Explodb1"   
+   Frame EX04 B 0 "Explodb2" 
+   Frame EX04 C 0 "Explodb3"   
+   
+   Frame EX04 D 1 "Explodb4" 
+   Frame EX04 E 1 "Explodb5"
+   
+   Frame EX04 F 2 "Explodb6" 
+   Frame EX04 G 2 "Explodb7"
+   
+   Frame EX04 H 3 "Explodb8" 
+   Frame EX04 I 3 "Explodb9"
+   }
+   
+///////////////////////////////////////////
+   //Explosion2 Multiskin part2
+   ///////////////////////////////////////////
+   Model Explosion2
+{
+  Path "Models/misc"   
+  Model 0 "Explosion.md2" 
+  Skin 0 "Explosionskin3.png" 
+  
+  Model 1 "Explosion.md2"  
+  Skin 1 "Explosionskin3.png"
+  
+  Model 2 "Explosion.md2"  
+  Skin 2 "Explosionskin3.png" 
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0             //Scale 
+
+  
+   Frame EX05 A 0 "Explodb10" 
+   Frame EX05 B 0 "Explodb11"
+   
+   Frame EX05 C 1 "Explodb12" 
+   Frame EX05 D 1 "Explodb13"
+   
+   Frame EX05 E 2 "Explodb14"
+   Frame EX05 F 2 "Explodb15"
+   }
+   
+///////////////////////////////////////////
+// Explosion2Toxic  - 15 FRAMES from bright to dark
+// ExplosionToxic Multiskin part1
+///////////////////////////////////////////
+Model Explosion2Toxic
+{
+  Path "Models/misc"     
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin0-Toxic.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin1-Toxic.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin2-Toxic.png" 
+  
+  Model 3 "Explosion.md2"   
+  Skin 3 "Explosionskin3-Toxic.png" 
+  
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0     //Scale 
+
+
+   Frame EX06 A 0 "Explodb1"   
+   Frame EX06 B 0 "Explodb2" 
+   Frame EX06 C 0 "Explodb3"   
+   
+   Frame EX06 D 1 "Explodb4" 
+   Frame EX06 E 1 "Explodb5"
+
+   Frame EX06 F 2 "Explodb6" 
+   Frame EX06 G 2 "Explodb7"
+   
+   Frame EX06 H 3 "Explodb8" 
+   Frame EX06 I 3 "Explodb9"
+   }
+   
+///////////////////////////////////////////
+   //Explosion2Toxic Multiskin part2
+   ///////////////////////////////////////////
+   Model Explosion2Toxic
+{
+  Path "Models/misc"   
+  Model 0 "Explosion.md2" 
+  Skin 0 "Explosionskin3-Toxic.png" 
+  
+  Model 1 "Explosion.md2"  
+  Skin 1 "Explosionskin3-Toxic.png"
+  
+  Model 2 "Explosion.md2"  
+  Skin 2 "Explosionskin3-Toxic.png" 
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0             //Scale 
+
+  
+   Frame EX07 A 0 "Explodb10" 
+   Frame EX07 B 0 "Explodb11"
+   
+   Frame EX07 C 1 "Explodb12" 
+   Frame EX07 D 1 "Explodb13"
+   
+   Frame EX07 E 2 "Explodb14"
+   Frame EX07 F 2 "Explodb15"
+   }
+   
+///////////////////////////////////////////
+// Explosion3  - 19 FRAMES from bright to dark
+// Explosion3 Multiskin part1
+///////////////////////////////////////////
+Model Explosion3
+{
+  Path "Models/misc"     
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin0.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin1.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin2.png" 
+  
+  Model 3 "Explosion.md2"   
+  Skin 3 "Explosionskin3.png" 
+  
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0     //Scale 
+
+
+   Frame EX08 A 0 "Explodc1"   
+   Frame EX08 B 0 "Explodc2" 
+   Frame EX08 C 0 "Explodc3"   
+   
+   Frame EX08 D 1 "Explodc4" 
+   Frame EX08 E 1 "Explodc5"
+   Frame EX08 F 2 "Explodc6"
+   
+   Frame EX08 G 2 "Explodc7"
+   Frame EX08 H 2 "Explodc8" 
+   Frame EX08 I 2 "Explodc9"
+   
+   Frame EX08 J 3 "Explodc7"
+   Frame EX08 K 3 "Explodc8" 
+   Frame EX08 L 3 "Explodc9"
+   }
+   
+///////////////////////////////////////////
+//Explosion3 Multiskin part2
+///////////////////////////////////////////
+
+Model Explosion3
+{
+  Path "Models/misc"     
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin4.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin5.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin6.png" 
+
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0     //Scale 
+
+
+   Frame EX09 A 0 "Explodc10"   
+   Frame EX09 B 0 "Explodc11" 
+   Frame EX09 C 0 "Explodc12"   
+   
+   Frame EX09 D 1 "Explodc13" 
+   Frame EX09 E 1 "Explodc14"
+   Frame EX09 F 2 "Explodc15"
+   
+   Frame EX09 G 2 "Explodc16"
+   Frame EX09 H 2 "Explodc17" 
+   Frame EX09 I 2 "Explodc18"
+   Frame EX09 J 2 "Explodc19"
+
+   }
+
+
+///////////////////////////////////////////
+// Explosion3Toxic  - 19 FRAMES from bright to dark
+// Explosion3Toxic   Multiskin part1
+///////////////////////////////////////////
+Model Explosion3Toxic
+{
+  Path "Models/misc"     
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin0-Toxic.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin1-Toxic.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin2-Toxic.png" 
+  
+  Model 3 "Explosion.md2"   
+  Skin 3 "Explosionskin3-Toxic.png" 
+  
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0     //Scale 
+
+
+   Frame EX10 A 0 "Explodc1"   
+   Frame EX10 B 0 "Explodc2" 
+   Frame EX10 C 0 "Explodc3"   
+   
+   Frame EX10 D 1 "Explodc4" 
+   Frame EX10 E 1 "Explodc5"
+   Frame EX10 F 2 "Explodc6"
+   
+   Frame EX10 G 2 "Explodc7"
+   Frame EX10 H 2 "Explodc8" 
+   Frame EX10 I 2 "Explodc9"
+   
+   Frame EX10 J 3 "Explodc7"
+   Frame EX10 K 3 "Explodc8" 
+   Frame EX10 L 3 "Explodc9"
+   }
+   
+///////////////////////////////////////////
+//Explosion3Toxic Multiskin part2
+///////////////////////////////////////////
+
+Model Explosion3Toxic
+{
+  Path "Models/misc"     
+  Model 0 "Explosion.md2"   
+  Skin 0 "Explosionskin4-Toxic.png" 
+  
+  Model 1 "Explosion.md2"   
+  Skin 1 "Explosionskin5-Toxic.png"
+  
+  Model 2 "Explosion.md2"   
+  Skin 2 "Explosionskin6-Toxic.png" 
+
+  
+  
+  OFFSET 0 0 10	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 1.0 1.0 1.0     //Scale 
+
+
+   Frame EX11 A 0 "Explodc10"   
+   Frame EX11 B 0 "Explodc11" 
+   Frame EX11 C 0 "Explodc12"   
+
+   Frame EX11 D 1 "Explodc13" 
+   Frame EX11 E 1 "Explodc14"
+   Frame EX11 F 2 "Explodc15"
+   
+   Frame EX11 G 2 "Explodc16"
+   Frame EX11 H 2 "Explodc17" 
+   Frame EX11 I 2 "Explodc18"
+   Frame EX11 J 2 "Explodc19"
+
+   }
+
+
+
+

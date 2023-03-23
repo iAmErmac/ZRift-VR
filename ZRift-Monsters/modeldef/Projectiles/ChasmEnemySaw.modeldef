@@ -1,0 +1,15 @@
+Model JokerSawBlade
+{
+   Path "models/Projectiles/EnemySaw"   	
+   Model 0 "EnemySaw.md2"   
+   Skin 0 "EnemySaw.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90
+   PITCHFROMMOMENTUM
+   ROTATING
+   Rotation-Speed 20
+
+//IdleA
+   Frame SAW2 X 0 "IdleA1"   
+   
+}

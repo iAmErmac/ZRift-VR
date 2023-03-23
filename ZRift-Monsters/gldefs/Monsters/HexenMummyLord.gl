@@ -1,0 +1,60 @@
+
+Brightmap texture models/MONSTERS/HexenMonsters/MummySkin1.png
+{
+Map "Materials/Monsters/MummyLord_Bright.png"
+	
+}
+
+
+
+//BY Ghastly Dragon
+
+Pointlight STracer1
+{
+Color 0.6 0.5 0.0
+Size 16
+}
+
+Pointlight STracer2
+{
+Color 0.8 0.6 0.0
+Size 48
+}
+
+Pointlight STracer3
+{
+Color 1.0 0.8 0.0
+Size 64
+}
+
+Pointlight STracer4
+{
+Color 0.8 0.3 0.0
+Size 56
+}
+
+Pointlight STracer5
+{
+Color 0.6 0.0 0.0
+Size 48
+}
+
+Pointlight STracer6
+{
+Color 0.3 0.0 0.0
+Size 24
+}
+
+Object STracerPuff
+{
+Frame FTRA { Light STracer1 }
+}
+
+Object STracer
+{
+Frame FTRAK { Light STracer2 }
+Frame FTRAL { Light STracer3 }
+Frame FTRAM { Light STracer4 }
+Frame FTRAN { Light STracer5 }
+Frame FTRAO { Light STracer6 }
+}

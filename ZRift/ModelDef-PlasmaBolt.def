@@ -1,0 +1,13 @@
+Model PlasmaPellet
+{
+   Path "models/effects"   	
+   Model 0 "LongBolt.md2"   
+   Skin 0 "BlueBolt.png"    
+   Scale 0.60 0.60 0.60  
+   AngleOffset -90 
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame PLP1 X 0 "IdleA1"   
+   
+}

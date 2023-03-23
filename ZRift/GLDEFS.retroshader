@@ -1,0 +1,9 @@
+hardwareshader postprocess beforebloom
+{
+	Name "RetroShader"
+	Shader "shaders/retroshader.fp" 330
+	Uniform int posterization
+	Uniform int postcolors
+	Uniform float postgamma
+	Uniform float pixelation
+}

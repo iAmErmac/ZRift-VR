@@ -1,0 +1,12 @@
+Model ChasmMinePickup
+{
+   Path "models/items"   	
+   Model 0 "MineBox.md2"   
+   Skin 0 "MineBox.png"    
+   Scale 0.23 0.23 0.23  
+   AngleOffset 90 
+
+//IdleA
+   Frame LMIX A 0 "IdleA1"   
+   
+}

@@ -1,0 +1,10 @@
+// custom md2 file...  
+MODEL SkullWizardProjectile
+{ 
+Path "Models/Projectiles/SkullShot" 
+SKIN 0 "Skullshot0.png"  
+MODEL 0 "SkullShot.md2" 
+Scale 1.0 1.0 1.0 
+// POLY set 1 
+frame SWPJ A 0 "POLY" 
+} 

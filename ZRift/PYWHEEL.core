@@ -1,0 +1,109 @@
+ChasmPlayer
+{
+rename "ChasmChainFist", "ChainFist 9000";
+rename "ChasmFists", "Fists";
+rename "ChasmChaingun", "Volcano";
+rename "ChasmCrossbow", "Laser Crossbow";
+rename "ChasmDestroyer", "Mega Destroyer";
+rename "ChasmMineWeapon", "Land Mines";
+rename "ChasmPlasmaThrower", "Plasma Thrower";
+rename "ChasmRifle", "Rifle";
+rename "ChasmRocketL", "Grenader";
+rename "ChasmSaw", "Blade Gun";
+rename "ChasmShotgun", "Super Shotgun";
+forceicon "ChasmChainFist", "WEP0B0";
+forceicon "ChasmFists", "WEP0A0";
+forceicon "ChasmRifle", "WEP0C0";
+forceicon "ChasmShotgun", "WEP0D0";
+forceicon "ChasmChaingun", "WEP0E0";
+forceicon "ChasmRocketL", "WEP0F0";
+forceicon "ChasmCrossbow", "WEP0G0";
+forceicon "ChasmDestroyer", "WEP0H0";
+forceicon "ChasmSaw", "WEP0I0";
+forceicon "ChasmMineWeapon", "WEP0J0";
+forceicon "ChasmPlasmaThrower", "WEP0K0";
+/////EXCLUDE DOOM AND QUAKE ITEMS
+exclude "ChasmPistol", "WEP0L0";
+hide "ChasmPistol", "WEP0L0";
+exclude "ChasmDoomChainFist", "WEP0M0";
+hide "ChasmDoomChainFist", "WEP0M0";
+exclude "ChasmBoomstick", "WEP0N0";
+hide "ChasmBoomstick", "WEP0N0";
+}
+
+ChasmDoomPlayer
+{
+rename "ChasmDoomChainFist", "Fist of Doom";
+rename "ChasmFists", "Fists";
+rename "ChasmChaingun", "Volcano";
+rename "ChasmCrossbow", "Laser Crossbow";
+rename "ChasmDestroyer", "Mega Destroyer";
+rename "ChasmMineWeapon", "Land Mines";
+rename "ChasmPlasmaThrower", "Plasma Thrower";
+rename "ChasmPistol", "Pistol";
+rename "ChasmRocketL", "Grenader";
+rename "ChasmSaw", "Blade Gun";
+rename "ChasmShotgun", "Super Shotgun";
+forceicon "ChasmDoomChainFist", "WEP0M0";
+forceicon "ChasmFists", "WEP0A0";
+forceicon "ChasmPistol", "WEP0L0";
+forceicon "ChasmShotgun", "WEP0D0";
+forceicon "ChasmChaingun", "WEP0E0";
+forceicon "ChasmRocketL", "WEP0F0";
+forceicon "ChasmCrossbow", "WEP0G0";
+forceicon "ChasmDestroyer", "WEP0H0";
+forceicon "ChasmSaw", "WEP0I0";
+forceicon "ChasmMineWeapon", "WEP0J0";
+forceicon "ChasmPlasmaThrower", "WEP0K0";
+/////EXCLUDE RIFT AND QUAKE ITEMS
+exclude "ChasmRifle", "WEP0C0";
+hide "ChasmRifle", "WEP0C0";
+exclude "ChasmChainFist", "WEP0B0";
+hide "ChasmChainFist", "WEP0B0";
+exclude "ChasmBoomstick", "WEP0N0";
+hide "ChasmBoomstick", "WEP0N0";
+}
+
+ChasmQuakePlayer
+{
+rename "ChasmChainFist", "ChainFist 9000";
+rename "ChasmFists", "Fists";
+rename "ChasmChaingun", "Volcano";
+rename "ChasmCrossbow", "Laser Crossbow";
+rename "ChasmDestroyer", "Mega Destroyer";
+rename "ChasmMineWeapon", "Land Mines";
+rename "ChasmPlasmaThrower", "Plasma Thrower";
+rename "ChasmBoomstick", "Boomstick";
+rename "ChasmRocketL", "Grenader";
+rename "ChasmSaw", "Blade Gun";
+rename "ChasmShotgun", "Super Shotgun";
+forceicon "ChasmChainFist", "WEP0B0";
+forceicon "ChasmFists", "WEP0A0";
+forceicon "ChasmBoomstick", "WEP0N0";
+forceicon "ChasmShotgun", "WEP0D0";
+forceicon "ChasmChaingun", "WEP0E0";
+forceicon "ChasmRocketL", "WEP0F0";
+forceicon "ChasmCrossbow", "WEP0G0";
+forceicon "ChasmDestroyer", "WEP0H0";
+forceicon "ChasmSaw", "WEP0I0";
+forceicon "ChasmMineWeapon", "WEP0J0";
+forceicon "ChasmPlasmaThrower", "WEP0K0";
+//EXCLUDE RIFT ADN DOOM ITEMS
+exclude "ChasmRifle", "WEP0C0";
+hide "ChasmRifle", "WEP0C0";
+exclude "ChasmDoomChainFist", "WEP0M0";
+hide "ChasmDoomChainFist", "WEP0M0";
+exclude "ChasmPistol", "WEP0L0";
+hide "ChasmPistol", "WEP0L0";
+
+
+//Info
+//exclude "weaponactor";
+//hide "weaponactor";
+//merge "weaponactor1", "weaponactor2";
+//forceicon "weaponactor", "AAAA A 0";
+//include "weaponactor";
+}
+
+
+

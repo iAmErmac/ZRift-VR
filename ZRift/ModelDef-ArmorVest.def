@@ -1,0 +1,15 @@
+Model RedVest
+{
+   Path "models/items"   	
+   Model 0 "ArmorVest.md2"   
+   Skin 0 "ArmorVest.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90 
+   ZOffset 15
+   ROTATING
+   Rotation-Speed 2
+
+//IdleA
+   Frame RARM X 0 "IdleA1"   
+   
+}

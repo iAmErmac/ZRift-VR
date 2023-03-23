@@ -1,0 +1,8 @@
+STARTUPTYPE = "Hexen"
+STARTUPTITLE = "ZRift - Chasm in Doom v1.1"
+STARTUPCOLORS = "95 91 7b", "4c 00 00"
+STARTUPSONG = ""
+PAGESCALE = "Fill"
+PlayerClasses = "ChasmPlayer" , "ChasmDoomPlayer" , "ChasmQuakePlayer"
+
+//IWAD = "Doom2.wad"

@@ -1,0 +1,33 @@
+Model ChasmSaw
+{
+   Path "models/effects"   	
+   Model 0 "PlayerSaw.md2"   
+   Skin 0 "PlayerSaw.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+   ZOffSet 20
+   ROTATING
+   Rotation-Speed 2
+   RollOffset 25
+
+//IdleA
+   Frame PSAX A 0 "IdleA1"   
+   
+}
+
+Model RecoveredSaw
+{
+   Path "models/effects"   	
+   Model 0 "PlayerSaw.md2"   
+   Skin 0 "PlayerSaw.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+   ZOffSet 20
+   ROTATING
+   Rotation-Speed 2
+   RollOffset 25
+
+//IdleA
+   Frame PSAX B 0 "IdleA1"   
+   
+}

@@ -1,0 +1,13 @@
+Model ChasmTracer
+{
+   Path "models/effects"   	
+   Model 0 "LongBolt.md2"   
+   Skin 0 "LongBolt.png"    
+   Scale 0.19 0.19 0.19  
+   AngleOffset -90 
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame CRS1 W 0 "IdleA1"   
+   
+}

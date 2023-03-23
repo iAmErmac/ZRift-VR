@@ -1,0 +1,50 @@
+actor PiggyMeleePuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  Scale 0.3
+  RenderStyle Add
+  Alpha 0.95
+  seesound "Piggy/Bite"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    stop
+  Crash:
+    TNT1 A 0
+    stop
+  Melee:
+	TNT1 A 0
+    stop
+  }
+}
+
+
+
+
+
+
+actor FatGuyMeleePuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  Scale 0.3
+  RenderStyle Add
+  Alpha 0.95
+  seesound "FatGuy/Hit"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    stop
+  Crash:
+    TNT1 A 0
+    stop
+  Melee:
+	TNT1 A 0
+    stop
+  }
+}

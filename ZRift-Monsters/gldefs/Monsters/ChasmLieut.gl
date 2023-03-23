@@ -1,0 +1,73 @@
+//////////////////////////
+//Chasm Monster Lieutenant Brightmap
+////////////////////////// 
+
+material texture "models/monsters/MongStratos/Lieutenant.png" {
+	brightmap "materials/monsters/Lieutenant_brightmap.png"        
+}
+
+
+//////////////////////////
+//Chasm Monster Lieutenant PNR (specular workflow)
+//////////////////////////
+//NOT NEEDED ATM
+//////////////////////////
+
+//////////////////////////
+// LIEUT LIGHT float
+flickerlight2 LIGHT-CHASMLIEUT
+{
+    color 0.0 0.3 0.0
+    size 30
+    secondarySize 40
+    interval 0.75
+    offset 0 50 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmLieut
+{
+	frame MSI1  { light LIGHT-CHASMLIEUT }
+	frame MSI2  { light LIGHT-CHASMLIEUT }
+	frame MSP1  { light LIGHT-CHASMLIEUT }
+	frame MSP2  { light LIGHT-CHASMLIEUT }
+	frame MSA2  { light LIGHT-CHASMLIEUT }
+	frame MSA1  { light LIGHT-CHASMLIEUT }
+	frame MSA3  { light LIGHT-CHASMLIEUT }
+    }
+    
+
+//////////////////////////
+// LIEUT LIGHT Fire weapon
+pointlight LIGHT-CHASMLIEUT-FIRE
+{
+    color 0.0 0.7 0.0
+    size 40
+    offset 0 50 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmLieut
+{
+	frame MSA1E { light LIGHT-CHASMLIEUT-FIRE }
+	frame MSA1F { light LIGHT-CHASMLIEUT-FIRE }
+    }
+    
+//////////////////////////
+// LIEUT LIGHT Fire weapon
+pointlight LIGHT-LieutBall
+{
+    color 0.0 0.5 0.0
+    size 25
+    offset 0 0 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmLieutBall
+{
+	frame PLZM { light LIGHT-LieutBall }
+    }
+    

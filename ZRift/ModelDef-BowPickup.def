@@ -1,0 +1,15 @@
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "LaserCrossbowPickup.md2"   
+   Skin 0 "LaserCrossbowPickup.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90 
+   ZOffset 15
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame CRSX A 0 "IdleA1"   
+   
+}

@@ -1,0 +1,65 @@
+Model ChasmScorpy
+{
+   Path "models/monsters"   	
+   Model 0 "Scorpy.md2"   
+   Skin 0 "Scorpy.png"    
+   Scale 0.35 0.35 0.35  
+   AngleOffset 90 
+
+   Frame SCW1 A 0 "Walk1"    	
+   Frame SCW1 B 0 "Walk2"    
+   Frame SCW1 C 0 "Walk3"    
+   Frame SCW1 D 0 "Walk4" 
+   Frame SCW1 E 0 "Walk5" 
+   Frame SCW1 F 0 "Walk6" 
+   Frame SCW1 G 0 "Walk7" 
+   Frame SCW1 H 0 "Walk8"
+      	
+///////////////////////////////////////////
+// AttackA	- 14 Frames 
+   Frame SCA1 A 0 "AttackA1"    	
+   Frame SCA1 B 0 "AttackA2"    
+   Frame SCA1 C 0 "AttackA3"    
+   Frame SCA1 D 0 "AttackA4" 
+   Frame SCA1 E 0 "AttackA5" 
+   Frame SCA1 F 0 "AttackA6" 
+   Frame SCA1 G 0 "AttackA7" 
+   Frame SCA1 H 0 "AttackA8" 
+   Frame SCA1 I 0 "AttackA9" 
+   Frame SCA1 J 0 "AttackA10" 
+   Frame SCA1 K 0 "AttackA11"  
+ 
+
+///////////////////////////////////////////
+// PainA	- 10 Frames 
+   Frame SCP1 A 0 "PainA1"    	
+   Frame SCP1 B 0 "PainA2"    
+   Frame SCP1 C 0 "PainA3"    
+   Frame SCP1 D 0 "PainA4" 
+   Frame SCP1 E 0 "PainA5" 
+   Frame SCP1 F 0 "PainA6" 
+
+
+///////////////////////////////////////////
+// DieA		- 25 Frames 
+   Frame SCD1 A 0 "DieA1"    	
+   Frame SCD1 B 0 "DieA2"    
+   Frame SCD1 C 0 "DieA3"    
+   Frame SCD1 D 0 "DieA4" 
+   Frame SCD1 E 0 "DieA5" 
+   Frame SCD1 F 0 "DieA6" 
+   Frame SCD1 G 0 "DieA7" 
+   Frame SCD1 H 0 "DieA8"
+
+//Jump
+   Frame SCJ1 A 0 "JumpA1"    	
+   Frame SCJ1 B 0 "JumpA2"    
+   Frame SCJ1 C 0 "JumpA3"    
+   Frame SCJ1 D 0 "JumpA4" 
+   Frame SCJ1 E 0 "JumpA5" 
+   Frame SCJ1 F 0 "JumpA6" 
+   Frame SCJ1 G 0 "JumpA7" 
+   Frame SCJ1 H 0 "JumpA8"
+   Frame SCJ1 I 0 "JumpA9" 
+
+}

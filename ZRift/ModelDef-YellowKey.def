@@ -1,0 +1,15 @@
+Model YellowSkull
+{
+   Path "models/items"   	
+   Model 0 "Key.md2"   
+   Skin 0 "YellowKey.png"    
+   Scale 0.10 0.10 0.10  
+   AngleOffset 90 
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame YSKU A 0 "IdleA1"  
+   Frame YSKU B 0 "IdleA1"  
+   
+}

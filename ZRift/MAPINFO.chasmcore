@@ -1,0 +1,58 @@
+gameinfo
+{
+playerclasses = "ChasmPlayer"
+NoRandomPlayerClass=True
+addeventhandlers="ImpRambler"
+addeventhandlers="PinkyRambler"
+dimcolor = "0b0a07"
+dimamount = 0.95
+gl_menu_blur = 0.5
+}
+
+
+
+ClearSkills
+
+skill Easy
+{
+    AmmoFactor = 1.25
+	DropAmmoFactor = 1.25
+	DamageFactor = 0.75
+	MonsterHealth = 0.75
+	ArmorFactor = 1.25
+	HealthFactor = 1.25
+	Aggressiveness = 0.2
+	SpawnFilter = Normal
+	Name = "Rookie"
+	PicName = "CH_EASY"
+	MustConfirm = "Enemies deal less damage and have less health. All pickups give 25% more."
+}
+
+skill Normal
+{
+    AmmoFactor = 1.0
+	DropAmmoFactor = 1.0
+	DamageFactor = 1.0
+	ArmorFactor = 1.0
+	HealthFactor = 1.0
+	Aggressiveness = 0.3
+	SpawnFilter = Hard
+	Name = "Soldier"
+	PicName = "CH_NORM"
+	MustConfirm = "Enemies and pickups are 'balanced'."
+}
+
+skill Hard
+{
+    AmmoFactor = 1
+	DropAmmoFactor = 1
+	DamageFactor = 1.50
+	MonsterHealth = 1.50
+	ArmorFactor = 1
+	HealthFactor = 1
+	Aggressiveness = 0.4
+	SpawnFilter = Hard
+	Name = "Spec Ops"
+	PicName = "CH_HARD"
+	MustConfirm = "Enemies deal 50% more damage and have 50% more health."
+}

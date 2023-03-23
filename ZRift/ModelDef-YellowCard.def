@@ -1,0 +1,16 @@
+Model YellowCard
+{
+   Path "models/items"   	
+   Model 0 "Card.md2"   
+   Skin 0 "YellowCard.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset 90 
+   ZOffset 10
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame YKEY A 0 "IdleA1"  
+   Frame YKEY B 0 "IdleA1"  
+   
+}

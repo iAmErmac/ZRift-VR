@@ -1,0 +1,167 @@
+Actor TreeSpawner1 : RandomSpawner replaces BigTree
+{
+dropitem "Tree01",255, 10
+dropitem "Tree01Brown",255, 10
+dropitem "Tree01Empty",255, 10
+dropitem "Tree02",255, 10
+dropitem "Tree02Brown",255, 10
+dropitem "Tree02Empty",255, 10
+dropitem "Tree03",255, 10
+dropitem "Tree03Brown",255, 10
+dropitem "Tree03Empty",255, 10
+}
+
+Actor TreeSpawner2 : RandomSpawner replaces TorchTree
+{
+dropitem "Tree01",255, 10
+dropitem "Tree01Brown",255, 10
+dropitem "Tree01Empty",255, 10
+dropitem "Tree02",255, 10
+dropitem "Tree02Brown",255, 10
+dropitem "Tree02Empty",255, 10
+dropitem "Tree03",255, 10
+dropitem "Tree03Brown",255, 10
+dropitem "Tree03Empty",255, 10
+}
+
+//////////////////////////////////////
+//TREE01
+//////////////////////////////////////
+Actor Tree01
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR01 A 1       //Just for Preview Sit 
+		loop
+	}
+}
+
+Actor Tree01Brown
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR01 B 1       //Just for Preview Sit 
+		loop
+	}
+}
+
+Actor Tree01Empty
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR01 C 1       //Just for Preview Sit 
+		loop
+	}
+}
+//////////////////////////////////////
+//TREE02
+//////////////////////////////////////
+Actor Tree02
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR02 A 1       //Just for Preview Sit 
+		loop
+	}
+}
+
+Actor Tree02Brown
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR02 B 1       //Just for Preview Sit 
+		loop
+	}
+}
+
+Actor Tree02Empty
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR02 C 1       //Just for Preview Sit 
+		loop
+	}
+}
+//////////////////////////////////////
+//TREE03
+//////////////////////////////////////
+Actor Tree03
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR03 A 1       //Just for Preview Sit 
+		loop
+	}
+}
+
+Actor Tree03Brown
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR03 B 1       //Just for Preview Sit 
+		loop
+	}
+}
+
+Actor Tree03Empty
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TR03 C 1       //Just for Preview Sit 
+		loop
+	}
+}

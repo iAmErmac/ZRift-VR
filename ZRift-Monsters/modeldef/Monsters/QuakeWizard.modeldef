@@ -1,0 +1,132 @@
+Model Scrag
+{
+   Path "models/monsters/QuakeMonsters"   
+   Model 0 "Wizard.md3"   
+   Skin 0 "Wizard.pcx"    
+   ZOffset 84
+   Scale 3.9 3.9 3.9          
+
+   FrameIndex WIZ1 A 0 0
+   FrameIndex WIZ1 B 0 1
+   FrameIndex WIZ1 C 0 2
+   FrameIndex WIZ1 D 0 3
+   FrameIndex WIZ1 E 0 4
+   FrameIndex WIZ1 F 0 5
+   FrameIndex WIZ1 G 0 6
+   FrameIndex WIZ1 H 0 7
+   FrameIndex WIZ1 I 0 8
+   FrameIndex WIZ1 J 0 9
+   FrameIndex WIZ1 K 0 10
+   FrameIndex WIZ1 L 0 11
+   FrameIndex WIZ1 M 0 12
+   FrameIndex WIZ1 N 0 13
+   FrameIndex WIZ1 O 0 14
+   FrameIndex WIZ2 A 0 15
+   FrameIndex WIZ2 B 0 16
+   FrameIndex WIZ2 C 0 17
+   FrameIndex WIZ2 D 0 18
+   FrameIndex WIZ2 E 0 19
+   FrameIndex WIZ2 F 0 20
+   FrameIndex WIZ2 G 0 21
+   FrameIndex WIZ2 H 0 22
+   FrameIndex WIZ2 I 0 23
+   FrameIndex WIZ2 J 0 24
+   FrameIndex WIZ2 K 0 25
+   FrameIndex WIZ2 L 0 26
+   FrameIndex WIZ2 M 0 27
+   FrameIndex WIZ2 N 0 28
+   FrameIndex WIZ3 A 0 29
+   FrameIndex WIZ3 B 0 30
+   FrameIndex WIZ3 C 0 31
+   FrameIndex WIZ3 D 0 32
+   FrameIndex WIZ3 E 0 33
+   FrameIndex WIZ3 F 0 34
+   FrameIndex WIZ3 G 0 35
+   FrameIndex WIZ3 H 0 36
+   FrameIndex WIZ3 I 0 37
+   FrameIndex WIZ3 J 0 38
+   FrameIndex WIZ3 K 0 39
+   FrameIndex WIZ3 L 0 40
+   FrameIndex WIZ3 M 0 41
+   FrameIndex WIZ4 A 0 42
+   FrameIndex WIZ4 B 0 43
+   FrameIndex WIZ4 C 0 44
+   FrameIndex WIZ4 D 0 45
+   FrameIndex WIZ5 A 0 46
+   FrameIndex WIZ5 B 0 47
+   FrameIndex WIZ5 C 0 48
+   FrameIndex WIZ5 D 0 49
+   FrameIndex WIZ5 E 0 50
+   FrameIndex WIZ5 F 0 51
+   FrameIndex WIZ5 G 0 52
+   FrameIndex WIZ5 H 0 53
+}
+
+Model WizardAcid
+{
+   Path "models/monsters/QuakeMonsters"  
+   Model 0 "fireball.md3"   
+   Skin 0 "fireball.pcx"  
+   PITCHFROMMOMENTUM  
+   Scale 1.0 1.0 1.0          
+
+   FrameIndex BAL7 A 0 0
+   FrameIndex BAL7 B 0 1
+   FrameIndex BAL7 C 0 2
+   FrameIndex BAL7 D 0 3
+}
+
+Model WizardHead
+{
+   Path "models/monsters/QuakeMonsters"  
+   Model 0 "WizHead.md3"   
+   Skin 0 "WizHead.pcx"
+   ROTATING
+   Rotation-Speed 5    
+   Scale 1.0 1.0 1.0      
+
+   FrameIndex GIBS A 0 0
+}
+
+Model WizardHead
+{
+   Path "models/monsters/QuakeMonsters"   
+   Model 0 "WizHead.md3"   
+   Skin 0 "WizHead.pcx"    
+   Scale 1.0 1.0 1.0      
+
+   FrameIndex GIBS B 0 0
+}
+
+Model WizardHead2
+{
+   Path "models/monsters/QuakeMonsters"  
+   Model 0 "WizHead.md3"   
+   Skin 0 "WizHead.pcx"    
+   Scale 1.0 1.0 1.0      
+
+   FrameIndex GIBS B 0 0
+}
+
+
+Model GIB11
+{
+   Path "models/monsters/QuakeMonsters"     
+   Model 0 "GIB1.md3"   
+   Skin 0 "GIB1.pcx"
+   ROTATING
+   Rotation-Speed 5    
+   Scale 0.7 0.7 0.7          
+
+   FrameIndex GIBS A 0 0
+}
+
+Model GIB11
+{
+   Path "models/monsters/QuakeMonsters"    
+   Model 0 "GIB1.md3"   
+   Skin 0 "GIB1.pcx"    
+   Scale 0.7 0.7 0.7          
+
+   FrameIndex GIBS B 0 0
+}

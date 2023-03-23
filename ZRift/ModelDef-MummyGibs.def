@@ -1,0 +1,46 @@
+
+Model MummyArm1
+{
+  Path "Models/misc"   
+  Model 0 "LIMB02A-DeadguyHand1.md3"   
+  SurfaceSkin 0 0 "LIMB18-Mummy-SKIN.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI02 A 0 0 
+}
+
+   
+Model MummyArm2
+{
+  Path "Models/misc"   
+  Model 0 "LIMB02B-DeadguyHand2.md3"   
+  SurfaceSkin 0 0 "LIMB18-Mummy-SKIN.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI02 B 0 0 
+}
+
+   Model MummyHead
+{
+  Path "Models/misc"   
+  Model 0 "LIMB02C-DeadguyHead.md3"   
+  SurfaceSkin 0 0 "LIMB18-Mummy-SKIN.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI02 C 0 0 
+}

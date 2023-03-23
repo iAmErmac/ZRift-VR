@@ -1,0 +1,378 @@
+//FISTS
+Texture WEP0A0
+    pic "sprites/fists/Wfists0001.PNG" tics 2
+    pic "sprites/fists/Wfists0002.PNG" tics 2
+    pic "sprites/fists/Wfists0003.PNG" tics 2
+    pic "sprites/fists/Wfists0004.PNG" tics 2
+    pic "sprites/fists/Wfists0005.PNG" tics 2
+    pic "sprites/fists/Wfists0006.PNG" tics 2
+    pic "sprites/fists/Wfists0007.PNG" tics 2
+    pic "sprites/fists/Wfists0008.PNG" tics 2
+    pic "sprites/fists/Wfists0009.PNG" tics 2
+    pic "sprites/fists/Wfists0010.PNG" tics 2
+    pic "sprites/fists/Wfists0011.PNG" tics 2
+    pic "sprites/fists/Wfists0012.PNG" tics 2
+    pic "sprites/fists/Wfists0013.PNG" tics 2
+    pic "sprites/fists/Wfists0014.PNG" tics 2
+    pic "sprites/fists/Wfists0015.PNG" tics 2
+    pic "sprites/fists/Wfists0016.PNG" tics 2
+    pic "sprites/fists/Wfists0017.PNG" tics 2
+    pic "sprites/fists/Wfists0018.PNG" tics 2
+    pic "sprites/fists/Wfists0019.PNG" tics 2
+    pic "sprites/fists/Wfists0020.PNG" tics 2
+    pic "sprites/fists/Wfists0021.PNG" tics 2
+    pic "sprites/fists/Wfists0022.PNG" tics 2
+    pic "sprites/fists/Wfists0023.PNG" tics 2
+
+//CHAINFIST
+Texture WEP0B0
+    pic "sprites/chainfist/Wchainfist0001.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0002.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0003.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0004.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0005.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0006.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0007.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0008.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0009.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0010.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0011.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0012.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0013.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0014.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0015.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0016.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0017.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0018.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0019.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0020.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0021.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0022.PNG" tics 2
+    pic "sprites/chainfist/Wchainfist0023.PNG" tics 2
+    
+//Rifle
+Texture WEP0C0
+    pic "sprites/Rifle/Wrifle0001.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0002.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0003.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0004.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0005.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0006.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0007.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0008.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0009.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0010.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0011.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0012.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0013.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0014.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0015.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0016.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0017.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0018.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0019.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0020.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0021.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0022.PNG" tics 2
+    pic "sprites/Rifle/Wrifle0023.PNG" tics 2
+    
+//SSG
+Texture WEP0D0
+    pic "sprites/SSG/Wssg0001.PNG" tics 2
+    pic "sprites/SSG/Wssg0002.PNG" tics 2
+    pic "sprites/SSG/Wssg0003.PNG" tics 2
+    pic "sprites/SSG/Wssg0004.PNG" tics 2
+    pic "sprites/SSG/Wssg0005.PNG" tics 2
+    pic "sprites/SSG/Wssg0006.PNG" tics 2
+    pic "sprites/SSG/Wssg0007.PNG" tics 2
+    pic "sprites/SSG/Wssg0008.PNG" tics 2
+    pic "sprites/SSG/Wssg0009.PNG" tics 2
+    pic "sprites/SSG/Wssg0010.PNG" tics 2
+    pic "sprites/SSG/Wssg0011.PNG" tics 2
+    pic "sprites/SSG/Wssg0012.PNG" tics 2
+    pic "sprites/SSG/Wssg0013.PNG" tics 2
+    pic "sprites/SSG/Wssg0014.PNG" tics 2
+    pic "sprites/SSG/Wssg0015.PNG" tics 2
+    pic "sprites/SSG/Wssg0016.PNG" tics 2
+    pic "sprites/SSG/Wssg0017.PNG" tics 2
+    pic "sprites/SSG/Wssg0018.PNG" tics 2
+    pic "sprites/SSG/Wssg0019.PNG" tics 2
+    pic "sprites/SSG/Wssg0020.PNG" tics 2
+    pic "sprites/SSG/Wssg0021.PNG" tics 2
+    pic "sprites/SSG/Wssg0022.PNG" tics 2
+    pic "sprites/SSG/Wssg0023.PNG" tics 2
+    
+//Volcano
+Texture WEP0E0
+    pic "sprites/Volcano/Wvolcano0001.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0002.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0003.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0004.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0005.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0006.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0007.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0008.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0009.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0010.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0011.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0012.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0013.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0014.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0015.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0016.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0017.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0018.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0019.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0020.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0021.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0022.PNG" tics 2
+    pic "sprites/Volcano/Wvolcano0023.PNG" tics 2
+
+//Grenader
+Texture WEP0F0
+    pic "sprites/Rocketl/Wrocket0001.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0002.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0003.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0004.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0005.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0006.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0007.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0008.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0009.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0010.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0011.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0012.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0013.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0014.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0015.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0016.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0017.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0018.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0019.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0020.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0021.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0022.PNG" tics 2
+    pic "sprites/Rocketl/Wrocket0023.PNG" tics 2
+
+//Xbow
+Texture WEP0G0
+    pic "sprites/Xbow/Wxbow0001.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0002.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0003.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0004.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0005.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0006.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0007.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0008.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0009.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0010.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0011.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0012.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0013.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0014.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0015.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0016.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0017.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0018.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0019.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0020.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0021.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0022.PNG" tics 2
+    pic "sprites/Xbow/Wxbow0023.PNG" tics 2
+    
+//Megadestroyer
+Texture WEP0H0
+    pic "sprites/Mega/Wmega0001.PNG" tics 2
+    pic "sprites/Mega/Wmega0002.PNG" tics 2
+    pic "sprites/Mega/Wmega0003.PNG" tics 2
+    pic "sprites/Mega/Wmega0004.PNG" tics 2
+    pic "sprites/Mega/Wmega0005.PNG" tics 2
+    pic "sprites/Mega/Wmega0006.PNG" tics 2
+    pic "sprites/Mega/Wmega0007.PNG" tics 2
+    pic "sprites/Mega/Wmega0008.PNG" tics 2
+    pic "sprites/Mega/Wmega0009.PNG" tics 2
+    pic "sprites/Mega/Wmega0010.PNG" tics 2
+    pic "sprites/Mega/Wmega0011.PNG" tics 2
+    pic "sprites/Mega/Wmega0012.PNG" tics 2
+    pic "sprites/Mega/Wmega0013.PNG" tics 2
+    pic "sprites/Mega/Wmega0014.PNG" tics 2
+    pic "sprites/Mega/Wmega0015.PNG" tics 2
+    pic "sprites/Mega/Wmega0016.PNG" tics 2
+    pic "sprites/Mega/Wmega0017.PNG" tics 2
+    pic "sprites/Mega/Wmega0018.PNG" tics 2
+    pic "sprites/Mega/Wmega0019.PNG" tics 2
+    pic "sprites/Mega/Wmega0020.PNG" tics 2
+    pic "sprites/Mega/Wmega0021.PNG" tics 2
+    pic "sprites/Mega/Wmega0022.PNG" tics 2
+    pic "sprites/Mega/Wmega0023.PNG" tics 2
+    
+//Bladegun
+Texture WEP0I0
+    pic "sprites/Disc/Wdisc0001.PNG" tics 2
+    pic "sprites/Disc/Wdisc0002.PNG" tics 2
+    pic "sprites/Disc/Wdisc0003.PNG" tics 2
+    pic "sprites/Disc/Wdisc0004.PNG" tics 2
+    pic "sprites/Disc/Wdisc0005.PNG" tics 2
+    pic "sprites/Disc/Wdisc0006.PNG" tics 2
+    pic "sprites/Disc/Wdisc0007.PNG" tics 2
+    pic "sprites/Disc/Wdisc0008.PNG" tics 2
+    pic "sprites/Disc/Wdisc0009.PNG" tics 2
+    pic "sprites/Disc/Wdisc0010.PNG" tics 2
+    pic "sprites/Disc/Wdisc0011.PNG" tics 2
+    pic "sprites/Disc/Wdisc0012.PNG" tics 2
+    pic "sprites/Disc/Wdisc0013.PNG" tics 2
+    pic "sprites/Disc/Wdisc0014.PNG" tics 2
+    pic "sprites/Disc/Wdisc0015.PNG" tics 2
+    pic "sprites/Disc/Wdisc0016.PNG" tics 2
+    pic "sprites/Disc/Wdisc0017.PNG" tics 2
+    pic "sprites/Disc/Wdisc0018.PNG" tics 2
+    pic "sprites/Disc/Wdisc0019.PNG" tics 2
+    pic "sprites/Disc/Wdisc0020.PNG" tics 2
+    pic "sprites/Disc/Wdisc0021.PNG" tics 2
+    pic "sprites/Disc/Wdisc0022.PNG" tics 2
+    pic "sprites/Disc/Wdisc0023.PNG" tics 2
+    
+//LandMines
+Texture WEP0J0
+    pic "sprites/Mine/Wmine0001.PNG" tics 2
+    pic "sprites/Mine/Wmine0002.PNG" tics 2
+    pic "sprites/Mine/Wmine0003.PNG" tics 2
+    pic "sprites/Mine/Wmine0004.PNG" tics 2
+    pic "sprites/Mine/Wmine0005.PNG" tics 2
+    pic "sprites/Mine/Wmine0006.PNG" tics 2
+    pic "sprites/Mine/Wmine0007.PNG" tics 2
+    pic "sprites/Mine/Wmine0008.PNG" tics 2
+    pic "sprites/Mine/Wmine0009.PNG" tics 2
+    pic "sprites/Mine/Wmine0010.PNG" tics 2
+    pic "sprites/Mine/Wmine0011.PNG" tics 2
+    pic "sprites/Mine/Wmine0012.PNG" tics 2
+    pic "sprites/Mine/Wmine0013.PNG" tics 2
+    pic "sprites/Mine/Wmine0014.PNG" tics 2
+    pic "sprites/Mine/Wmine0015.PNG" tics 2
+    pic "sprites/Mine/Wmine0016.PNG" tics 2
+    pic "sprites/Mine/Wmine0017.PNG" tics 2
+    pic "sprites/Mine/Wmine0018.PNG" tics 2
+    pic "sprites/Mine/Wmine0019.PNG" tics 2
+    pic "sprites/Mine/Wmine0020.PNG" tics 2
+    pic "sprites/Mine/Wmine0021.PNG" tics 2
+    pic "sprites/Mine/Wmine0022.PNG" tics 2
+    pic "sprites/Mine/Wmine0023.PNG" tics 2
+    
+
+//PlasmaThrower
+Texture WEP0K0
+    pic "sprites/Plasma/Wplasma0001.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0002.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0003.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0004.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0005.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0006.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0007.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0008.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0009.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0010.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0011.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0012.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0013.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0014.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0015.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0016.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0017.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0018.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0019.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0020.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0021.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0022.PNG" tics 2
+    pic "sprites/Plasma/Wplasma0023.PNG" tics 2
+
+//ChasmDoom Pistol
+Texture WEP0L0
+    pic "sprites/Pistol/Wpistol0001.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0002.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0003.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0004.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0005.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0006.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0007.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0008.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0009.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0010.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0011.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0012.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0013.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0014.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0015.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0016.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0017.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0018.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0019.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0020.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0021.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0022.PNG" tics 2
+    pic "sprites/Pistol/Wpistol0023.PNG" tics 2
+
+//ChasmDoomChainFist
+Texture WEP0M0
+    pic "sprites/Doomchain/Wdoomchain0001.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0002.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0003.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0004.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0005.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0006.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0007.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0008.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0009.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0010.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0011.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0012.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0013.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0014.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0015.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0016.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0017.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0018.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0019.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0020.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0021.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0022.PNG" tics 2
+    pic "sprites/Doomchain/Wdoomchain0023.PNG" tics 2
+
+Texture WEP0N0
+    pic "sprites/QuakeShot/WQuakeshot0001.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0002.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0003.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0004.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0005.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0006.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0007.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0008.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0009.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0010.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0011.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0012.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0013.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0014.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0015.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0016.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0017.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0018.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0019.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0020.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0021.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0022.PNG" tics 2
+    pic "sprites/QuakeShot/WQuakeshot0023.PNG" tics 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+Model TrooperArm1
+{
+  Path "Models/misc"   
+  Model 0 "Limb01A-Alientrooper-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB01-Alientrooper-SKIN.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI01 A 0 0 
+}
+
+   
+Model TrooperArm2
+{
+  Path "Models/misc"   
+  Model 0 "Limb01B-Alientrooper-Hand2.md3"   
+  SurfaceSkin 0 0 "LIMB01-Alientrooper-SKIN.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI01 B 0 0 
+}
+
+   Model TrooperHead
+{
+  Path "Models/misc"   
+  Model 0 "Limb01C-Alientrooper-Head.md3"   
+  SurfaceSkin 0 0 "LIMB01-Alientrooper-SKIN.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI01 C 0 0 
+}

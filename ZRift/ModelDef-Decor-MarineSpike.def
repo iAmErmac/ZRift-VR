@@ -1,0 +1,170 @@
+//////////////////////////////////////
+//Marine Body Impaled
+//Each Frame is Different Mesh/Variants For randowm Spawn
+// BOD1 ABCDEFGHIJK
+//////////////////////////////////////
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike1.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 A 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike2.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 B 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike3.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 C 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike4.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 D 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike5.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 E 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike6.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 F 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike7.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 G 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike8.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 H 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike9.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 I 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike9.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 J 0 0                        
+}
+
+Model MarineSpike
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineSpike10.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineSpike.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD1 K 0 0                        
+}
+

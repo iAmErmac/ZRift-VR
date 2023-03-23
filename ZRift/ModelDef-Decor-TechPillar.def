@@ -1,0 +1,15 @@
+//////////////////////////////////////
+//TechPillar Chasm
+Model TechPillarChasm
+{
+  Path "Models/"   
+  Model 0 "TechPillar.md3"     
+  SurfaceSkin 0 0 "TechPillar_chasm.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.55 0.55 0.55
+
+  FrameIndex TPIL B 0 0 
+}

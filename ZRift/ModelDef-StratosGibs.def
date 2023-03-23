@@ -1,0 +1,45 @@
+Model StratosLeg1
+{
+  Path "Models/misc"   
+  Model 0 "LIMB15A-Stratos-Leg1.md3"   
+  SurfaceSkin 0 0 "LIMB15-Stratos-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI15 A 0 0 
+}
+
+   
+Model StratosLeg2
+{
+  Path "Models/misc"   
+  Model 0 "LIMB15B-Stratos-Leg2.md3"   
+  SurfaceSkin 0 0 "LIMB15-Stratos-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI15 B 0 0 
+}
+
+   Model StratosHead 
+{
+  Path "Models/misc"   
+  Model 0 "LIMB15C-Stratos-Head.md3"   
+  SurfaceSkin 0 0 "LIMB15-Stratos-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI15 C 0 0 
+}

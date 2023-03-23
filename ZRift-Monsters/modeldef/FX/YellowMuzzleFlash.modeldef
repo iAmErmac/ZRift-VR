@@ -1,0 +1,12 @@
+Model YellowMuzzleFlash
+{
+   Path "models/Fx/YellowMuzzleFlash"   	
+   Model 0 "MuzzleFlash.md2"   
+   Skin 0 "MuzzleFlash.png"    
+   Scale 0.35 0.35 0.35  
+   AngleOffset 90 
+
+//IdleA
+   Frame MFSH A 0 "IdleA1"   
+   
+}

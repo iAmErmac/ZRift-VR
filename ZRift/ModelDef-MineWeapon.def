@@ -1,0 +1,30 @@
+Model ChasmMineWeapon
+{
+   Path "models/weapons"   	
+   Model 0 "MineWeapon.md2"   
+   Skin 0 "MineWeapon.png"    
+   OFFSET 1 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset -3		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.15 0.15 0.15    //Scale (negative value is to mirror left right)
+
+//FireA
+
+   Frame MINX A 0 "FireA1"    	
+   Frame MINX B 0 "FireA2"    
+   Frame MINX C 0 "FireA3"    
+   Frame MINX D 0 "FireA4" 
+   Frame MINX E 0 "FireA5" 
+   Frame MINX F 0 "FireA6" 
+   Frame MINX G 0 "FireA7" 
+   Frame MINX H 0 "FireA8"
+   Frame MINX I 0 "FireA9" 
+   Frame MINX J 0 "FireA10" 
+   Frame MINX K 0 "FireA11" 
+   Frame MINX L 0 "FireA12" 
+   Frame MINX M 0 "FireA13"
+ 
+   Frame MINX N 0 "IdleA1" 
+   
+}

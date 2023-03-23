@@ -1,0 +1,5 @@
+clearplayerclasses
+
+addplayerclass ChasmPlayer
+addplayerclass ChasmQuakePlayer
+addplayerclass ChasmDoomPlayer

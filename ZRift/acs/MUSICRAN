@@ -1,0 +1,18 @@
+#library "ChasmMusicList"
+#include "zcommon.acs"
+#define CHASMMUS 9
+
+int ChasmMusicList[CHASMMUS] = 
+{
+   "01","02","03","04","05","06","07",
+   "08","09"
+};
+
+Script 1666 OPEN 
+{
+	int i = random(0, CHASMMUS-1);
+	if(getcvar("randomizeroff")== 0)
+		{
+		SetMusic(ChasmMusicList[i],0);
+		}
+}

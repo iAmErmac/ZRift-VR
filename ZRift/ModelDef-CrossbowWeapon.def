@@ -1,0 +1,130 @@
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowIdle1.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Idle1
+
+   Frame CROX L 0 "FireA12" 
+}
+
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowCharge1.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Charge1
+
+   Frame CROY A 0 "FireA1"    	
+   Frame CROX A 0 "FireA2"    
+   
+}
+
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowFire1.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Fire1
+   	
+   Frame CROX B 0 "FireA2"    
+   Frame CROX C 0 "FireA3"     
+   
+}
+
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowCharge2.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Recoil1
+    
+   Frame CROX D 0 "FireA4" 
+   Frame CROX E 0 "FireA5" 
+   Frame CROX F 0 "FireA6"   
+}
+
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowCharge1.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Recoil2
+ 
+   Frame CROX G 0 "FireA7" 
+   Frame CROX H 0 "FireA8"
+   Frame CROX I 0 "FireA9" 
+   Frame CROX J 0 "FireA10" 
+   
+}
+
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowIdle1.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Recoil3
+
+   Frame CROX K 0 "FireA11"
+   Frame CROX L 0 "FireA12" 
+   
+}
+
+Model ChasmCrossbow
+{
+   Path "models/weapons"   	
+   Model 0 "CrossbowFireFIX.md2"   
+   Skin 0 "XBowIdle1.png"    
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Select
+   	
+   Frame CROW A 0 "FireA6"    
+   Frame CROW B 0 "FireA7"
+   Frame CROW C 0 "FireA8"    
+   Frame CROW D 0 "FireA9"   
+   Frame CROW E 0 "FireA10"    
+   Frame CROW F 0 "FireA11" 
+   Frame CROW G 0 "FireA12"    
+   
+}

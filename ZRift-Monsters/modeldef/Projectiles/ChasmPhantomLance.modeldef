@@ -1,0 +1,14 @@
+Model PhantomLance
+{
+   Path "models/Projectiles/SkeletonLance"   	
+   Model 0 "SkellySword.md2"   
+   Skin 0 "WhiteSword.png"    
+   Scale 0.40 0.40 0.40  
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame SKLX A 0 "IdleA1"   
+   
+}
+

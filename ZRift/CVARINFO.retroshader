@@ -1,0 +1,5 @@
+user float retro_pixelation    = -1;     // Higher = More pixels. Can use decimals. 1=factors pixels as if expanding 320x200 to your aspect ratio, 0 = 160x200, -1 = off
+user bool  retro_posterization = false; // Toggle posterization
+user int   retro_postcolors    = 20;    // Higher = More colors. Controls the number of levels in each channel
+user float retro_postgamma     = 0.46;  // Higher = Less colors in shadows. Keep it low for more colors allocated to shadows, else they turn full grey or black
+

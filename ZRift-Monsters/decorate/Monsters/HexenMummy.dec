@@ -1,0 +1,113 @@
+ACTOR HexenMummy
+{
+//$Category Hexen Monster
+  Health 60
+  Radius 20
+  Height 56
+  Mass 100
+  Speed 4
+  PainChance 200
+  Monster
+  +FLOORCLIP
+  SeeSound "imp/sight"
+  PainSound "imp/pain"
+  DeathSound "imp/death"
+  ActiveSound "imp/active"
+  HitObituary "$OB_IMPHIT"
+  Obituary "$OB_IMP"
+  States
+  {
+  Spawn:
+    MUM1 A 8
+    MUM1 BCDEFGHIJKLMNOPQRSTUV 2 A_Look
+    Mum1 W 8
+   Loop
+
+  See:
+    MUM2 ABCDEFGHIJKLM 2 A_Chase
+    Loop
+
+  Melee:
+   MUM3 ABCDEFGHI 3 A_FACETARGET
+   mum3 HI 1 A_SargAttack
+   MUM3 JKLMNOP 3 A_FACETARGET
+   Goto See
+
+  Missile:
+    MUM4 ABCD 4 A_FaceTarget
+    MUM4 EFGHI 2 A_TroopAttack
+    MUM4 JKLMN 4
+    Goto See
+  Pain:
+    MUM3 GFE 2
+    MUM3 DC 2 A_Pain
+    Goto See
+  Death:
+TNT1 A 0 A_SpawnItemEx("MummyArm",0,0,random(32,-16),random(-2,2),random(-2,2),random(3,-16),random(0,359),32)
+TNT1 A 0 A_SpawnItemEx("MummyLeg",0,0,random(32,-16),random(-2,2),random(-2,2),random(3,-16),random(0,359),32)
+    MUM5 ABC 8
+    MUM5 DEF 8 A_Scream
+    MUM5 GHI 6
+    MUM5 JK 6 A_NoBlocking
+
+    MUM5 L 0 A_SpawnItemEx ("MummyCrawl", 0, 0, 0, 0, 0, 0, 0)
+    Stop
+
+  }
+}
+
+ACTOR MummyArm
+{
+	Radius 8
+	Height 8
+	States
+	{
+	Spawn:
+	3dum A -1
+	Stop
+}
+}
+
+ACTOR MummyLeg
+{
+	Radius 8
+	Height 8
+	States
+	{
+	Spawn:
+	3dum A -1
+	Stop
+}
+}
+
+Actor MummyCrawl 
+{
+   Health 60
+  Radius 20
+  Height 56
+  Mass 100
+  Speed 4
+  PainChance 200
+  Monster
+  +FLOORCLIP
+  SeeSound "imp/sight"
+  PainSound "imp/pain"
+  DeathSound "imp/death"
+  ActiveSound "imp/active"
+  HitObituary "$OB_IMPHIT"
+  Obituary "$OB_IMP"
+  States
+ {
+  Spawn:
+  See:
+    MUM1 ABCDEFGHIJKLM 2 A_Chase
+    Loop
+ Melee:
+    MUM1 ML 2 A_SargAttack
+   Goto See
+
+ Death: 
+   MUM1 G -1
+   Stop
+  }
+}

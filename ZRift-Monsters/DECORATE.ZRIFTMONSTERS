@@ -1,0 +1,89 @@
+//CHASM MONSTERS
+#Include "Decorate/Monsters/ChasmGrunt.dec"
+#Include "Decorate/Monsters/ChasmHound.dec"
+#Include "Decorate/Monsters/ChasmFaust.dec"
+#Include "Decorate/Monsters/ChasmStratos.dec"
+#Include "Decorate/Monsters/ChasmLieutenant.dec"
+#Include "Decorate/Monsters/ChasmTurret.dec"
+#Include "Decorate/Monsters/ChasmRocketTurret.dec"
+#Include "Decorate/Monsters/ChasmAcidTurret.dec"
+
+//Bosses
+#Include "Decorate/Monsters/ChasmSarcof.dec"
+#Include "Decorate/Monsters/ChasmSphinx.dec"
+#Include "Decorate/Monsters/ChasmPhantomLord.dec"
+#Include "Decorate/Monsters/ChasmWorm.dec"
+
+//Egypt
+#Include "Decorate/Monsters/ChasmLion.dec"
+#Include "Decorate/Monsters/ChasmDeadGuy.dec"
+#Include "Decorate/Monsters/ChasmMummy.dec"
+#Include "Decorate/Monsters/ChasmPunisher.dec"
+#Include "Decorate/Monsters/ChasmSkeleton.dec"
+#Include "Decorate/Monsters/ChasmOgre.dec"
+
+//Medieval
+#Include "Decorate/Monsters/ChasmJoker.dec"
+#Include "Decorate/Monsters/ChasmViking.dec"
+#Include "Decorate/Monsters/ChasmPunisher2.dec"
+
+
+//Alien
+#Include "Decorate/Monsters/ChasmMincer.dec"
+#Include "Decorate/Monsters/ChasmAlienT.dec"
+#Include "Decorate/Monsters/ChasmAlienC.dec"
+
+
+//Animals
+#Include "Decorate/Monsters/ChasmScorpy.dec"
+#Include "Decorate/Monsters/ChasmPiggy.dec"
+#Include "Decorate/Monsters/ChasmRaptor.dec"
+
+//ADDON
+
+#Include "Decorate/Monsters/ChasmGoblin.dec"
+#Include "Decorate/Monsters/ChasmOrc.dec"
+
+//Fantasy
+#Include "Decorate/Monsters/ChasmPhantomLesser.dec"
+
+//MONSTER PROJECTILES
+#Include "Decorate/Projectiles/ChasmEnemyShotgunTracer.dec"
+#Include "Decorate/Projectiles/ChasmEnemyRocket.dec"
+#Include "Decorate/Projectiles/EnemyRocketModel.dec"
+#Include "Decorate/Projectiles/FireBalls.dec"
+#Include "Decorate/Projectiles/ZombieBreath.dec"
+#Include "Decorate/Projectiles/FatGuyAxe.dec"
+#Include "Decorate/Projectiles/ChasmOgreRock.dec"
+//#Include "Decorate/Projectiles/AlienLaser.dec"
+#Include "Decorate/Projectiles/BatMonster.dec"
+#Include "Decorate/Projectiles/YakBall.dec"
+#Include "Decorate/Projectiles/Hellrain.dec"
+
+//BLOOD & GORE
+#Include "Decorate/Gore/Gore.dec"
+#Include "Decorate/Gore/Blood.dec"
+#Include "Decorate/Gore/LionGore.dec"
+#Include "Decorate/Gore/DeadGuyGibs.dec"
+#Include "Decorate/Gore/FatGuyGibs.dec"
+
+
+//EFFECTS
+#Include "Decorate/FX/EnemyRezFX.dec"
+#Include "Decorate/FX/Puffs.dec"
+
+
+//Quake Monsters
+
+#Include "Decorate/Monsters/QuakeWizard.dec"
+
+
+//Hexen Monsters
+#Include "Decorate/Monsters/HexenMummy.dec"
+#Include "Decorate/Monsters/HexenMummyLord.dec"
+#Include "Decorate/Monsters/HexenImp.dec"
+#Include "Decorate/Monsters/HexenSkullWiz.dec"
+#Include "Decorate/Monsters/HexenYakman1.dec"
+
+//DoD Monsters
+#Include "Decorate/Monsters/DoDDweller.dec"

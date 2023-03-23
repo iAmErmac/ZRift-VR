@@ -1,0 +1,24 @@
+Model ChasmPlasmaThrower
+{
+   Path "models/weapons"   	
+   Model 0 "FlakGun.md2"   
+   Skin 0 "FlakGunView-Green.png"    
+   OFFSET 0 0 0            
+   AngleOffset 0         
+   PitchOffset 0           
+   RollOffset 0         
+   Scale -1.0 0.7 1.0   
+
+   Frame PLW1 A 0 "Active01"    	
+   Frame PLW1 B 0 "Active02"    
+   Frame PLW1 C 0 "Active03"    
+   Frame PLW1 D 0 "Active04" 
+   Frame PLW1 E 0 "Active05" 
+ 
+   Frame PLW2 A 0 "Pow01"    	
+   Frame PLW2 B 0 "Pow02"    
+   Frame PLW2 C 0 "Pow03"    
+   Frame PLW2 D 0 "Pow04" 
+   Frame PLW2 E 0 "Pow05" 
+   
+   }

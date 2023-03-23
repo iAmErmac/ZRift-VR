@@ -1,0 +1,46 @@
+
+Model JokerArm1
+{
+  Path "Models/misc"   
+  Model 0 "LIMB06A-Joker-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB06-Joker-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI06 A 0 0 
+}
+
+   
+Model JokerArm2
+{
+  Path "Models/misc"   
+  Model 0 "LIMB06B-Joker-Hand2.md3"   
+  SurfaceSkin 0 0 "LIMB06-Joker-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI06 B 0 0 
+}
+
+   Model JokerHead
+{
+  Path "Models/misc"   
+  Model 0 "LIMB06C-Joker-Head.md3"   
+  SurfaceSkin 0 0 "LIMB06-Joker-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI06 C 0 0 
+}

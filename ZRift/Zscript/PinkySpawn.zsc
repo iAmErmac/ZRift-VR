@@ -1,0 +1,23 @@
+class PinkyRambler:EventHandler
+{
+    override void WorldLoaded(WorldEvent e)
+	{
+        int which=random(0,2);
+        thinkeriterator pigreplacer=thinkeriterator.create("Demon");
+        actor piggg=null;
+        array<actor>pigggdelend;
+        while(piggg=actor(pigreplacer.next()))
+		{
+            class<actor> notpig="ChasmScorpy";
+            if(which==1) notpig="ChasmPiggy";
+			else if(which==2) notpig="ChasmMincer";
+            piggg.spawn(notpig,piggg.pos);
+            pigggdelend.push(piggg);
+        }
+        while(pigggdelend.size()>0)
+		{
+            pigggdelend[0].destroy();
+            pigggdelend.delete(0);
+        }
+    }
+}

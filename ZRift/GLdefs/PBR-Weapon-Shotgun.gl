@@ -1,0 +1,54 @@
+//////////////////////////
+//Chasm Shotgun Brightmap Firstperson
+
+material texture "models/weapons/Shotgun_new/Shotgun.png" {
+	brightmap "materials/weapons/ShotgunWeapon_brightmap.png"
+}
+
+//////////////////////////
+//Chasm Shotgun PBR Firstperson (specular workflow)
+material texture "models/weapons/Shotgun_new/Shotgun.png" {
+    normal "materials/weapons/ShotgunWeapon_normal.png" 
+    specular "materials/weapons/ShotgunWeapon_specular.png"
+    glossiness 5
+	specularlevel 5
+	disablefullbright
+}
+
+
+//////////////////////////
+//Chasm Shotgun Brightmap Thirdperson
+
+material texture "models/weapons/ShotgunPickup.png" {
+	brightmap "materials/weapons/ShotgunPickup_brightmap.png"
+}
+
+//////////////////////////
+//Chasm Shotgun PBR Thirdperson (specular workflow)
+material texture "models/weapons/ShotgunPickup.png" {
+    normal "materials/weapons/ShotgunPickup_normal.png" 
+    specular "materials/weapons/ShotgunPickup_specular.png"
+    glossiness 5
+	specularlevel 5
+	disablefullbright
+}
+
+
+
+//////////////////////////
+// Weapon Pickup Light
+pulselight Pickuplight-Shotgun
+{
+    color 0.8 0.8 0.6
+    offset 0.0 5.0 0.0
+    size 25
+    secondarySize 15
+    interval 1
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmShotgun
+{
+	frame SHGXA  { light Pickuplight-Shotgun }
+    }

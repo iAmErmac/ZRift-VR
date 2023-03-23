@@ -1,0 +1,13 @@
+pointlight ZombieBreath
+{
+    color 0.2 0.6 0.0
+    size 40
+    offset 0 0 0
+    attenuate 1
+    dontlightself 0
+    }
+
+Object ZombieBreath
+{
+	Frame POIX {Light ZombieBreath}
+}

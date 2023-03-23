@@ -1,0 +1,119 @@
+
+Model ChasmChainFist
+{
+  Path "Models/Weapons/"   
+  Model 0 "CHAINFIST.md3"   
+  SurfaceSkin 0 0 "Chainfist.png"
+  OFFSET 20 -30 -120 
+  AngleOffset 0
+  PitchOffset 25	
+  RollOffset 15
+  Scale -2.0 1.0 2.0
+  
+
+//CHECK Model file in Quake model tool to see frames
+// Frame 0 is always the first frame
+
+
+  FrameIndex CHF0 A 0 0 
+  FrameIndex CHF0 B 0 1 
+  FrameIndex CHF0 C 0 2
+  FrameIndex CHF0 D 0 3
+  
+
+  FrameIndex CHF0 E 0 4
+  FrameIndex CHF0 F 0 5 
+  FrameIndex CHF0 G 0 6
+  FrameIndex CHF0 H 0 7
+  FrameIndex CHF0 I 0 8
+  FrameIndex CHF0 J 0 9 
+  FrameIndex CHF0 K 0 10
+}
+
+  
+
+/////////////////////////////////
+// FRAMES FOR ANIMDEF when the saw is working
+/////////////////////////////////
+Model ChasmChainFist
+{
+  Path "Models/Weapons/"   
+  Model 0 "CHAINFIST.md3"   
+  SurfaceSkin 0 0 "Chainfist_active.png"
+  OFFSET 20 -30 -120 
+  AngleOffset 0
+  PitchOffset 25	
+  RollOffset 15
+  Scale -2.0 1.0 2.0
+  
+
+  FrameIndex CHF0 K 0 11
+  FrameIndex CHF0 L 0 12
+  FrameIndex CHF0 M 0 13
+  FrameIndex CHF0 N 0 14 
+  FrameIndex CHF0 O 0 15
+  FrameIndex CHF0 P 0 16
+  FrameIndex CHF0 Q 0 17 
+  FrameIndex CHF0 R 0 18
+  FrameIndex CHF0 S 0 19
+  FrameIndex CHF0 T 0 20
+  FrameIndex CHF0 U 0 21
+  FrameIndex CHF0 V 0 22
+  FrameIndex CHF0 W 0 23
+  
+
+  FrameIndex CHF0 X 0 24
+  FrameIndex CHF0 Y 0 25
+  FrameIndex CHF0 Z 0 26
+
+  FrameIndex CHF1 A 0 27 
+  FrameIndex CHF1 B 0 28
+  FrameIndex CHF1 C 0 29
+  FrameIndex CHF1 D 0 30
+  
+
+  FrameIndex CHF1 E 0 31
+  FrameIndex CHF1 F 0 32
+  FrameIndex CHF1 G 0 33
+  FrameIndex CHF1 H 0 34
+  FrameIndex CHF1 I 0 35
+  FrameIndex CHF1 J 0 36
+  FrameIndex CHF1 K 0 37
+  FrameIndex CHF1 L 0 38
+  FrameIndex CHF1 M 0 39
+  FrameIndex CHF1 N 0 40
+  FrameIndex CHF1 O 0 41 
+  FrameIndex CHF1 P 0 42
+  
+
+  FrameIndex CHF1 Q 0 43
+  FrameIndex CHF1 R 0 44 
+  FrameIndex CHF1 S 0 45
+  FrameIndex CHF1 T 0 46
+  FrameIndex CHF1 U 0 47
+  
+
+  FrameIndex CHF1 V 0 48
+  FrameIndex CHF1 W 0 49
+  FrameIndex CHF1 X 0 50
+  FrameIndex CHF1 Y 0 51
+  FrameIndex CHF1 Z 0 52
+}
+
+
+Model ChasmChainFist
+{
+  Path "Models/Weapons/"   
+  Model 0 "CHAINFIST.md3"   
+  SurfaceSkin 0 0 "Chainfist_pickup.png"
+  OFFSET -20 0 55 //XYZ
+  AngleOffset 0
+  PitchOffset -55	
+  RollOffset 0
+  Scale 0.4 0.4 0.4
+  ROTATING
+  Rotation-Speed 3
+
+  //Draw Weapon    
+  FrameIndex CHFX A 0 4
+}

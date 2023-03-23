@@ -1,0 +1,21 @@
+//////////////////////////
+// Blue Plasmathrower Light
+pointlight LIGHT-Blueplasmalight
+{
+    color 0.1 0.1 0.3
+    size 50
+    offset 0 0 0
+    attenuate 1
+    dontlightself 0
+    }
+
+
+object PlasmaShortFlame
+{
+	frame PLB1 { light LIGHT-Blueplasmalight }
+    }
+    
+object PlasmaFlame
+{
+	frame PLB1 { light LIGHT-Blueplasmalight }
+    }

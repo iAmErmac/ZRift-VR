@@ -1,0 +1,29 @@
+Model ChasmSawBlade
+{
+   Path "models/effects"   	
+   Model 0 "PlayerSaw.md2"   
+   Skin 0 "PlayerSaw.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+   PITCHFROMMOMENTUM
+   ROTATING
+   Rotation-Speed 20
+
+//IdleA
+   Frame SAW3 X 0 "IdleA1"   
+   
+}
+
+Model ChasmSawBlade
+{
+   Path "models/effects"   	
+   Model 0 "PlayerSaw.md2"   
+   Skin 0 "PlayerSaw.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame SAW3 Y 0 "IdleA1"   
+   
+}

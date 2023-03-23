@@ -1,0 +1,151 @@
+//////////////////////////////////////
+//////////////////////////////////////
+//Regular Chasm Tree 1
+Model Tree01
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-Full.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR01 A 0 0 
+}
+
+//////////////////////////////////////
+//Brown Chasm Tree 1
+Model Tree01Brown
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-FullBrown.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR01 B 0 0 
+}
+
+//////////////////////////////////////
+//Empty Chasm Tree 1
+Model Tree01Empty
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-empty.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR01 C 0 0 
+}
+
+
+//////////////////////////////////////
+//////////////////////////////////////
+//Regular Chasm Tree 2
+Model Tree02
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-Full.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR02 A 0 1 
+}
+
+//////////////////////////////////////
+//Brown Chasm Tree 2
+Model Tree02Brown
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-FullBrown.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR02 B 0 1 
+}
+
+//////////////////////////////////////
+//Empty Chasm Tree 2
+Model Tree02Empty
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-empty.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR02 C 0 1 
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//Regular Chasm Tree 3
+Model Tree03
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-Full.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR03 A 0 2 
+}
+
+//////////////////////////////////////
+//Brown Chasm Tree 2
+Model Tree03Brown
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-FullBrown.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR03 B 0 2 
+}
+
+//////////////////////////////////////
+//Empty Chasm Tree 2
+Model Tree03Empty
+{
+  Path "Models/Trees/"   
+  Model 0 "Trees.md3"   
+  SurfaceSkin 0 0 "Trees-empty.png"
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex TR03 C 0 2 
+}
+
+
+
+
+

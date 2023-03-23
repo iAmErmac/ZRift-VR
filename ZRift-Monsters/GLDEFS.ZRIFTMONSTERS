@@ -1,0 +1,5 @@
+//MONSTERS
+#Include gldefs/Monsters/ChasmGrunt.gl
+#Include gldefs/Monsters/ChasmLieut.gl
+#Include gldefs/Monsters/ChasmStratos.gl
+#Include gldefs/monsters/HexenMummyLord.gl

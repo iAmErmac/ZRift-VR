@@ -1,0 +1,45 @@
+Model VikingArm1 //Red Skin
+{
+  Path "Models/Gibs/ChasmViking/"   
+  Model 0 "LIMB14A-Viking-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB14-Viking-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI14 A 0 0 
+}
+
+   
+Model VikingArm2 //Red Skin
+{
+  Path "Models/Gibs/ChasmViking/"   
+  Model 0 "LIMB14B-Viking-Hand2.md3"   
+  SurfaceSkin 0 0 "LIMB14-Viking-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI14 B 0 0 
+}
+
+   Model VikingHead
+{
+  Path "Models/Gibs/ChasmViking/"     
+  Model 0 "LIMB14C-Viking-Head.md3"   
+  SurfaceSkin 0 0 "LIMB14-Viking-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI14 C 0 0 
+}

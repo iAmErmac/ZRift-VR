@@ -1,0 +1,12 @@
+Model ChasmShell
+{
+   Path "models/items"   	
+   Model 0 "Shells.md2"   
+   Skin 0 "Shells.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+
+//IdleA
+   Frame SHTA X 0 "IdleA1"   
+   
+}

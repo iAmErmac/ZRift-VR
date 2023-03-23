@@ -1,0 +1,15 @@
+Model ChasmRocketL
+{
+   Path "models/weapons"   	
+   Model 0 "RocketLPickup.md2"   
+   Skin 0 "RocketLPickup.png"    
+   Scale 0.22 0.22 0.22 
+   AngleOffset 90 
+   ZOffset 15
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame GRNX A 0 "IdleA1"   
+   
+}

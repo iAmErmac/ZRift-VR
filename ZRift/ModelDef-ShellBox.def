@@ -1,0 +1,12 @@
+Model CShellBox
+{
+   Path "models/items"   	
+   Model 0 "ShellBox.md2"   
+   Skin 0 "ShellBox.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset 90 
+
+//IdleA
+   Frame SHTA Y 0 "IdleA1"   
+   
+}

@@ -1,0 +1,59 @@
+ACTOR LionGuyFireBall
+{
+  Radius 12
+  Height 8
+  Speed 15
+  Damage 8
+  Projectile
+  +RANDOMIZE
+  Alpha 0.67
+  RenderStyle Add
+  DeathSound "LionGuy/FireExp"
+  States
+  {
+  Spawn:
+  	TNT1 A 0 NoDelay A_PlaySound("LionBall/Loop",CHAN_WEAPON,1.0,1)
+    HWFX AAAA 1 Bright A_SpawnItemEx("LionGuyFireBallTrail",0,0,0,0,0,0,0,2)
+    Loop
+  Death:
+    TNT1 A 0 A_StopSound(CHAN_WEAPON)
+	TNT1 A 0 A_Scream
+	TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(1,2), random(10,-10), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(2,4), random(18,-18), random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(4,6), random(10,-10), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("EnemyExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+    TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+    Stop
+  }
+}
+
+ACTOR LionGuyFireBallTrail
+{ 
+	RenderStyle Add
+	Scale 0.25
+	Alpha 0.97
+	+NOGRAVITY
+	+BRIGHT
+	States
+	{
+	Spawn:
+		YFLR A 1 A_FadeOut
+		YFLR A 1 A_SetScale(0.18)
+		YFLR A 1 A_FadeOut
+		YFLR A 1 A_SetScale(0.13)
+		YFLR A 1 A_FadeOut
+		YFLR A 1 A_SetScale(0.07)
+		YFLR A 1 A_FadeOut
+		YFLR A 1 A_SetScale(0.02)
+		Stop
+	}
+}
+
+Actor FireBallSmall : LionGuyFireBall
+{
+
+Damage 4
+Scale 0.5
+Speed 7
+}

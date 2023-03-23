@@ -1,0 +1,112 @@
+//CHASM MONSTERS
+#Include "Modeldef/Monsters/ChasmGrunt.modeldef"
+#Include "Modeldef/Monsters/AssaultGrunt.modeldef"
+#Include "Modeldef/Monsters/ShotgunGrunt.modeldef"
+#Include "Modeldef/Monsters/MedicGrunt.modeldef"
+#Include "Modeldef/Monsters/ChasmHound.modeldef"
+#Include "Modeldef/Monsters/ChasmFaust.modeldef"
+#Include "Modeldef/Monsters/ChasmStratos.modeldef"
+#Include "Modeldef/Monsters/ChasmLieutenant.modeldef"
+#Include "Modeldef/Monsters/ChasmTurret.modeldef"
+#Include "Modeldef/Monsters/ChasmRocketTurret.modeldef"
+#Include "Modeldef/Monsters/ChasmAcidTurret.modeldef"
+
+//Bosses
+#Include "Modeldef/Monsters/ChasmSarcof.modeldef"
+#Include "Modeldef/Monsters/ChasmSphinx.modeldef"
+#Include "Modeldef/Monsters/ChasmPhantomLord.modeldef"
+#Include "Modeldef/Monsters/ChasmWorm.modeldef"
+
+//Animals
+#Include "Modeldef/Monsters/ChasmScorpy.modeldef"
+#Include "Modeldef/Monsters/ChasmPiggy.modeldef"
+#Include "Modeldef/Monsters/ChasmRaptor.modeldef"
+
+//Egypt
+#Include "Modeldef/Monsters/ChasmLionGuy.modeldef"
+#Include "Modeldef/Monsters/ChasmDeadGuy.modeldef"
+#Include "Modeldef/Monsters/ChasmMummy.modeldef"
+#Include "Modeldef/Monsters/ChasmFatGuy.modeldef"
+#Include "Modeldef/Monsters/ChasmSkeleton.modeldef"
+#Include "Modeldef/Monsters/ChasmSkeleton2.modeldef"
+#Include "Modeldef/Monsters/ChasmGross.modeldef"
+
+//Medieval
+#Include "Modeldef/Monsters/ChasmJoker.modeldef"
+#Include "Modeldef/Monsters/ChasmViking.modeldef"
+#Include "Modeldef/Monsters/ChasmFatGuy2.modeldef"
+
+//Alien
+#Include "Modeldef/Monsters/ChasmMincer.modeldef"
+#Include "Modeldef/Monsters/ChasmAlienTrooper.modeldef"
+#Include "Modeldef/Monsters/ChasmAlienCaptain.modeldef"
+
+//ADDON
+#Include "Modeldef/Monsters/ChasmGoblin.modeldef"
+#Include "Modeldef/Monsters/ChasmOrc.modeldef"
+
+
+//Fantasy
+#Include "Modeldef/Monsters/PhantomLesser.modeldef"
+
+
+//CHASM GIBS
+#Include "Modeldef/Gibs/ChasmGruntGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmFaustGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmStratosGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmLionGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmDeadGuyGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmFatGuyGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmSkeletonGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmGrossGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmJokerGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmVikingGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmOrcGibs.modeldef"
+#Include "Modeldef/Gibs/AlienTGibs.modeldef"
+//#Include "Modeldef/Gibs/GenericAlienGibs.modeldef"
+#Include "Modeldef/Gibs/AlienCGibs.modeldef"
+
+//CHASM FX
+#Include "Modeldef/FX/YellowMuzzleFlash.modeldef"
+#Include "Modeldef/FX/GreenMuzzleFlash.modeldef"
+
+
+//CHASM PROJECTILES
+#Include "Modeldef/Projectiles/ChasmEnemyShotgunTracer.modeldef"
+#Include "Modeldef/Projectiles/EnemyRocketModel.modeldef"
+#Include "Modeldef/Projectiles/ChasmStratosBolt.modeldef"
+#Include "Modeldef/Projectiles/ChasmLionBall.modeldef"
+#Include "Modeldef/Projectiles/FatGuyAxe.modeldef"
+#Include "Modeldef/Projectiles/SkeletonLance.modeldef"
+#Include "Modeldef/Projectiles/OgreRock.modeldef"
+#Include "Modeldef/Projectiles/ChasmPhantomLance.modeldef"
+#Include "Modeldef/Projectiles/ChasmEnemySaw.modeldef"
+#Include "Modeldef/Projectiles/VikingShield1.modeldef"
+#Include "Modeldef/Projectiles/GoblinBolt.modeldef"
+#Include "Modeldef/Projectiles/OrcSpear.modeldef"
+#Include "Modeldef/Projectiles/AlienLaser.modeldef"
+#Include "Modeldef/Projectiles/SphinxBall.modeldef"
+#Include "Modeldef/Projectiles/BatMonster.modeldef"
+
+
+//HEXEN PROJECTILES
+#Include "Modeldef/Projectiles/SkullShot.modeldef"
+#Include "Modeldef/Projectiles/YakBall.modeldef"
+
+
+//Quake Monsters
+
+#Include "Modeldef/Monsters/QuakeWizard.modeldef"
+
+//Hexen Monsters
+#Include "Modeldef/Monsters/HexenMummy.modeldef"
+#Include "Modeldef/Monsters/HexenMummyLord.modeldef"
+#Include "Modeldef/Monsters/HexenImp.modeldef"
+#Include "Modeldef/Monsters/HexenYakman1.modeldef"
+#Include "Modeldef/Monsters/HexenYakman2.modeldef"
+#Include "Modeldef/Monsters/HexenYakman3.modeldef"
+#Include "Modeldef/Monsters/HexenSkullWiz.modeldef"
+
+
+//DoD Monsters
+#Include "Modeldef/Monsters/DoDDweller.modeldef"

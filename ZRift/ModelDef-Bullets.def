@@ -1,0 +1,12 @@
+Model ChasmClip
+{
+   Path "models/items"   	
+   Model 0 "Bullets.md2"   
+   Skin 0 "Bullets.png"    
+   Scale 0.24 0.24 0.24  
+   AngleOffset 90 
+
+//IdleA
+   Frame CHNA X 0 "IdleA1"   
+   
+}

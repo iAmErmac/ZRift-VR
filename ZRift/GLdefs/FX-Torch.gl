@@ -1,0 +1,125 @@
+//////////////////////////
+// RED TORCH
+flickerlight Doom-Torch-Red
+{
+    color 2.0 0.1 0.1
+    offset 0.0 60.0 0.0
+    size 45
+    secondarySize 50
+    attenuate 0
+    dontlightself 1
+    }
+
+flickerlight Doom-Torch-Red-Short
+{
+    color 2.0 0.1 0.1
+    offset 0.0 40.0 0.0
+    size 25
+    secondarySize 30
+    attenuate 0
+    dontlightself 1
+    }
+    
+object ChasmRedTorch
+{
+	frame TORRA  { light Doom-Torch-Red }
+    frame TORRB  { light Doom-Torch-Red }
+    frame TORRC  { light Doom-Torch-Red }
+    frame TORRD  { light Doom-Torch-Red }
+    frame TORRE  { light Doom-Torch-Red }
+    }
+    
+
+object ChasmShortRedTorch
+{
+	frame TOSRA  { light Doom-Torch-Red-Short }
+    frame TOSRB  { light Doom-Torch-Red-Short }
+    frame TOSRC  { light Doom-Torch-Red-Short }
+    frame TOSRD  { light Doom-Torch-Red-Short }
+    frame TOSRE  { light Doom-Torch-Red-Short }
+    }
+    
+
+//////////////////////////
+// GREEN TORCH
+flickerlight Doom-Torch-Green
+{
+    color 0.2 1.8 0.2
+    offset 0.0 60.0 0.0
+    size 45
+    secondarySize 50
+    attenuate 0
+    dontlightself 1
+    }
+    
+
+flickerlight Doom-Torch-Green-Short
+{
+    color 0.2 1.8 0.2
+    offset 0.0 40.0 0.0
+    size 25
+    secondarySize 30
+    attenuate 0
+    dontlightself 1
+    }
+    
+object ChasmGreenTorch
+{
+	frame TORGA  { light Doom-Torch-Green }
+    frame TORGB  { light Doom-Torch-Green }
+    frame TORGC  { light Doom-Torch-Green }
+    frame TORGD  { light Doom-Torch-Green }
+    frame TORGE  { light Doom-Torch-Green }
+    }
+    
+
+object ChasmShortGreenTorch
+{
+	frame TOSGA  { light Doom-Torch-Green-Short }
+    frame TOSGB  { light Doom-Torch-Green-Short }
+    frame TOSGC  { light Doom-Torch-Green-Short }
+    frame TOSGD  { light Doom-Torch-Green-Short }
+    frame TOSGE  { light Doom-Torch-Green-Short }
+    }
+    
+//////////////////////////
+// BLUE TORCH
+flickerlight Doom-Torch-Blue
+{
+    color 0.1 0.1 2.0
+    offset 0.0 60.0 0.0
+    size 45
+    secondarySize 50
+    attenuate 0
+    dontlightself 1
+    }
+
+flickerlight Doom-Torch-Blue-Short
+{
+    color 0.1 0.1 2.0
+    offset 0.0 40.0 0.0
+    size 25
+    secondarySize 30
+    attenuate 0
+    dontlightself 1
+    }
+    
+object ChasmBlueTorch
+{
+	frame TORBA  { light Doom-Torch-Blue }
+    frame TORBB  { light Doom-Torch-Blue }
+    frame TORBC  { light Doom-Torch-Blue }
+    frame TORBD  { light Doom-Torch-Blue }
+    frame TORBE  { light Doom-Torch-Blue }
+    }
+    
+
+object ChasmShortBlueTorch
+{
+	frame TOSBA  { light Doom-Torch-Blue-Short }
+    frame TOSBB  { light Doom-Torch-Blue-Short }
+    frame TOSBC  { light Doom-Torch-Blue-Short }
+    frame TOSBD  { light Doom-Torch-Blue-Short }
+    frame TOSBE  { light Doom-Torch-Blue-Short }
+    }
+

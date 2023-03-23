@@ -1,0 +1,124 @@
+
+Model POST-NORMAL1
+{
+  Path "Models/"   
+  Model 0 "Post.md3"   
+  SurfaceSkin 0 0 "Post-Normal.png"
+  SurfaceSkin 0 1 "SKULL.png"   
+  SurfaceSkin 0 2 "HEART.png"   
+  
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.14 0.14 0.20
+
+  FrameIndex POST A 0 0 // Frame 0 empty post
+}
+
+
+Model POST-NORMAL2
+{
+  Path "Models/"   
+  Model 0 "Post.md3"   
+  SurfaceSkin 0 0 "Post-Normal.png"
+  SurfaceSkin 0 1 "SKULL.png"   
+  SurfaceSkin 0 2 "HEART.png"   
+  
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.14 0.14 0.20
+
+  FrameIndex POST B 0 1 // Frame 1 heart
+}
+
+Model POST-NORMAL3
+{
+  Path "Models/"   
+  Model 0 "Post.md3"   
+  SurfaceSkin 0 0 "Post-Normal.png"
+  SurfaceSkin 0 1 "SKULL.png"   
+  SurfaceSkin 0 2 "HEART.png"   
+  
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.14 0.14 0.20
+
+  FrameIndex POST C 0 2 // Frame 2 Skulls
+}
+
+
+
+
+Model POST-RED1
+{
+  Path "Models/"   
+  Model 0 "Post.md3"   
+  SurfaceSkin 0 0 "Post-Red.png"
+  SurfaceSkin 0 1 "SKULL-GOLD.png"   
+  SurfaceSkin 0 2 "HEART-GOLD.png"   
+  
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.14 0.14 0.20
+
+  FrameIndex POST D 0 0 // Frame 0 empty post
+}
+
+
+Model POST-RED2
+{
+  Path "Models/"   
+  Model 0 "Post.md3"   
+  SurfaceSkin 0 0 "Post-Red.png"
+  SurfaceSkin 0 1 "SKULL-GOLD.png"   
+  SurfaceSkin 0 2 "HEART-GOLD.png"   
+  
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.14 0.14 0.20
+
+  FrameIndex POST E 0 1 // Frame 1 heart
+
+}
+
+
+Model POST-RED3
+{
+  Path "Models/"   
+  Model 0 "Post.md3"   
+  SurfaceSkin 0 0 "Post-Red.png"
+  SurfaceSkin 0 1 "SKULL-GOLD.png"   
+  SurfaceSkin 0 2 "HEART-GOLD.png"   
+  
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.14 0.14 0.20
+
+  FrameIndex POST F 0 2 // Frame 2 Skulls
+}
+
+
+
+
+
+
+
+
+

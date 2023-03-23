@@ -1,0 +1,16 @@
+Model EnemyRocketModel
+{
+   Path "models/projectiles/EnemyRocketModel"   	
+   Model 0 "EnemyRocketModel.md3"   
+   SurfaceSkin 0 0 "EnemyRocketModel.png"    
+   SurfaceSkin 0 1 "EnemyRocketModel.png"    
+   SurfaceSkin 0 2 "EnemyRocketModel.png"    
+   Scale 0.3 0.4 0.3
+   AngleOffset 90        
+   PitchOffset 0		 
+   RollOffset 90  	
+   PITCHFROMMOMENTUM
+
+   Frameindex EROC A 0 0
+   
+}

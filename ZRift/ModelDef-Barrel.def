@@ -1,0 +1,12 @@
+Model ChasmBarrel
+{
+   Path "models/monsters"   	
+   Model 0 "Barrel.md2"   
+   Skin 0 "Barrel.png"    
+   Scale 0.26 0.26 0.26  
+   AngleOffset 90 
+   
+//IdleA
+   Frame BARX A 0 "IdleA1"    	
+
+}

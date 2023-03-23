@@ -1,0 +1,12 @@
+Model FieldKit
+{
+   Path "models/items"   	
+   Model 0 "FieldKit.md2"   
+   Skin 0 "FieldKit.png"    
+   Scale 0.20 0.20 0.20  
+   AngleOffset 90 
+
+//IdleA
+   Frame FIEX A 0 "IdleA1"   
+   
+}

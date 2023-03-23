@@ -1,0 +1,12 @@
+Model CCellAmmo
+{
+   Path "models/items"   	
+   Model 0 "AlienCell.md2"   
+   Skin 0 "AlienCell.png"    
+   Scale 0.40 0.40 0.40  
+   AngleOffset 90 
+
+//IdleA
+   Frame CCLA X 0 "IdleA1"   
+   
+}

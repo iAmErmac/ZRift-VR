@@ -1,0 +1,319 @@
+//////////////////////////////////////
+//Marine Body Sitting pose
+//Each Frame is Different Mesh/Variants For randowm Spawn
+// BOD3 ABCDE - Body in sitting Pose
+//////////////////////////////////////
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodySit1.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD3 A 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodySit2.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD3 B 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodySit3.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD3 C 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodySit4.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD3 D 0 0                        
+}
+
+//////////////////////////////////////
+//Marine Body Lying Pose Front
+//Each Frame is Different Mesh/Variants For randowm Spawn
+// BOD4 ABCDEFGH - Body in sitting Pose
+//////////////////////////////////////
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront1.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 A 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront2.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 B 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront3.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 C 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront4.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 D 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront5.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 E 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront6.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 F 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront7.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 G 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyFront8.md3"   
+  SurfaceSkin 0 1 "MarineBlood.png"
+  SurfaceSkin 0 0 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 H 0 0                        
+}
+
+
+//////////////////////////////////////
+//Marine Body Lying Pose Back
+//Each Frame is Different Mesh/Variants For randowm Spawn
+// BOD4 IJKLMNOP - Body in sitting Pose
+//////////////////////////////////////
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack1.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 I 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack2.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 J 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack3.md3"   
+  SurfaceSkin 0 0 "MarineBody.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 K 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack4.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 L 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack5.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 M 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack6.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 N 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack7.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 O 0 0                        
+}
+
+Model MarineBody
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineBodyBack8.md3"   
+  SurfaceSkin 0 0 "MarineBlood.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD4 P 0 0                        
+}
+
+
+
+

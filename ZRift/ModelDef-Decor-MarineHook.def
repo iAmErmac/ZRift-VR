@@ -1,0 +1,150 @@
+//////////////////////////////////////
+//Marine Body Hook
+//Each Frame is Different Mesh/Variants For randowm Spawn
+//BOD2 ABCDEFGHI
+//////////////////////////////////////
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook0.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 A 0 0
+}
+
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook1.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 B 0 0
+}
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook2.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 C 0 0
+}
+
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook3.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 D 0 0
+}
+
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook4.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 E 0 0
+}
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook5.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 F 0 0
+}
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook6.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 G 0 0
+}
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook7.md3"   
+  SurfaceSkin 0 0 "MarineHook.png"
+  SurfaceSkin 0 1 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 H 0 0
+}
+
+Model MarineHook
+{
+  Path "Models/Bodies/"   
+  Model 0 "MarineHook8.md3"   
+  SurfaceSkin 0 1 "MarineHook.png"
+  SurfaceSkin 0 0 "MarineBody.png" 
+  OFFSET 0 0 20
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.24 0.24 0.24
+
+  FrameIndex BOD2 I 0 0
+}
+
+
+
+
+
+
+
+  

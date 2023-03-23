@@ -1,0 +1,310 @@
+Actor ChasmJoker
+{
+    Health 60
+    Radius 18
+    Height 54
+    Speed 6
+    PainChance 68
+	PainChance "Laser", 136
+	Scale 1.00
+	Mass 240
+    Monster
+    +FLOORCLIP
+	+DONTHARMSPECIES
+	Species "Undead"
+	DropItem "ChasmSaw", 75
+    SeeSound "Joker/See"
+    PainSound "Joker/Pain"
+    DeathSound "Joker/Death"
+    Obituary "%o was killed by a Joker."
+	BloodColor "Red"
+	BloodType "RedBlood", "RedBlood"
+	Tag "Jester"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay
+	    TNT1 A 0 A_Jump(10, "Idle1")
+		TNT1 A 0 A_Jump(10, "Idle2")
+        JKI1 ABCDEFGHIJKLMNOPQR 2 A_Look
+        Loop
+	Idle1:
+	    TNT1 A 0 A_PlaySound("Joker/Idle",3)
+	    JKI2 ABCDEFGHIJKLMNOPQ 2 A_Look
+	    Goto Spawn
+	Idle2:
+	    TNT1 A 0 A_PlaySound("Joker/Idle",3)
+	    JKI3 ABCDEFGHIJKLMNOP 2 A_Look
+	    Goto Spawn
+    See:
+	    TNT1 A 0 A_Jump(30, "ScreamyBoi")
+        JKW1 ABCDEF 2 A_Chase
+		TNT1 A 0 A_PlaySound("Joker/Walk", 4)
+		JKW1 GHIJKL 2 A_Chase
+		TNT1 A 0 A_PlaySound("Joker/Walk", 4)
+        Loop
+	ScreamyBoi:
+	    JKS1 ABCDEFGH 2 A_FaceTarget
+		TNT1 A 0 A_PlaySound("Joker/Active", 4)
+		JKS1 IJKLMNOPQRSTUV 2 A_FaceTarget
+	    Goto See
+	Missile:
+	    TNT1 A 0 A_Jump(128, "Missile2")
+		JKA1 ABCDEFGHIJKL 2 A_FaceTarget
+		TNT1 A 0 A_PlaySound("JokerSaw/Fire", 1)
+		JKA1 L 0 A_CustomMissile("JokerSawBlade")
+		JKA1 L 2 BRIGHT
+		JKA1 MNOPR 2
+		Goto See
+	Missile2:
+	    JKA3 ABCDEFGHI 2 A_FaceTarget
+		TNT1 A 0 A_PlaySound("JokerSaw/Fire", 1)
+		JKA3 I 0 A_CustomMissile("JokerSawBlade")
+		JKA3 I 2 BRIGHT
+		JKA3 JKLMN 2
+		Goto See
+	Melee:
+	    TNT1 A 0 A_Jump(62, "Melee2")
+	    JKA2 ABCDEFGHI 2 A_FaceTarget
+		JKA2 J 0 A_CustomBulletAttack(1, 1, 1, 5, "PiggyMeleePuff", 50, CBAF_AIMFACING)
+		JKA2 J 2
+		JKA2 KLMNOPQRS 2
+		Goto See
+	Melee2:
+	    JKA4 ABCDEFG 2 A_FaceTarget
+		JKA4 H 0 A_CustomBulletAttack(1, 1, 1, 5, "PiggyMeleePuff", 50, CBAF_AIMFACING)
+		JKA4 H 2
+		JKA4 IJKLMN 2
+	    Goto See
+  Pain:
+    TNT1 A 0 A_Jump(30, "BigPain")
+	TNT1 A 0 A_Jump(60, "Pain1")
+	TNT1 A 0 A_Jump(60, "Pain2")
+    JKP1 A 2 A_Pain
+    JKP1 BCDEF 2
+    Goto See
+  BigPain:
+	JKP2 A 2 A_Pain
+    JKP2 BCDEFGHIJKLMNOPQRSTU 2
+    Goto See
+  Pain1:
+	JKP3 A 2 A_Pain
+    JKP3 BCDEFGHIJKLMNOPQ 2
+    Goto See
+  Pain2:
+	JKP4 A 2 A_Pain
+    JKP4 BCDEFGHIJKLMNOPQ 2
+    Goto See
+  Death:
+    TNT1 A 0 A_Jump(30, "Death1")
+    JKD1 A 2
+    JKD1 B 2 A_Scream
+    JKD1 C 2 A_NoBlocking
+	JKD1 EFGHIJKLMNOPQ 2
+	TNT1 A 0 A_PlaySound("MongA/Fall", 4)
+    JKD1 RST 2
+    JKD1 T -1
+    Stop
+  Death1:
+    JKD2 A 4
+    JKD2 B 5 A_Scream
+    JKD2 C 5 A_NoBlocking
+	JKD2 EFG 4
+	TNT1 A 0 A_PlaySound("MongA/Fall", 4)
+    JKD2 HIJKLMNOPQR 4
+    JKD2 R -1
+    Stop
+  Death.Explosive:
+    TNT1 A 0
+	Goto XDeath
+  XDeath:
+    TNT1 A 0
+	TNT1 A 0 A_NoBlocking
+    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+    TNT1 A 0 A_CustomMissile("JokerHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("JokerArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("JokerArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+	Stop
+  Raise:
+    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+	JKI1 A 1 A_SetTranslucent(0.10, 0)
+	JKI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+  Goto See
+    }
+}
+
+//
+
+ACTOR JokerSawBlade
+{
+  Radius 12
+  Height 8
+  Speed 20
+  Damage 4
+  Projectile
+  +RANDOMIZE
+  +NOGRAVITY
+  DeathSound "ChasmSaw/Exp"
+  States
+  {
+  Spawn:
+  	TNT1 A 0 NoDelay
+    SAW2 X 1 Bright A_SpawnItemEx("PunAxeTrail",0,0,0,0,0,0,0,2)
+    Loop
+  Death:
+	TNT1 A 0 A_Scream
+	TNT1 AAAA 0 A_CustomMissile("ExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("ExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+    TNT1 AA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+    Stop
+  }
+}
+
+//////////////////GIBS
+
+ACTOR JokerArm1
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI06 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI06 AAAAA 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI06 A 5 A_SetTranslucent(0.8)
+       LI06 A 5 A_SetTranslucent(0.6)
+       LI06 A 5 A_SetTranslucent(0.4)
+       LI06 A 5 A_SetTranslucent(0.2)
+       LI06 A 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR JokerArm2
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI06 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI06 BBBBB 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI06 B 5 A_SetTranslucent(0.8)
+       LI06 B 5 A_SetTranslucent(0.6)
+       LI06 B 5 A_SetTranslucent(0.4)
+       LI06 B 5 A_SetTranslucent(0.2)
+       LI06 B 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR JokerHead
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI06 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI06 CCCCC 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI06 C 5 A_SetTranslucent(0.8)
+       LI06 C 5 A_SetTranslucent(0.6)
+       LI06 C 5 A_SetTranslucent(0.4)
+       LI06 C 5 A_SetTranslucent(0.2)
+       LI06 C 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+Actor HereticChasmJoker: ChasmJoker Replaces MummyGhost
+{
+    Health 200
+	Game Heretic
+}

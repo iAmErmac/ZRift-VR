@@ -1,0 +1,30 @@
+Model OrcArm1
+{
+  Path "Models/misc"   
+  Model 0 "LIMB17A-Orc-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB17-Orc-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI17 A 0 0 
+}
+
+   
+Model OrcArm2
+{
+  Path "Models/misc"   
+  Model 0 "LIMB17B-Orc-Hand2.md3"   
+  SurfaceSkin 0 0 "LIMB17-Orc-skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI17 B 0 0 
+}

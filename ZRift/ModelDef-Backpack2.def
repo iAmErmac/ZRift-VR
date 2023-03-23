@@ -1,0 +1,15 @@
+Model SupplyPack
+{
+   Path "models/items"   	
+   Model 0 "Backpack.md2"   
+   Skin 0 "Backpack.png"    
+   Scale 0.28 0.28 0.28  
+   AngleOffset 90 
+   ZOffset 1
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame PAK1 X 0 "IdleA1"  
+   
+}

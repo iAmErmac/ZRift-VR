@@ -1,0 +1,174 @@
+Model AmmoPack
+{
+  Path "Models/items"   
+  Model 0 "AmmoBag.md3"   
+  SurfaceSkin 0 0 "AmmoBagBrown.png" //Heads
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+  ZOffset 20
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex PI00 A 0 0
+}
+
+//
+
+Model GlobusMap
+{
+  Path "Models/items"   
+  Model 0 "GlobusMap.md3"   
+  SurfaceSkin 0 0 "GlobusMap-green.png" //Heads
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.1 0.1 0.1
+  ZOffset 24
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex PI00 F 0 0
+}
+
+//
+
+Model LesserRiftCharge
+{
+  Path "Models/items"   
+  Model 0 "ChasmSign.md3"   
+  SurfaceSkin 0 0 "ChasmSign.png" //Heads
+
+  OFFSET 0 0 6 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  ZOffset 24
+  Scale 0.30 0.30 0.30
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex PI00 C 0 0
+}
+
+Model GreaterRiftCharge
+{
+  Path "Models/items"   
+  Model 0 "ChasmSign.md3"   
+  SurfaceSkin 0 0 "ChasmSign-Red.png" //Heads
+
+  OFFSET 0 0 6 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  ZOffset 24
+  Scale 0.45 0.45 0.45
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex PI00 D 0 0
+}
+
+//
+
+Model ChojinMask
+{
+  Path "Models/items"   
+  Model 0 "ChojinMask.md3"   
+  SurfaceSkin 0 0 "ChojinMask.png" //Heads
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  ZOffset 24
+  Scale 0.20 0.20 0.20
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex PI00 E 0 0
+}
+
+//
+
+Model InvisibilityMask
+{
+  Path "Models/items"   
+  Model 0 "Invis.md3"   
+  SurfaceSkin 0 0 "Invis.png" //Heads
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  ZOffset 18
+  Scale 0.24 0.24 0.24
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex PI00 H 0 0
+}
+
+Model BerserkPack
+{
+   Path "models/items"   	
+   Model 0 "BigHealth.md2"   
+   Skin 0 "BigHealthBerserk.png"    
+   Scale 0.24 0.24 0.24  
+   AngleOffset 90 
+
+//IdleA
+   Frame PI00 Z 0 "IdleA1"   
+   
+}
+
+//
+Model ChasmInfra
+{
+  Path "Models/items"   
+  Model 0 "InfraredPowerup.md3"   
+  SurfaceSkin 0 0 "InfraGreen.png" //Heads
+
+  OFFSET 0 0 10 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex INFG A 0 0
+}
+
+//
+
+Model ChasmHazmat
+{
+  Path "Models/items"   
+  Model 0 "Hazmat.md3"   
+  SurfaceSkin 0 0 "Hazmat.png" 
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.85 0.85 0.85
+  
+   ROTATING
+   Rotation-Speed 3
+
+  FrameIndex HAZM A 0 0
+
+}

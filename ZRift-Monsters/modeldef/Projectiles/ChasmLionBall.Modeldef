@@ -1,0 +1,14 @@
+Model LionGuyFireBall
+{
+   Path "models/Fx/misc"   	
+   Model 0 "LongBolt.md2"   
+   Skin 0 "LongBolt.png"    
+   Scale 0.60 0.60 0.60  
+   AngleOffset -90 
+   PITCHFROMMOMENTUM
+   ZOffSet -2
+
+//IdleA
+   Frame HWFX A 0 "IdleA1"   
+   
+}

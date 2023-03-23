@@ -1,0 +1,14 @@
+Model SarcofMissile
+{
+   Path "models/Projectiles/EnemyRocketModel"   	
+   Model 0 "EnemyRocketModel.md2"   
+   Skin 0 "EnemyRocketModel.png"    
+   Scale 0.35 0.35 0.35  
+   AngleOffset -90
+   ZOffSet -2
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame SAR2 X 0 "IdleA1"   
+   
+}

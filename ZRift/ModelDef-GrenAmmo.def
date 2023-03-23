@@ -1,0 +1,12 @@
+Model CGrenadeAmmo
+{
+   Path "models/items"   	
+   Model 0 "GrenadeAmmo.md2"   
+   Skin 0 "GrenadeAmmo.png"    
+   Scale 0.33 0.33 0.33  
+   AngleOffset 90 
+
+//IdleA
+   Frame GRN0 X 0 "IdleA1"   
+   
+}

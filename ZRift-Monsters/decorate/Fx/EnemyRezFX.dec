@@ -1,0 +1,24 @@
+//Resurrect
+ACTOR EnemyRezFX
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  +NOCLIP
+  +BRIGHT
+  RenderStyle Add
+  Alpha 0.97
+  Scale 0.99
+  Mass 5
+  +clientsideonly
+	States
+	{
+	    Spawn:
+		SPEC EFGHIJ 2
+		Goto Death
+		Death:
+		SPEC JJJJJJ 1 A_FadeOut
+		Stop
+	}
+}

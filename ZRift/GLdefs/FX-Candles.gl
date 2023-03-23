@@ -1,0 +1,36 @@
+flickerlight ChasmCandle
+{
+    color 0.8 0.8 0.3
+    size 18
+    secondarySize 20
+    offset 0 25 0
+    attenuate 1
+    chance 0.1
+    }
+    
+
+flickerlight ChasmCandleBig
+{
+    color 0.8 0.8 0.3
+    size 33
+    secondarySize 35
+    offset 0 50 0
+    attenuate 1
+    chance 0.1
+
+}
+
+
+
+object ChasmCandlestick
+{
+frame CANAB { light ChasmCandle }
+}
+
+
+object ChasmCandelabra
+{
+frame CANAA { light ChasmCandleBig }
+}
+
+

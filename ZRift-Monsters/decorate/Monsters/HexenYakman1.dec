@@ -1,0 +1,179 @@
+ACTOR HexenYakman1
+{
+//$Category Hexen Monster
+  Health 460
+  Radius 32
+  Height 64
+  Mass 500
+  Speed 8
+  PainChance 50
+  PainThreshold 40
+  Monster
+  +NOINFIGHTSPECIES
+  +DONTHARMSPECIES
+  DropItem "AmmoPack", 175
+
+
+  AttackSound "Yakman/grunt"
+  PainSound "Yakman/pain"
+  DeathSound "Yakman/Die"
+  ActiveSound "Yakman/Hoof"
+  SeeSound "Yakman/Snort1"
+
+  Species "Yaktribe"
+  Obituary "%o was killed by a Yakman."
+  States
+  {
+  Spawn:
+	TNT1 A 0 NoDelay
+	WAI0 A 0  A_Jump  (256, "Idle")
+    Stop
+
+    Idle:
+	TNT1 A 0 A_Jump (64, "Idle2", "Idle3")
+    WAI0 ABCDEFGHIJKLMNOPQRSTUVWX 2  A_Look
+    Loop
+
+    Idle2:
+	TNT1 A 0 A_PlaySound ("Yakman/Snort2")
+    SHA0 ABCDEFGHIJKLMNOPQRST 2  A_Look
+    Goto Idle
+
+    Idle3:
+	TNT1 A 0 A_Playsound ("Yakman/Roar")
+    HOW0 ABCDEFGHIJKLMNOPQRSTUVWXYZ 2 A_Look
+    HOW1 ABCDEFGHIJ 2 A_Look
+    Goto Idle   
+
+    See:
+	TNT1 A 0 A_Jump (256, "See1", "See2")
+
+  See1:
+	TNT1 A 0 A_PlaySound ("Yakman/Hoof")
+    BWA0 ABCDEFGHIJKLMNOPQRSTUVWX 2  A_Chase
+    Loop
+
+  See2:
+	TNT1 A 0 A_PlaySound ("Yakman/Hoof")
+    WAL0 ABCDEFGHIJKLMNOPQRSTUVWX 2  A_Chase
+    Loop
+
+  Missile:
+	TNT1 A 0 A_Jump (127, "Missile2", "Missile3")
+    HAR0 ABCDEFGHIJKLMNOPQRSTUVW 1  A_FaceTarget
+    TNT1 A 0 A_PlaySound("Yakman/Icespell ", 1, 0.4)
+    HAR0 X 1 Bright A_CustomMissile("YakBall",48,0,8)
+    HAR0 X 1 Bright A_CustomMissile("YakBall",48,0,0)
+    HAR0 X 1 Bright A_CustomMissile("YakBall",48,0,-8)
+    HAR0 YZ 1
+    HAR1 ABCDEF 1 A_FaceTarget 
+    Goto See
+  
+  Missile2: //CHARGE ATTACK
+	TNT1 A 0 A_SetPainThreshold (0)
+    CHA0 ABCDEFGHIJKL 2 A_facetarget
+    GOR0 AB 1 { A_SkullAttack; ThrustThingZ(0,3,1,1); } 
+	GOR0 B 1 A_Explode (4,12, XF_EXPLICITDAMAGETYPE, XF_NOTMISSILE)
+    TNT1 A 0 A_FaceTarget
+GOR0 B 1 A_Explode (4,12, XF_EXPLICITDAMAGETYPE, XF_NOTMISSILE)
+    GOR0 C 2 A_CustomBulletAttack(1, 1, 1, 12, "YakMeleePuff", 50, CBAF_AIMFACING)
+	TNT1 A 0 A_SetPainThreshold (50)
+    Goto See
+
+
+   Missile3: //HOWL EXPLOSION
+	TNT1 A 2 A_Playsound ("Yakman/Roar")
+       HOW0  ABCDEFGHI  2 A_FaceTarget
+       HOW0  JJ 2 Bright A_FaceTarget
+	TNT1 A 0 A_Quake(4,12,0,400)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,15,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,30,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,45,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,60,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,75,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,90,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,105,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,120,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,135,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,150,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,165,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,180,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,195,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,210,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,225,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,240,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,255,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,270,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,285,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,300,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,315,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,330,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,345,0)
+       HOW0  J 0 A_CustomMissile("Yakball",48,0,0,0)
+       HOW0 KLMNOPQRSTUVWXYZ 2
+       HOW1  ABCDEFGHIJ 2
+       Goto See
+
+  Melee:
+
+    GOR0 AB 2 A_FaceTarget 
+    GOR0 C 2 A_CustomBulletAttack(1, 1, 1, 12, "YakMeleePuff", 50, CBAF_AIMFACING)
+    Goto See
+
+  Pain:
+    PAI0 ABCD 1 
+    PAI0 E 1 A_Pain
+    PAI0 FGH 1
+    Goto See
+
+  Death:
+    DEA0 A 2 
+    DEA0 B 2  A_Scream
+    DEA0 C 2 
+    DEA0 D 2 A_NoBlocking
+    DEA0 EFGHIJKLMOPQRSTUVWX 2
+    DEA0 Y -1
+    Stop
+  }
+}
+
+
+
+
+actor YakMeleePuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  Scale 0.3
+  RenderStyle Add
+  Alpha 0.95
+  seesound "Yakman/grunt"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    stop
+  Crash:
+    TNT1 A 0
+    stop
+  Melee:
+	TNT1 A 0
+    stop
+  }
+}
+
+ACTOR HexenYakman2 : HexenYakman1
+{
+  Health 1260
+  Obituary "%o was killed by a Minotaur."
+  Tag "Minotaur"
+
+}
+
+ACTOR HexenYakman3 : HexenYakman1
+{
+  Health 460
+  Obituary "%o was killed by a Shadow Yak."
+  Tag "Shadow Yak"
+}

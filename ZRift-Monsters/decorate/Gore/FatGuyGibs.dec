@@ -1,0 +1,89 @@
+ACTOR FatGuyArm1
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI10 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI10 AAAAA 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI10 A 5 A_SetTranslucent(0.8)
+       LI10 A 5 A_SetTranslucent(0.6)
+       LI10 A 5 A_SetTranslucent(0.4)
+       LI10 A 5 A_SetTranslucent(0.2)
+       LI10 A 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}
+
+ACTOR FatGuyArm2
+{
+    Radius 4
+    Height 4
+    Speed 15
+	Mass 5
+	+MISSILE
+	+BOUNCEONWALLS
+	+THRUGHOST
+	+ROLLSPRITE
+	+THRUACTORS
+	+MOVEWITHSECTOR
+    BounceType "Hexen"
+    BounceFactor 0.3
+	WallBounceFactor 0.3
+    BounceCount 3
+	BounceSound "Gib/Bounce"
+    States
+    {
+    Spawn:
+	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI10 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+        Loop
+	Death:
+	    TNT1 A 0 A_Scream
+	    TNT1 A 0
+		Goto Splat
+    Splat:
+	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI10 BBBBB 5
+       TNT1 A 0 A_Jump(28, "Vanish")
+		Loop
+   Vanish:
+       LI10 B 5 A_SetTranslucent(0.8)
+       LI10 B 5 A_SetTranslucent(0.6)
+       LI10 B 5 A_SetTranslucent(0.4)
+       LI10 B 5 A_SetTranslucent(0.2)
+       LI10 B 5 A_SetTranslucent(0.2)
+       Stop	
+     Splash:
+        TNT1 A 0
+        Stop
+    }
+}

@@ -1,0 +1,238 @@
+Model ChasmBarrelToxic
+{
+  Path "Models/misc"   
+  Model 0 "BarrelToxic.md3"   
+  SurfaceSkin 0 0 "BarrelToxic.png" 
+  SurfaceSkin 0 1 "BarrelToxicLiquid.png"   
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.2 0.2 0.2
+
+  FrameIndex BAR0 A 0 0
+  FrameIndex BAR0 B 0 1
+  FrameIndex BAR0 C 0 2
+  FrameIndex BAR0 D 0 3
+  FrameIndex BAR0 E 0 4
+  FrameIndex BAR0 F 0 5
+  FrameIndex BAR0 G 0 6
+  FrameIndex BAR0 H 0 7
+  FrameIndex BAR0 I 0 8
+  FrameIndex BAR0 J 0 9
+  FrameIndex BAR0 K 0 10
+  FrameIndex BAR0 L 0 11
+  FrameIndex BAR0 M 0 12
+  FrameIndex BAR0 N 0 13
+  FrameIndex BAR0 O 0 14
+  FrameIndex BAR0 P 0 15
+  FrameIndex BAR0 Q 0 16
+  FrameIndex BAR0 R 0 17
+  FrameIndex BAR0 S 0 18
+  FrameIndex BAR0 T 0 19
+  FrameIndex BAR0 U 0 20
+  FrameIndex BAR0 V 0 21
+  FrameIndex BAR0 W 0 22
+  FrameIndex BAR0 X 0 23
+  FrameIndex BAR0 Y 0 24
+  FrameIndex BAR0 Z 0 25
+
+}
+
+Model ChasmBarrelToxic
+{
+  Path "Models/misc"    
+  Model 0 "BarrelExplode.md3"   
+  SurfaceSkin 0 0 "BarrelToxic.png"   
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.2 0.2 0.2
+
+  FrameIndex BAR1 A 0 0
+  FrameIndex BAR1 B 0 1
+  FrameIndex BAR1 C 0 2
+  FrameIndex BAR1 D 0 3
+  FrameIndex BAR1 E 0 4
+  FrameIndex BAR1 F 0 5
+  FrameIndex BAR1 G 0 6
+  FrameIndex BAR1 H 0 7
+  FrameIndex BAR1 I 0 8
+  FrameIndex BAR1 J 0 9
+  FrameIndex BAR1 K 0 10
+  FrameIndex BAR1 L 0 11
+  FrameIndex BAR1 M 0 12
+  FrameIndex BAR1 N 0 13
+  FrameIndex BAR1 O 0 14
+  FrameIndex BAR1 P 0 15
+  FrameIndex BAR1 Q 0 16
+  FrameIndex BAR1 R 0 17
+  FrameIndex BAR1 S 0 18
+  FrameIndex BAR1 T 0 19
+  FrameIndex BAR1 U 0 20
+  FrameIndex BAR1 V 0 21
+  FrameIndex BAR1 W 0 22
+  FrameIndex BAR1 X 0 23
+  FrameIndex BAR1 Y 0 24
+  FrameIndex BAR1 Z 0 25
+
+} 
+
+//BATTEL MELT PART1
+Model ChasmBarrelMelt
+{
+  Path "Models/misc"    
+  Model 0 "BarrelMelt.md3"   
+  SurfaceSkin 0 0 "BarrelToxic.png" 
+  SurfaceSkin 0 1 "BarrelToxicLiquid.png"   
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.2 0.2 0.1
+  
+  FrameIndex BAR2 A 0 0
+  FrameIndex BAR2 B 0 1
+  FrameIndex BAR2 C 0 2
+  FrameIndex BAR2 D 0 3
+  
+  }
+  
+
+Model ChasmBarrelNormal
+{
+  Path "Models/misc"  
+  Model 0 "BarrelNormal.md2" 
+  Skin 0 "BarrelNormal.png" 
+
+  OFFSET 0 0 0	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0         //angle  
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	    //roll Up-Down  
+  Scale 0.2 0.2 0.2     //Scale 
+
+  
+   Frame BAR3 A 0 "IdleA1" 
+
+   }
+   
+
+Model ChasmBarrelNormal
+{
+  Path "Models/misc"   
+  Model 0 "BarrelExplode.md3"   
+  SurfaceSkin 0 0 "BarrelNormal.png"   
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.2 0.2 0.2
+
+  FrameIndex BAR4 A 0 0
+  FrameIndex BAR4 B 0 1
+  FrameIndex BAR4 C 0 2
+  FrameIndex BAR4 D 0 3
+  FrameIndex BAR4 E 0 4
+  FrameIndex BAR4 F 0 5
+  FrameIndex BAR4 G 0 6
+  FrameIndex BAR4 H 0 7
+  FrameIndex BAR4 I 0 8
+  FrameIndex BAR4 J 0 9
+  FrameIndex BAR4 K 0 10
+  FrameIndex BAR4 L 0 11
+  FrameIndex BAR4 M 0 12
+  FrameIndex BAR4 N 0 13
+  FrameIndex BAR4 O 0 14
+  FrameIndex BAR4 P 0 15
+  FrameIndex BAR4 Q 0 16
+  FrameIndex BAR4 R 0 17
+  FrameIndex BAR4 S 0 18
+  FrameIndex BAR4 T 0 19
+  FrameIndex BAR4 U 0 20
+  FrameIndex BAR4 V 0 21
+  FrameIndex BAR4 W 0 22
+  FrameIndex BAR4 X 0 23
+  FrameIndex BAR4 Y 0 24
+  FrameIndex BAR4 Z 0 25
+
+} 
+ 
+//BARRELFIRE
+Model ChasmBarrelFire
+{
+  Path "Models/misc"    
+  Model 0 "BarrelFire.md3"   
+  SurfaceSkin 0 0 "BarrelWood.png"   
+  SurfaceSkin 0 1 "BarrelFire.png"
+  SurfaceSkin 0 2 "BarrelFlame.png"
+  
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.2 0.2 0.2
+
+  FrameIndex BAR5 A 0 0
+  FrameIndex BAR5 B 0 1
+  FrameIndex BAR5 C 0 2
+  FrameIndex BAR5 D 0 3
+  FrameIndex BAR5 E 0 4
+  FrameIndex BAR5 F 0 5
+  FrameIndex BAR5 G 0 6
+  FrameIndex BAR5 H 0 7
+  FrameIndex BAR5 I 0 8
+  FrameIndex BAR5 J 0 9
+  FrameIndex BAR5 K 0 10
+  
+
+} 
+  //EXPLOSION FOR BARRELFIRE
+  Model ChasmBarrelFire
+{
+  Path "Models/misc"   
+  Model 0 "BarrelExplode.md3"   
+  SurfaceSkin 0 0 "BarrelFire.png"     
+
+  OFFSET 0 0 0 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.2 0.2 0.2
+
+  FrameIndex BAR6 A 0 0
+  FrameIndex BAR6 B 0 1
+  FrameIndex BAR6 C 0 2
+  FrameIndex BAR6 D 0 3
+  FrameIndex BAR6 E 0 4
+  FrameIndex BAR6 F 0 5
+  FrameIndex BAR6 G 0 6
+  FrameIndex BAR6 H 0 7
+  FrameIndex BAR6 I 0 8
+  FrameIndex BAR6 J 0 9
+  FrameIndex BAR6 K 0 10
+  FrameIndex BAR6 L 0 11
+  FrameIndex BAR6 M 0 12
+  FrameIndex BAR6 N 0 13
+  FrameIndex BAR6 O 0 14
+  FrameIndex BAR6 P 0 15
+  FrameIndex BAR6 Q 0 16
+  FrameIndex BAR6 R 0 17
+  FrameIndex BAR6 S 0 18
+  FrameIndex BAR6 T 0 19
+  FrameIndex BAR6 U 0 20
+  FrameIndex BAR6 V 0 21
+  FrameIndex BAR6 W 0 22
+  FrameIndex BAR6 X 0 23
+  FrameIndex BAR6 Y 0 24
+  FrameIndex BAR6 Z 0 25
+
+} 
+  
+  
+  

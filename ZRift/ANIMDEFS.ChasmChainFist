@@ -1,0 +1,10 @@
+Texture "models/weapons/Chainfist_active.png"
+    pic "models/weapons/Chainfist_active1.png" tics 1 
+    pic "models/weapons/Chainfist_active.png" tics 1 
+
+Texture "models/weapons/Doomchainfist/Chainfist_active.png"
+    pic "models/weapons/Doomchainfist/Chainfist_active1.png" tics 1 
+    pic "models/weapons/Doomchainfist/Chainfist_active.png" tics 1 
+
+
+

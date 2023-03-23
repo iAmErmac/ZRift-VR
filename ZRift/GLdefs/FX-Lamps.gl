@@ -1,0 +1,47 @@
+flickerlight ChasmLamp
+{
+    color 0.8 0.6 0.8
+    size 45
+    secondarySize 50
+    offset 0 60 0
+    attenuate 1
+    chance 0.4
+
+}
+
+
+flickerlight ChasmLamp2
+{
+    color 0.7 0.5 0.7
+    size 25
+    secondarySize 30
+    offset 0 30 0
+    attenuate 1
+    chance 0.5
+
+}
+
+flickerlight ChasmColumn
+{
+    color 0.7 0.5 0.2
+    size 25
+    secondarySize 30
+    offset 0 40 0
+    attenuate 1
+
+}
+
+object ChasmTechlamp
+{
+frame LAMAA { light ChasmLamp }
+}
+
+object ChasmTechlamp2
+{
+frame LAMAB { light ChasmLamp2 }
+}
+
+object ChasmColumn
+{
+frame LAMAC { light ChasmColumn }
+}

@@ -1,0 +1,72 @@
+//////////////////////////
+//Chasm Chainfist Brightmap Firstperson
+
+material texture "models/weapons/Chainfist.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
+}
+material texture "models/weapons/Chainfist_active.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
+}
+material texture "models/weapons/Chainfist_active1.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
+}
+material texture "models/weapons/Chainfist_pickup.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
+}
+
+
+
+//////////////////////////
+//Chasm Chainfist PBR Firstperson (specular workflow)
+material texture "models/weapons/Chainfist.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
+material texture "models/weapons/Chainfist_active.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
+material texture "models/weapons/Chainfist_active1.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
+material texture "models/weapons/Chainfist_pickup.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
+
+
+
+//////////////////////////
+// Weapon Pickup Light
+pulselight Pickuplight-Chainfist
+{
+    color 0.8 0.1 0.1
+    offset 0.0 5.0 0.0
+    size 25
+    secondarySize 15
+    interval 1
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmChainFist
+{
+	frame CHFXA  { light Pickuplight-Chainfist }
+    }

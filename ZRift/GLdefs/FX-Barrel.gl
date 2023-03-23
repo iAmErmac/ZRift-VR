@@ -1,0 +1,10 @@
+material texture Models/Misc/BarrelToxic.png  { 
+	shader "Shaders/env.fp"
+	texture displacement "Materials/Environment/Enviro1.png"
+	texture envmask "Materials/Barrel/BarrelToxic_spec.png"
+	normal "Materials/Barrel/BarrelToxic_norm.png"
+	specular "Materials/Barrel/BarrelToxic_spec.png"
+    brightmap "Materials/Barrel/BarrelToxic_spec.png"
+	specularlevel 2.0
+	glossiness 7
+}

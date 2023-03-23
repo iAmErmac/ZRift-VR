@@ -1,0 +1,15 @@
+Model ChasmShotgun
+{
+   Path "models/weapons"   	
+   Model 0 "ShotgunPickup.md2"   
+   Skin 0 "ShotgunPickup.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90 
+   ZOffset 15
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame SHGX A 0 "IdleA1"   
+   
+}

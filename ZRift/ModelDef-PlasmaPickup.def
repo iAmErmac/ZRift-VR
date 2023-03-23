@@ -1,0 +1,16 @@
+Model ChasmPlasmaThrower
+{
+   Path "models/weapons"   	
+   Model 0 "FlakPickup.md2"   
+   Skin 0 "FlakGunPickup-Green.png"    
+   Scale 0.83 0.83 0.83 
+   AngleOffset 90 
+   ZOffset 20
+   PitchOffset 25
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame PLWX Z 0 "IdleA1"   
+   
+}

@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////
+actor ChasmCandelabraSpawner : RandomSpawner replaces Candelabra
+{
+DropItem "ChasmCandelabra", 256, 1
+}
+
+ACTOR ChasmCandelabra
+{
+  Radius 16
+  Height 60
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+    CANA A -1 Bright
+    Stop
+  }
+}
+
+////////////////////////////////////////////////////
+actor ChasmCandlestickSpawner : RandomSpawner replaces Candlestick
+{
+DropItem "ChasmCandlestick", 256, 1
+}
+
+ACTOR ChasmCandlestick
+{
+  Radius 20
+  Height 14
+  ProjectilePassHeight -16
+  States
+  {
+  Spawn:
+    CANA B -1 Bright
+    Stop
+  }
+}

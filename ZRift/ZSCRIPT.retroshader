@@ -1,0 +1,21 @@
+version "2.5"
+
+class RetroHandler : EventHandler
+{
+	override void UiTick()
+	{
+		PlayerInfo p = players[consoleplayer];
+		if (Cvar.GetCVar("retro_pixelation", p).GetInt() + Cvar.GetCVar("retro_posterization", p).GetInt() > -1)
+		{
+			Shader.SetUniform1f(p, "RetroShader", "pixelation", Cvar.GetCVar("retro_pixelation", p).GetFloat());
+			Shader.SetUniform1f(p, "RetroShader", "posterization", Cvar.GetCVar("retro_posterization", p).GetInt());
+			Shader.SetUniform1f(p, "RetroShader", "postcolors", Cvar.GetCVar("retro_postcolors", p).GetInt());
+			Shader.SetUniform1f(p, "RetroShader", "postgamma", Cvar.GetCVar("retro_postgamma", p).GetFloat());
+			Shader.SetEnabled(p, "RetroShader", true);
+		}
+		else
+		{
+			Shader.SetEnabled(p, "RetroShader", false);
+		}
+	}
+}

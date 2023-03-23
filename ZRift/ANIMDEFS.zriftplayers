@@ -1,0 +1,82 @@
+Texture CHASMPL Oscillate
+    pic "graphics/riftmarine/Riftmarine0001.PNG" tics 20
+    pic "graphics/riftmarine/Riftmarine0002.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0003.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0004.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0005.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0006.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0007.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0008.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0009.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0010.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0011.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0012.PNG" tics 20
+    pic "graphics/riftmarine/Riftmarine0013.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0014.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0015.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0016.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0017.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0018.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0019.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0020.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0021.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0022.PNG" tics 2
+    pic "graphics/riftmarine/Riftmarine0023.PNG" tics 20
+
+
+Texture QUAKEPL Oscillate
+    pic "graphics/Quakemarine/Quakemarine0001.PNG" tics 20
+    pic "graphics/Quakemarine/Quakemarine0002.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0003.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0004.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0005.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0006.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0007.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0008.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0009.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0010.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0011.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0012.PNG" tics 20
+    pic "graphics/Quakemarine/Quakemarine0013.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0014.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0015.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0016.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0017.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0018.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0019.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0020.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0021.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0022.PNG" tics 2
+    pic "graphics/Quakemarine/Quakemarine0023.PNG" tics 20
+    
+    Texture DOOMPL Oscillate
+    pic "graphics/Doommarine/Doommarine0001.PNG" tics 20
+    pic "graphics/Doommarine/Doommarine0002.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0003.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0004.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0005.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0006.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0007.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0008.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0009.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0010.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0011.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0012.PNG" tics 20
+    pic "graphics/Doommarine/Doommarine0013.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0014.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0015.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0016.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0017.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0018.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0019.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0020.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0021.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0022.PNG" tics 2
+    pic "graphics/Doommarine/Doommarine0023.PNG" tics 20
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+material texture "models/monsters/AlienCaptain.png" {
+	brightmap "materials/monsters/AlienCaptain_brightmap.png"        
+}    
+material texture "models/monsters/AlienTrooper.png" {
+	brightmap "materials/monsters/AlienTrooper_brightmap.png"        
+}
+material texture "models/monsters/AssaultGrunt.png" {
+	brightmap "materials/monsters/AssaultGrunt_brightmap.png"        
+}
+material texture "models/monsters/Banshee.png" {
+	brightmap "materials/monsters/Banshee_brightmap.png"        
+}
+material texture "models/monsters/DeadGuy.png" {
+	brightmap "materials/monsters/DeadGuy_brightmap.png"        
+}
+material texture "models/monsters/FatGuy.png" {
+	brightmap "materials/monsters/FatGuy_brightmap.png"        
+}
+material texture "models/monsters/Faust.png" {
+	brightmap "materials/monsters/Faust_brightmap.png"        
+}
+material texture "models/monsters/Goblin.png" {
+	brightmap "materials/monsters/Goblin_brightmap.png"        
+}
+material texture "models/monsters/Joker.png" {
+	brightmap "materials/monsters/Joker_brightmap.png"        
+}
+material texture "models/monsters/LionGuy.png" {
+	brightmap "materials/monsters/LionGuy_brightmap.png"        
+}
+material texture "models/monsters/Mincer.png" {
+	brightmap "materials/monsters/Mincer_brightmap.png"        
+}
+material texture "models/monsters/Orc.png" {
+	brightmap "materials/monsters/Orc_brightmap.png"        
+}
+material texture "models/monsters/PhantomLesser.png" {
+	brightmap "materials/monsters/PhantomLesser_brightmap.png"        
+}
+material texture "models/monsters/PhantomLord.png" {
+	brightmap "materials/monsters/PhantomLord_brightmap.png"        
+}
+material texture "models/monsters/Piggy.png" {
+	brightmap "materials/monsters/Piggy_brightmap.png"        
+}
+material texture "models/monsters/Raptor.png" {
+	brightmap "materials/monsters/Raptor_brightmap.png"        
+}
+material texture "models/monsters/Sarcof.png" {
+	brightmap "materials/monsters/Sarcof_brightmap.png"        
+}
+material texture "models/monsters/Scorpy.png" {
+	brightmap "materials/monsters/Scorpy_brightmap.png"        
+}
+material texture "models/monsters/ShotgunGrunt.png" {
+	brightmap "materials/monsters/ShotgunGrunt_brightmap.png"        
+}
+material texture "models/monsters/SkeletonGuy.png" {
+	brightmap "materials/monsters/SkeletonGuy_brightmap.png"        
+}
+material texture "models/monsters/SkeletonGuy2.png" {
+	brightmap "materials/monsters/SkeletonGuy2_brightmap.png"        
+}
+material texture "models/monsters/Sphinx.png" {
+	brightmap "materials/monsters/Sphinx_brightmap.png"        
+}
+material texture "models/monsters/TurretBase.png" {
+	brightmap "materials/monsters/TurretBase_brightmap.png"        
+}
+material texture "models/monsters/TurretTop.png" {
+	brightmap "materials/monsters/TurretTop_brightmap.png"        
+}
+material texture "models/monsters/TurretTopDead.png" {
+	brightmap "materials/monsters/TurretTopDead_brightmap.png"        
+}
+material texture "models/monsters/Viking.png" {
+	brightmap "materials/monsters/Viking_brightmap.png"        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

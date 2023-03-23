@@ -1,0 +1,15 @@
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MegaDestroyerPickup.md2"   
+   Skin 0 "MegaDestroyerPickup.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90 
+   ZOffset 15
+   ROTATING
+   Rotation-Speed 2
+
+//IdleA
+   Frame DESX A 0 "IdleA1"   
+   
+}

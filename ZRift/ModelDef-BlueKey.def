@@ -1,0 +1,15 @@
+Model BlueSkull
+{
+   Path "models/items"   	
+   Model 0 "Key.md2"   
+   Skin 0 "BlueKey.png"    
+   Scale 0.10 0.10 0.10  
+   AngleOffset 90 
+   ROTATING
+   Rotation-Speed 3
+
+//IdleA
+   Frame BSKU A 0 "IdleA1"
+   Frame BSKU B 0 "IdleA1"   
+   
+}

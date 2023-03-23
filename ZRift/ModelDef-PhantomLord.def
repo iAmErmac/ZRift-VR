@@ -1,0 +1,133 @@
+Model ChasmPhantomLord
+{
+   Path "models/monsters"   	
+   Model 0 "Phantom.md2"   
+   Skin 0 "PhantomLord.png"    
+   Scale 0.26 0.26 0.26  
+   AngleOffset 90 
+
+//Walk
+   Frame PHW1 A 0 "Walk1"    	
+   Frame PHW1 B 0 "Walk2"    
+   Frame PHW1 C 0 "Walk3"    
+   Frame PHW1 D 0 "Walk4" 
+   Frame PHW1 E 0 "Walk5" 
+   Frame PHW1 F 0 "Walk6" 
+   Frame PHW1 G 0 "Walk7" 
+   Frame PHW1 H 0 "Walk8"
+   Frame PHW1 I 0 "Walk9" 
+   Frame PHW1 J 0 "Walk10" 
+   Frame PHW1 K 0 "Walk11" 
+   Frame PHW1 L 0 "Walk12"
+
+//AttackA
+   Frame PHA1 A 0 "AttackA1"    	
+   Frame PHA1 B 0 "AttackA2"    
+   Frame PHA1 C 0 "AttackA3"    
+   Frame PHA1 D 0 "AttackA4" 
+   Frame PHA1 E 0 "AttackA5" 
+   Frame PHA1 F 0 "AttackA6" 
+   Frame PHA1 G 0 "AttackA7" 
+   Frame PHA1 H 0 "AttackA8"
+   Frame PHA1 I 0 "AttackA9" 
+   Frame PHA1 J 0 "AttackA10" 
+   Frame PHA1 K 0 "AttackA11" 
+   Frame PHA1 L 0 "AttackA12" 
+   Frame PHA1 M 0 "AttackA13" 
+   Frame PHA1 N 0 "AttackA14" 
+   Frame PHA1 O 0 "AttackA15" 
+   Frame PHA1 P 0 "AttackA16" 
+   Frame PHA1 Q 0 "AttackA17" 
+   Frame PHA1 R 0 "AttackA18" 
+   Frame PHA1 S 0 "AttackA19" 
+   Frame PHA1 T 0 "AttackA20" 
+   Frame PHA1 U 0 "AttackA21" 
+   Frame PHA1 V 0 "AttackA22" 
+   Frame PHA1 W 0 "AttackA23"
+   Frame PHA1 X 0 "AttackA24" 
+   Frame PHA1 Y 0 "AttackA25"
+
+//PainA
+   Frame PHP1 A 0 "PainA1"    	
+   Frame PHP1 B 0 "PainA2"    
+   Frame PHP1 C 0 "PainA3"    
+   Frame PHP1 D 0 "PainA4" 
+   Frame PHP1 E 0 "PainA5" 
+   Frame PHP1 F 0 "PainA6" 
+   Frame PHP1 G 0 "PainA7" 
+   Frame PHP1 H 0 "PainA8"
+   Frame PHP1 I 0 "PainA9" 
+   Frame PHP1 J 0 "PainA10" 
+   Frame PHP1 K 0 "PainA11" 
+   Frame PHP1 L 0 "PainA12" 
+   Frame PHP1 M 0 "PainA13"   
+
+
+}
+
+Model HereticChasmPhantomLord
+{
+   Path "models/monsters"   	
+   Model 0 "Phantom.md2"   
+   Skin 0 "PhantomLord.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90 
+
+//Walk
+   Frame PHW1 A 0 "Walk1"    	
+   Frame PHW1 B 0 "Walk2"    
+   Frame PHW1 C 0 "Walk3"    
+   Frame PHW1 D 0 "Walk4" 
+   Frame PHW1 E 0 "Walk5" 
+   Frame PHW1 F 0 "Walk6" 
+   Frame PHW1 G 0 "Walk7" 
+   Frame PHW1 H 0 "Walk8"
+   Frame PHW1 I 0 "Walk9" 
+   Frame PHW1 J 0 "Walk10" 
+   Frame PHW1 K 0 "Walk11" 
+   Frame PHW1 L 0 "Walk12"
+
+//AttackA
+   Frame PHA1 A 0 "AttackA1"    	
+   Frame PHA1 B 0 "AttackA2"    
+   Frame PHA1 C 0 "AttackA3"    
+   Frame PHA1 D 0 "AttackA4" 
+   Frame PHA1 E 0 "AttackA5" 
+   Frame PHA1 F 0 "AttackA6" 
+   Frame PHA1 G 0 "AttackA7" 
+   Frame PHA1 H 0 "AttackA8"
+   Frame PHA1 I 0 "AttackA9" 
+   Frame PHA1 J 0 "AttackA10" 
+   Frame PHA1 K 0 "AttackA11" 
+   Frame PHA1 L 0 "AttackA12" 
+   Frame PHA1 M 0 "AttackA13" 
+   Frame PHA1 N 0 "AttackA14" 
+   Frame PHA1 O 0 "AttackA15" 
+   Frame PHA1 P 0 "AttackA16" 
+   Frame PHA1 Q 0 "AttackA17" 
+   Frame PHA1 R 0 "AttackA18" 
+   Frame PHA1 S 0 "AttackA19" 
+   Frame PHA1 T 0 "AttackA20" 
+   Frame PHA1 U 0 "AttackA21" 
+   Frame PHA1 V 0 "AttackA22" 
+   Frame PHA1 W 0 "AttackA23"
+   Frame PHA1 X 0 "AttackA24" 
+   Frame PHA1 Y 0 "AttackA25"
+
+//PainA
+   Frame PHP1 A 0 "PainA1"    	
+   Frame PHP1 B 0 "PainA2"    
+   Frame PHP1 C 0 "PainA3"    
+   Frame PHP1 D 0 "PainA4" 
+   Frame PHP1 E 0 "PainA5" 
+   Frame PHP1 F 0 "PainA6" 
+   Frame PHP1 G 0 "PainA7" 
+   Frame PHP1 H 0 "PainA8"
+   Frame PHP1 I 0 "PainA9" 
+   Frame PHP1 J 0 "PainA10" 
+   Frame PHP1 K 0 "PainA11" 
+   Frame PHP1 L 0 "PainA12" 
+   Frame PHP1 M 0 "PainA13"   
+
+
+}

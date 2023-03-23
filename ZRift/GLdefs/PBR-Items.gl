@@ -1,0 +1,35 @@
+material texture "models/items/BoltAmmo.png" {
+	brightmap "materials/BoltAmmoBright.png"        
+}
+
+material texture "models/items/FlakgunAmmo-Green.png" {
+	brightmap "materials/FlakgunAmmo-GreenBright.png"        
+}
+
+material texture "models/items/AlienCell.png" {
+	brightmap "materials/AlienCellBright.png"        
+}  
+
+material texture "models/items/AlienCellBox.png" {
+	brightmap "materials/AlienCellBoxBright.png"        
+}
+
+material texture "models/items/SmallHealth.png" {
+	brightmap "materials/SmallHealthBright.png"        
+}
+
+material texture "models/items/BigHealth.png" {
+	brightmap "materials/BigHealthBright.png"        
+}
+
+material texture "models/items/BigHealthBerserk.png" {
+	brightmap "materials/BigHealthBerserkBright.png"        
+}
+
+material texture "models/items/Invis.png" {
+	brightmap "materials/InvisBright.png"        
+}    
+
+material texture "models/items/FieldKit.png" {
+	brightmap "materials/FieldKitBright.png"        
+}                         

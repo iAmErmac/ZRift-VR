@@ -1,0 +1,54 @@
+AddOptionMenu "OptionsMenu"
+{
+	//Submenu "$OPTMNU_RETROSHADER", "RetroShaderMenu"
+}
+
+OptionMenu "RetroShaderMenu"
+{
+	Title "$RETROSHADERMNU_TITLE"
+	StaticText ""
+	StaticText "RetroShader", "gold"
+    StaticText ""
+    StaticText ""
+    StaticText ""
+	Option "Pixelation", "retro_pixelation", "PixelOptions"
+	Option "Posterization", "retro_posterization", "OnOff"
+	Slider "Color bit depth", "retro_postcolors", 3, 32, 1, 0
+    PWWStaticText ""
+    PWWStaticText "Default value = 20"
+	Slider "Shadow gamma", "retro_postgamma", 0, 1, 0.01, 2
+    PWWStaticText ""
+    PWWStaticText "Default value = 46"
+	Option "$GLPREFMNU_BLOOM",		 			gl_bloom,						"OnOff"
+	Option "$GLPREFMNU_LENS",		 			gl_lens,						"OnOff"
+	Option "$GLPREFMNU_SSAO",		 			gl_ssao,						"SSAOModes"
+	Slider "$GLPREFMNU_SSAO_PORTALS",			gl_ssao_portals,				0.0, 4.0, 1.0, 0
+	Option "$GLPREFMNU_FXAA",		 			gl_fxaa,						"FXAAQuality"
+	Option "$GLPREFMNU_DITHER",		 			gl_dither_bpc,					"DitherModes"
+	Option "$GLPREFMNU_TONEMAP", 				gl_tonemap,						"TonemapModes"
+	StaticText " "
+	Slider "$GLPREFMNU_PALTONEMAPPOWER",		gl_paltonemap_powtable,			0.2, 3.0, 0.1, 1
+	Option "$GLPREFMNU_PALTONEMAPORDER",		gl_paltonemap_reverselookup,	"LookupOrder"
+
+
+
+
+    StaticText ""
+    StaticText ""
+    StaticText "Retroshader mod created by NightFright"
+    StaticText ""
+    StaticText ""
+    PWWStaticText "Retroshader Version: 2.7.2"
+}
+
+OptionValue "PixelOptions"
+{
+	-1, "Off"
+	0, "160x200 (Low Detail)"
+	1, "320x200 (Vanilla)"
+	1.5, "480x300 (WinDoom)"
+	2, "640x400 (Doom95)"
+	2.4, "768x480 (NTSC)"
+    3, "960x600 (High detail)"
+    4, "1280x800 (High detail++)"
+}

@@ -1,0 +1,44 @@
+//////////////////////////////////////
+//Marine Head With Candles
+//DE01 ABCD - Headpile Candles Full
+//////////////////////////////////////
+Model Headpile
+{
+  Path "Models/bodies"   
+  Model 0 "Headpile-Candles.md3"   
+  SurfaceSkin 0 0 "MarineHeads.png" //Heads
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  SurfaceSkin 0 1 "Candle-On.png"   //Candle
+  
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame
+  SurfaceSkin 0 1 "Candle-On.png"   //Flame   
+
+  OFFSET 0 0 2 
+  AngleOffset 0
+  PitchOffset 0	
+  RollOffset 0
+  Scale 0.3 0.3 0.3
+
+  FrameIndex DE01 A 0 0
+  FrameIndex DE01 B 0 1
+  FrameIndex DE01 C 0 2
+  FrameIndex DE01 D 0 3
+}
+
+
+
+
+
+
+

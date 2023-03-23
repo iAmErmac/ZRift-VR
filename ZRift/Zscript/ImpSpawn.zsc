@@ -1,0 +1,24 @@
+class ImpRambler:EventHandler
+{
+    override void WorldLoaded(WorldEvent e)
+	{
+        int which=random(0,2);
+        thinkeriterator impreplacer=thinkeriterator.create("DoomImp");
+        actor imppp=null;
+        array<actor>impppdelend;
+        while(imppp=actor(impreplacer.next()))
+		{
+            class<actor> notimp="ChasmJoker";
+            if(which==1) notimp="ChasmViking";
+			else if(which==2) notimp="DeadGuyRandom";
+            imppp.spawn(notimp,imppp.pos);
+            impppdelend.push(imppp);
+        }
+        while(impppdelend.size()>0)
+		{
+            impppdelend[0].destroy();
+            impppdelend.delete(0);
+        }
+    }
+}
+

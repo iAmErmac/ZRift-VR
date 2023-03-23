@@ -1,0 +1,168 @@
+Model ChasmBlueTorch 
+{
+Path "models/doom/torches" 
+Model 0 "BigBlueTorch.MD2" 
+Skin 0 "BigBlueTorch.png"
+Scale 0.5 0.5 0.5 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame TORB A 0 "Fire1" 
+Frame TORB B 0 "Fire2" 
+Frame TORB C 0 "Fire3" 
+Frame TORB D 0 "Fire4" 
+Frame TORB E 0 "Fire5" 
+}
+
+
+Model ChasmGreenTorch 
+{
+Path "models/doom/torches" 
+Model 0 "BigGreenTorch.MD2" 
+Skin 0 "BigGreenTorch.png"
+Scale 0.5 0.5 0.5 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame TORG A 0 "Fire1" 
+Frame TORG B 0 "Fire2" 
+Frame TORG C 0 "Fire3" 
+Frame TORG D 0 "Fire4" 
+Frame TORG E 0 "Fire5" 
+}
+
+
+Model ChasmRedTorch 
+{
+Path "models/doom/torches" 
+Model 0 "BigRedTorch.MD2" 
+Skin 0 "BigRedTorch.png"
+Scale 0.5 0.5 0.5 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame TORR A 0 "Fire1" 
+Frame TORR B 0 "Fire2" 
+Frame TORR C 0 "Fire3" 
+Frame TORR D 0 "Fire4" 
+Frame TORR E 0 "Fire5" 
+}
+
+
+/////////////////////////////////////////////
+
+Model ChasmShortBlueTorch 
+{
+Path "models/doom/torches" 
+Model 0 "BigBlueTorch.MD2" 
+Skin 0 "BigBlueTorch.png"
+Scale 0.25 0.25 0.25 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame TOSB A 0 "Fire1" 
+Frame TOSB B 0 "Fire2" 
+Frame TOSB C 0 "Fire3" 
+Frame TOSB D 0 "Fire4" 
+Frame TOSB E 0 "Fire5" 
+}
+
+
+Model ChasmShortGreenTorch 
+{
+Path "models/doom/torches" 
+Model 0 "BigGreenTorch.MD2" 
+Skin 0 "BigGreenTorch.png"
+Scale 0.25 0.25 0.25
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame TOSG A 0 "Fire1" 
+Frame TOSG B 0 "Fire2" 
+Frame TOSG C 0 "Fire3" 
+Frame TOSG D 0 "Fire4" 
+Frame TOSG E 0 "Fire5" 
+}
+
+
+Model ChasmShortRedTorch 
+{
+Path "models/doom/torches" 
+Model 0 "BigRedTorch.MD2" 
+Skin 0 "BigRedTorch.png"
+Scale 0.25 0.25 0.25
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame TOSR A 0 "Fire1" 
+Frame TOSR B 0 "Fire2" 
+Frame TOSR C 0 "Fire3" 
+Frame TOSR D 0 "Fire4" 
+Frame TOSR E 0 "Fire5" 
+}
+
+
+/////////////////////////////////////////////
+
+Model ChasmTechlamp
+{
+Path "models/doom/lamps" 
+Model 0 "biglamp.MD2" 
+Skin 0 "biglamp.png"
+Scale 1.2 1.2 1.5 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame LAMA A 0 "biglamp1" 
+}
+
+
+Model ChasmTechlamp2
+{
+Path "models/doom/lamps" 
+Model 0 "mediumlamp.MD2" 
+Skin 0 "mediumlamp.png"
+Scale 0.8 0.8 1.0 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame LAMA B 0 "medlamp1" 
+}
+
+Model ChasmColumn
+{
+Path "models/doom/lamps" 
+Model 0 "lamp.MD2" 
+Skin 0 "lamp.png"
+Scale 0.6 0.6 0.8 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame LAMA C 0 "column1" 
+}
+
+/////////////////////////////////////////////
+
+Model ChasmCandelabra
+{
+Path "models/doom/candles" 
+Model 0 "Candleabra.MD2" 
+Skin 0 "Candleabra.png"
+Scale 1.3 1.3 1.3 
+Offset 0 0 0 
+AngleOffset 90
+
+Frame CANA A 0 "Candleabra1" 
+}
+
+Model ChasmCandlestick
+{
+Path "models/doom/candles" 
+Model 0 "Candle.MD2" 
+Skin 0 "Candle.png"
+Scale 0.6 0.6 0.8 
+Offset 0 0 0 
+AngleOffset 0 
+
+Frame CANA B 0 "Candle1" 
+}

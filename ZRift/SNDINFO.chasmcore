@@ -1,0 +1,676 @@
+//Player
+$playeralias           ChasmPlayer	male	*pain100	Player/Pain
+$playeralias           ChasmPlayer	male	*pain75		Player/Pain
+$playeralias           ChasmPlayer	male	*pain50		Player/Pain
+$playeralias           ChasmPlayer	male	*pain25		Player/Pain
+$playeralias	       ChasmPlayer	male	*death		Player/Death
+$playeralias	       ChasmPlayer	male	*xdeath		Player/XDeath
+$playeralias	       ChasmPlayer	male	*grunt		Player/Grunt
+$playeralias	       ChasmPlayer	male	*land		Player/Land
+$playeralias	       ChasmPlayer	male	*jump		Player/Jump
+
+Player/Jump PLJUMP1
+Player/Grunt PLGRNT1
+$random Player/Pain { Player/Pain1 Player/Pain2 }
+Player/Pain1 PLPAI1
+Player/Pain2 PLPAI2
+Player/Death PLDIE1
+Player/Land PLLAND1
+Player/Step PLSTEP1
+$volume Player/Step 0.2
+
+BatPoop/Hit DRIP1
+
+//Weapons
+Ammo/Pickup SHAM1
+BigAmmo/Pickup SHAM2
+GrenAmmo/Pickup ROAM1
+BigGrenAmmo/Pickup ROAM2
+CellAmmo/Pickup CEAM1
+BigCellAmmo/Pickup CEAM2
+PlasmaAmmo/Pickup PLWAM1
+BoltAmmo/Pickup CRSS2
+
+Barrel/Exp BAREXP1
+Barrel/ToxicExp BAREXP2
+
+$random Bullet/Ric { Bullet/Ric1 Bullet/Ric2 Bullet/Ric3 Bullet/Ric4 Bullet/Ric5 Bullet/Ric6 Bullet/Ric7 Bullet/Ric8 }
+Bullet/Ric1 RIC1
+Bullet/Ric2 RIC2
+Bullet/Ric3 RIC3
+Bullet/Ric4 RIC4
+Bullet/Ric5 RIC5
+Bullet/Ric6 RIC6
+Bullet/Ric7 RIC7
+Bullet/Ric8 RIC8
+
+$random Bullet/Flesh { Bullet/Flesh1 Bullet/Flesh2 Bullet/Flesh3 }
+Bullet/Flesh1 FLESH1
+Bullet/Flesh2 FLESH2
+Bullet/Flesh3 FLESH3
+$volume Bullet/Flesh 0.15
+
+//Distant
+
+$random Distant/Explosion { Distant/Explosion1 Distant/Explosion2 Distant/Explosion3 Distant/Explosion4 }
+Distant/Explosion1 EXPDIS1
+Distant/Explosion2 EXPDIS2
+Distant/Explosion3 EXPDIS3
+Distant/Explosion4 EXPDIS4
+$rolloff Distant/Explosion 1500 8000
+
+$random Midway/Explosion { Midway/Explosion1 Midway/Explosion2 Midway/Explosion3 Midway/Explosion4 Midway/Explosion5 }
+Midway/Explosion1 AEXP1
+Midway/Explosion2 AEXP2
+Midway/Explosion3 AEXP3
+Midway/Explosion4 AEXP4
+Midway/Explosion5 AEXP5
+$rolloff Midway/Explosion 500 1500
+
+/////
+
+ChainFist/Up SAWUP2
+ChainFist/Idle SAWRDY1
+$random ChainFist/Attack { ChainFist/Fire1 ChainFist/Fire2 ChainFist/Fire3 ChainFist/Fire4 ChainFist/Fire5 ChainFist/Fire6 }
+ChainFist/Fire1 SAWFIR1
+ChainFist/Fire2 SAWFIR2
+ChainFist/Fire3 SAWFIR3
+ChainFist/Fire4 SAWFIR4
+ChainFist/Fire5 SAWFIR5
+ChainFist/Fire6 SAWFIR6
+$random ChainFist/Hit { ChainFist/Hit1 ChainFist/Hit2 ChainFist/Hit3 ChainFist/Hit4 }
+ChainFist/Hit1 SAWFLSH1
+ChainFist/Hit2 SAWFLSH2
+ChainFist/Hit3 SAWFLSH3
+ChainFist/Hit4 SAWFLSH4
+$random ChainFist/Surface { ChainFist/Surface1 ChainFist/Surface2 ChainFist/Surface3 ChainFist/Surface4 }
+ChainFist/Surface1 SAWHIT1
+ChainFist/Surface2 SAWHIT2
+ChainFist/Surface3 SAWHIT3
+ChainFist/Surface4 SAWHIT4
+$volume ChainFist/Surface 0.5
+ChainFist/Start SAWSTR1
+ChainFist/Loop SAWLOP1
+ChainFist/Stop SAWSTP1
+
+ChasmSaw/Fire CSAW1
+Saw/Up SAWUP1
+ChasmSaw/Bounce GBOUN1
+$volume ChasmSaw/Bounce 0.5
+ChasmSaw/Exp FATGEXP1
+
+ChasmFist/Up FISUP1
+$volume ChasmFist/Up 0.70
+$random ChasmFist/Swing { ChasmFist/Swing1 ChasmFist/Swing2 ChasmFist/Swing3 }
+ChasmFist/Swing1 FISATK1
+ChasmFist/Swing2 FISATK2
+ChasmFist/Swing3 FISATK3
+$volume ChasmFist/Swing 0.50
+$random ChasmFist/Surface { ChasmFist/Surface1 ChasmFist/Surface2 }
+ChasmFist/Surface1 FISHIT1
+ChasmFist/Surface2 FISHIT2
+$random ChasmFist/Punch { ChasmFist/Hit1 ChasmFist/Hit2 ChasmFist/Hit3 }
+ChasmFist/Hit1 FISPUN1
+ChasmFist/Hit2 FISPUN2
+ChasmFist/Hit3 FISPUN3
+
+ChasmRifle/Fire RIFL1
+ChasmStick/Fire BOOMST1
+Rifle/Up RIFLUP1
+//
+$random ChasmShotgun/Fire { ChasmShotgun/Fire0 ChasmShotgun/Fire1 ChasmShotgun/Fire2 ChasmShotgun/Fire3 }
+ChasmShotgun/Fire1 SHTGA1
+ChasmShotgun/Fire2 SHTGB1
+ChasmShotgun/Fire3 SHTGC1
+ChasmShotgun/Fire0 SHTG1
+$random ChasmShotgun/Pump { ChasmShotgun/Pump1 ChasmShotgun/Pump2 ChasmShotgun/Pump3 ChasmShotgun/Pump4 }
+ChasmShotgun/Pump1 SHTG2
+ChasmShotgun/Pump2 SHTG3
+ChasmShotgun/Pump3 SHTG4
+ChasmShotgun/Pump4 SHTG5
+
+//
+PlasmaThrower/Charge PLWCRG1
+PlasmaThrower/Fire PLWFIR1
+PlasmaThrower/Up PLWUP1
+PlasmaThrower/Start PLWSTR1
+PlasmaThrower/FireLoop PLWLOP1
+PlasmaThrower/Stop PLWEND1
+PlasmaThrower/Hit PLWHIT1
+$random PlasmaBall/Bounce { PlasmaBall/Bounce1 PlasmaBall/Bounce2 }
+PlasmaBall/Bounce1 PLWBNC1
+PlasmaBall/Bounce2 PLWBNC2
+PlasmaBall/Exp PLWEXP1
+PlasmaThrower/Recoil PLWREC1
+
+//
+ChasmChaingun/FireLoop CHAN1
+ChasmChaingun/Fire CHAN0
+ChasmChaingun/Spin CHAN2
+ChasmChaingun/Stop CHAN3
+ChaingunLoop/Stop CHAN1e
+Chaingun/Up CHNUP1
+//
+$random ChasmRocketL/Fire { ChasmRocketL/Fire1 ChasmRocketL/Fire2 ChasmRocketL/Fire3 }
+ChasmRocketL/Fire1 GRENA1
+ChasmRocketL/Fire2 GRENB1
+ChasmRocketL/Fire3 GRENC1
+RocketL/Up GRENUP1
+ChasmRocketL/Bounce GBOUN1
+$random ChasmRocketL/Exp { ChasmRocketL/Exp1 ChasmRocketL/Exp2 ChasmRocketL/Exp3 }
+ChasmRocketL/Exp1 GEXP1
+ChasmRocketL/Exp2 GEXP2
+ChasmRocketL/Exp3 GEXP3
+ChasmRocketL/Fly GFLY1
+ChasmRocketL/ClusterFire CLUFIR1
+ChasmRocketL/ClusterBreak CLUBRK1
+$random ChasmRocketL/ClusterExp { ChasmRocketL/ClusterExp1 ChasmRocketL/ClusterExp2 ChasmRocketL/ClusterExp3 }
+ChasmRocketL/ClusterExp1 CLUEXP1
+ChasmRocketL/ClusterExp2 CLUEXP2
+ChasmRocketL/ClusterExp3 CLUEXP3
+//
+ChasmCrossbow/Fire CRSS1
+Crossbow/Up CRSUP1
+ChasmCrossbow/Exp CEXP1
+$volume ChasmCrossbow/Exp 0.80
+ChasmCrossbow/RicFire RICFIR1
+$random ChasmCrossbow/Bounce { ChasmCrossbow/Bounce1 ChasmCrossbow/Bounce2 }
+ChasmCrossbow/Bounce1 RICBNC1
+ChasmCrossbow/Bounce2 RICBNC2
+$volume ChasmCrossbow/Bounce 0.50
+//
+ChasmDestroyer/Fire DEST1
+ChasmDestroyer/Exp DEST2
+ChasmDestroyer/ExtraExp DEST3
+$volume ChasmDestroyer/ExtraExp 0.65
+ChasmDestroyer/Fly DEST4
+$volume ChasmDestroyer/Fly 0.65
+ChasmDestroyer/Charge DEST5
+MD/Up DESUP1
+ChasmDestroyer/AltCharge MDCRG1
+ChasmDestroyer/AltFire MDFIR1
+ChasmDestroyer/AltLoop MDLOOP1
+ChasmDestroyer/AltStop MDEND1
+MD/Click MDDRY1
+Distant/MDExp DESDIS1
+$volume Distant/MDExp 0.75
+$rolloff Distant/MDExp 800 8000
+
+//
+ChasmMine/Fire MINE1
+ChasmMine/Land MINE2
+ChasmMine/Beep MINE3
+ChasmMine/Activate MINE4
+ChasmMine/Explode MINE5
+Mine/Up MINEUP1
+
+//Monsters
+Turret/See TURSEE1
+Turret/Fire TURFIR1
+Turret/Pain TURPAI1
+$volume Turret/Pain 0.50
+Turret/Death TURDIE1
+
+$random Mongs/Active { Grunt/Idle1 Grunt/Idle2 Grunt/Idle3 Grunt/Idle4 Grunt/Idle5 Grunt/Idle6 }
+Grunt/Idle1 MONACT1
+Grunt/Idle2 MONACT2
+Grunt/Idle3 MONACT3
+Grunt/Idle4 MONACT4
+Grunt/Idle5 MONACT5
+Grunt/Idle6 MONACT6
+$volume Mongs/Active 0.55
+
+$random Mongs/Idle { Mongs/Idle1 Mongs/Idle2 Mongs/Idle3 }
+Mongs/Idle1 MONIDL1
+Mongs/Idle2 MONIDL2
+Mongs/Idle3 MONIDL3
+$rolloff Mongs/Idle 200 1600
+$volume Mongs/Idle 0.35
+
+MongA/See MON1SEE1
+MongA/Fire MON1FIR1
+MongA/ShotgunFire MON1FIR2
+MongA/MGFire MON1FIR3
+MongA/Stab MON1STB1
+$volume MongA/Stab 0.80
+$random MongA/Pain { ChasmGrunt/Pain1 ChasmGrunt/Pain2 }
+ChasmGrunt/Pain1 MON1PAI1
+ChasmGrunt/Pain2 MON1PAI2
+MongA/Death MON1DIE1
+MongA/Walk MON1WLK1
+$rolloff MongA/Walk 200 300
+$Volume MongA/Walk 0.20
+MongA/Fall MON1FLL1
+
+Joker/See JOKSEE1
+$volume Joker/See 0.35
+Joker/Active JOKACT1
+$volume Joker/Active 0.35
+Joker/Pain JOKPAI1
+$volume Joker/Pain 0.35
+Joker/Death JOKDIE1
+$volume Joker/Death 0.35
+JokerSaw/Fire JOKFIR1
+Joker/Walk JOKWLK1
+$rolloff Joker/Walk 200 300
+$Volume Joker/Walk 0.20
+$random Joker/Idle { Joker/Idle1 Joker/Idle2 }
+Joker/Idle1 JOKIDL1
+Joker/Idle2 JOKIDL2
+$rolloff Joker/Idle 200 1000
+$volume Joker/Idle 0.25
+
+Viking/See VIKSEE1
+$volume Viking/See 0.50
+Viking/Throw VIKATK1
+Viking/Stab VIKHIT1
+Viking/Exp VIKEXP1
+$random Viking/Pain { Viking/Pain1 Viking/Pain2 }
+Viking/Pain1 VIKPAI1
+Viking/Pain2 VIKPAI2
+$random Viking/Death { Viking/Death1 Viking/Death2 }
+Viking/Death1 VIKDIE1
+Viking/Death2 VIKDIE2
+Viking/Idle VIKIDL1
+$rolloff Viking/Idle 200 1400
+$volume Viking/Idle 0.35
+
+Zombie/See ZOMSEE1
+Zombie/Active ZOMACT1
+$volume Zombie/Active 0.50
+Zombie/Scream ZOMATK1
+Zombie/Smack ZOMSTB1
+Zombie/Pain ZOMPAI1
+Zombie/Death ZOMDIE1
+Zombie/Fall ZOMFLL1
+$random Zombie/Idle { Zombie/Idle1 Zombie/Idle2 }
+Zombie/Idle1 ZOMIDL1
+Zombie/Idle2 ZOMIDL2
+$rolloff Zombie/Idle 200 1200
+$volume Zombie/Idle 0.25
+$random Zombie/Poison { Zombie/Poison1 Zombie/Poison2 Zombie/Poison3 Zombie/Poison4 }
+Zombie/Poison1 ZOMPOI1
+Zombie/Poison2 ZOMPOI2
+Zombie/Poison3 ZOMPOI3
+Zombie/Poison4 ZOMPOI4
+$volume Zombie/Poison 0.40
+
+MongB/See MON2SEE1
+MongB/Fire MON2FIR1
+$random MongB/Pain { MongB/Pain1 MongB/Pain2 }
+MongB/Pain1 MON2PAI1
+MongB/Pain2 MON2PAI2
+MongB/Death MON2DIE1
+
+MongC/See MON3SEE1
+$random MongC/Pain { MongC/Pain1 MongC/Pain2 }
+MongC/Pain1 MON3PAI1
+MongC/Pain2 MON3PAI2
+MongC/Death MON3DIE1
+MongC/GunFire MON3FIR2
+MongC/MissileFire MON3FIR1
+Distant/FaustMissile MON3DIS1
+$volume Distant/FaustMissile 0.60
+$rolloff Distant/FaustMissile 1000 7000
+
+Piggy/See BEASEE1
+$volume Piggy/See 0.50
+Piggy/Active BEAACT1
+Piggy/Attack BEAATK1
+$volume Piggy/Attack 0.50
+Piggy/Pain BEAPAI1
+$volume Piggy/Pain 0.50
+Piggy/Death BEADIE1
+$volume Piggy/Death 0.50
+Piggy/Walk BEAWLK1
+$rolloff Piggy/Walk 200 400
+$Volume Piggy/Walk 0.20
+Piggy/Fall BEAFLL1
+Piggy/Bite LIOHIT1
+Piggy/Idle BEAIDL1
+$rolloff Piggy/Idle 200 1100
+$volume Piggy/Idle 0.25
+
+Scorpy/See SCRSEE1
+Scorpy/Active SCRACT1
+Scorpy/Attack SCRATK1
+Scorpy/Pain SCRPAI1
+Scorpy/Walk SCRWLK1
+$rolloff Scorpy/Walk 200 300
+$Volume Scorpy/Walk 0.2
+Scorpy/Gib SCRGIB1
+Scorpy/Death SCRDIE1
+
+Mincer/See MINSEE1
+$volume Mincer/See 0.40
+Mincer/Active MINACT1
+Mincer/Stab MINATK1
+Mincer/Pain MINPAI1
+$volume Mincer/Pain 0.40
+Mincer/Death MINDIE1
+$volume Mincer/Death 0.40
+Mincer/Idle MINIDL1
+$rolloff Mincer/Idle 200 1000
+$volume Mincer/Idle 0.40
+
+$random Raptor/See { Raptor/See1 Raptor/See2 Raptor/See3 }
+Raptor/See1 RAPSEE1
+Raptor/See2 RAPSEE2
+Raptor/See3 RAPSEE3
+$random Raptor/Idle { Raptor/Idle1 Raptor/Idle2 Raptor/Idle3 }
+Raptor/Idle1 RAPIDL1
+Raptor/Idle2 RAPIDL2
+Raptor/Idle3 RAPIDL3
+$rolloff Raptor/Idle 200 1300
+$volume Raptor/Idle 0.25
+$random Raptor/Active { Raptor/Active1 Raptor/Active2 }
+Raptor/Active1 RAPACT1
+Raptor/Active2 RAPACT2
+$random Raptor/Pain { Raptor/Pain1 Raptor/Pain2 }
+Raptor/Pain1 RAPPAI1 
+Raptor/Pain2 RAPPAI2
+$random Raptor/Death { Raptor/Death1 Raptor/Death2 Raptor/Death3 }
+Raptor/Death1 RAPDIE1
+Raptor/Death2 RAPDIE2
+Raptor/Death3 RAPDIE3
+$random Raptor/Attack { Raptor/Attack1 Raptor/Attack2 }
+Raptor/Attack1 RAPATK1
+Raptor/Attack2 RAPATK2
+Raptor/Jump RAPJMP1
+$random Raptor/Walk { Raptor/Walk1 Raptor/Walk2 }
+Raptor/Walk1 RAPWLK1
+Raptor/Walk2 RAPWLK2
+$rolloff Raptor/Walk 200 400
+
+Banshee/See BANSEE1
+$random Banshee/Active { Banshee/Active1 Banshee/Active2 }
+Banshee/Active1 BANACT1
+Banshee/Active2 BANACT2
+$random Banshee/Attack { Banshee/Attack1 Banshee/Attack2 }
+Banshee/Attack1 BANATK1
+Banshee/Attack2 BANATK2
+$volume Banshee/Attack 0.70
+$random Banshee/Pain { Banshee/Pain1 Banshee/Pain2 }
+Banshee/Pain1 BANPAI1
+Banshee/Pain2 BANPAI2
+Banshee/Explode BANEXP1
+$volume Banshee/Explode 0.50
+
+MongL/See LIESEE1
+MongL/Pain LIEPAI1
+MongL/Death LIEDIE1
+MongL/Fire LIEFIR1
+
+FatGuy/See FATGSEE1
+$random FatGuy/Active { FatGuy/Active1 FatGuy/Active2 }
+FatGuy/Active1 FATGACT1
+FatGuy/Active2 FATGACT2
+$volume FatGuy/Active 0.40
+$random FatGuy/Pain { FatGuy/Pain1 FatGuy/Pain2 }
+FatGuy/Pain1 FATGPAI1
+FatGuy/Pain2 FATGPAI2
+FatGuy/Death FATGDIE1
+FatGuy/Gib FATGGIB1
+FatGuy/Attack FATGATK1
+FatGuy/Melee FATGATK2
+FatGuyHammer/Exp FATGEXP1
+FatGuyHammer/Loop FATGFLY1
+FatGuy/Walk FATGWLK1
+$rolloff FatGuy/Walk 200 500
+$Volume FatGuy/Walk 0.30
+FatGuy/Hit FATGHIT1
+FatGuy/Idle FATGIDL1
+$rolloff FatGuy/Idle 200 1000
+$volume FatGuy/Idle 0.40
+
+LionGuy/See LIOSEE1
+LionGuy/Active LIOACT1
+LionGuy/Pain LIOPAI1
+LionGuy/Death LIODIE1
+LionGuy/FireBall LIOATK1
+LionGuy/FireExp LIOEXP1
+LionGuy/Melee LIOMEL1
+LionGuy/Hit LIOHIT1
+LionGuy/Walk LIOWLK1
+$rolloff LionGuy/Walk 200 400
+$Volume LionGuy/Walk 0.30
+LionGuy/Fall LIOFLL1
+LionGuy/Idle LIOIDL1
+$rolloff LionGuy/Idle 200 1100
+$volume LionGuy/Idle 0.40
+LionBall/Loop LIOFLY1
+
+Ogre/See GROSEE1
+Ogre/Active GROSEE1
+Ogre/Pain GROPAI1
+Ogre/Death GRODIE1
+Ogre/Attack GROATK1
+Ogre/Melee GROMEL1
+Ogre/RockHit GROHIT2
+OgreHammer/Hit GROHIT1
+Ogre/Walk GROWLK1
+$rolloff Ogre/Walk 200 600
+$Volume Ogre/Walk 0.30
+Ogre/Grenade GROFIR1
+Ogre/GrenadeExp GROEXP1
+Ogre/Idle GROIDL1
+$rolloff Ogre/Idle 200 1250
+$volume Ogre/Idle 0.40
+
+Skeleton/See SKESEE1
+Skeleton/Active SKEACT1
+$random Skeleton/Pain { Skeleton/Pain1 Skeleton/Pain2 }
+Skeleton/Pain1 SKEPAI1
+Skeleton/Pain2 SKEPAI2
+Skeleton/Death SKEDIE1
+Skeleton/Melee SKEATK3
+Skeleton/Ranged1 SKEATK1
+Skeleton/Ranged2 SKEATK2
+Skeleton/Ranged3 SKEATK4
+Skeleton/Exp SKEEXP1
+Skeleton/LanceExp SKEEXP2
+Skeleton/Break SKEBRK1
+Skeleton/Stab SKESTB1
+$volume Skeleton/Break 0.80
+Skeleton/Fall SKEFLL1
+Skeleton/Walk SKEWLK1
+$rolloff Skeleton/Walk 200 600
+$Volume Skeleton/Walk 0.30
+Bone/Bounce SKEBNC1
+$random Skeleton/Idle { Skeleton/Idle1 Skeleton/Idle2 Skeleton/Idle3 }
+Skeleton/Idle1 SKEIDL1
+Skeleton/Idle2 SKEIDL2
+Skeleton/Idle3 SKEIDL3
+$rolloff Skeleton/Idle 200 1300
+$volume Skeleton/Idle 0.60
+
+$random Alien/See { Alien/See1 Alien/See2 }
+Alien/See1 ALISEE1
+Alien/See2 ALISEE2
+Alien/Active ALIACT1
+$random Alien/Pain { Alien/Pain1 Alien/Pain2 }
+Alien/Pain1 ALIPAI1
+Alien/Pain2 ALIPAI2
+$random Alien/Death { Alien/Death1 Alien/Death2 }
+Alien/Death1 ALIDIE1
+Alien/Death2 ALIDIE2
+Alien/Fire ALIFIR1
+Alien/LaserExp ALIHIT1
+Alien/Stab ALIATK1
+Alien/Fall ALIFLL1
+Alien/Walk ALIWLK1
+$rolloff Alien/Walk 200 450
+$Volume Alien/Walk 0.30
+Alien/Idle ALIIDL1
+$rolloff Alien/Idle 200 1200
+$volume Alien/Idle 0.40
+
+Phantom/See PHASEE1
+Phantom/Fly PHAFLY1
+$rolloff Phantom/Fly 200 1800
+$random Phantom/Pain { Phantom/Pain1 Phantom/Pain2 Phantom/Pain3 }
+Phantom/Pain1 PHAPAI1
+Phantom/Pain2 PHAPAI2
+Phantom/Pain3 PHAPAI3
+Phantom/Death PHADIE1
+Phantom/Fire PHAATK1
+Phantom/Exp PHAEXP1
+Phantom/Melee PHAATK2
+Phantom/Stab PHAHIT1
+vile/raise	 PHAREZ1
+
+Bat/See BATSEE1
+$volume Bat/See 0.50
+$random Bat/Active { Bat/Active1 Bat/Active2 }
+Bat/Active1 BATACT1
+Bat/Active2 BATACT2
+Bat/Pain BATPAI1
+Bat/Attack BATATK1
+Bat/Death BATDIE1
+$volume Bat/Death 0.60
+
+PhantomLord/See LORSEE1
+$volume PhantomLord/See 0.50
+$random PhantomLord/Active { PhantomLord/Active1 PhantomLord/Active2 }
+PhantomLord/Active1 LORACT1
+PhantomLord/Active2 LORACT2
+$volume PhantomLord/Active 0.50
+PhantomLord/Attack LORATK1
+PhantomLord/Charge LORCRG1
+$random PhantomLord/Pain { PhantomLord/Pain1 PhantomLord/Pain2 }
+PhantomLord/Pain1 LORPAI1
+PhantomLord/Pain2 LORPAI2
+$volume PhantomLord/Pain 0.50
+PhantomLord/Death LORDIE1
+$volume PhantomLord/Death 0.50
+PhantomLord/Warning LORTAR1
+PhantomLord/Soul LORSOL1
+
+Sarcof/See SARSEE1
+Sarcof/Active SARACT1
+Sarcof/Pain SARPAI1
+Sarcof/Death SARDIE1
+Sarcof/Fire SARFIR1
+Sarcof/Melee SARATK1
+Sarcof/Walk SARWLK1
+$rolloff Sarcof/Walk 200 900
+$Volume Sarcof/Walk 0.50
+SarcMissile/Fly SARFLY1
+Distant/SarcofMissile SARDIS1
+$volume Distant/SarcofMissile 0.50
+$rolloff Distant/SarcofMissile 1200 8000
+Sarcof/Autocannon SARFIR2
+Sarcof/TracerHit SAREXP1
+Distant/SarcofCannon SARDIS2
+$volume Distant/SarcofCannon 0.90
+$rolloff Distant/SarcofCannon 1200 8000
+
+Sphinx/See SPHSEE1
+Sphinx/Active SPHACT1
+Sphinx/Pain SPHPAI1
+Sphinx/Death SPHDIE1
+Sphinx/Flames SPHFIR1
+Sphinx/Fire SPHFIR2
+Sphinx/Exp SPHEXP1
+Sphinx/Walk SPHWLK1
+SphinxFireBall/Fly SPHFLY1
+$rolloff Sphinx/Walk 200 1200
+$Volume Sphinx/Walk 0.50
+Sphinx/HuggerLoop SPHFLY2
+Distant/SphinxBreath SPHBRT1
+$volume Distant/SphinxBreath 0.80
+$rolloff Distant/SphinxBreath 1200 8000
+
+Goblin/See GOBSEE1
+$random Goblin/Pain { Goblin/Pain1 Goblin/Pain2 }
+Goblin/Pain1 GOBPAI1
+Goblin/Pain2 GOBPAI2
+Goblin/Death GOBDIE1
+Goblin/Fire GOBATK1
+Goblin/Load GOBBOW1
+
+Orc/See ORCSEE1
+$random Orc/Pain { Orc/Pain1 Orc/Pain2 }
+Orc/Pain1 ORCPAI1
+Orc/Pain2 ORCPAI2
+Orc/Death ORCDIE1
+Orc/Attack ORCATK1
+Orc/Idle ORCIDL1
+$rolloff Orc/Idle 200 900
+$volume Orc/Idle 0.50
+
+//Misc
+Weapon/Pickup WEAPON1
+Flesh/Gib GIB2
+Gib/Bounce GIB1
+SupplyPack/Bounce MONBAK1
+$volume SupplyPack/Bounce 0.65
+
+Armor/SmallPickup CARM1
+Armor/Pickup CARM2
+Armor/BigPickup CARM3
+
+Kit/Pickup KIT1
+
+Berserker/Pickup BERS1
+RiftCharge/Pickup EMBL1
+Invis/Pickup CLOAK1
+Invul/Pickup INVUL1
+Infra/Pickup INFRA1
+Hazmat/Pickup HAZM1
+
+$random ArmorBlood/Ping { ArmorBlood/Ping1 ArmorBlood/Ping2 ArmorBlood/Ping3 }
+ArmorBlood/Ping1 PING1
+ArmorBlood/Ping2 PING2
+ArmorBlood/Ping3 PING3
+
+//Vanilla
+plats/pt1_strt			DDLIFT1
+plats/pt1_stop			DDLIFT3
+plats/pt1_mid			DDLIFT2
+$volume plats/pt1_mid 0.5
+doors/dr1_open			DDOPEN2
+doors/dr1_clos			DDCLOSE2
+doors/dr2_open			DDOPEN1
+doors/dr2_clos			DDCLOSE1
+misc/w_pkup			WEAPON1		// Pickup weapon
+misc/p_pkup			POWER1	// Pickup powerup
+misc/i_pkup			AMMO1	// Pickup item
+misc/k_pkup			CARD1	// Pickup key
+switches/normbutn		DDBUTT1
+switches/exitbutn		DDBUTT2
+$random misc/teleport { misc/teleport1 misc/teleport2 misc/teleport3 }
+misc/teleport1 PORT1
+misc/teleport2 PORT2
+misc/teleport3 PORT3
+world/drip			AMB1
+world/watersplash	SPLASH1	
+world/sludgegloop	none	
+world/lavasizzle	none
+
+intermission/tick			MON1FIR3
+intermission/nextstage		CEXP1
+
+menu/activate		MENU1	// Activate a new menu
+menu/backup			MENU2	// Backup to previous menu
+menu/prompt			DDBUTT1	// Activate a prompt "menu"
+menu/cursor			MENU3		// Move cursor up/down
+menu/change			MENU3	// Select new value for option
+menu/invalid		MENU3		// Menu not available
+menu/dismiss		MENU2	// Dismiss a prompt message
+menu/choose			DDLIFT3	// Choose a menu item
+menu/clear			MENU2	// Close top menu
+
+$random menu/quit1 { Player/Death Flesh/Gib Sarcof/Death Alien/LaserExp Joker/Pain ChasmRifle/Fire Skeleton/Break FatGuy/Gib }
+$random menu/quit2 { misc/teleport Sarcof/Active MongC/See MongA/Death MongB/Fire }
+
+$ifheretic
+doors/dr1_open			HHOPEN1
+doors/dr1_clos			HHCLOSE1
+doors/dr2_open			HHOPEN1
+doors/dr2_clos			HHCLOSE1
+plats/pt1_strt			HHLIFTSTRT1
+plats/pt1_stop			HHLIFTSTOP1
+plats/pt1_mid			HHLOOP1
+plats/pt2_mid			HHLOOP1
+switches/normbutn		HHBUTT1

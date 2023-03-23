@@ -1,0 +1,349 @@
+//Ammo
+
+Actor GoldAmmoSpawner Replaces GoldWandAmmo
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem ChasmClip
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor GoldAmmoBoxSpawner Replaces GoldWandHefty
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem CClipBox
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor CrossAmmoSpawner Replaces CrossbowAmmo
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem ChasmShell
+  Dropitem CPlasmaCell
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor CrossBoxSpawner Replaces CrossbowHefty
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem CShellBox
+  Dropitem CPlasmaCell
+  Dropitem CPlasmaCell
+  DropItem ChasmSaw, 100
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor BlasterAmmoSpawner Replaces BlasterAmmo
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem ChasmShell, 150
+  Dropitem CPlasmaCell, 150
+  Dropitem ChasmClip, 150
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor BlasterBoxSpawner Replaces BlasterHefty
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem ChasmShellBox, 150
+  Dropitem CPlasmaCell, 150
+  Dropitem CClipBox, 150
+  DropItem ChasmSaw, 100
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor PhoenixAmmoSpawner Replaces PhoenixRodAmmo
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem CGrenadeAmmo
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor PhoenixBoxSpawner Replaces PhoenixRodHefty
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem CGrenadeBox
+  Dropitem ChasmMinePickup
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor SkullStaffAmmoSpawner Replaces SkullRodAmmo
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem LaserBoltAmmo
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor SkullStaffAmmoBoxSpawner Replaces SkullRodHefty
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem LaserBoltAmmo
+  Dropitem LaserBoltAmmo
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor MaceStaffAmmoSpawner Replaces MaceAmmo
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem CCellAmmo
+  DropItem ChasmSaw
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor MaceStaffAmmoBoxSpawner Replaces MaceHefty
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  DropItem CCellBox
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+//Weapons
+
+Actor GauntletSpawner : RandomSpawner Replaces Gauntlets
+{
+Game Heretic
+dropitem "ChasmChainfist",255, 10
+}
+
+Actor GoldWandSpawner : RandomSpawner Replaces GoldWand
+{
+Game Heretic
+dropitem "ChasmRifle",255, 10
+}
+
+Actor CrossbowSpawner : RandomSpawner Replaces Crossbow
+{
+Game Heretic
+dropitem "ChasmShotgun",255, 10
+dropitem "ChasmPlasmaThrower",255, 5
+}
+
+Actor BlasterSpawner : RandomSpawner Replaces Blaster
+{
+Game Heretic
+dropitem "ChasmChaingun",255, 10
+}
+
+Actor PhoenixSpawner : RandomSpawner Replaces PhoenixRod
+{
+Game Heretic
+dropitem "ChasmRocketL",255, 10
+}
+
+Actor SkullRodSpawner : RandomSpawner Replaces SkullRod
+{
+Game Heretic
+dropitem "ChasmCrossbow",255, 10
+}
+
+Actor MaceRodSpawner : RandomSpawner Replaces Mace
+{
+Game Heretic
+dropitem "ChasmDestroyer",255, 10
+}
+
+//Items
+
+Actor CrystalVialSpawner Replaces CrystalVial
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem SmallHealth
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor ArtiHealthSpawner Replaces ArtiHealth
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem BigHealth
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor SilverShieldSpawner Replaces SilverShield
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem YellowVest
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+
+Actor EnchantedShieldSpawner Replaces EnchantedShield
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem RedVest
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+} 
+
+Actor HoldingBagSpawner Replaces BagOfHolding
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem AmmoPack
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+}
+
+Actor PowerTomeSpawner Replaces ArtiTomeOfPower
+{
+  Radius 0
+  Height 0
+  +NOTELESTOMP
+  +NOINTERACTION
+  Dropitem BerserkPack
+  States
+    {
+  Spawn:
+   TNT1 A 0 
+   TNT1 A 1 A_Fall
+   Stop
+   }
+}

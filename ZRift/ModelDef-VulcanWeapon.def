@@ -1,0 +1,50 @@
+Model ChasmChaingun
+{
+   Path "models/weapons"   	
+   Model 0 "VulcanFix.md2"   
+   Skin 0 "VulcanIdle1.png"
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Idle
+   Frame VULX Z 0 "FireA5"    	
+}
+
+Model ChasmChaingun
+{
+   Path "models/weapons"   	
+   Model 0 "VulcanFix.md2"   
+   Skin 0 "VulcanFire1.png"
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Firing
+   Frame VULX A 0 "FireA1"    	
+   Frame VULX B 0 "FireA2"    
+   Frame VULX C 0 "FireA3"    
+   Frame VULX D 0 "FireA4"    	
+}
+
+Model ChasmChaingun
+{
+   Path "models/weapons"   	
+   Model 0 "VulcanFix.md2"   
+   Skin 0 "VulcanIdle1.png"
+   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Select
+   Frame VULZ A 0 "FireA2"    	
+   Frame VULZ B 0 "FireA3"    
+   Frame VULZ C 0 "FireA4"    
+   Frame VULZ D 0 "FireA5"    	
+}

@@ -1,0 +1,38 @@
+Model ChasmMineBase
+{
+   Path "models/effects"   	
+   Model 0 "MineProjectile.md2"   
+   Skin 0 "MineProjectile.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset 90
+   
+   //IdleA
+   Frame MINX Z 0 "IdleA1"   
+   
+}
+
+Model ChasmMine
+{
+   Path "models/effects"   	
+   Model 0 "MineProjectile.md2"   
+   Skin 0 "MineProjectile.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset 90
+   
+//IdleA
+   Frame MINX Z 0 "IdleA1"   
+   
+}
+   
+Model ChasmMine2
+{
+   Path "models/effects"   	
+   Model 0 "MineProjectile.md2"   
+   Skin 0 "MineProjectile.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset 90 
+
+//IdleA
+   Frame MINX Z 0 "IdleA1"   
+   
+}

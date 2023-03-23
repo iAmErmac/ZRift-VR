@@ -1,0 +1,13 @@
+Model AlienAutoLaser
+{
+   Path "models/effects"   	
+   Model 0 "AlienLaser.md2"   
+   Skin 0 "AlienLaser.png"    
+   Scale 0.25 0.25 0.25  
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame LAS1 X 0 "IdleA1"   
+   
+}

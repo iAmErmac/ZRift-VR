@@ -1,0 +1,29 @@
+Model SphinxFireBall
+{
+   Path "models/effects"   	
+   Model 0 "SphinxBall.md2"   
+   Skin 0 "SphinxBall.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset -90
+   ZOffset 1
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame SPFX A 0 "IdleA1"    	
+   Frame SPFX B 0 "IdleA2"    
+   Frame SPFX C 0 "IdleA3"    
+   Frame SPFX D 0 "IdleA4" 
+   Frame SPFX E 0 "IdleA5" 
+   Frame SPFX F 0 "IdleA6" 
+   Frame SPFX G 0 "IdleA7" 
+   Frame SPFX H 0 "IdleA8"
+   Frame SPFX I 0 "IdleA9" 
+   Frame SPFX J 0 "IdleA10" 
+   Frame SPFX K 0 "IdleA11" 
+   Frame SPFX L 0 "IdleA12" 
+   Frame SPFX M 0 "IdleA13" 
+   Frame SPFX N 0 "IdleA14" 
+   Frame SPFX O 0 "IdleA15" 
+   Frame SPFX P 0 "IdleA16" 
+   
+}

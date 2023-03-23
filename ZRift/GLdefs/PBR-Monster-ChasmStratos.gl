@@ -1,0 +1,73 @@
+//////////////////////////
+//Chasm Monster STRATOS Brightmap
+////////////////////////// 
+
+material texture "models/monsters/Stratos.png" {
+	brightmap "materials/monsters/Stratos_brightmap.png"        
+}
+
+
+//////////////////////////
+//Chasm Monster STRATOS PBR (specular workflow)
+//////////////////////////
+//NOT NEEDED ATM
+//////////////////////////
+
+//////////////////////////
+// STRATOS LIGHT float
+flickerlight2 LIGHT-CHASMSTRATOS
+{
+    color 0.3 0.1 0.0
+    size 30
+    secondarySize 40
+    interval 0.75
+    offset 0 50 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmStratos
+{
+	frame MSI1  { light LIGHT-CHASMSTRATOS }
+	frame MSI2  { light LIGHT-CHASMSTRATOS }
+	frame MSP1  { light LIGHT-CHASMSTRATOS }
+	frame MSP2  { light LIGHT-CHASMSTRATOS }
+	frame MSA2  { light LIGHT-CHASMSTRATOS }
+	frame MSA1  { light LIGHT-CHASMSTRATOS }
+	frame MSA3  { light LIGHT-CHASMSTRATOS }
+    }
+    
+
+//////////////////////////
+// STRATOS LIGHT Fire weapon
+pointlight LIGHT-CHASMSTRATOS-FIRE
+{
+    color 0.6 0.2 0.0
+    size 40
+    offset 0 50 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmStratos
+{
+	frame MSA1E { light LIGHT-CHASMSTRATOS-FIRE }
+	frame MSA1F { light LIGHT-CHASMSTRATOS-FIRE }
+    }
+    
+//////////////////////////
+// STRATOS LIGHT Fire weapon
+pointlight LIGHT-StratosBall
+{
+    color 0.3 0.1 0.0
+    size 25
+    offset 0 0 0
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmStratosBolt
+{
+	frame CRS1 { light LIGHT-StratosBall }
+    }
+    

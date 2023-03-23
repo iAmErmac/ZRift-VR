@@ -1,0 +1,63 @@
+DoomEdNums
+{
+30000 = ChasmGrunt
+30001 = ShotgunGrunt
+30002 = AssaultGrunt
+30003 = MedicGrunt
+30004 = ChasmHound
+30005 = ChasmFaust
+30006 = ChasmStratos
+30007 = ChasmLieut
+30008 = ChasmTurret
+30009 = ChasmRocketTurret
+30010 = ChasmAcidTurret
+30015 = ChasmSarcof
+
+30021 = ChasmScorpy
+30022 = ChasmPiggy
+
+30023 = ChasmLionGuy
+30024 = ChasmDeadGuy
+30025 = ChasmPunisher
+30026 = ChasmSkeleton
+30027 = ChasmSkeleton2
+30028 = ChasmOgre
+
+30029 = ChasmPhantomLord
+
+
+30030 = ChasmJoker
+30031 = ChasmViking
+
+30035 = ChasmPunisher2
+30036 = ChasmSphinx
+
+30032 = ChasmMincer
+30033 = ChasmAlienTrooper
+30034 = ChasmAlienCaptain
+
+30037 = ChasmWorm
+
+
+30050 = ChasmGoblin
+30051 = ChasmOrc
+30052 = ChasmPhantomLesser
+30053 = BatMonster
+30054 = ChasmMummy
+30055 = ChasmRaptor
+
+30080 = Scrag
+30081 = HexenMummy
+30082 = HexenImp
+30083 = HexenYakman1
+30084 = HexenYakman2
+30085 = HexenYakman3
+30086 = MummyLord1
+30087 = HexenImp2
+30088 = HexenImp3
+30089 = HexenImp4
+30090 = HexenSkullWiz
+
+30100 = DoDDweller
+
+}

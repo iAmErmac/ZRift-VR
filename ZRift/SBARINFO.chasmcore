@@ -1,0 +1,76 @@
+base doom;
+height 0;
+
+
+StatusBar Normal//, Forcescaled
+{
+
+DrawImage "FHUDA", 40, 176;
+DrawNumber 3, BIGFONT, Red, Health, fillzeros, 130, 184, 6;
+DrawImage "FHUDM", 182, 176;
+DrawNumber 3, BIGFONT, Olive, Ammo1, fillzeros, 243, 184, 6;
+DrawMugShot 5, 140, 160;
+DrawString SMALLFONT, Olive, "ARMOR", 160, 189, 0, alignment(center);
+DrawNumber 3, SMALLFONT, Green, Armor, fillzeros, 175, 194, 4;
+
+
+
+DrawImage weaponicon, 252, 176;
+
+Alpha 0.80
+drawswitchableimage BlueCard, "nullimage", "STKEYS0", 129, 168; //Left-right, Up-down
+Alpha 0.80
+drawswitchableimage YellowCard, "nullimage", "STKEYS1", 123, 168;
+Alpha 0.80
+drawswitchableimage RedCard, "nullimage", "STKEYS2", 117, 168;
+
+Alpha 0.80
+drawswitchableimage BlueSkull, "nullimage", "STKEYS3", 182, 168;
+Alpha 0.80
+drawswitchableimage YellowSkull, "nullimage", "STKEYS4", 190, 168;
+Alpha 0.80
+drawswitchableimage RedSkull, "nullimage", "STKEYS5", 198, 168;
+
+Alpha 0.80
+drawswitchableimage KeyYellow, "nullimage", "YKEYICON", 129, 168;
+Alpha 0.80
+drawswitchableimage KeyGreen, "nullimage", "GKEYICON", 123, 168;
+Alpha 0.80
+drawswitchableimage KeyBlue, "nullimage", "BKEYICON", 117, 168;
+
+drawselectedinventory artiflash, INDEXFONT_RAVEN, 280, 170, 310, 194, untranslated, 1;
+}
+
+StatusBar FullScreen//, Forcescaled
+{
+
+DrawImage "HUARM1", 125, 176;
+DrawNumber 3, BIGFONT, Green, Armor, fillzeros, 198, 185, 4; 
+DrawImage "HULIF1", 46, 176;
+DrawNumber 3, BIGFONT, Red, Health, fillzeros, 122, 185, 4;
+DrawImage weaponicon, 200, 176;
+DrawNumber 3, BIGFONT, Olive, Ammo1, fillzeros, 280, 185, 4;
+
+Alpha 0.80
+drawswitchableimage BlueCard, "nullimage", "STKEYS0", 129, 168; //Left-right, Up-down
+Alpha 0.80
+drawswitchableimage YellowCard, "nullimage", "STKEYS1", 123, 168;
+Alpha 0.80
+drawswitchableimage RedCard, "nullimage", "STKEYS2", 117, 168;
+
+Alpha 0.80
+drawswitchableimage BlueSkull, "nullimage", "STKEYS3", 182, 168;
+Alpha 0.80
+drawswitchableimage YellowSkull, "nullimage", "STKEYS4", 190, 168;
+Alpha 0.80
+drawswitchableimage RedSkull, "nullimage", "STKEYS5", 198, 168;
+
+Alpha 0.80
+drawswitchableimage KeyYellow, "nullimage", "YKEYICON", 129, 168;
+Alpha 0.80
+drawswitchableimage KeyGreen, "nullimage", "GKEYICON", 123, 168;
+Alpha 0.80
+drawswitchableimage KeyBlue, "nullimage", "BKEYICON", 117, 168;
+
+drawselectedinventory artiflash, INDEXFONT_RAVEN, 280, 170, 310, 194, untranslated, 1;
+}

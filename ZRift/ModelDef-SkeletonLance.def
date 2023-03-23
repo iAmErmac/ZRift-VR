@@ -1,0 +1,14 @@
+Model SkeletonLance
+{
+   Path "models/effects"   	
+   Model 0 "SkellySword.md2"   
+   Skin 0 "SkellySword.png"    
+   Scale 0.30 0.30 0.30  
+   AngleOffset -90
+   ZOffset -5
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame SKLX A 0 "IdleA1"   
+   
+}

@@ -1,0 +1,135 @@
+Actor TechPillarChasm Replaces TechPillar
+{
+	+SOLID
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		TPIL B 1       
+		loop
+	}
+}
+
+Actor PostSpawner1 : RandomSpawner replaces ShortGreenColumn
+{
+dropitem "POST-NORMAL1",255, 10
+dropitem "POST-NORMAL2",255, 10
+dropitem "POST-NORMAL3",255, 10
+}
+
+Actor PostSpawner2 : RandomSpawner replaces HeartColumn
+{
+dropitem "POST-NORMAL1",255, 10
+dropitem "POST-NORMAL2",255, 10
+dropitem "POST-NORMAL3",255, 10
+}
+
+Actor PostSpawner3 : RandomSpawner replaces ShortRedColumn
+{
+dropitem "POST-RED1",255, 10
+dropitem "POST-RED2",255, 10
+dropitem "POST-RED3",255, 10
+}
+
+Actor PostSpawner4 : RandomSpawner replaces SkullColumn
+{
+dropitem "POST-RED1",255, 10
+dropitem "POST-RED2",255, 10
+dropitem "POST-RED3",255, 10
+}
+
+///////////////
+
+Actor POST-NORMAL1
+{
+	+SOLID
+	Radius 8
+	Height 10
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		POST A 1    
+		loop
+	}
+}
+
+Actor POST-NORMAL2
+{
+	+SOLID
+	Radius 8
+	Height 10
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		POST B 1     
+		loop
+	}
+}
+
+Actor POST-NORMAL3
+{
+	+SOLID
+	Radius 8
+	Height 10
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		POST C 1     
+		loop
+	}
+}
+
+
+Actor POST-RED1
+{
+	+SOLID
+	Radius 8
+	Height 10
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		POST D 1    
+		loop
+	}
+}
+
+Actor POST-RED2
+{
+	+SOLID
+	Radius 8
+	Height 10
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		POST E 1    
+		loop
+	}
+}
+
+Actor POST-RED3
+{
+	+SOLID
+	Radius 8
+	Height 10
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay
+		POST F 1    
+		loop
+	}
+}

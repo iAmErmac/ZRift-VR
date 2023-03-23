@@ -1,0 +1,88 @@
+//Base
+Model ChasmTurretBase
+{
+   Path "models/monsters/MongTurret"   	
+   Model 1 "TurretBase.md2"   
+   Skin 1 "TurretBase.png"
+   Scale 0.26 0.26 0.26  
+   AngleOffset 90 
+   
+//IdleA
+   Frame TUTB A 1 "IdleA1"    	
+
+}
+
+//Turret
+Model ChasmTurret
+{
+   Path "models/monsters/MongTurret"   	
+   Model 0 "TurretTop.md2"   
+   Skin 0 "TurretTop.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90 
+   ZOffSet 28
+
+   Frame TUTX A 0 "IdleA1"    	
+   Frame TUTX B 0 "IdleA2"    
+   Frame TUTX C 0 "IdleA3"    
+   Frame TUTX D 0 "IdleA4" 
+   Frame TUTX E 0 "IdleA5" 
+   Frame TUTX F 0 "IdleA6" 
+   Frame TUTX G 0 "IdleA7" 
+   Frame TUTX H 0 "IdleA8"
+   Frame TUTX I 0 "IdleA9" 
+   Frame TUTX J 0 "IdleA10" 
+   Frame TUTX K 0 "IdleA11" 
+   Frame TUTX L 0 "IdleA12" 
+   Frame TUTX M 0 "IdleA13" 
+   Frame TUTX N 0 "IdleA14" 
+   Frame TUTX O 0 "IdleA15" 
+   Frame TUTX P 0 "IdleA16" 
+   Frame TUTX Q 0 "IdleA17" 
+   Frame TUTX R 0 "IdleA18" 
+   Frame TUTX S 0 "IdleA19" 
+   Frame TUTX T 0 "IdleA20" 
+   Frame TUTX U 0 "IdleA21" 
+   Frame TUTX V 0 "IdleA22" 
+   Frame TUTX W 0 "IdleA23"
+   Frame TUTX X 0 "IdleA24"
+
+   Frame TUTY A 0 "AttackA1"    	
+   Frame TUTY B 0 "AttackA2"    
+   Frame TUTY C 0 "AttackA3"    
+   Frame TUTY D 0 "AttackA4" 
+   Frame TUTY E 0 "AttackA5" 
+   Frame TUTY F 0 "AttackA6" 
+   Frame TUTY G 0 "AttackA7" 
+   Frame TUTY H 0 "AttackA8" 
+
+   Frame TUTZ A 0 "PainA1"    	
+   Frame TUTZ B 0 "PainA2"    
+   Frame TUTZ C 0 "PainA3"    
+   Frame TUTZ D 0 "PainA4" 
+   Frame TUTZ E 0 "PainA5" 
+   Frame TUTZ F 0 "PainA6"   
+
+}
+
+Model ChasmTurret
+{
+   Path "models/monsters/MongTurret"   	
+   Model 0 "TurretTop.md2"   
+   Skin 0 "TurretTopDead.png"    
+   Scale 0.22 0.22 0.22  
+   AngleOffset 90
+   ZOffSet 28
+
+   Frame TUTW A 0 "DieA1"    	
+   Frame TUTW B 0 "DieA2"    
+   Frame TUTW C 0 "DieA3"    
+   Frame TUTW D 0 "DieA4" 
+   Frame TUTW E 0 "DieA5" 
+   Frame TUTW F 0 "DieA6" 
+   Frame TUTW G 0 "DieA7" 
+   Frame TUTW H 0 "DieA8"
+   Frame TUTW I 0 "DieA9" 
+   Frame TUTW J 0 "DieA10" 
+
+} 

@@ -1,0 +1,6 @@
+Texture "models/weapons/VulcanFire1.png"
+    pic "materials/weapon-animdefs/VulcanFire1.png" tics 1 
+    pic "materials/weapon-animdefs/VulcanFire2.png" tics 1 
+    pic "materials/weapon-animdefs/VulcanFire3.png" tics 1 
+    pic "materials/weapon-animdefs/VulcanFire4.png" tics 1 
+    pic "materials/weapon-animdefs/VulcanFire5.png" tics 1 

@@ -1,0 +1,12 @@
+Model BigHealth
+{
+   Path "models/items"   	
+   Model 0 "BigHealth.md2"   
+   Skin 0 "BigHealth.png"    
+   Scale 0.23 0.23 0.23  
+   AngleOffset 90 
+
+//IdleA
+   Frame BMHE A 0 "IdleA1"   
+   
+}

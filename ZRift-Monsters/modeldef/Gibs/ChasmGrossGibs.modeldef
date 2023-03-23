@@ -1,0 +1,45 @@
+Model GrossArm1
+{
+  Path "Models/gibs/ChasmGross"   
+  Model 0 "LIMB04A-Gross-Hand1.md3"   
+  SurfaceSkin 0 0 "LIMB04-Gross-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI04 A 0 0 
+}
+
+   
+Model GrossArm2
+{
+  Path "Models/gibs/ChasmGross" 
+  Model 0 "LIMB04B-Gross-Hand2.md3"   
+  SurfaceSkin 0 0 "LIMB04-Gross-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI04 B 0 0 
+}
+
+   Model GrossHead
+{
+  Path "Models/gibs/ChasmGross"
+  Model 0 "LIMB04C-Gross-Head.md3"   
+  SurfaceSkin 0 0 "LIMB04-Gross-Skin.png" 
+  
+  OFFSET 0 0 0	       //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0        // Offset Rotation
+  PitchOffset 0		   //pitch Left Right
+  RollOffset 0  	   //roll Up-Down  
+  Scale 0.35 0.35 0.35    //
+
+  FrameIndex LI04 C 0 0 
+}

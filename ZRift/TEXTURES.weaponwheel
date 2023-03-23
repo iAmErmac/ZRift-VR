@@ -1,0 +1,77 @@
+Texture WEP0A0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+
+Texture WEP0B0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+
+Texture WEP0C0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+
+Texture WEP0D0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+
+Texture WEP0E0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+
+Texture WEP0F0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+
+Texture WEP0G0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0H0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0I0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0J0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0K0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0L0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0M0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+Texture WEP0N0, 128, 128
+{
+   XScale 1.75
+   YScale 1.75
+}
+

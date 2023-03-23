@@ -1,0 +1,53 @@
+//////////
+//YAKMAN//
+//////////
+
+Yakman/Idle1 YakSnort1
+
+Yakman/Die		YAKDIE
+Yakman/Icespell 	YAKICESPELL
+Yakman/Roar		YAKROAR
+Yakman/Grunt		YAKGRUNT
+Yakman/Pain		Yakpain
+Yakman/Hoof		YAKHOOF
+Yakman/Snort1		YAKSNORT1		
+Yakman/Snort2		YAKSNORT2
+
+
+
+/////////
+//MUMMY//
+/////////
+
+$random Mummy/Pain 	{Mummy/Pain1 Mummy/Pain2}
+$random Mummy/Sight 	{Mummy/sight1 Mummy/sight2}
+$random Mummy/Idle	{Mummy/Idle1 Mummy/Idle2}
+$random Mummy/Death	{Mummy/Die1 Mummy/Die2}
+
+Mummy/Die1		Mumdie
+Mummy/Die2		Mumdie2
+Mummy/LimbLoss		Mumlimbloss
+Mummy/Fire		mummislfire
+Mummy/Pain1		Mumpain		
+Mummy/Pain2		Mumpain2
+Mummy/Sight1		MumSight
+Mummy/Sight2		Mumsight2
+Mummy/Step		MumStep
+Mummy/Crawl		Mumcrawl
+Mummy/Bite		Mumbite
+Mummy/Idle1		Mummoan
+Mummy/Idle2		Mummoan2
+Mummy/Tap		Mumtap
+
+///////
+//IMP//
+///////
+
+Imp/Die		HImpdie
+Imp/Fireball	HImpfireball
+Imp/Fly		Himpfly
+Imp/Swoop	Himpswoop
+Imp/Shard	Himpshard
+Imp/SwoopHit	HImpswoophit
+Imp/See		Himpup
+Imp/

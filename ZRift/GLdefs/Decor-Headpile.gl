@@ -1,0 +1,20 @@
+flickerlight Candle
+{
+    color 0.7 0.5 0.2
+    size 25
+    secondarySize 30
+    chance 25
+    offset 0 30 0
+    attenuate 1
+
+}
+
+object Headpile
+{
+	frame DE01A { light Candle}
+    frame DE01B { light Candle}
+    frame DE01C { light Candle}
+    frame DE02D { light Candle}
+}
+
+

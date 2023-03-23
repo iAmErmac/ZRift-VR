@@ -1,0 +1,12 @@
+Model GreenMuzzleFlash
+{
+   Path "models/effects"   	
+   Model 0 "MuzzleFlash1.md2"   
+   Skin 0 "MuzzleFlash1.png"    
+   Scale 0.35 0.35 0.35  
+   AngleOffset 90 
+
+//IdleA
+   Frame MFSH B 0 "IdleA1"   
+   
+}

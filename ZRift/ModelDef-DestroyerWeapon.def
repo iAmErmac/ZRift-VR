@@ -1,0 +1,129 @@
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MDFix.md2"   
+   Skin 0 "MDIdle1.png"
+   OFFSET 0 -17 -7	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Idle/Ready State1
+
+   Frame MEGZ Z 0 "FireA1" 
+
+}
+
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MDFix.md2"   
+   Skin 0 "MDIdle2.png"
+   OFFSET 0 -17 -7	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Idle/Ready State1
+
+   Frame MEGZ Y 0 "FireA1" 
+
+}
+
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MDFix.md2"   
+   Skin 0 "MDIdle2.png"
+   OFFSET 0 -17 -7	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Charge1
+
+   Frame MEGY A 0 "FireA1" 
+
+}
+
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MDFix.md2"   
+   Skin 0 "MDFire1.png"
+   OFFSET 0 -17 -7	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Firing
+
+   Frame MEGY B 0 "FireA2"    
+   Frame MEGY C 0 "FireA3"    
+   Frame MEGY D 0 "FireA4"
+
+}
+
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MDFix.md2"   
+   Skin 0 "MDIdle2.png"
+   OFFSET 0 -17 -7	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//Recoil
+
+   Frame MEGY D 0 "FireA4" 
+   Frame MEGY E 0 "FireA5" 
+   Frame MEGY F 0 "FireA6" 
+   Frame MEGY G 0 "FireA7" 
+   Frame MEGY H 0 "FireA8"
+   Frame MEGY I 0 "FireA9" 
+   Frame MEGY J 0 "FireA10" 
+   Frame MEGY K 0 "FireA11" 
+   Frame MEGY L 0 "FireA12" 
+   Frame MEGY M 0 "FireA13" 
+   Frame MEGY N 0 "FireA14" 
+
+}
+
+Model ChasmDestroyer
+{
+   Path "models/weapons"   	
+   Model 0 "MDFix.md2"   
+   Skin 0 "MDIdle1.png"
+   OFFSET 0 -17 -7	         //X-Left/Right Y-Depth Z-Up/Down
+   AngleOffset -90         //angle  
+   PitchOffset 0		     //pitch Left Right
+   RollOffset 0  	     //roll Up-Down  
+   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+
+//RecoilPt2
+
+   Frame MEGY O 0 "FireA15" 
+   Frame MEGY P 0 "FireA16" 
+   Frame MEGY Q 0 "FireA17" 
+   Frame MEGY R 0 "FireA18" 
+   Frame MEGY S 0 "FireA19" 
+   Frame MEGY T 0 "FireA20" 
+   Frame MEGY U 0 "FireA21" 
+   Frame MEGY V 0 "FireA22" 
+   Frame MEGY W 0 "FireA23"
+   Frame MEGY X 0 "FireA24" 
+   Frame MEGY Y 0 "FireA25" 
+   Frame MEGY Z 0 "FireA26"
+
+   Frame MEGW A 0 "FireA27"    	
+   Frame MEGW B 0 "FireA28"    
+   Frame MEGW C 0 "FireA29"    
+   Frame MEGW D 0 "FireA30" 
+
+}

@@ -1,0 +1,16 @@
+//////////////////////////
+//Chasm Rifle Brightmap
+
+material texture "models/weapons/Rifle/Rifle.png" {
+	brightmap "materials/weapons/RifleWeapon_brightmap.png"
+}
+
+//////////////////////////
+//Chasm Rifle PBR (specular workflow)
+material texture "models/weapons/Rifle/Rifle.png" {
+    normal "materials/weapons/RifleWeapon_normal.png" 
+    specular "materials/weapons/RifleWeapon_specular.png"
+    glossiness 10
+	specularlevel 5
+	disablefullbright
+}
