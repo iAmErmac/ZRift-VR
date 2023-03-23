@@ -1,6 +1,5 @@
 //Main
 #include "Decorate/ChasmPlayer.txt"
-#include "Decorate/RandomSpawner.txt"
 
 //Weapons
 #include "Decorate/Weapons/ChasmSaw.txt"
@@ -18,47 +17,12 @@
 #include "Decorate/Weapons/ChasmCrossbow.txt"
 #include "Decorate/Weapons/ChasmDestroyer.txt"
 
-//Enemies
-#include "Decorate/Monsters/ChasmGrunt.txt"
-#include "Decorate/Monsters/ChasmJoker.txt"
-#include "Decorate/Monsters/ChasmViking.txt"
-#include "Decorate/Monsters/ChasmDeadGuy.txt"
-#include "Decorate/Monsters/ChasmStratos.txt"
-#include "Decorate/Monsters/ChasmFaust.txt"
-#include "Decorate/Monsters/ChasmPiggy.txt"
-#include "Decorate/Monsters/ChasmScorpy.txt"
-#include "Decorate/Monsters/ChasmMincer.txt"
-#include "Decorate/Monsters/ChasmRaptor.txt"
-#include "Decorate/Monsters/ChasmLieut.txt"
-#include "Decorate/Monsters/ChasmPunisher.txt"
-#include "Decorate/Monsters/ChasmLion.txt"
-#include "Decorate/Monsters/ChasmOgre.txt"
-#include "Decorate/Monsters/ChasmSkeletonGuy.txt"
-#include "Decorate/Monsters/ChasmAlienT.txt"
-#include "Decorate/Monsters/ChasmAlienC.txt"
-#include "Decorate/Monsters/ChasmBanshee.txt"
-#include "Decorate/Monsters/ChasmPhantomLesser.txt"
-#include "Decorate/Monsters/ChasmPhantomLord.txt"
-#include "Decorate/Monsters/ChasmSarcof.txt"
-#include "Decorate/Monsters/ChasmSphinx.txt"
-#include "Decorate/Monsters/ChasmMummy.txt"
-#include "Decorate/Monsters/ChasmGoblin.txt"
-#include "Decorate/Monsters/ChasmOrc.txt"
-#include "Decorate/Monsters/ChasmTurret.txt"
-
 #include "Decorate/Misc/ChasmBarrel.txt"
-
-
 
 //Ally - Secret
 #Include "Decorate/Secrets/Doot.txt"
 
-
-//Gore
-
 //Misc
-#include "Decorate/Misc/Gore.txt"
-#include "Decorate/Misc/Blood.txt"
 #include "Decorate/Misc/Items.txt"
 #include "Decorate/Misc/Corpses.txt"
 #include "Decorate/Misc/Trees.txt"

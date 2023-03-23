@@ -1,7 +1,0 @@
-actor DeadGuyRandom : RandomSpawner replaces DoomImp
-{
-DropItem "ChasmDeadGuy", 255, 15
-DropItem "ChasmMummy", 255, 1
-DropItem "ChasmGoblin", 255, 5
-}
-
