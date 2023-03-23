@@ -1,9 +1,0 @@
-// <scope> [noarchive] [cheat] [latch] <type> <name> [= <defaultvalue>];
-
-server color flashlight_color = "FF FF B3";
-server int flashlight_intensity = 128;
-
-server float flashlight_inner = 12.0;
-server float flashlight_outer = 26.0;
-
-server int flashlight_location = 0;

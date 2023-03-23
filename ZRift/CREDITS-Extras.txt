@@ -3,18 +3,9 @@ Weapon Wheel Version: 0.3
 Zrift Weapon wheel mod is based on PyWeaponWheel_v0.3 mod by DrPyspy"
 Modified for Zrift Chasm in Doom by HAL9000"
 ==============================================
-Tilt++ Version: 1.65
-Tilt++ script created by Nash Muhandes
-==============================================
-WeaponSway Version: 1.0
-WeaponSway script created by Nash Muhandes
-==============================================
 Retroshader Version: 2.7.2
 Retroshader mod created by NightFright
 ==============================================
 Chasm Music Randomizer:1.0 
 Authentic OST in GZDoom, made by QuakedoomNukem Cz
-==============================================
-Steve's Flashlight Mod. v2018.02.12
-Steve's Flashlight Mod Created by SuaveSteve
 ==============================================

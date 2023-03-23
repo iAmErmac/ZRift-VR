@@ -1,3 +1,0 @@
-user bool cl_weaponsway = true;
-user bool cl_weaponsway_invert = false;
-user bool cl_weaponsway_vertical = false;
