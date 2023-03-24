@@ -1,0 +1,160 @@
+////////////////////////////////////////////////////
+Class ChasmBlueTorchSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmBlueTorch", 256, 1;
+	}
+}
+
+Class ChasmBlueTorch : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 68;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+  
+	States
+	{
+	Spawn:
+		TORB ABCDE 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmGreenTorchSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmGreenTorch", 256, 1;
+	}
+}
+
+Class ChasmGreenTorch : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 68;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		TORG ABCDE 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmRedTorchSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmRedTorch", 256, 1;
+	}
+}
+
+Class ChasmRedTorch : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 68;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+  
+	States
+	{
+	Spawn:
+		TORR ABCDE 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmShortBlueTorchSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmShortBlueTorch", 256, 1;
+	}
+}
+
+Class ChasmShortBlueTorch : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 37;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		TOSB ABCDE 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmShortGreenTorchSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmShortGreenTorch", 256, 1;
+	}
+}
+
+Class ChasmShortGreenTorch : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 37;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		TOSG ABCDE 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmShortRedTorchSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmShortRedTorch", 256, 1;
+	}
+}
+Class ChasmShortRedTorch : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 37;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		TOSR ABCDE 3 Bright;
+		Loop;
+	}
+}

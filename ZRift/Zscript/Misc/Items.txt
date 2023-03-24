@@ -1,0 +1,438 @@
+Class SupplyPackDecider : Actor
+{
+	Default
+	{
+	Radius 1;
+	Height 1;
+	Speed 0;
+	DeathSound "";
+	Projectile;
+	+SOLID
+	}
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		TNT1 A 0 A_Jump(102, "DropPack");
+		TNT1 A 0;
+		Goto Death;
+	Death:
+		TNT1 A 0;
+		TNT1 A 0;
+		Stop;
+	DropPack:
+	    TNT1 A 0;
+		TNT1 A 0 BRIGHT A_CustomMissile("SupplyPackProjectile", 10, 0, random (0, 360), 2, random (0, 160));
+		TNT1 A 0;
+		Goto Death;
+	}
+}
+
+Class SupplyPackProjectile : Actor
+{
+	Default
+	{
+    Radius 6;
+    Height 6;
+    Speed 5;
+	Mass 50;
+    +NOBLOCKMAP;
+	+MISSILE;
+	+BOUNCEONWALLS;
+	+THRUGHOST;
+    BounceType "Hexen";
+    BounceFactor 0.3;
+	WallBounceFactor 0.3;
+    BounceCount 2;
+    DeathSound "SupplyPack/Bounce";
+	BounceSound "SupplyPack/Bounce";
+	Mass 0;
+	}
+	
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay;
+        PAK1 X 6;
+        Loop;
+	Death:
+	    TNT1 A 0;
+	    TNT1 A 0 A_Scream;
+	    TNT1 A 0;
+	    TNT1 A 0 A_SpawnItemEx("SupplyPack",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION);
+		Stop;
+    }
+}
+
+Class SupplyPack : CustomInventory
+{
+	Default
+	{
+	+Inventory.AlwaysPickup;
+	Inventory.PickupMessage "Picked up a pack of ammo.";
+	Inventory.PickupSound "misc/i_pkup";
+	}
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PAK1 X -1;
+		Loop;
+	Pickup:
+		TNT1 A 0 A_GiveInventory("ChasmClip", 4);
+		TNT1 A 0 A_GiveInventory("ChasmShell", 2);
+		TNT1 A 0 A_GiveInventory("Health", 2);
+		Stop;
+	}
+}
+
+Class ArmorBonusSpawner : RandomSpawner
+{
+	Default
+	{
+	dropitem "FieldKit",255, 10;
+	}
+}
+
+Class HealthBonusSpawner : RandomSpawner
+{
+	Default
+	{
+	dropitem "FieldKit",255, 10;
+	}
+}
+
+Class FieldKit : CustomInventory
+{
+	Default
+	{
+	+Inventory.AlwaysPickup;
+	Inventory.PickupMessage "Picked up a field stabalizing kit.";
+	Inventory.PickupSound "Kit/Pickup";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		FIEX A -1;
+		Stop;
+	Pickup:
+		TNT1 A 0 A_GiveInventory("ArmorBonus", 2);
+		TNT1 A 0 A_GiveInventory("HealthBonus", 2);
+		Stop;
+	}
+}
+
+Class ArmorShard : BasicArmorBonus
+{
+	Default
+	{
+	Radius 20;
+	Height 16;
+	Inventory.PickupMessage "Picked up an armor fragment.";
+	Inventory.PickupSound "Armor/SmallPickup";
+	Armor.SavePercent 33.335;
+	Armor.SaveAmount 2;
+	Armor.MaxSaveAmount 200;
+	Scale 0.95;
+	}
+	
+	States
+	{
+	Spawn:
+		ARSD ABCD 6;
+		ARSD D 1 BRIGHT;
+		ARSD CB 6;
+		Loop;
+	}
+}
+
+Class YellowVest : BasicArmorBonus
+{
+	Default
+	{
+	Radius 20;
+	Height 16;
+	Inventory.PickupMessage "Picked up a ballistic helmet!";
+	Inventory.PickupSound "Armor/Pickup";
+	Armor.SavePercent 40;
+	Armor.SaveAmount 100;
+	Armor.MaxSaveAmount 100;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		YARM X -1;
+		Stop;
+	}
+}
+
+Class RedVest : BasicArmorBonus
+{
+	Default
+	{
+	Radius 20;
+	Height 16;
+	Inventory.PickupMessage "Picked up a reinforced ballistic vest!";
+	Inventory.PickupSound "Armor/BigPickup";
+	Armor.SavePercent 70;
+	Armor.SaveAmount 200;
+	Armor.MaxSaveAmount 200;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		RARM X -1;
+		Stop;
+	}
+}
+
+Class SmallHealth : Health
+{
+	Default
+	{
+	Inventory.Amount 15;
+	Inventory.MaxAmount 100;
+	Inventory.PickupSound "misc/i_pkup";
+	Inventory.PickupMessage "Pickup a small medikit.";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		SMHE A -1;
+		Stop;
+	}
+}
+
+Class BigHealth : Health
+{
+	Default
+	{
+	Inventory.Amount 30;
+	Inventory.MaxAmount 100;
+	Inventory.PickupSound "misc/p_pkup";
+	Inventory.PickupMessage "Picked up a large medikit.";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		BMHE A -1;
+		Stop;
+	}
+}
+
+//Powerups
+
+Class AmmoPack : BackpackItem
+{
+	Default
+	{
+	Height 26;
+	Inventory.PickupMessage "Picked up a backpack full of ammo!";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 A -1;
+		Stop;
+	}
+}
+
+Class GlobusMap : MapRevealer
+{
+	Default
+	{
+	inventory.pickupmessage "Picked up a Globus Map Scanner.";
+	inventory.respawntics 2010;
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 F -1 bright;
+		stop;
+	}
+}
+
+Class LesserRiftCharge : Health
+{
+	Default
+	{
+	+INVENTORY.AUTOACTIVATE;
+	+INVENTORY.ALWAYSPICKUP;
+	+INVENTORY.FANCYPICKUPSOUND;
+	Inventory.Amount 100;
+	Inventory.MaxAmount 200;
+	Inventory.PickupMessage "Picked up a Lesser Rift Charge.";
+	Inventory.PickupSound "RiftCharge/Pickup";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 C 1;
+		Loop;
+	}
+}
+
+Class GreaterRiftCharge : CustomInventory
+{
+	Default
+	{
+	+INVENTORY.ALWAYSPICKUP;
+	Inventory.PickupMessage "Picked up a Greater Rift Charge.";
+	Inventory.PickupSound "RiftCharge/Pickup";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 D -1 BRIGHT;
+		Stop;
+	Pickup:
+		TNT1 A 0 A_GiveInventory("BlueArmorForMegasphere", 1);
+		TNT1 A 0 A_GiveInventory("MegasphereHealth", 1);
+		Stop;
+	}
+}
+
+Class ChojinMask : PowerupGiver
+{
+	Default
+	{
+	+INVENTORY.AUTOACTIVATE;
+	+INVENTORY.ALWAYSPICKUP;
+	+INVENTORY.BIGPOWERUP;
+	Inventory.MaxAmount 0;
+	Inventory.PickupSound "Invul/Pickup";
+	Powerup.Type "PowerInvulnerable";
+	Powerup.Color "GreenMap", 0.25;
+	Inventory.PickupMessage "Picked up a Mask of the Chojin.";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 E -1 BRIGHT;
+		Stop;
+	}
+}
+
+Class InvisibilityMask : PowerupGiver
+{
+	Default
+	{
+	+VISIBILITYPULSE;
+	+INVENTORY.AUTOACTIVATE;
+	+INVENTORY.ALWAYSPICKUP;
+	+INVENTORY.BIGPOWERUP;
+	Inventory.MaxAmount 0;
+	Powerup.Type "PowerInvisibility";
+	RenderStyle "Translucent";
+	Inventory.PickupMessage "Picked up a helm of Invisibility.";
+	Inventory.PickupSound "Invis/Pickup";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 H -1;
+		Stop;
+	}
+}
+
+Class BerserkPack : CustomInventory
+{
+	Default
+	{
+	+INVENTORY.ALWAYSPICKUP;
+	Inventory.PickupMessage "Picked up a damage-booster stim!";
+	Inventory.PickupSound "Berserker/Pickup";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		PI00 Z -1 BRIGHT;
+		Stop;
+	Pickup:
+		TNT1 A 0 A_GiveInventory("ChasmPowerStrength");
+		TNT1 A 0 A_GiveInventory("PowerRegeneration");
+		TNT1 A 0 HealThing(25, 0);
+		TNT1 A 0 A_SelectWeapon("ChasmFists");
+		Stop;
+	}
+}
+
+Class ChasmPowerStrength : PowerStrength
+{
+	Default
+	{
+	Powerup.Duration 1;
+	Powerup.Color "255, 0, 0", 0.20;
+	+INVENTORY.HUBPOWER;
+	}
+}
+
+Class ChasmInfra : PowerupGiver
+{
+	Default
+	{
+	+INVENTORY.AUTOACTIVATE;
+	+INVENTORY.ALWAYSPICKUP;
+	+INVENTORY.BIGPOWERUP;
+	Inventory.MaxAmount 0;
+	Inventory.PickupSound "Infra/Pickup";
+	Powerup.Type "PowerLightAmp";
+	Inventory.PickupMessage "Picked up Infrared Goggles.";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		INFG A -1 BRIGHT;
+		Stop;
+	}
+}
+
+Class ChasmHazmat : PowerupGiver
+{
+	Default
+	{
+	+INVENTORY.AUTOACTIVATE;
+	+INVENTORY.ALWAYSPICKUP;
+	+INVENTORY.BIGPOWERUP;
+	Inventory.MaxAmount 0;
+	Inventory.PickupSound "Hazmat/Pickup";
+	Powerup.Type "PowerIronFeet";
+	Inventory.PickupMessage "Picked up a Hazmat suit.";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		HAZM A -1 BRIGHT;
+		Stop;
+	}
+}

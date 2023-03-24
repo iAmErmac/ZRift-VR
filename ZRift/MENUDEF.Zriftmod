@@ -24,14 +24,21 @@ OptionMenu "ZriftCredits"
     StaticText""
 }
 
+OptionMenu "SpawnerMenu"
+{
+	Title "$OPTMNU_SPAWNER"
+    StaticText""
+	Option "$OPTMNU_REPLACE_MONS", "zrift_monsters", "YesNo"
+	Option "$OPTMNU_REPLACE_ITEM", "zrift_items", "YesNo"
+    StaticText""
+    PWWStaticText "$OPTMNU_REPLACE_NOTE"
+}
+
 
 OptionMenu "Zriftmenu"
 {
 
     Title "ZRIFT OPTIONS MENU"
-    StaticText ""
-    StaticText ""
-    StaticText ""
     StaticText ""
 	StaticText "............................" , "red"
     StaticText ""
@@ -39,12 +46,12 @@ OptionMenu "Zriftmenu"
     StaticText ""
     Submenu "$OPTMNU_RETROSHADER", "RetroShaderMenu"
     Submenu "$PWW_MenuTitle", "PyWheelMenu"
+	Submenu "$OPTMNU_SPAWNER", "SpawnerMenu"
     Submenu "$OPTMNU_ZRIFTCREDITS", "ZriftCredits"
     StaticText ""
 	StaticText "............................" , "red"
     StaticText ""
-    StaticText ""
-    StaticText ""
     PWWStaticText "Zrift - Chasm in Doom Version 1.1"
     PWWStaticText "created by HAL9000 & Pandut"
+    PWWStaticText "VR Enhancements by Ermac"
 }

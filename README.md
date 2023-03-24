@@ -11,32 +11,28 @@
 
 [<img src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2" height="36" alt="Buy me a Cofee!">](https://ko-fi.com/ermac)
 
-## Whats new
+## Features
 * Chasm The Rift Music randomizer
 * Retro Shader
 * Cosmetic Player Classes
 * Cosmetic Classes Weapons
-* New decor model placeholders (they will be replaced)
-* Zrift Menu
-* Bugfixes
-* HUD update
-* Code Cleanup
-* Misc Improvements
+* Playable with Heretic
 
 ## Whats updated in VR mod
 * Unusable features like Weapon Sway, Tilt++ and static Flashlight has been removed
 * ZRift Monsters are now available as a separate mod
+* Option to turn off item replacements
 
 ## Planned Mod updates
 * Modify weapon wheel for VR
 * Modify/adjust Weapon models for VR
-* Option to turn off monster replacement
-* Option to turn off item replacement
-* Make playable with Heretic/Hexen/Strife/Chex
+* Option to turn off monster replacements
+* Make playable with Hexen/Strife/Chex
 
 ## Quick note
-* Don't forget to bind Weapon Wheel in the Zrift Menu.
-* Retro Shader can be disabled in the Zrift menu.
+* Don't forget to bind Weapon Wheel in the Zrift Menu
+* Retro Shader can be disabled in the Zrift menu
+* ZRift 3D items can be disabled in the Zrift menu
 
 ## Installation
 

@@ -1,0 +1,187 @@
+////////////////////////////////////////////////////
+Class DoomEvilEyeSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "DoomEvilEye", 256, 1;
+	}
+}
+
+Class DoomEvilEye : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 54;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		DE00 ABCDEFGHI 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class DoomHeadCandlesSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "DoomHeadCandles", 256, 1;
+	}
+}
+
+Class DoomHeadCandles : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 42;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		DE01 ABC 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class DoomFloatingSkullSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "DoomFloatingSkull", 256, 1;
+	}
+}
+
+Class DoomFloatingSkull : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 26;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		DE02 ABCABC 3 Bright;
+		Loop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class DoomStalagmiteSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "DoomStalagmite", 256, 1;
+	}
+}
+
+Class DoomStalagmite : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 48;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		DE03 A -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class DoomStalagtiteSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "DoomStalagtite", 256, 1;
+	}
+}
+
+Class DoomStalagtite : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 40;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		DE04 A -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmTallGreenColumnSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmTallGreenColumn", 256, 1;
+	}
+}
+
+Class ChasmTallGreenColumn : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 52;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		CCOL A -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmTallRedColumnSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmTallRedColumn", 256, 1;
+	}
+}
+
+Class ChasmTallRedColumn : Actor
+{
+	Default
+	{
+	Radius 16;
+	Height 52;
+	ProjectilePassHeight -16;
+	+SOLID;
+	}
+	
+	States
+	{
+	Spawn:
+		CCOL A -1;
+		Stop;
+	}
+}

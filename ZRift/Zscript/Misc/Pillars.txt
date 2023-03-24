@@ -1,0 +1,168 @@
+Class TechPillarChasm : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 100;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		TPIL B 1;
+		loop;
+	}
+}
+
+Class PostSpawner1 : RandomSpawner
+{
+	Default
+	{
+	dropitem "POST_NORMAL1",255, 10;
+	dropitem "POST_NORMAL2",255, 10;
+	dropitem "POST_NORMAL3",255, 10;
+	}
+}
+
+Class PostSpawner2 : RandomSpawner
+{
+	Default
+	{
+	dropitem "POST_NORMAL1",255, 10;
+	dropitem "POST_NORMAL2",255, 10;
+	dropitem "POST_NORMAL3",255, 10;
+	}
+}
+
+Class PostSpawner3 : RandomSpawner
+{
+	Default
+	{
+	dropitem "POST_RED1",255, 10;
+	dropitem "POST_RED2",255, 10;
+	dropitem "POST_RED3",255, 10;
+	}
+}
+
+Class PostSpawner4 : RandomSpawner
+{
+	Default
+	{
+	dropitem "POST_RED1",255, 10;
+	dropitem "POST_RED2",255, 10;
+	dropitem "POST_RED3",255, 10;
+	}
+}
+
+///////////////
+
+Class POST_NORMAL1 : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 10;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		POST A 1;
+		loop;
+	}
+}
+
+Class POST_NORMAL2 : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 10;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		POST B 1;
+		loop;
+	}
+}
+
+Class POST_NORMAL3 : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 10;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		POST C 1;
+		loop;
+	}
+}
+
+
+Class POST_RED1 : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 10;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		POST D 1;
+		loop;
+	}
+}
+
+Class POST_RED2 : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 10;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		POST E 1;
+		loop;
+	}
+}
+
+Class POST_RED3 : Actor
+{
+	Default
+	{
+	+SOLID;
+	Radius 8;
+	Height 10;
+	}
+
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		POST F 1;
+		loop;
+	}
+}

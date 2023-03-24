@@ -1,0 +1,2 @@
+user bool zrift_monsters 	= false;
+user bool zrift_items 		= false;

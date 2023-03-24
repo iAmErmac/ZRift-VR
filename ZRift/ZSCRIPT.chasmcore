@@ -1,1 +1,16 @@
 version "3.4"
+
+
+//Misc
+#include "Zscript/Misc/Items.txt"
+#include "Zscript/Misc/ChasmBarrel.txt"
+#include "Zscript/Misc/Corpses.txt"
+#include "Zscript/Misc/Trees.txt"
+#include "Zscript/Misc/Pillars.txt"
+#include "Zscript/Misc/HereticItems.txt"
+#include "Zscript/Misc/DoomTorches.txt"
+#include "Zscript/Misc/DoomMisc.txt"
+#include "Zscript/Misc/Doomlamps.txt"
+#include "Zscript/Misc/DoomCandles.txt"
+#include "Zscript/Misc/DoomGibs.txt"
+#include "Zscript/Spawners.txt"

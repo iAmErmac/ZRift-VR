@@ -1,9 +1,9 @@
 
-Model POST-NORMAL1
+Model POST_NORMAL1
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "Post-Normal.png"
+  SurfaceSkin 0 0 "POST_Normal.png"
   SurfaceSkin 0 1 "SKULL.png"   
   SurfaceSkin 0 2 "HEART.png"   
   
@@ -18,11 +18,11 @@ Model POST-NORMAL1
 }
 
 
-Model POST-NORMAL2
+Model POST_NORMAL2
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "Post-Normal.png"
+  SurfaceSkin 0 0 "POST_Normal.png"
   SurfaceSkin 0 1 "SKULL.png"   
   SurfaceSkin 0 2 "HEART.png"   
   
@@ -36,11 +36,11 @@ Model POST-NORMAL2
   FrameIndex POST B 0 1 // Frame 1 heart
 }
 
-Model POST-NORMAL3
+Model POST_NORMAL3
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "Post-Normal.png"
+  SurfaceSkin 0 0 "POST_Normal.png"
   SurfaceSkin 0 1 "SKULL.png"   
   SurfaceSkin 0 2 "HEART.png"   
   
@@ -57,11 +57,11 @@ Model POST-NORMAL3
 
 
 
-Model POST-RED1
+Model POST_RED1
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "Post-Red.png"
+  SurfaceSkin 0 0 "POST_Red.png"
   SurfaceSkin 0 1 "SKULL-GOLD.png"   
   SurfaceSkin 0 2 "HEART-GOLD.png"   
   
@@ -76,11 +76,11 @@ Model POST-RED1
 }
 
 
-Model POST-RED2
+Model POST_RED2
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "Post-Red.png"
+  SurfaceSkin 0 0 "POST_Red.png"
   SurfaceSkin 0 1 "SKULL-GOLD.png"   
   SurfaceSkin 0 2 "HEART-GOLD.png"   
   
@@ -96,11 +96,11 @@ Model POST-RED2
 }
 
 
-Model POST-RED3
+Model POST_RED3
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "Post-Red.png"
+  SurfaceSkin 0 0 "POST_Red.png"
   SurfaceSkin 0 1 "SKULL-GOLD.png"   
   SurfaceSkin 0 2 "HEART-GOLD.png"   
   

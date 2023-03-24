@@ -5,6 +5,7 @@ NoRandomPlayerClass=True
 dimcolor = "0b0a07"
 dimamount = 0.95
 gl_menu_blur = 0.5
+AddEventHandlers = "ZRiftItemSpawnHandler"
 }
 
 

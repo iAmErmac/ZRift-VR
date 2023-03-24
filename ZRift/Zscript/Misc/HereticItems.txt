@@ -1,0 +1,442 @@
+//Ammo
+
+/*Class GoldAmmoSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem ChasmClip;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 ;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class GoldAmmoBoxSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem CClipBox;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 ;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class CrossAmmoSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem ChasmShell;
+	Dropitem CPlasmaCell;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 ;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class CrossBoxSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem CShellBox;
+	Dropitem CPlasmaCell;
+	Dropitem CPlasmaCell;
+	DropItem ChasmSaw, 100;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class BlasterAmmoSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem ChasmShell, 150;
+	Dropitem CPlasmaCell, 150;
+	Dropitem ChasmClip, 150;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class BlasterBoxSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem ChasmShellBox, 150;
+	Dropitem CPlasmaCell, 150;
+	Dropitem CClipBox, 150;
+	DropItem ChasmSaw, 100;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class PhoenixAmmoSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem CGrenadeAmmo;
+	}
+  
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class PhoenixBoxSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem CGrenadeBox;
+	Dropitem ChasmMinePickup;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class SkullStaffAmmoSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem LaserBoltAmmo;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class SkullStaffAmmoBoxSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem LaserBoltAmmo;
+	Dropitem LaserBoltAmmo;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class MaceStaffAmmoSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem CCellAmmo;
+	DropItem ChasmSaw;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class MaceStaffAmmoBoxSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	DropItem CCellBox;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+//Weapons
+
+Class GauntletSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmChainfist",255, 10;
+	}
+}
+
+Class GoldWandSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmRifle",255, 10;
+	}
+}
+
+Class CrossbowSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmShotgun",255, 10;
+	dropitem "ChasmPlasmaThrower",255, 5;
+	}
+}
+
+Class BlasterSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmChaingun",255, 10;
+	}
+}
+
+Class PhoenixSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmRocketL",255, 10;
+	}
+}
+
+Class SkullRodSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmCrossbow",255, 10;
+	}
+}
+
+Class MaceRodSpawner : RandomSpawner
+{
+	Default
+	{
+	Game Heretic;
+	dropitem "ChasmDestroyer",255, 10;
+	}
+}*/
+
+//Items
+
+Class CrystalVialSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "SmallHealth";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class ArtiHealthSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "BigHealth";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class SilverShieldSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "YellowVest";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+
+Class EnchantedShieldSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "RedVest";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class HoldingBagSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "AmmoPack";
+	}
+	
+	States
+	{
+		Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+}
+
+Class PowerTomeSpawner : Actor
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "BerserkPack";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+}

@@ -1,0 +1,161 @@
+////////////////////////////////////////////////////
+Class ChasmBrainStemSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmBrainStem", 256, 1;
+	}
+}
+
+Class ChasmBrainStem : Actor
+{
+	Default
+	{
+	Radius 20;
+	Height 4;
+	+NOBLOCKMAP;
+	+MOVEWITHSECTOR;
+	}
+	
+	States
+	{
+	Spawn:
+		DOGI A -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmColonGibsSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmColonGibs", 256, 1;
+	}
+}
+
+Class ChasmColonGibs : Actor
+{
+	Default
+	{
+	Radius 20;
+	Height 4;
+	+NOBLOCKMAP;
+	+MOVEWITHSECTOR;
+	}
+	
+	States
+	{
+	Spawn:
+		DOGI B -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmSmallBloodPoolSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmSmallBloodPool", 256, 1;
+	}
+}
+
+Class ChasmSmallBloodPool : Actor
+{
+	Default
+	{
+	Radius 20;
+	Height 1;
+	+NOBLOCKMAP;
+	+MOVEWITHSECTOR;
+	}
+	
+	States
+	{
+	Spawn:
+		DOGI C -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmRealGibsSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmRealGibs", 256, 1;
+	}
+}
+
+Class ChasmRealGibs : Actor
+{
+	Default
+	{
+	Radius 20;
+	Height 1;
+	+NOBLOCKMAP;
+	+MOVEWITHSECTOR;
+	}
+	
+	States
+	{
+	Spawn:
+		DOGI D -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmGibbedmarineSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmGibbedmarine", 256, 1;
+	}
+}
+
+Class ChasmGibbedmarine : Actor
+{
+	Default
+	{
+	Radius 20;
+	Height 1;
+	+NOBLOCKMAP;
+	+MOVEWITHSECTOR;
+	}
+	
+	States
+	{
+	Spawn:
+		DOGI E -1;
+		Stop;
+	}
+}
+
+////////////////////////////////////////////////////
+Class ChasmGibbedmarineExtraSpawner : RandomSpawner
+{
+	Default
+	{
+	DropItem "ChasmGibbedmarineExtra", 256, 1;
+	}
+}
+
+Class ChasmGibbedmarineExtra : Actor
+{
+	Default
+	{
+	Radius 20;
+	Height 1;
+	+NOBLOCKMAP;
+	+MOVEWITHSECTOR;
+	}
+	
+	States
+	{
+	Spawn:
+		DOGI F -1;
+		Stop;
+	}
+}

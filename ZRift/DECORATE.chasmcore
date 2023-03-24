@@ -17,22 +17,8 @@
 #include "Decorate/Weapons/ChasmCrossbow.txt"
 #include "Decorate/Weapons/ChasmDestroyer.txt"
 
-#include "Decorate/Misc/ChasmBarrel.txt"
-
 //Ally - Secret
 #Include "Decorate/Secrets/Doot.txt"
-
-//Misc
-#include "Decorate/Misc/Items.txt"
-#include "Decorate/Misc/Corpses.txt"
-#include "Decorate/Misc/Trees.txt"
-#include "Decorate/Misc/Pillars.txt"
-#include "Decorate/Misc/HereticItems.txt"
-#include "Decorate/Misc/DoomTorches.txt"
-#include "Decorate/Misc/DoomMisc.txt"
-#include "Decorate/Misc/Doomlamps.txt"
-#include "Decorate/Misc/DoomCandles.txt"
-#include "Decorate/Misc/DoomGibs.txt"
 
 //ClassBasedWeapons
 #include "Decorate/Class/ClassWeapons.txt"
