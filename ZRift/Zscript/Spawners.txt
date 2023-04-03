@@ -115,7 +115,6 @@ Class ZRiftItemSpawnHandler: EventHandler
 		
 		if(GameInfo.GameType & GAME_Heretic)
 		{
-			/*
 			//ammo
 			if(e.Replacee is "GoldWandAmmo") 		e.Replacement = 'GoldAmmoSpawner';
 			if(e.Replacee is "GoldWandHefty") 		e.Replacement = 'GoldAmmoBoxSpawner';
@@ -138,7 +137,6 @@ Class ZRiftItemSpawnHandler: EventHandler
 			if(e.Replacee is "PhoenixRod") 			e.Replacement = 'PhoenixSpawner';
 			if(e.Replacee is "SkullRod") 			e.Replacement = 'SkullRodSpawner';
 			if(e.Replacee is "Mace") 				e.Replacement = 'MaceRodSpawner';
-			*/
 			
 			if(replace_items)
 			{

@@ -1,0 +1,1003 @@
+Class ChasmRocketL : Weapon Replaces RocketLauncher
+{
+	Default
+	{
+	Inventory.PickupMessage "Picked up a Grenader!";
+	Inventory.PickupSound "Weapon/Pickup";
+	Weapon.AmmoType1 "CGrenadeAmmo";
+	Weapon.AmmoType2 "CGrenadeAmmo";
+	Weapon.AmmoUse1 1;
+	Weapon.AmmoUse2 1;
+	Weapon.AmmoGive 3;
+	Weapon.UpSound "RocketL/Up";
+	Weapon.SlotNumber 5;
+	Weapon.SelectionOrder 5;
+	Weapon.KickBack 1;
+	Weapon.BobStyle "Alpha";
+	Weapon.BobRangeX 0.07;
+	Weapon.BobRangeY 0.45;
+	Weapon.BobSpeed 1.85;
+	Inventory.Icon "HUROK1";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		GRNX A -1;
+		Stop;
+	Ready:
+		GREX Z 1 A_WeaponReady;
+		Loop;
+	Select:
+		TNT1 A 0 SetPlayerProperty(0,1,2);
+		GREX IJKLMNO 1;
+		GREX O 5;
+		GREX PQRSTUVW 1;
+		Goto Ready;
+	Deselect:
+		GREX Z 1 A_Lower;
+		Loop;
+	Fire:
+		TNT1 A 0;
+		GREX Z 1 BRIGHT;
+		GREX A 0 A_PlaySound("ChasmRocketL/Fire",1, 1.0);
+		TNT1 A 0 A_FireCustomMissile("ChasmRocket",0,1,random(4,5),2);
+		TNT1 AAAA 0 A_FireCustomMissile("BarrelSmokeSpawnShotguns",frandom(-1.6,1.1),0,random(4,5),2,0,frandom(-1.1,0.9));
+		TNT1 A 0 A_Quake(1, 5, 0, 50, "None");
+		GREX A 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch-4.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		GREX B 1 BRIGHT A_Recoil(0.2);
+		TNT1 A 0 A_SetPitch(pitch-2.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		GREX C 1 A_Recoil(0.2);
+		TNT1 A 0 A_SetPitch(pitch-1.50);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		GREX D 1;
+		TNT1 A 0 A_SetPitch(pitch-1.00);
+		TNT1 A 0 A_SetAngle(angle-0.1); //8.50
+		GREX E 1;
+		TNT1 A 0 A_SetPitch(pitch+3.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX F 1;
+		TNT1 A 0 A_SetPitch(pitch+2.50);
+		TNT1 A 0 A_SetAngle(angle+0.1); //5.50
+		GREX G 1;
+		TNT1 A 0 A_SetPitch(pitch+1.25); //6.25
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX H 1;
+		TNT1 A 0 A_SetPitch(pitch+0.75); //7
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX I 1;
+		TNT1 A 0 A_SetPitch(pitch+0.75);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX J 1;
+		TNT1 A 0 A_SetPitch(pitch+0.25);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX KLMNO 1;
+		GREX O 8;
+		GREX PQRSTUVW 1;
+		Goto Ready;
+	AltFire:
+		TNT1 A 0;
+		GREX Z 1 BRIGHT;
+		GREX A 0 A_PlaySound("ChasmRocketL/ClusterFire",1, 1.0);
+		TNT1 A 0 A_FireCustomMissile("ChasmClusterRocket",0,1,random(4,5),2);
+		TNT1 AAAA 0 A_FireCustomMissile("BarrelSmokeSpawnShotguns",frandom(-1.6,1.1),0,random(4,5),2,0,frandom(-1.1,0.9));
+		TNT1 A 0 A_Quake(1, 5, 0, 50, "None");
+		GREX A 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch-4.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		GREX B 1 BRIGHT A_Recoil(0.2);
+		TNT1 A 0 A_SetPitch(pitch-2.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		GREX C 1 A_Recoil(0.2);
+		TNT1 A 0 A_SetPitch(pitch-1.50);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		GREX D 1;
+		TNT1 A 0 A_SetPitch(pitch-1.00);
+		TNT1 A 0 A_SetAngle(angle-0.1); //8.50
+		GREX E 1;
+		TNT1 A 0 A_SetPitch(pitch+3.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX F 1;
+		TNT1 A 0 A_SetPitch(pitch+2.50);
+		TNT1 A 0 A_SetAngle(angle+0.1); //5.50
+		GREX G 1;
+		TNT1 A 0 A_SetPitch(pitch+1.25); //6.75
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX H 1;
+		TNT1 A 0 A_SetPitch(pitch+0.75); //7.50
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX I 1;
+		TNT1 A 0 A_SetPitch(pitch+0.75);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX J 1;
+		TNT1 A 0 A_SetPitch(pitch+0.25);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		GREX KLMNO 1;
+		GREX O 8;
+		GREX PQRSTUVW 1;
+		Goto Ready;
+	}
+}
+
+Class ChasmClusterRocket : Actor
+{
+	Default
+	{
+	Radius 3;
+	Height 3;
+	Speed 26;
+	Damage 15;
+	Projectile;
+	-NOGRAVITY;
+	+RANDOMIZE;
+	+BOUNCEONWALLS;
+	+BOUNCEONCEILINGS;
+	Gravity 0.35;
+	BounceCount 5;
+	BounceType "Hexen";
+	BounceFactor 0.90;
+	WallBounceFactor 0.90;
+	BounceSound "ChasmSaw/Bounce";
+	DeathSound "ChasmRocketL/ClusterBreak";
+	DamageType "Explosive";
+	Decal "Scorch";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		GRN1 X 1 Bright A_SpawnItemEx("RocketFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("RocketSmokeTrail1",0,0,0,0,0,0,0,2);
+		TNT1 AAA 0 A_SpawnItemEx("RocketLauncherSparks",0,0,0,random(-1,1),random(-1,1),random(-1,1),0,128,0);
+		TNT1 AAAA 0 A_SpawnParticle ("Gray", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		TNT1 AAA 0 A_SpawnParticle ("DarkGrey", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		TNT1 AA 0 A_SpawnParticle ("Black", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		TNT1 AAA 0 A_SpawnParticle ("Gold", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		Loop;
+	Death:
+		TNT1 A 0;
+		TNT1 A 0 A_PlaySound("Distant/Explosion", 7);
+		TNT1 A 0 A_PlaySound("Midway/Explosion", 6);
+		TNT1 A 0 A_Scream;
+		TNT1 A 0 Radius_Quake(6, 5, 0, 4, 0);
+		TNT1 A 0 Radius_Quake(1, 20, 0, 18, 0);
+		TNT1 AAAAAAAA 0 A_CustomMissile("BoomFlare", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAAAAAA 0 A_CustomMissile("ExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-2.0,3.0), 0,0,-0.1, 0.98, -1);
+		TNT1 A 0 A_CustomMissile("ExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,12), random(1,-1), random (0, 360), 2, random (0, 160));
+		MIS3 A 2 BRIGHT A_SetScale(0.30);
+		MIS3 A 2 BRIGHT A_SetScale(1.00);
+		TNT1 A 0 A_PlaySound("ChasmRocketL/ClusterExp", 1);
+		TNT1 A 0 A_Explode(50);
+		TNT1 AA 0 A_CustomMissile("ExplosionFX", random(1,-10), random(35,-35), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnItemEx("ExplosionWave", 0, random(10,-10), random (-5, 5));
+		MIS3 AB 3 BRIGHT;
+		TNT1 A 0 A_PlaySound("ChasmRocketL/ClusterExp", 5);
+		TNT1 A 0 A_Explode(50);
+		TNT1 AA 0 A_CustomMissile("ExplosionFX", random(1,10), random(35,-35), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnItemEx("ExplosionWave", 0, random(10,-10), random (-5, 5));
+		MISC CD 3 BRIGHT;
+		TNT1 A 0 A_PlaySound("ChasmRocketL/ClusterExp", 6);
+		TNT1 A 0 A_Explode(50);
+		TNT1 AA 0 A_CustomMissile("ExplosionFX", random(1,-10), random(35,-35), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnItemEx("ExplosionWave", 0, random(10,-10), random (-5, 5));
+		MIS3 EF 3 BRIGHT;
+		TNT1 A 0 A_PlaySound("ChasmRocketL/ClusterExp", 1);
+		TNT1 A 0 A_Explode(50);
+		TNT1 AA 0 A_CustomMissile("ExplosionFX", random(1,-10), random(35,-35), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnItemEx("ExplosionWave", 0, random(10,-10), random (-5, 5));
+		MIS3 GGG 1 BRIGHT A_FadeOut;
+		Stop;
+	}
+}
+
+Class ChasmRocket : Actor
+{
+	Default
+	{
+	Radius 3;
+	Height 3;
+	Speed 30;
+	Damage 30;
+	Projectile;
+	+RANDOMIZE;
+	DeathSound "ChasmRocketL/Exp";
+	DamageType "Explosive";
+	Decal "Scorch";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_PlaySound("ChasmRocketL/Fly",CHAN_WEAPON,1.0,1);
+		GRN1 X 1 Bright A_SpawnItemEx("RocketFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("RocketSmokeTrail1",0,0,0,0,0,0,0,2);
+		TNT1 AAA 0 A_SpawnItemEx("RocketLauncherSparks",0,0,0,random(-1,1),random(-1,1),random(-1,1),0,128,0);
+		TNT1 AAAA 0 A_SpawnParticle ("Gray", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		TNT1 AAA 0 A_SpawnParticle ("DarkGrey", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		TNT1 AA 0 A_SpawnParticle ("Black", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		TNT1 AAA 0 A_SpawnParticle ("Gold", SPF_FULLBRIGHT | SPF_RELATIVE, random(20,25), random(2,3), random(3,-3), -4,random(-1,1),0, frandom(0.2,0.4),frandom(-0.2,0.2),frandom(-1.0,1.0), 0,0,-0.1, 0.90, -1);
+		Loop;
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_WEAPON);
+		TNT1 A 0 A_PlaySound("Distant/Explosion", 7);
+		TNT1 A 0 A_PlaySound("Midway/Explosion", 6);
+		TNT1 A 0 Radius_Quake(6, 5, 0, 4, 0);
+		TNT1 A 0 Radius_Quake(1, 20, 0, 18, 0);
+		TNT1 A 0 A_Scream;
+		TNT1 AAAAAAAA 0 A_CustomMissile("BoomFlare", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAAAAAA 0 A_CustomMissile("ExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-2.0,3.0), 0,0,-0.1, 0.98, -1);
+		TNT1 AAA 0 A_CustomMissile("ExplosionFX", random(1,12), random(16,-16), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("ExplosionFX", random(1,-12), random(16,-16), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_CustomMissile("ExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,12), random(1,-1), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_Explode(156,128);
+		TNT1 A 0 A_SetTranslucent(0.97, 1);
+		TNT1 A 0 A_SpawnItemEx("ExplosionWave");
+		MIS3 AB 2 BRIGHT;
+		MIS3 CD 2 BRIGHT;
+		MIS3 EFG 1 BRIGHT A_FadeOut;
+		TNT1 A 0 A_SetScale(0.80);
+		MIS3 GGG 1 BRIGHT A_FadeOut;
+		Stop;
+	}
+}
+
+Class RocketFlareTrail : Actor
+{
+	Default
+	{
+	RenderStyle "Add";
+	Alpha 0.97;
+	Scale 0.18;
+	+NOGRAVITY;
+	+BRIGHT;
+	}
+	
+	States
+	{
+	Spawn:
+		OGLO A 1 A_FadeOut;
+		OGLO A 1 A_SetScale(0.14);
+		OGLO A 1 A_FadeOut;
+		OGLO A 1 A_SetScale(0.09);
+		OGLO A 1 A_FadeOut;
+		OGLO A 1 A_SetScale(0.03);
+		OGLO A 1 A_FadeOut;
+		OGLO A 1 A_SetScale(0.01);
+		Stop;
+	}
+}
+
+Class RocketSmokeTrail1 : Actor
+{
+	Default
+	{
+	RenderStyle "Add";
+	Alpha 0.97;
+	Scale 0.40;
+	+NOGRAVITY;
+	}
+	
+	States
+	{
+	Spawn:
+		GRN2 AA 1 A_FadeOut;
+		GRN2 BB 1 A_SetScale(0.35);
+		GRN2 CC 1 A_FadeOut;
+		GRN2 DD 1 A_SetScale(0.15);
+		GRN2 EE 1 A_FadeOut;
+		GRN2 EE 1 A_SetScale(0.05);
+		Stop;
+	}
+}
+
+Class RocketLauncherSparks : Actor
+{
+	Default
+	{
+	Radius 2;
+	Height 2;
+	+NoBlockMap;
+	+NoGravity;
+	+DontSplash;
+	+ForceXYBillboard;
+	RenderStyle "Add";
+	Alpha 0.67;
+	Scale 0.20;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 3 Bright;
+		SCOR AAAAAAAAA 1 BRIGHT;
+		SCOR BBBBCCCDD 1 A_FadeOut;
+		Stop;
+	}
+}
+
+Class ExplosionFX : Actor
+{
+	Default
+	{
+	+NOBLOCKMAP;
+	+NOGRAVITY;
+	+ALLOWPARTICLES;
+	+RANDOMIZE;
+	+NOCLIP;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.97;
+	Scale 0.1;
+	Mass 5;
+	+clientsideonly;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_SetScale(0.25);
+		D016 A 1;
+		TNT1 A 0 A_SetScale(0.50);
+		D016 A 1;
+		TNT1 A 0 A_SetScale(0.90);
+		D016 A 1;
+		TNT1 A 0 A_SetScale(1.00);
+		D016 B 1;
+		TNT1 A 0 A_SetScale(1.10);
+		D016 B 1;
+		TNT1 A 0 A_SetScale(0.90);
+		D016 C 1;
+		TNT1 A 0 A_SetScale(0.80);
+		D016 D 1;
+		TNT1 A 0 A_SetScale(0.50);
+		D016 E 1;
+		Goto Death;
+	Death:
+		D016 E 1;
+		Stop;
+	}
+}
+
+Class ExplosionWave : Actor
+{
+	Default
+	{
+	+NOBLOCKMAP;
+	+NOGRAVITY;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.97;
+	Scale 0.01;
+	}
+	
+	States
+	{
+	Spawn:
+		SHOK A 1;
+		TNT1 A 0 A_SetScale(0.05);
+		SHOK A 1;
+		TNT1 A 0 A_SetScale(0.10);
+		SHOK A 1;
+		TNT1 A 0 A_SetScale(0.15);
+		SHOK A 1;
+		TNT1 A 0 A_SetScale(0.20);
+		SHOK A 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(0.25);
+		SHOK A 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(0.30);
+		SHOK A 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(0.35);
+		SHOK A 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(0.40);
+		SHOK A 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(0.45);
+		SHOK A 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(0.50);
+		Stop;
+	}
+}
+
+Class ExplosionSmokeSpawner : RandomSpawner
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	dropitem "ExplosionSmoke1", 255, 10;
+	dropitem "ExplosionSmoke2", 255, 10;
+	dropitem "ExplosionSmoke3", 255, 10;
+	dropitem "ExplosionSmoke4", 255, 10;
+	dropitem "ExplosionSmoke5", 255, 10;
+	}
+}
+
+Class ExplosionSmoke1 : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 1;
+	Mass 0;
+	+FLOAT;
+	+NOGRAVITY;
+	+DONTSPLASH;
+	+NOTELEPORT;
+	+NOBLOCKMAP;
+	+NODAMAGETHRUST;
+	+CANNOTPUSH;
+	+NOCLIP;
+    PROJECTILE;
+	RenderStyle "Add";
+	Alpha 0.1;
+	Scale 0.25;
+	}
+	
+    States 
+    { 
+    Spawn: 
+        SMO2 AAAAAAAAAA 2 A_FadeIn(0.07);
+        Goto Death;
+    Death: 
+        SMO2 AAAAAAAAAA 2 A_Fadeout(0.05);
+        Stop;
+    } 
+}
+
+Class ExplosionSmoke2 : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 1;
+	Mass 0;
+	+FLOAT;
+	+NOGRAVITY;
+	+DONTSPLASH;
+	+NOTELEPORT;
+	+NOBLOCKMAP;
+	+NODAMAGETHRUST;
+	+CANNOTPUSH;
+	+NOCLIP;
+    PROJECTILE;
+	RenderStyle "Add";
+	Alpha 0.01;
+	Scale 0.25;
+	}
+	
+    States 
+    { 
+    Spawn: 
+        SMO2 BBBBBBBBBB 2 A_FadeIn(0.07);
+        Goto Death;
+    Death: 
+        SMO2 BBBBBBBBBB 2 A_FadeOut(0.05);
+        Stop;
+    } 
+}
+
+Class ExplosionSmoke3 : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 1;
+	Mass 0;
+	+FLOAT;
+	+NOGRAVITY;
+	+DONTSPLASH;
+	+NOTELEPORT;
+	+NOBLOCKMAP;
+	+NODAMAGETHRUST;
+	+CANNOTPUSH;
+	+NOCLIP;
+    PROJECTILE;
+	RenderStyle "Add";
+	Alpha 0.01;
+	Scale 0.25;
+	}
+	
+    States 
+    { 
+    Spawn: 
+        SMO2 CCCCCCCCCC 2 A_FadeIn(0.07);
+        Goto Death;
+    Death: 
+        SMO2 CCCCCCCCCC 2 A_FadeOut(0.05);
+        Stop;
+    } 
+}
+
+Class ExplosionSmoke4 : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 1;
+	Mass 0;
+	+FLOAT;
+	+NOGRAVITY;
+	+DONTSPLASH;
+	+NOTELEPORT;
+	+NOBLOCKMAP;
+	+NODAMAGETHRUST;
+	+CANNOTPUSH;
+	+NOCLIP;
+    PROJECTILE;
+	RenderStyle "Add";
+	Alpha 0.01;
+	Scale 0.25;
+	}
+	
+    States 
+    { 
+    Spawn: 
+        SMO2 DDDDDDDDDD 2 A_FadeIn(0.07);
+        Goto Death;
+    Death: 
+        SMO2 DDDDDDDDDD 2 A_FadeOut(0.05);
+        Stop;
+    } 
+}
+
+Class ExplosionSmoke5 : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 1;
+	Mass 0;
+	+FLOAT;
+	+NOGRAVITY;
+	+DONTSPLASH;
+	+NOTELEPORT;
+	+NOBLOCKMAP;
+	+NODAMAGETHRUST;
+	+CANNOTPUSH;
+	+NOCLIP;
+    PROJECTILE;
+	RenderStyle "Add";
+	Alpha 0.01;
+	Scale 0.25;
+	}
+	
+    States 
+    { 
+    Spawn: 
+        SMO2 EEEEEEEEEE 2 A_FadeIn(0.07);
+        Goto Death;
+    Death: 
+        SMO2 EEEEEEEEEE 2 A_FadeOut(0.05);
+        Stop;
+    } 
+}
+
+Class BigExplosionSmokeSpawner : RandomSpawner
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	dropitem "BigExplosionSmoke1", 255, 10;
+	dropitem "BigExplosionSmoke2", 255, 10;
+	dropitem "BigExplosionSmoke3", 255, 10;
+	dropitem "BigExplosionSmoke4", 255, 10;
+	dropitem "BigExplosionSmoke5", 255, 10;
+	}
+}
+
+Class BigExplosionSmoke1 : ExplosionSmoke1
+{
+	Default
+	{
+	Scale 0.60;
+	}
+}
+
+Class BigExplosionSmoke2 : ExplosionSmoke2
+{
+	Default
+	{
+	Scale 0.60;
+	}
+}
+
+Class BigExplosionSmoke3 : ExplosionSmoke3
+{
+	Default
+	{
+	Scale 0.60;
+	}
+}
+
+Class BigExplosionSmoke4 : ExplosionSmoke4
+{
+	Default
+	{
+	Scale 0.60;
+	}
+}
+
+Class BigExplosionSmoke5 : ExplosionSmoke5
+{
+	Default
+	{
+	Scale 0.60;
+	}
+}
+
+Class SmallExplosionSmokeSpawner : RandomSpawner
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	dropitem "SmallExplosionSmoke1", 255, 10;
+	dropitem "SmallExplosionSmoke2", 255, 10;
+	dropitem "SmallExplosionSmoke3", 255, 10;
+	dropitem "SmallExplosionSmoke4", 255, 10;
+	dropitem "SmallExplosionSmoke5", 255, 10;
+	}
+}
+
+Class SmallExplosionSmoke1 : ExplosionSmoke1
+{
+	Default
+	{
+	Scale 0.05;
+	}
+}
+
+Class SmallExplosionSmoke2 : ExplosionSmoke2
+{
+	Default
+	{
+	Scale 0.05;
+	}
+}
+
+Class SmallExplosionSmoke3 : ExplosionSmoke3
+{
+	Default
+	{
+	Scale 0.05;
+	}
+}
+
+Class SmallExplosionSmoke4 : ExplosionSmoke4
+{
+	Default
+	{
+	Scale 0.05;
+	}
+}
+
+Class SmallExplosionSmoke5 : ExplosionSmoke5
+{ 
+	Default
+	{
+	Scale 0.05;
+	}
+}
+
+Class ExplosionSparkSpawner : RandomSpawner
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	dropitem "ExplosionSpark1", 255, 10;
+	dropitem "ExplosionSpark2", 255, 10;
+	}
+}
+
+Class ExplosionSpark1 : Actor
+{
+	Default
+	{
+	Health 1;
+	radius 1;
+	height 1;
+	speed 1;
+	Alpha 0.97;
+	RenderStyle "Add";
+	Scale 0.80;
+	Mass		0;
+	PROJECTILE;
+	}
+	
+	States
+	{
+	Spawn:
+		FX57 ABC 1 BRIGHT;
+		FX57 DEF 1 BRIGHT;
+		Goto Death;
+	Death:
+		FX57 GH 1 BRIGHT;
+		FX57 IJ 1 BRIGHT;
+		Stop;
+	}
+}
+
+Class ExplosionSpark2 : Actor
+{
+	Default
+	{
+	Health 1;
+	radius 1;
+	height 1;
+	speed 1;
+	Alpha 0.97;
+	RenderStyle "Add";
+	Scale 0.80;
+	Mass		0;
+	PROJECTILE;
+	}
+	
+	States
+	{
+	Spawn:
+		FX57 KLM 1 BRIGHT;
+		FX57 NOP 1 BRIGHT;
+		Goto Death;
+	Death:
+		FX57 QR 1 BRIGHT;
+		FX57 ST 1 BRIGHT;
+		Stop;
+	}
+}
+
+Class ExplosionFlare : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 7;
+    Scale 0.3;
+	Mass 10;
+    +NOBLOCKMAP;
+	+THRUGHOST;
+	-SOLID;
+	+MISSILE;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.95;
+	}
+	
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay;
+        SCOR AAA 1 A_SpawnItemEx("ExplosionFlareTrail",0,0,0,0,0,0,0,2);
+        Loop;
+	Death:
+	    TNT1 A 0;
+	    SCOR BBBCCCDDD 2;
+		SCOR DDDDD 1 A_FadeOut;
+		Stop;
+    }
+}
+
+Class ExplosionFlareTrail : Actor
+{
+	Default
+	{
+	Speed 0;
+	Scale 0.2;
+	Alpha 0.67;
+	RenderStyle "Add";
+	+NOGRAVITY;
+	}
+	
+	States
+	{
+	Spawn:
+		SCOR AAABBBCCCDDD 1 BRIGHT A_FadeOut(0.1);
+		Loop;
+	}
+}
+
+//Flares
+
+Class BoomFlare : Actor
+{
+	Default
+	{
+    Radius 1;
+    Height 1;
+    Speed 6;
+    Scale 0.6;
+	Mass 0;
+    +NOBLOCKMAP;
+	+MISSILE;
+    +NOTELEPORT;
+    +MOVEWITHSECTOR;
+    +CLIENTSIDEONLY;
+	+THRUGHOST;
+	-SOLID;
+	Gravity 0.2;
+	RenderStyle "Add";
+    alpha 0.95;
+    SeeSound "";
+    DeathSound "";
+	Mass 0;
+	}
+	
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay;
+        SCOR AA 1 BRIGHT A_SpawnItemEx("BoomFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("BoomFlareTrail2",0,0,0,0,0,0,0,2);
+		SCOR AA 1 BRIGHT A_SpawnItemEx("BoomFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("BoomFlareTrail2",0,0,0,0,0,0,0,2);
+		SCOR AA 1 BRIGHT A_SpawnItemEx("BoomFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("BoomFlareTrail2",0,0,0,0,0,0,0,2);
+		SCOR AA 1 BRIGHT A_SpawnItemEx("BoomFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("BoomFlareTrail2",0,0,0,0,0,0,0,2);
+		SCOR AA 1 BRIGHT A_SpawnItemEx("BoomFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("BoomFlareTrail2",0,0,0,0,0,0,0,2);
+		SCOR AA 1 BRIGHT A_SpawnItemEx("BoomFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_SpawnItemEx("BoomFlareTrail2",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_Jump(40, "Death");
+        Loop;
+    Death:
+		SCOR ABCD 1 BRIGHT A_FadeOut(0.1);
+		SCOR DDDDDDDDDD 1 A_FadeOut(0.2);
+		Stop;
+	}
+}
+
+Class BoomFlareTrail : Actor
+{
+	Default
+	{
+	Speed 0;
+	Scale 0.75;
+	Alpha 0.95;
+	RenderStyle "Add";
+	+NOGRAVITY;
+	+BRIGHT;
+	}
+	
+	States
+	{
+	Spawn:
+		SCOR AA 1;
+		SCOR BB 1;
+		SCOR CC 1;
+		SCOR DD 1;
+		SCOR DDDDD 1 A_FadeOut;
+		Stop;
+	}
+}
+
+Class BoomFlareTrail2 : Actor
+{
+	Default
+	{
+	Speed 0;
+	Scale 0.60;
+	Alpha 0.67;
+	RenderStyle "Add";
+	+NOGRAVITY;
+	+BRIGHT;
+	}
+	
+	States
+	{
+	Spawn:
+		NAIL GG 1;
+		TNT1 A 0 A_SetScale(0.45);
+		NAIL HH 1;
+		TNT1 A 0 A_SetScale(0.30);
+		NAIL II 1;
+		TNT1 A 0 A_SetScale(0.15);
+		Stop;
+	}
+}
+
+//Ammo
+
+Class ChasmRocketSpawn1 : Actor Replaces RocketAmmo
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "CGrenadeAmmo";
+	Dropitem "ChasmMinePickup", 100;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class ChasmRocketSpawn2 : Actor Replaces RocketBox
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "CGrenadeBox";
+	Dropitem "ChasmMinePickup", 150;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class CGrenadeAmmo : Ammo
+{
+	Default
+	{
+	Inventory.Amount 1;
+	Inventory.MaxAmount 50;
+	ammo.backpackamount 3;
+	ammo.backpackmaxamount 100;
+	Inventory.PickupSound "GrenAmmo/Pickup";
+	Inventory.PickupMessage "Picked up a grenade!";
+	Scale 1;
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		GRN0 X -1;
+		stop;
+	}
+}
+
+Class CGrenadeBox : CGrenadeAmmo
+{
+	Default
+	{
+	Inventory.Amount 9;
+	Inventory.PickupMessage "Picked up a box of grenades!";
+	Inventory.PickupSound "BigGrenAmmo/Pickup";
+	Scale 1;
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		GRN0 Y -1;
+		stop;
+	}
+}

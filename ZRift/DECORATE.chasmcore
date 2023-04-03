@@ -1,25 +1,6 @@
 //Main
 #include "Decorate/ChasmPlayer.txt"
 
-//Weapons
-#include "Decorate/Weapons/ChasmSaw.txt"
-#include "Decorate/Weapons/ChasmMine.txt"
-#include "Decorate/Weapons/ChasmFists.txt"
-#include "Decorate/Weapons/ChasmChainFists.txt"
-#include "Decorate/Weapons/ChasmDoomChainFists.txt"
-#include "Decorate/Weapons/ChasmRifle.txt"
-#include "Decorate/Weapons/ChasmPistol.txt"
-#include "Decorate/Weapons/ChasmBoomstick.txt"
-#include "Decorate/Weapons/ChasmShotgun.txt"
-#include "Decorate/Weapons/ChasmPlasmaThrower.txt"
-#include "Decorate/Weapons/ChasmChaingun.txt"
-#include "Decorate/Weapons/ChasmRocketL.txt"
-#include "Decorate/Weapons/ChasmCrossbow.txt"
-#include "Decorate/Weapons/ChasmDestroyer.txt"
-
 //Ally - Secret
 #Include "Decorate/Secrets/Doot.txt"
-
-//ClassBasedWeapons
-#include "Decorate/Class/ClassWeapons.txt"
 

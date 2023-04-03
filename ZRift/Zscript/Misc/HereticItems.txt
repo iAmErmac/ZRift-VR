@@ -1,6 +1,6 @@
 //Ammo
 
-/*Class GoldAmmoSpawner : Actor
+Class GoldAmmoSpawner : Actor
 {
 	Default
 	{
@@ -8,7 +8,7 @@
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem ChasmClip;
+	Dropitem "ChasmClip";
 	}
 	
 	States
@@ -28,7 +28,7 @@ Class GoldAmmoBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem CClipBox;
+	Dropitem "CClipBox";
 	}
 	
 	States
@@ -48,8 +48,8 @@ Class CrossAmmoSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem ChasmShell;
-	Dropitem CPlasmaCell;
+	Dropitem "ChasmShell";
+	Dropitem "CPlasmaCell";
 	}
 	
 	States
@@ -69,10 +69,10 @@ Class CrossBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem CShellBox;
-	Dropitem CPlasmaCell;
-	Dropitem CPlasmaCell;
-	DropItem ChasmSaw, 100;
+	Dropitem "CShellBox";
+	Dropitem "CPlasmaCell";
+	Dropitem "CPlasmaCell";
+	DropItem "ChasmSaw", 100;
 	}
 	
 	States
@@ -92,9 +92,9 @@ Class BlasterAmmoSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem ChasmShell, 150;
-	Dropitem CPlasmaCell, 150;
-	Dropitem ChasmClip, 150;
+	Dropitem "ChasmShell", 150;
+	Dropitem "CPlasmaCell", 150;
+	Dropitem "ChasmClip", 150;
 	}
 	
 	States
@@ -114,10 +114,10 @@ Class BlasterBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem ChasmShellBox, 150;
-	Dropitem CPlasmaCell, 150;
-	Dropitem CClipBox, 150;
-	DropItem ChasmSaw, 100;
+	Dropitem "ChasmShellBox", 150;
+	Dropitem "CPlasmaCell", 150;
+	Dropitem "CClipBox", 150;
+	DropItem "ChasmSaw", 100;
 	}
 	
 	States
@@ -137,7 +137,7 @@ Class PhoenixAmmoSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem CGrenadeAmmo;
+	Dropitem "CGrenadeAmmo";
 	}
   
 	States
@@ -157,8 +157,8 @@ Class PhoenixBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem CGrenadeBox;
-	Dropitem ChasmMinePickup;
+	Dropitem "CGrenadeBox";
+	Dropitem "ChasmMinePickup";
 	}
 	
 	States
@@ -178,7 +178,7 @@ Class SkullStaffAmmoSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem LaserBoltAmmo;
+	Dropitem "LaserBoltAmmo";
 	}
 	
 	States
@@ -198,8 +198,8 @@ Class SkullStaffAmmoBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem LaserBoltAmmo;
-	Dropitem LaserBoltAmmo;
+	Dropitem "LaserBoltAmmo";
+	Dropitem "LaserBoltAmmo";
 	}
 	
 	States
@@ -219,8 +219,8 @@ Class MaceStaffAmmoSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem CCellAmmo;
-	DropItem ChasmSaw;
+	Dropitem "CCellAmmo";
+	DropItem "ChasmSaw";
 	}
 	
 	States
@@ -240,7 +240,7 @@ Class MaceStaffAmmoBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	DropItem CCellBox;
+	DropItem "CCellBox";
 	}
 	
 	States
@@ -258,8 +258,7 @@ Class GauntletSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmChainfist",255, 10;
+	dropitem "ChasmChainfist", 255, 10;
 	}
 }
 
@@ -267,8 +266,7 @@ Class GoldWandSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmRifle",255, 10;
+	dropitem "ChasmRifle", 255, 10;
 	}
 }
 
@@ -276,9 +274,8 @@ Class CrossbowSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmShotgun",255, 10;
-	dropitem "ChasmPlasmaThrower",255, 5;
+	dropitem "ChasmShotgun", 255, 10;
+	dropitem "ChasmPlasmaThrower", 255, 5;
 	}
 }
 
@@ -286,8 +283,7 @@ Class BlasterSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmChaingun",255, 10;
+	dropitem "ChasmChaingun", 255, 10;
 	}
 }
 
@@ -295,8 +291,7 @@ Class PhoenixSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmRocketL",255, 10;
+	dropitem "ChasmRocketL", 255, 10;
 	}
 }
 
@@ -304,8 +299,7 @@ Class SkullRodSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmCrossbow",255, 10;
+	dropitem "ChasmCrossbow", 255, 10;
 	}
 }
 
@@ -313,10 +307,9 @@ Class MaceRodSpawner : RandomSpawner
 {
 	Default
 	{
-	Game Heretic;
-	dropitem "ChasmDestroyer",255, 10;
+	dropitem "ChasmDestroyer", 255, 10;
 	}
-}*/
+}
 
 //Items
 

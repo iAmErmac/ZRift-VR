@@ -1,0 +1,965 @@
+Class ChasmCellSpawn : Actor Replaces Cell
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "CCellAmmo";
+	Dropitem "LaserBoltAmmo";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+}
+
+Class ChasmCellBoxSpawn : Actor Replaces CellPack
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	+NOTELESTOMP;
+	+NOINTERACTION;
+	Dropitem "CCellBox";
+	Dropitem "LaserBoltAmmo";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0;
+		TNT1 A 1 A_Fall;
+		Stop;
+	}
+} 
+
+Class ChasmDestroyer : Weapon Replaces BFG9000
+{
+	Default
+	{
+	Inventory.PickupMessage "Picked up a Mega Destroyer!";
+	Inventory.PickupSound "Weapon/Pickup";
+	Weapon.AmmoType1 "CCellAmmo";
+	Weapon.AmmoType2 "CCellAmmo";
+	Weapon.AmmoUse1 10;
+	Weapon.AmmoUse2 0;
+	Weapon.AmmoGive 20;
+	Weapon.UpSound "MD/Up";
+	Weapon.SlotNumber 7;
+	Weapon.SelectionOrder 5;
+	Weapon.KickBack 1;
+	Weapon.BobStyle "Alpha";
+	Weapon.BobRangeX 0.07;
+	Weapon.BobRangeY 0.45;
+	Weapon.BobSpeed 1.80;
+	Inventory.Icon "HUCEL1";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		DESX A -1;
+		Stop;
+	Ready:
+		MEGZ ZZZZZZZZZZYYYYYYYYYYZZZZ 1 A_WeaponReady;
+		Loop;
+	Select:
+		TNT1 A 0 SetPlayerProperty(0,1,2);
+		MEGY OPQRSTUVWXYZ 1;
+		MEGW ABCD 1;
+		Goto Ready;
+	Deselect:
+		MEGZ Z 1 A_Lower;
+		Loop;
+	Fire:
+		MEGZ Z 1 BRIGHT;
+		TNT1 A 0 BRIGHT A_SetBlend("Green",0.2,8);
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/Charge",1);
+		MEGY AAAAA 4 BRIGHT;
+		MEGY A 0 A_PlaySound("ChasmDestroyer/Fire",1, 1.0);
+		TNT1 A 0 A_FireCustomMissile("ChasmDestroyerBall",0,1,3,2);
+		TNT1 A 0 A_Quake(2, 10, 0, 50, "None");
+		TNT1 A 0 BRIGHT A_SetBlend("White",0.5,8);
+		MEGY A 1;
+		TNT1 A 0 A_SetPitch(pitch-7.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		MEGY B 1 BRIGHT A_Recoil(0.2);
+		TNT1 A 0 A_SetPitch(pitch-5.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		MEGY C 1 BRIGHT A_Recoil(0.2);
+		TNT1 A 0 A_SetPitch(pitch-3.00);
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		MEGY D 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch-1.00); //16
+		TNT1 A 0 A_SetAngle(angle-0.1);
+		MEGY E 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+5.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY E 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+3.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY E 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+2.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY E 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+1.00);
+		TNT1 A 0 A_SetAngle(angle+0.1); //11
+		MEGY F 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+1.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY G 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+1.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY H 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+1.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY I 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+1.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY J 1 BRIGHT;
+		TNT1 A 0 A_SetPitch(pitch+1.00);
+		TNT1 A 0 A_SetAngle(angle+0.1);
+		MEGY KLMNOPQRSTUVWXYZ 1 BRIGHT;
+		MEGW ABCD 1 BRIGHT;
+		MEGW D 3;
+		Goto Ready;
+	AltFire:
+		MEGZ Z 1 BRIGHT;
+		TNT1 A 0 A_JumpIfInventory("CCellAmmo", 1, 1);
+		Goto NoAmmo;
+		TNT1 A 0 BRIGHT A_SetBlend("Green",0.2,8);
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/AltCharge",1);
+		MEGY AAAAA 4 BRIGHT;
+		TNT1 A 0;
+	FiringStart:
+		TNT1 A 0;
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/AltFire",7);
+		TNT1 A 0 A_Quake(2, 10, 0, 50, "None");
+		TNT1 A 0 BRIGHT A_SetBlend("White",0.5,8);
+		MEGY A 2 BRIGHT;
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/AltLoop", CHAN_WEAPON, 1, 1);
+		TNT1 A 0;
+	FiringLoop:
+		TNT1 A 0;
+		TNT1 A 0 A_JumpIfInventory("CCellAmmo", 1, 1);
+		Goto NoAmmoStop;
+		TNT1 A 0;
+		TNT1 A 0 A_Quake(2, 10, 0, 50, "None");
+		TNT1 A 0 A_FireCustomMissile("MegaAltEffect",0,1,random(5,7),2);
+		MEGY A 1 BRIGHT OffSet(1, 34);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_FireCustomMissile("MegaAltEffect",0,1,random(5,7),2);
+		MEGY A 1 BRIGHT OffSet(2, 36);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_FireCustomMissile("MegaAltEffect",0,1,random(5,7),2);
+		MEGY A 1 BRIGHT OffSet(-1, 30);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_FireCustomMissile("MegaAltEffect",0,1,random(5,7),2);
+		MEGY A 1 BRIGHT OffSet(-2, 28);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_RailAttack (random(6,10), random(5,10), 1, "none", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 25, "MDHarmlessPuff", 0,0, 1000, 1, 0.75, 0, "none", -2);
+		TNT1 A 0 A_TakeInventory("CCellAmmo", 1);
+		TNT1 A 0 A_ReFire("FiringLoop");
+	LetGo:
+		TNT1 A 0;
+		TNT1 A 0 A_StopSound(CHAN_WEAPON);
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/AltStop", 1);
+		MEGY ABCD 1;
+		MEGY FGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT;
+		MEGW ABCD 1 BRIGHT;
+		MEGW D 3;
+		Goto Ready;
+	NoAmmo:
+		TNT1 A 0;
+		TNT1 A 0 A_PlaySound("MD/Click", 1);
+		MEGZ ZYZYZYZ 3 BRIGHT;
+		Goto Ready;
+	NoAmmoStop:
+		TNT1 A 0;
+		TNT1 A 0 A_StopSound(CHAN_WEAPON);
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/AltStop", 1);
+		MEGY ABCD 1;
+		MEGY FGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT;
+		MEGW ABCD 1 BRIGHT;
+		MEGW D 3;
+		Goto Ready;
+	}
+}
+
+Class ChasmDestroyerBall : BFGBall
+{
+	Default
+	{
+	Radius 6;
+	Height 6;
+	Speed 20;
+	Damage 100;
+	Projectile;
+	+RANDOMIZE;
+	Scale 0.65;
+	RenderStyle "Add";
+	Alpha 0.97;
+	DeathSound "ChasmDestroyer/Exp";
+	DamageType "PlayerEnergy";
+	Decal "BFGScorch";
+	}
+	
+	States
+	{
+		Spawn:
+		TNT1 A 0 NoDelay A_PlaySound("ChasmDestroyer/Fly",CHAN_WEAPON,1.0,1);
+		DES2 ABC 1 Bright A_SpawnItemEx("ChasmDestroyerBallTrail",0,0,0,0,0,0,0,2);
+		TNT1 AAA 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, -160));
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,128), random(1,4), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,128), random(1,4), 0.2, 0, "None", -8);
+		DES2 DEF 1 Bright A_SpawnItemEx("ChasmDestroyerBallTrail",0,0,0,0,0,0,0,2);
+		TNT1 AAA 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, -160));
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,128), random(1,4), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,128), random(1,4), 0.2, 0, "None", -8);
+		DES2 GHI 1 Bright A_SpawnItemEx("ChasmDestroyerBallTrail",0,0,0,0,0,0,0,2);
+		TNT1 AAA 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, 160));
+		TNT1 AAA 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, -160));
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,128), random(1,4), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,128), random(1,4), 0.2, 0, "None", -8);
+		Loop;
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_WEAPON);
+		TNT1 A 0 A_Scream;
+		TNT1 A 0 A_PlaySound("Distant/MDExp", 7);
+		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("Green", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,70), random(1,6), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1);
+		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("White", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,70), random(1,6), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1);
+		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("DestroyerFlare", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAAAAAA 0 A_CustomMissile("DestroyerSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 AAAA 0 A_CustomMissile("DestroyerExpFX", random(1,-11), random(12,-12), random (0, 360), 2, random (0, 160));
+		TNT1 AAAA 0 A_CustomMissile("DestroyerExpFX", random(1,11), random(12,-12), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,12), random(-15,15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("HugeExplosionSmoke", random(1,-12), random(30,-30), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_CustomMissile("HugeExplosionSmoke", random(1,12), random(-30,30), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnItemEx("DestroyerLightningBall");
+		TNT1 A 0 A_SpawnItemEx("DestroyerWave");
+		TNT1 A 0 A_Explode(256,256);
+		Stop;
+	}
+}
+
+Class ChasmDestroyerBallTrail : Actor
+{
+	Default
+	{
+	RenderStyle "Add";
+	Scale 0.70;
+	Alpha 0.67;
+	+NOGRAVITY;
+	}
+	
+	States
+	{
+	Spawn:
+	    DES2 A 1 A_FadeOut;
+		DES2 B 1 A_SetScale(0.55);
+		DES2 C 1 A_FadeOut;
+		DES2 D 1 A_SetScale(0.45);
+		DES2 E 1 A_FadeOut;
+		DES2 F 1 A_SetScale(0.35);
+		DES2 G 1 A_FadeOut;
+		DES2 H 1 A_SetScale(0.25);
+		DES2 I 1 A_FadeOut;
+		DES2 J 1 A_SetScale(0.15);
+		Stop;
+	}
+}
+
+Class HugeExplosionSmoke : Actor
+{
+	Default
+	{
+    Radius 36;
+    Height 12;
+    Speed 1;
+    +RIPPER;
+	+NOCLIP;
+	+DONTSPLASH;
+    PROJECTILE;
+    RENDERSTYLE "AddShaded";
+	StencilColor "Green";
+    ALPHA 0.97;
+	Scale 0.20;
+	Damage 0;
+	}
+	
+    States 
+    { 
+    Spawn: 
+	    TNT1 A 0 NoDelay;
+		DIS7 A 1;
+		DIS7 A 1 A_SetScale(0.30);
+		DIS7 A 1;
+		DIS7 A 1 A_SetScale(0.40);
+		DIS7 A 1;
+		DIS7 A 1 A_SetScale(0.50);
+		DIS7 A 1;
+		DIS7 A 1 A_SetScale(0.60);
+		DIS7 A 1;
+        Goto Looping;
+	Looping:
+	    TNT1 A 0;
+		DIS7 AAAAAA 1;
+		TNT1 A 0 A_Jump(77, "Death");
+		Loop;
+    Death: 
+        DIS7 AAAAAAAAAA 2 A_FadeOut(0.1);
+        Stop;
+    } 
+}
+
+Class DestroyerExtra : Actor
+{
+	Default
+	{
+	+NOBLOCKMAP;
+	+NOGRAVITY;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.97;
+	DamageType "Extreme";
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		TNT1 A 0 A_PlaySound("ChasmDestroyer/ExtraExp", 7);
+		DES3 K 1 BRIGHT A_SetScale(0.35);
+		DES3 K 1 BRIGHT A_SetScale(0.45);
+		DES3 L 1 BRIGHT A_SetScale(0.55);
+		DES3 L 1 BRIGHT A_SetScale(0.70);
+		DES3 M 1 BRIGHT A_SetScale(0.85);
+		DES3 M 1 BRIGHT;
+		DES3 NOPQRSTUVW 1 BRIGHT A_FadeOut;
+		Stop;
+	}
+}
+
+Class DestroyerLightningBall : Actor
+{
+	Default
+	{
+	+NOBLOCKMAP;
+	+NOGRAVITY;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.97;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		TNT1 A 0 A_SetScale(0.25);
+		DES4 D 20;
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.23);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.21);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.19);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.17);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.15);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.13);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.11);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.09);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.07);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.05);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.02);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_FadeOut;
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_FadeOut;
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_FadeOut;
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_FadeOut;
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_FadeOut;
+		TNT1 A random(1,6) A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A random(1,6) A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A random(1,6) A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A random(1,6) A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0;
+		Stop;
+	}
+}
+
+Class DestroyerWave : Actor
+{
+	Default
+	{
+	+NOBLOCKMAP;
+	+NOGRAVITY;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.97;
+	Scale 0.20;
+	}
+	
+	States
+	{
+	Spawn:
+		SHOK Q 1;
+		TNT1 A 0 Radius_Quake(8, 10, 0, 9, 0);
+		TNT1 A 0 Radius_Quake(3, 20, 0, 24, 0);
+		TNT1 A 0 A_SetScale(0.35);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(0.45);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(0.55);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(0.65);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(0.75);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(0.85);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1.10);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1.25);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1.40);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1.55);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1.70);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(1.85);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(2);
+		SHOK Q 1;
+		TNT1 A 0 A_SetScale(2.15);
+		SHOK Q 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(2.18);
+		SHOK Q 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(2.22);
+		SHOK Q 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(2.26);
+		SHOK Q 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(2.28);
+		SHOK Q 1 A_FadeOut;
+		TNT1 A 0 A_SetScale(2.30);
+		SHOK Q 1 A_FadeOut;
+		Stop;
+	}
+}
+
+Class DestroyerExpFX : Actor
+{
+	Default
+	{
+	+NOBLOCKMAP;
+	+NOGRAVITY;
+	+ALLOWPARTICLES;
+	+RANDOMIZE;
+	+NOCLIP;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.97;
+	Scale 0.45;
+	Mass 5;
+	+clientsideonly;
+	}
+	
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 A 1 A_SetScale(0.10);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 A 1 A_SetScale(0.17);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 A 1 A_SetScale(0.25);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 A 1 A_SetScale(0.50);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 B 1 A_SetScale(0.75);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 B 1 A_SetScale(1.00);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 B 1 A_SetScale(1.25);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.50);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.60);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.40);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.35);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.30);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.33);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.36);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.39);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.42);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 2 A_SetScale(1.45);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		Goto Death;
+	Death:
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.35);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.20);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 C 1 A_SetScale(1.00);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.85);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.75);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.60);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.45);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.35);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "FFFFFF", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "None", "00FF00", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(64,258), random(1,10), 0.2, 0, "None", -8);
+		DES4 D 1 A_SetScale(0.25);
+		Stop;
+	}
+}
+
+Class MDHarmlessPuff : Actor
+{
+	Default
+	{
+	+NOINTERACTION;
+	+BLOODLESSIMPACT;
+	+PAINLESS;
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 0;
+		stop;
+	}
+}
+
+//AltFire effects
+
+Class MegaAltEffect : FastProjectile
+{
+	Default
+	{
+	Radius 6;
+	Height 6;
+	PROJECTILE;
+	Scale 0.25;
+	MissileType "MegaAltEffectTrail";
+	MissileHeight 8;
+	RenderStyle "Add";
+	Speed 100;
+	Alpha 0.97;
+	Damage 0;
+	+RIPPER;
+	+BRIGHT;
+	+ROLLSPRITE;
+	+ROLLCENTER;
+	}
+	
+	States
+	{
+	Spawn:
+	    TNT1 A 0 NoDelay;
+		PULS AAAAAAAAAAAA 1 BRIGHT A_SetRoll(frandom(-360.0,360.0));
+		Stop;
+	Death:
+	    TNT1 A 0;
+		TNT1 A 0 Radius_Quake(4, 5, 0, 6, 0);
+	    TNT1 AA 0 A_CustomMissile("DestroyerSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, 160));
+	    TNT1 A 0 A_CustomMissile("DestroyerWigglesSpawner", 4, 0, random (0, 360), CMF_AIMDIRECTION, random (0, -160));
+		PULS BCDEFGH 1;
+		PULS H 1 A_SetScale(0.15);
+		PULS H 1 A_SetScale(0.10);
+		PULS H 1 A_SetScale(0.05);
+		Stop;
+	}
+}
+
+Class MegaAltEffectTrail : Actor
+{
+	Default
+	{
+	Alpha 0.67;
+	RenderStyle "Add";
+	+ROLLSPRITE;
+	+ROLLCENTER;
+	+NOGRAVITY;
+	Scale 0.20;
+	}
+	
+	States
+	{
+	Spawn:
+		PULS AAA 1 BRIGHT A_SetRoll(frandom(-360.0,360.0));
+		Stop;
+	}
+}
+
+//Other effects
+
+Class DestroyerSparks : Actor
+{
+	Default
+	{
+    Radius 0;
+    Height 0;
+    Speed 7;
+    Scale 0.05;
+	Mass 10;
+    +NOBLOCKMAP;
+	+THRUGHOST;
+	-SOLID;
+	+MISSILE;
+	+BRIGHT;
+	RenderStyle "Add";
+	Alpha 0.95;
+	}
+	
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay;
+        PULS AAA 1 A_SpawnItemEx("DestroyerSparksTrail",0,0,0,0,0,0,0,2);
+        Loop;
+	Death:
+	    TNT1 A 0;
+		PULS AAAAA 1 A_FadeOut;
+		Stop;
+    }
+}
+
+Class DestroyerSparksTrail : Actor
+{
+	Default
+	{
+	Speed 0;
+	Scale 0.04;
+	Alpha 0.67;
+	RenderStyle "Add";
+	+NOGRAVITY;
+	}
+	
+	States
+	{
+	Spawn:
+		PULS AA 1 BRIGHT;
+		PULS AA 1 BRIGHT A_SetScale(0.03);
+		PULS AA 1 BRIGHT A_SetScale(0.02);
+		PULS AA 1 BRIGHT A_SetScale(0.01);
+		Stop;
+	}
+}
+
+Class DestroyerFlare : Actor
+{
+	Default
+	{
+    Radius 1;
+    Height 1;
+    Speed 6;
+    Scale 0.12;
+	Mass 0;
+    +NOBLOCKMAP;
+	+MISSILE;
+    +NOTELEPORT;
+    +MOVEWITHSECTOR;
+    +CLIENTSIDEONLY;
+	+THRUGHOST;
+	-SOLID;
+	+BRIGHT;
+	Gravity 0.2;
+	RenderStyle "Add";
+    alpha 0.95;
+    SeeSound "";
+    DeathSound "";
+	Mass 0;
+	}
+	
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay;
+        PULS AAAAAA 1 BRIGHT A_SpawnItemEx("DestroyerFlareTrail",0,0,0,0,0,0,0,2);
+		TNT1 A 0 A_Jump(40, "Death");
+        Loop;
+    Death:
+       PULS AA 1 A_SetScale(0.10);
+	   PULS AA 1 A_SetScale(0.08);
+	   PULS AA 1 A_SetScale(0.06);
+	   PULS AA 1 A_SetScale(0.04);
+	   PULS AAAAA 1 A_FadeOut;
+	   Stop;
+	}
+}
+
+Class DestroyerFlareTrail : Actor
+{
+	Default
+	{
+	Speed 0;
+	Scale 0.12;
+	Alpha 0.95;
+	RenderStyle "Add";
+	+NOGRAVITY;
+	+BRIGHT;
+	}
+	
+	States
+	{
+	Spawn:
+		PULS AA 1 BRIGHT;
+		PULS AA 1 BRIGHT A_SetScale(0.10);
+		PULS AA 1 BRIGHT A_SetScale(0.06);
+		PULS AA 1 BRIGHT A_SetScale(0.02);
+		Stop;
+	}
+}
+
+Class DestroyerWigglesSpawner : RandomSpawner
+{
+	Default
+	{
+	Radius 0;
+	Height 0;
+	dropitem "DestroyerWiggles1", 255, 10;
+	dropitem "DestroyerWiggles2", 255, 10;
+	}
+}
+
+Class DestroyerWiggles1 : Actor
+{
+	Default
+	{
+    Radius 1;
+    Height 1;
+    Speed 2;
+    Scale 0.40;
+	Mass 0;
+    +NOBLOCKMAP;
+	+MISSILE;
+    +NOTELEPORT;
+    +MOVEWITHSECTOR;
+    +CLIENTSIDEONLY;
+    +BLOODLESSIMPACT;
+	+DONTSPLASH;
+	+THRUGHOST;
+	-SOLID;
+	+NOGRAVITY;
+	Gravity 0.2;
+	RenderStyle "Add";
+    alpha 0.97;
+    SeeSound "";
+    DeathSound "";
+	Mass 0;
+	}
+	
+    States
+    {
+    Spawn:
+		TNT1 A 0 NoDelay;
+		EBLT AAABBBCCCAABBCC 1 BRIGHT;
+		Goto Death;
+    Death:
+		EBLT DDDEEEDDDEEEEFFF 1 BRIGHT A_FadeOut;
+		Stop;
+	}
+}
+
+Class DestroyerWiggles2 : Actor
+{
+	Default
+	{
+    Radius 1;
+    Height 1;
+    Speed 2;
+    Scale 0.40;
+	Mass 0;
+    +NOBLOCKMAP;
+	+MISSILE;
+    +NOTELEPORT;
+    +MOVEWITHSECTOR;
+    +CLIENTSIDEONLY;
+    +BLOODLESSIMPACT;
+	+DONTSPLASH;
+	+THRUGHOST;
+	-SOLID;
+	+NOGRAVITY;
+	Gravity 0.2;
+	RenderStyle "Add";
+    alpha 0.97;
+    SeeSound "";
+    DeathSound "";
+	Mass 0;
+	}
+	
+    States
+    {
+    Spawn:
+	    TNT1 A 0 NoDelay;
+        EBLT GGGHHHGGGHHHIIIIHHH 1 BRIGHT;
+        Goto Death;
+    Death:
+		EBLT JJJKKKJJJKKKLLLL 1 BRIGHT A_FadeOut;
+		Stop;
+	}
+}
+
+////////////////////////////////Ammo
+Class CCellAmmo : Ammo
+{
+	Default
+	{
+	Inventory.Amount 10;
+	Inventory.MaxAmount 100;
+	ammo.backpackamount 20;
+	ammo.backpackmaxamount 200;
+	Inventory.PickupSound "CellAmmo/Pickup";
+	Inventory.PickupMessage "Picked up a Cell pack.";
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		CCLA X -1;
+		stop;
+	}
+}
+
+Class CCellBox : CCellAmmo
+{
+	Default
+	{
+	Inventory.Amount 30;
+	Inventory.PickupMessage "Picked up a heavy Cell pack.";
+	Inventory.PickupSound "BigCellAmmo/Pickup";
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 0 NoDelay;
+		CCLA Y -1;
+		stop;
+	}
+}

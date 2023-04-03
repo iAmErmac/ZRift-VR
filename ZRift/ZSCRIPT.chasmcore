@@ -1,5 +1,20 @@
 version "3.4"
 
+//Weapons
+#include "Zscript/Weapons/ChasmSaw.txt"
+#include "Zscript/Weapons/ChasmMine.txt"
+#include "Zscript/Weapons/ChasmFists.txt"
+#include "Zscript/Weapons/ChasmChainFists.txt"
+#include "Zscript/Weapons/ChasmDoomChainFists.txt"
+#include "Zscript/Weapons/ChasmRifle.txt"
+#include "Zscript/Weapons/ChasmPistol.txt"
+#include "Zscript/Weapons/ChasmBoomstick.txt"
+#include "Zscript/Weapons/ChasmShotgun.txt"
+#include "Zscript/Weapons/ChasmPlasmaThrower.txt"
+#include "Zscript/Weapons/ChasmChaingun.txt"
+#include "Zscript/Weapons/ChasmRocketL.txt"
+#include "Zscript/Weapons/ChasmCrossbow.txt"
+#include "Zscript/Weapons/ChasmDestroyer.txt"
 
 //Misc
 #include "Zscript/Misc/Items.txt"
@@ -14,3 +29,6 @@ version "3.4"
 #include "Zscript/Misc/DoomCandles.txt"
 #include "Zscript/Misc/DoomGibs.txt"
 #include "Zscript/Spawners.txt"
+
+//ClassBasedWeapons
+#include "Zscript/Class/ClassWeapons.txt"

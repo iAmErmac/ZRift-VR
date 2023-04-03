@@ -28,7 +28,6 @@ OptionMenu "SpawnerMenu"
 {
 	Title "$OPTMNU_SPAWNER"
     StaticText""
-	Option "$OPTMNU_REPLACE_MONS", "zrift_monsters", "YesNo"
 	Option "$OPTMNU_REPLACE_ITEM", "zrift_items", "YesNo"
     StaticText""
     PWWStaticText "$OPTMNU_REPLACE_NOTE"

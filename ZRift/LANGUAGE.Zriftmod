@@ -1,9 +1,8 @@
 [enu default]
 
-OPTMNU_SPAWNER = "Monster/Item Replacement";
-OPTMNU_REPLACE_MONS = "Replace Monsters";
+OPTMNU_SPAWNER = "Item Replacement";
 OPTMNU_REPLACE_ITEM = "Replace Items";
-OPTMNU_REPLACE_NOTE = "Level restart is required for these options to take effect";
+OPTMNU_REPLACE_NOTE = "Level restart is required for this options to take effect";
 OPTMNU_ZRIFTCREDITS = "Zrift Credits";
 ZRIFTCREDITS_TITLE = "Zrift Credits";
 
