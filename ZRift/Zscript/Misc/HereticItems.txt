@@ -114,7 +114,7 @@ Class BlasterBoxSpawner : Actor
 	Height 0;
 	+NOTELESTOMP;
 	+NOINTERACTION;
-	Dropitem "ChasmShellBox", 150;
+	Dropitem "CShellBox", 150;
 	Dropitem "CPlasmaCell", 150;
 	Dropitem "CClipBox", 150;
 	DropItem "ChasmSaw", 100;

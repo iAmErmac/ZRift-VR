@@ -46,6 +46,7 @@
 
 //Fantasy
 #Include "Decorate/Monsters/ChasmPhantomLesser.dec"
+#Include "Decorate/Monsters/ChasmBanshee.dec"
 
 //MONSTER PROJECTILES
 #Include "Decorate/Projectiles/ChasmEnemyShotgunTracer.dec"
@@ -61,6 +62,7 @@
 #Include "Decorate/Projectiles/Hellrain.dec"
 
 //BLOOD & GORE
+#Include "Decorate/Gore/DoomGibs.dec"
 #Include "Decorate/Gore/Gore.dec"
 #Include "Decorate/Gore/Blood.dec"
 #Include "Decorate/Gore/LionGore.dec"

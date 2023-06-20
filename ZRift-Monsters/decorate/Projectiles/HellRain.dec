@@ -124,7 +124,7 @@ ACTOR HellRainExplosions
 		TNT1 A 0 A_PlaySound("DSBAREXP",1)
 		TNT1 A 0 A_SpawnItemEx("KnightAxe2DeathGlow",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_SpawnItemEx("KnightAxe2Explosion",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
-		TNT1 AAAAAAAAAA 0 A_CustomMissile ("RedExplosionParticle2", 3, 0, random (0, 360), 2, random (0, 360))
+		//TNT1 AAAAAAAAAA 0 A_CustomMissile ("RedExplosionParticle2", 3, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 5 Thing_Stop(0)
 		TNT1 A 7 A_Explode(80,96,0)
 		Stop
@@ -212,7 +212,7 @@ ACTOR KnightAxe2Explosion: FlameTrails
 	States
 	{
     Spawn:
-	    EXPR AABBCCDDEEFFGG 1 BRIGHT A_SpawnItemEx("Axe2XPFlare",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	    EXPR AABBCCDDEEFFGG 1 BRIGHT //A_SpawnItemEx("Axe2XPFlare",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
         Stop
 	}
 }

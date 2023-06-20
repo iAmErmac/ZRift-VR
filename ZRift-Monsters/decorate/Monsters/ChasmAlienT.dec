@@ -1,7 +1,7 @@
 Actor AlienGuysSpawner : RandomSpawner replaces Arachnotron
 {
-dropitem "ChasmAlienTrooper",255, 10
-dropitem "ChasmAlienCaptain",255, 4
+	dropitem "ChasmAlienTrooper",255, 10
+	dropitem "ChasmAlienCaptain",255, 4
 }
 
 Actor ChasmAlienTrooper Replaces ChainGunGuy
@@ -20,7 +20,7 @@ Actor ChasmAlienTrooper Replaces ChainGunGuy
 	+BOSSDEATH
 	+DONTHARMSPECIES
 	Species "Alien"
-	Dropitem "CCellAmmo", 50
+	Dropitem "Cell", 50
     SeeSound "Alien/See"
     PainSound "Alien/Pain"
     DeathSound "Alien/Death"
@@ -32,12 +32,12 @@ Actor ChasmAlienTrooper Replaces ChainGunGuy
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_Jump(10, "Idle1")
+	    ATI1 A 0 NoDelay
+		ATI1 A 0 A_Jump(10, "Idle1")
         ATI1 ABCDEFGHIJKLMNOPQ 2 A_Look
         Loop
 	Idle1:
-	    TNT1 A 0 A_PlaySound("Alien/Idle",3)
+	    ATI1 Q 0 A_PlaySound("Alien/Idle",3)
 		ATI1 Q 1 A_Look
 		Goto Spawn
     See:
@@ -72,54 +72,54 @@ Actor ChasmAlienTrooper Replaces ChainGunGuy
 		ATA3 I 2
 		ATA3 JKLMOPQ 2
 		Goto See
-  Pain:
-    ATP1 A 2 A_Pain
-    ATP1 BCDEFGHI 2
-    Goto See
-  Death:
-    TNT1 A 0 A_Jump(80, "Death1")
-    ATD1 A 2
-    ATD1 B 4 A_Scream
-    ATD1 CDEF 2 
-    ATD1 G 2 A_NoBlocking
-	TNT1 A 0 A_PlaySound("Alien/Fall", 4)
-    ATD1 H 2 A_BossDeath
-	ATD1 IJKLMNOPQRSTUVW 2
-    ATD1 W -1
-    Stop
-  Death1:
-    ATD2 A 2
-    ATD2 B 4 A_Scream
-    ATD2 CDEF 2 
-    ATD2 G 2 A_NoBlocking
-	TNT1 A 0 A_PlaySound("Alien/Fall", 4)
-    ATD2 H 2 A_BossDeath
-	ATD2 IJKLMNOPQRSTU 2
-    ATD2 U -1
-    Stop
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  XDeath:
-	TNT1 A 0 A_BossDeath
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-	TNT1 A 0 A_CustomMissile("TrooperHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("TrooperArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("TrooperArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
-    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(20,60), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(20,60), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("GoreSpawner", random(20,50), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("GoreSpawner", random(20,50), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, 20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("AlienGibSpawner", random(10,50), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("AlienGibSpawner", random(10,50), random(0,20), random (0, 360), 2, random (0, 160))
-	Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	ATI1 A 1 A_SetTranslucent(0.10, 0)
-	ATI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		ATP1 A 2 A_Pain
+		ATP1 BCDEFGHI 2
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(80, "Death1")
+		ATD1 A 2
+		ATD1 B 4 A_Scream
+		ATD1 CDEF 2 
+		ATD1 G 2 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Alien/Fall", 4)
+		ATD1 H 2 A_BossDeath
+		ATD1 IJKLMNOPQRSTUVW 2
+		ATD1 W -1
+		Stop
+	Death1:
+		ATD2 A 2
+		ATD2 B 4 A_Scream
+		ATD2 CDEF 2 
+		ATD2 G 2 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Alien/Fall", 4)
+		ATD2 H 2 A_BossDeath
+		ATD2 IJKLMNOPQRSTU 2
+		ATD2 U -1
+		Stop
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	XDeath:
+		TNT1 A 0 A_BossDeath
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("TrooperHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("TrooperArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("TrooperArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(20,60), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(20,60), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("GoreSpawner", random(20,50), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("GoreSpawner", random(20,50), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, 20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("AlienGibSpawner", random(10,50), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("AlienGibSpawner", random(10,50), random(0,20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		ATI1 A 1 A_SetTranslucent(0.10, 0)
+		ATI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+		Goto See
     }
 }
 
@@ -231,7 +231,7 @@ ACTOR AlienGib1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GI02 A 0 A_JumpIf(waterlevel > 1, "Splash")
         GI02 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
@@ -277,17 +277,17 @@ ACTOR AlienGib2
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GI02 B 0 A_JumpIf(waterlevel > 1, "Splash")
         GI02 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    GI02 B 0 A_Scream
+	    GI02 B 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   GI02 B 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        GI02 BBBBB 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       GI02 B 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        GI02 B 5 A_SetTranslucent(0.8)
@@ -297,7 +297,7 @@ ACTOR AlienGib2
        GI02 B 5 A_SetTranslucent(0.1)
        Stop	
      Splash:
-        TNT1 A 0
+        GI02 B 0
         Stop
     }
 }
@@ -323,17 +323,17 @@ ACTOR AlienGib3
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GI02 C 0 A_JumpIf(waterlevel > 1, "Splash")
         GI02 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    GI02 C 0 A_Scream
+	    GI02 C 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   GI02 C 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        GI02 CCCCC 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       GI02 C 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        GI02 C 5 A_SetTranslucent(0.8)
@@ -343,7 +343,7 @@ ACTOR AlienGib3
        GI02 C 5 A_SetTranslucent(0.1)
        Stop	
      Splash:
-        TNT1 A 0
+        GI02 C 0
         Stop
     }
 }
@@ -369,17 +369,17 @@ ACTOR AlienGib4
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GI02 D 0 A_JumpIf(waterlevel > 1, "Splash")
         GI02 D 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    GI02 D 0 A_Scream
+	    GI02 D 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   GI02 D 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        GI02 DDDDD 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       GI02 D 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        GI02 D 5 A_SetTranslucent(0.8)
@@ -389,7 +389,7 @@ ACTOR AlienGib4
        GI02 D 5 A_SetTranslucent(0.1)
        Stop	
      Splash:
-        TNT1 A 0
+        GI02 D 0
         Stop
     }
 }
@@ -416,7 +416,7 @@ ACTOR TrooperArm1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI01 A 0 A_JumpIf(waterlevel > 1, "Splash")
         LI01 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
@@ -461,27 +461,27 @@ ACTOR TrooperArm2
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
-        LI01 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+	    LI08 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI08 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI08 A 0 A_Scream
+	    LI08 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
-       LI01 BBBBB 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+	   LI08 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI08 AAAAA 5
+       LI08 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
-       LI01 B 5 A_SetTranslucent(0.8)
-       LI01 B 5 A_SetTranslucent(0.6)
-       LI01 B 5 A_SetTranslucent(0.4)
-       LI01 B 5 A_SetTranslucent(0.2)
-       LI01 B 5 A_SetTranslucent(0.2)
+       LI08 A 5 A_SetTranslucent(0.8)
+       LI08 A 5 A_SetTranslucent(0.6)
+       LI08 A 5 A_SetTranslucent(0.4)
+       LI08 A 5 A_SetTranslucent(0.2)
+       LI08 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI08 A 0
         Stop
     }
 }
@@ -506,27 +506,27 @@ ACTOR TrooperHead
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
-        LI01 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
+	    LI08 A 0 A_JumpIf(waterlevel > 1, "Splash")
+        LI08 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI08 A 0 A_Scream
+	    LI08 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
-       LI01 CCCCC 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+	   LI08 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+       LI08 AAAAA 5
+       LI08 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
-       LI01 C 5 A_SetTranslucent(0.8)
-       LI01 C 5 A_SetTranslucent(0.6)
-       LI01 C 5 A_SetTranslucent(0.4)
-       LI01 C 5 A_SetTranslucent(0.2)
-       LI01 C 5 A_SetTranslucent(0.2)
+       LI08 A 5 A_SetTranslucent(0.8)
+       LI08 A 5 A_SetTranslucent(0.6)
+       LI08 A 5 A_SetTranslucent(0.4)
+       LI08 A 5 A_SetTranslucent(0.2)
+       LI08 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI08 A 0
         Stop
     }
 }

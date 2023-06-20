@@ -1,4 +1,4 @@
-Actor ChasmRaptor 
+Actor ChasmRaptor Replaces Spectre
 {
 //$Category ChasmMonsterAnimal
     Health 200
@@ -23,12 +23,13 @@ Actor ChasmRaptor
 	MaxTargetRange 356
 	MinMissileChance 10000
 	Tag "Raptor"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_Jump(10, "LookLeft")
-		TNT1 A 0 A_Jump(10, "LookRight")
+	    RAP0 A 0 NoDelay
+		RAP0 A 0 A_Jump(10, "LookLeft")
+		RAP0 A 0 A_Jump(10, "LookRight")
         RAP0 ABCDEFGHIJKLMNOPQRSTUVWXYZ 2 A_Look
 		RAP1 ABCDE 1 A_Look
         Loop
@@ -37,7 +38,7 @@ Actor ChasmRaptor
 		TNT1 A 0 A_PlaySound("Raptor/Idle", 3)
 		RAPA ABCDEFGHIJKLMNOPQRSTU 2 A_Look
 		Goto Spawn
-		LookLeft:
+	LookLeft:
 	    TNT1 A 0
 		TNT1 A 0 A_PlaySound("Raptor/Idle", 3)
 		RAPB ABCDEFGHIJKLMNOPQRSTU 2 A_Look
@@ -67,40 +68,40 @@ Actor ChasmRaptor
 	    RAPL ABCDEFGHIJKL 2 A_Stop
 		RAP0 ABCDE 2 A_Stop
 		Goto Missile+9
-  Pain:
-    RAP5 A 2 A_Pain
-    RAP5 BCDEFGHIJK 2 
-    Goto See
-  Pain2:
-    TNT1 A 0 A_Jump(30, "Pain2")
-    RAP7 A 2 A_Pain
-    RAP7 BCDEFGHIJK 2 
-    Goto See
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  Death:
-    TNT1 A 0
-    RAP6 A 2 A_Scream
-    RAP6 BCDEFG 2
-    RAP6 H 2 A_NoBlocking
-    RAP6 IJKLMNOPQRSTU 3
-    RAP6 U -1
-    Stop
-  XDeath:
-    TNT1 A 0
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
-   Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	RAP0 A 1 A_SetTranslucent(0.10, 0)
-	RAP0 AAAAAAAAAAAA 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		RAP5 A 2 A_Pain
+		RAP5 BCDEFGHIJK 2 
+		Goto See
+	Pain2:
+		TNT1 A 0 A_Jump(30, "Pain2")
+		RAP7 A 2 A_Pain
+		RAP7 BCDEFGHIJK 2 
+		Goto See
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	Death:
+		TNT1 A 0
+		RAP6 A 2 A_Scream
+		RAP6 BCDEFG 2
+		RAP6 H 2 A_NoBlocking
+		RAP6 IJKLMNOPQRSTU 3
+		RAP6 U -1
+		Stop
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		RAP0 A 1 A_SetTranslucent(0.10, 0)
+		RAP0 AAAAAAAAAAAA 2 A_FadeIn(0.1)
+		Goto See
     }
 }

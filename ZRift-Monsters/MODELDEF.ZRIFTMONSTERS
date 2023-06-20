@@ -48,6 +48,7 @@
 
 //Fantasy
 #Include "Modeldef/Monsters/PhantomLesser.modeldef"
+#Include "Modeldef/Monsters/Banshee.modeldef"
 
 
 //CHASM GIBS
@@ -56,6 +57,7 @@
 #Include "Modeldef/Gibs/ChasmStratosGibs.modeldef"
 #Include "Modeldef/Gibs/ChasmLionGibs.modeldef"
 #Include "Modeldef/Gibs/ChasmDeadGuyGibs.modeldef"
+#Include "Modeldef/Gibs/ChasmMummyGibs.modeldef"
 #Include "Modeldef/Gibs/ChasmFatGuyGibs.modeldef"
 #Include "Modeldef/Gibs/ChasmSkeletonGibs.modeldef"
 #Include "Modeldef/Gibs/ChasmGrossGibs.modeldef"
@@ -65,6 +67,7 @@
 #Include "Modeldef/Gibs/AlienTGibs.modeldef"
 //#Include "Modeldef/Gibs/GenericAlienGibs.modeldef"
 #Include "Modeldef/Gibs/AlienCGibs.modeldef"
+#Include "Modeldef/Gibs/GenericGibs.modeldef"
 
 //CHASM FX
 #Include "Modeldef/FX/YellowMuzzleFlash.modeldef"

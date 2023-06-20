@@ -14,7 +14,7 @@ Actor ChasmLieut Replaces Cacodemon
 	+NOGRAVITY
 	+DROPOFF
 	+SPAWNFLOAT
-	Dropitem "CPlasmaCell", 100
+	Dropitem "Shell", 100
 	Dropitem "SupplyPackDecider"
     SeeSound "MongL/See"
     PainSound "MongL/Pain"
@@ -28,12 +28,12 @@ Actor ChasmLieut Replaces Cacodemon
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-	    TNT1 A 0 A_Jump(10, "Loopty")
+	    MSI1 A 0 NoDelay
+	    MSI1 A 0 A_Jump(10, "Loopty")
         MSI1 ABCDEFGHIJKLMNOP 2 A_Look
         Loop
 	Loopty:
-	    TNT1 A 0 A_PlaySound("Mongs/Idle",3)
+	    MSI2 A 0 A_PlaySound("Mongs/Idle",3)
 	    MSI2 ABCDEFGHIJKLMNOPQRSTUV 2 A_Look
 		Goto Spawn
     See:
@@ -65,49 +65,47 @@ Actor ChasmLieut Replaces Cacodemon
 		MSA3 G 2
 		MSA3 HIJKLM 2
 		Goto See
-  Pain:
-    TNT1 A 0 A_Jump(30, "Pain2")
-    MSP1 A 2 A_Pain
-    MSP1 BCDEFGHI 2
-    Goto See
-  Pain2:
-    MSP2 A 2 A_Pain
-    MSP2 BCDEFGHIJKLMNOPQRSTUV 2
-    Goto See
-  Death:
-    MSD1 A 4
-    MSD1 B 4 A_Scream
-    MSD1 C 4 A_NoBlocking
-    MSD1 DEFGH 3
-	MSD1 IJKL 2
-	TNT1 A 0 A_PlaySound("MongA/Fall", 4)
-	MSD1 MN 1
-    MSD1 N -1
-    Stop
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  XDeath:
-    TNT1 A 0
-	TNT1 A 0 A_NoBlocking
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-    
-    TNT1 A 0 A_CustomMissile("StratosHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("StratosLeg1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("StratosLeg2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
-    
-    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
-    Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("EnemyRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	MSI1 A 1 A_SetTranslucent(0.10, 0)
-	MSI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		TNT1 A 0 A_Jump(30, "Pain2")
+		MSP1 A 2 A_Pain
+		MSP1 BCDEFGHI 2
+		Goto See
+	Pain2:
+		MSP2 A 2 A_Pain
+		MSP2 BCDEFGHIJKLMNOPQRSTUV 2
+		Goto See
+	Death:
+		MSD1 A 4
+		MSD1 B 4 A_Scream
+		MSD1 C 4 A_NoBlocking
+		MSD1 DEFGH 3
+		MSD1 IJKL 2
+		TNT1 A 0 A_PlaySound("MongA/Fall", 4)
+		MSD1 MN 1
+		MSD1 N -1
+		Stop
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("StratosHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("StratosLeg1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("StratosLeg2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("EnemyRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		MSI1 A 1 A_SetTranslucent(0.10, 0)
+		MSI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+		Goto See
     }
 }
 
@@ -126,7 +124,7 @@ ACTOR ChasmLieutBall
   States
   {
   Spawn:
-  	TNT1 A 0 NoDelay
+  	PLZM A 0 NoDelay
     PLZM FFF 1 Bright A_SpawnItemEx("ChasmLieutTrail",0,0,0,0,0,0,0,2)
 	TNT1 A 0 A_SpawnItemEx("LieutBallFX",0,0,0,random(-1,1),random(-1,1),random(-1,1),0,128,0)
 	PLZM GGG 1 Bright A_SpawnItemEx("ChasmLieutTrail",0,0,0,0,0,0,0,2)

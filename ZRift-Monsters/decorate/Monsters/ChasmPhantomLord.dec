@@ -23,12 +23,13 @@ Actor ChasmPhantomLord
 	BloodType "RedBlood", "RedBlood"
 	Species "Fantasy"
 	Tag "Phantom Lord"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
+	    PHW1 A 0 NoDelay
         PHW1 ABCDEF 2 A_Look
-		TNT1 A 0 A_PlaySound("Phantom/Fly", 4, 0.40)
+		PHW1 A 0 A_PlaySound("Phantom/Fly", 4, 0.40)
 		PHW1 GHIJKL 2 A_Look
         Loop
     See:
@@ -36,7 +37,6 @@ Actor ChasmPhantomLord
 		TNT1 A 0 A_PlaySound("Phantom/Fly", 4, 0.40)
 		PHW1 GHIJKL 2 A_VileChase
         Loop
-
 	Missile:
 		TNT1 A 0 A_Jump (125, "Missile1", "Missile2")
 	Missile1:
@@ -56,7 +56,6 @@ Actor ChasmPhantomLord
 		PHA1 Q 4 BRIGHT
 		PHA1 RSTUVWXY 2
 		Goto See
-
 	Melee:
 	    PHA1 ABCDEFGHIJKLMNOP 1 A_FaceTarget
 		TNT1 A 0 A_PlaySound("PhantomLord/Attack", 3)
@@ -64,39 +63,39 @@ Actor ChasmPhantomLord
 		PHA1 Q 2 BRIGHT
 		PHA1 RSTUVWXY 1
 		Goto See
-  Pain:
-    PHP1 A 2 A_Pain
-    PHP1 BCDEFGHIJKLM 2
-    Goto See
-  Death:
-    PHP1 M 1 A_SetTranslucent(0.90)
-	PHP1 M 1 A_SetTranslucent(0.85)
-	PHP1 M 1 A_SetTranslucent(0.80)
-	PHP1 M 1 A_SetTranslucent(0.75)
-	TNT1 A 0 A_SetTranslucent(0.70)
-    PHP1 L 1 A_Scream
-	PHP1 L 1 A_SetTranslucent(0.65)
-	PHP1 L 1 A_SetTranslucent(0.60)
-	PHP1 L 1 A_SetTranslucent(0.55)
-	PHP1 K 1 A_SetTranslucent(0.50)
-    PHP1 K 3 A_NoBlocking
-	PHP1 J 4
-	PHP1 IHG 4
-	PHP1 F 6
-	TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-	TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, 20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("PhantomRezFX", 25, 5, random (0, 180), 2, random (0, 90))
-	TNT1 A 0 A_PlaySound("PhantomLord/Soul", 7)
-    Stop
-  Heal:
-    PHA1 ABCDEFGHIJKL 2
-	PHA1 LKJIHGFEDCBA 2
-	Goto See
+	Pain:
+		PHP1 A 2 A_Pain
+		PHP1 BCDEFGHIJKLM 2
+		Goto See
+	Death:
+		PHP1 M 1 A_SetTranslucent(0.90)
+		PHP1 M 1 A_SetTranslucent(0.85)
+		PHP1 M 1 A_SetTranslucent(0.80)
+		PHP1 M 1 A_SetTranslucent(0.75)
+		TNT1 A 0 A_SetTranslucent(0.70)
+		PHP1 L 1 A_Scream
+		PHP1 L 1 A_SetTranslucent(0.65)
+		PHP1 L 1 A_SetTranslucent(0.60)
+		PHP1 L 1 A_SetTranslucent(0.55)
+		PHP1 K 1 A_SetTranslucent(0.50)
+		PHP1 K 3 A_NoBlocking
+		PHP1 J 4
+		PHP1 IHG 4
+		PHP1 F 6
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, 20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 25, 5, random (0, 180), 2, random (0, 90))
+		TNT1 A 0 A_PlaySound("PhantomLord/Soul", 7)
+		Stop
+	Heal:
+		PHA1 ABCDEFGHIJKL 2
+		PHA1 LKJIHGFEDCBA 2
+		Goto See
     }
 }
 

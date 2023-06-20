@@ -47,29 +47,29 @@ Class ChasmPlasmaThrower : Weapon
 		TNT1 A 0;
 	Hold:
 		TNT1 A 0;
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
 		PLW2 A 2 BRIGHT Offset(1, 34);
 		PLW1 E 1 BRIGHT;
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
 		PLW2 A 2 BRIGHT;
 		PLW1 E 1 BRIGHT;
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
 		PLW2 A 2 BRIGHT Offset(-1, 30);
 		PLW1 E 1 BRIGHT;
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
 		PLW2 A 2 BRIGHT;
 		PLW1 E 1 BRIGHT;
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),1,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
 		PLW2 A 2 BRIGHT Offset(1, 34);
 		PLW1 E 1 BRIGHT;
 		TNT1 A 0 A_ReFire;
@@ -133,15 +133,15 @@ Class ChasmPlasmaThrower : Weapon
 		PLW1 E 1 BRIGHT Offset(12, 44);
 	AltFiring:
 		PLW2 A 1 BRIGHT A_PlaySound("PlasmaThrower/Fire", 1);
-		PLW2 AAAAAAAA 0 BRIGHT A_FireCustomMissile("PlasmaPellet",frandom(-11.6,11.1),0,6,0,0,frandom(-1.1,0.9));
-		PLW2 AAAAAAAA 0 BRIGHT A_FireCustomMissile("PlasmaPellet",frandom(11.6,-11.1),0,6,0,0,frandom(-1.1,0.9));
-		PLW2 A 0 BRIGHT A_FireCustomMissile("PlasmaPellet",0,1,6,0,0,frandom(-1.1,0.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
-		PLW1 E 0 A_FireCustomMissile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW2 AAAAAAAA 0 BRIGHT A_FireProjectile("PlasmaPellet",frandom(-11.6,11.1),0,6,0,0,frandom(-1.1,0.9));
+		PLW2 AAAAAAAA 0 BRIGHT A_FireProjectile("PlasmaPellet",frandom(11.6,-11.1),0,6,0,0,frandom(-1.1,0.9));
+		PLW2 A 0 BRIGHT A_FireProjectile("PlasmaPellet",0,1,6,0,0,frandom(-1.1,0.9));
+		PLW1 E 0 A_FireProjectile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
+		PLW1 E 0 A_FireProjectile("PlasmaShortFlame",frandom(-4.6,4.1),0,6,0,0,frandom(-2.1,1.9));
 		//Recoil
 		PLW2 A 1;
 		TNT1 A 0 A_SetPitch(pitch-5.00);
@@ -218,30 +218,30 @@ Class PlasmaFlame : Actor
 	Spawn:
 		TNT1 A 0 NoDelay;
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 BBCCDDEE 1 BRIGHT A_FadeOut;
 		Stop;
 	Death:
 		TNT1 A 0;
 		TNT1 A 0 A_PlaySound("PlasmaThrower/Hit");
-		TNT1 A 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
-		TNT1 A 0 A_CustomMissile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
 		PLB1 BBCC 1 Bright;
 		PLB1 DDEE 1 Bright A_FadeOut;
 		PLB1 EE 1 A_Fadeout;
@@ -249,8 +249,8 @@ Class PlasmaFlame : Actor
 	XDeath:
 		TNT1 A 0;
 		TNT1 A 0 A_PlaySound("PlasmaThrower/Hit");
-		TNT1 A 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
-		TNT1 A 0 A_CustomMissile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
 		PLB1 BBCC 1 Bright;
 		PLB1 DDEE 1 Bright A_FadeOut;
 		PLB1 EE 1 A_Fadeout;
@@ -258,8 +258,8 @@ Class PlasmaFlame : Actor
 	Crash:
 		TNT1 A 0;
 		TNT1 A 0 A_PlaySound("PlasmaThrower/Hit");
-		TNT1 A 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
-		TNT1 A 0 A_CustomMissile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
 		PLB1 BBCC 1 Bright;
 		PLB1 DDEE 1 Bright A_FadeOut;
 		PLB1 EE 1 A_Fadeout;
@@ -288,19 +288,19 @@ Class PlasmaShortFlame : Actor
 	Spawn:
 		TNT1 A 0 NoDelay;
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
-		TNT1 A 0 A_CustomRailgun (0, 0, "None", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
+		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		PLB1 BBCCDDEE 1 BRIGHT A_FadeOut;
 		Stop;
 	Death:
 		TNT1 A 0;
-		TNT1 A 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
 		PLB1 BBCC 1 Bright;
 		PLB1 DDEE 1 Bright A_FadeOut;
 		PLB1 EE 1 A_Fadeout;
@@ -362,12 +362,12 @@ Class UnstablePlasmaBall : Actor
 		TNT1 A 0 A_PlaySound("PlasmaBall/Exp");
 		TNT1 A 0 A_Explode;
 		TNT1 AAAAAAAAAA 0 A_SpawnParticle ("Blue", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-2.0,3.0), 0,0,-0.1, 0.98, -1);
-		TNT1 AAAAAA 0 A_CustomMissile("PlasmaExplosionFX", random(1,12), random(16,-16), random (0, 360), 2, random (0, 160));
-		TNT1 AAAAAA 0 A_CustomMissile("PlasmaExplosionFX", random(1,-12), random(16,-16), random (0, 360), 2, random (0, 160));
-		TNT1 AAAAAA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160));
-		TNT1 AAAAAA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160));
-		TNT1 AAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160));
-		TNT1 AAA 0 A_CustomMissile("BigExplosionSmokeSpawner", random(1,12), random(1,-1), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_SpawnProjectile("PlasmaExplosionFX", random(1,12), random(16,-16), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_SpawnProjectile("PlasmaExplosionFX", random(1,-12), random(16,-16), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAAAAA 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_SpawnProjectile("BigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_SpawnProjectile("BigExplosionSmokeSpawner", random(1,12), random(1,-1), random (0, 360), 2, random (0, 160));
 		PLBA A 0 A_SetScale(0.60);
 		PLBA ABCDEFGH 2 BRIGHT;
 		Stop;
@@ -465,8 +465,8 @@ Class PlasmaPellet : FastProjectile
 	Death:
 		TNT1 A 0;
 		TNT1 A 0 A_PlaySound("PlasmaThrower/Hit");
-		TNT1 AAA 0 A_CustomMissile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
-		TNT1 AA 0 A_CustomMissile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
+		TNT1 AAA 0 A_SpawnProjectile("PlasmaSparks", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160));
+		TNT1 AA 0 A_SpawnProjectile("ExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160));
 		PLBA ABCDEFGH 1 BRIGHT A_FadeOut;
 		Stop;
 	}

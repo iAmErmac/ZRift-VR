@@ -41,7 +41,7 @@ Class ZRiftItemSpawnHandler: EventHandler
 				if(e.Replacee is "BlurSphere") 			e.Replacement = 'InvisibilityMask';
 				if(e.Replacee is "Berserk") 			e.Replacement = 'BerserkPack';
 				if(e.Replacee is "InfraRed") 			e.Replacement = 'ChasmInfra';
-				if(e.Replacee is "ChasmHazmat") 		e.Replacement = 'Radsuit';
+				if(e.Replacee is "Radsuit") 			e.Replacement = 'ChasmHazmat';
 				
 				//barrel
 				if(e.Replacee is "BurningBarrel") 		e.Replacement = 'ChasmBarrelFire';

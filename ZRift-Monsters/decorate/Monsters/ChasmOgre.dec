@@ -22,15 +22,16 @@ Actor ChasmOgre Replaces Fatso
 	BloodColor "Red"
 	BloodType "RedBlood", "RedBlood"
 	Tag "Ogre"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_Jump(10, "Idle1")
+	    OGI1 A 0 NoDelay
+		OGI1 A 0 A_Jump(10, "Idle1")
         OGI1 ABCDEFGHIJKLMNOPQRSTUVWX 2 A_Look
         Loop
 	Idle1:
-	    TNT1 A 0 A_PlaySound("Ogre/Idle",3)
+	    OGI1 X 0 A_PlaySound("Ogre/Idle",3)
 		OGI1 X 1 A_Look
 		Goto Spawn
     See:
@@ -55,58 +56,58 @@ Actor ChasmOgre Replaces Fatso
 		OGA2 K 4
 		OGA2 LMNOPQRST 2 A_FaceTarget
 		Goto See
-  Pain:
-    TNT1 A 0 A_Jump(24, "BigPain")
-    OGP1 A 2 A_Pain
-    OGP1 BCDEFGHIJ 2
-    Goto See
-  BigPain:
-    OGP2 A 2 A_Pain
-	OGP2 BCDEFGHIJKLMNOPQRSTU 2
-	Goto See
-  Death:
-    TNT1 A 0 A_Jump(68, "Death1")
-    OGD1 A 2
-    OGD1 B 4 A_Scream
-    OGD1 C 3 A_NoBlocking
-    OGD1 EFGHIJ 2
-	TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
-	TNT1 A 0 A_BossDeath
-	OGD1 KLMNOPQRSTU 2
-    OGD1 U -1
-    Stop
-  Death1:
-	OGD2 A 2
-    OGD2 B 4 A_Scream
-    OGD2 C 3 A_NoBlocking
-    OGD2 EFGHI 2
-	TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
-	TNT1 A 0 A_BossDeath
-	OGD2 JKLMNOPQRS 2
-    OGD2 T -1
-    Stop
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  XDeath:
-    TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_NoBlocking
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-	TNT1 A 0 A_CustomMissile("GrossHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GrossArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GrossArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
-    Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	OGI1 A 1 A_SetTranslucent(0.10, 0)
-	OGI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		TNT1 A 0 A_Jump(24, "BigPain")
+		OGP1 A 2 A_Pain
+		OGP1 BCDEFGHIJ 2
+		Goto See
+	BigPain:
+		OGP2 A 2 A_Pain
+		OGP2 BCDEFGHIJKLMNOPQRSTU 2
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(68, "Death1")
+		OGD1 A 2
+		OGD1 B 4 A_Scream
+		OGD1 C 3 A_NoBlocking
+		OGD1 EFGHIJ 2
+		TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
+		TNT1 A 0 A_BossDeath
+		OGD1 KLMNOPQRSTU 2
+		OGD1 U -1
+		Stop
+	Death1:
+		OGD2 A 2
+		OGD2 B 4 A_Scream
+		OGD2 C 3 A_NoBlocking
+		OGD2 EFGHI 2
+		TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
+		TNT1 A 0 A_BossDeath
+		OGD2 JKLMNOPQRS 2
+		OGD2 T -1
+		Stop
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	XDeath:
+		TNT1 A 0 A_BossDeath
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("GrossHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GrossArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GrossArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		OGI1 A 1 A_SetTranslucent(0.10, 0)
+		OGI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+		Goto See
     }
 }
 
@@ -134,17 +135,17 @@ ACTOR GrossArm1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI04 A 0 A_JumpIf(waterlevel > 1, "Splash")
         LI04 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI04 A 0 A_Scream
+	    LI04 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI04 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI04 AAAAA 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI04 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI04 A 5 A_SetTranslucent(0.8)
@@ -154,7 +155,7 @@ ACTOR GrossArm1
        LI04 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI04 A 0
         Stop
     }
 }
@@ -179,17 +180,17 @@ ACTOR GrossArm2
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI04 B 0 A_JumpIf(waterlevel > 1, "Splash")
         LI04 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI04 B 0 A_Scream
+	    LI04 B 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI04 B 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI04 BBBBB 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI04 B 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI04 B 5 A_SetTranslucent(0.8)
@@ -199,7 +200,7 @@ ACTOR GrossArm2
        LI04 B 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI04 B 0
         Stop
     }
 }
@@ -224,17 +225,17 @@ ACTOR GrossHead
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI04 C 0 A_JumpIf(waterlevel > 1, "Splash")
         LI04 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI04 C 0 A_Scream
+	    LI04 C 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI04 C 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI04 CCCCC 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI04 C 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI04 C 5 A_SetTranslucent(0.8)
@@ -244,7 +245,7 @@ ACTOR GrossHead
        LI04 C 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI04 C 0
         Stop
     }
 }

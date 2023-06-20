@@ -23,14 +23,15 @@ Actor ChasmSphinx Replaces SpiderMasterMind
 	Species "Fantasy"
 	MeleeRange 256
 	Tag "Sphinx Monster"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
+	    SPP1 H 0 NoDelay
         SPP1 HIJKLKJI 4 A_Look
         Loop
     See:
-	    TNT1 A 0 A_Jump(20, "Snort")
+	    SPW1 A 0 A_Jump(20, "Snort")
 		SPW1 ABCD 2 A_Chase
 		TNT1 A 0 A_PlaySound("Sphinx/Walk", 4)
 		SPW1 EFGHIJKL 2 A_Chase
@@ -73,47 +74,47 @@ Actor ChasmSphinx Replaces SpiderMasterMind
 		SPA1 J 6 A_FaceTarget
 		SPA1 KLMNOPQR 2
 		Goto See
-  Pain:
-    TNT1 A 0 A_Jump(78, "Pain2")
-    SPP1 A 2 A_Pain
-    SPP1 BCDEFGHIKL 2
-    Goto See
-  Pain2:
-    SPP2 A 2 A_Pain
-    SPP2 BCDEFGHIKLMNOPQRSTUVWX 2
-    Goto See
-  Death:
-    TNT1 A 0
-    SPP2 A 2 A_Scream
-    SPP2 BCDEFGHIKLMNOPQRSTUVWX 2
-	SPT1 ABCDEFGH 2
-	SPT1 HI 2
-	TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-	TNT1 A 0 A_PlaySound("Sphinx/Exp", 1)
-	TNT1 A 0 A_Quake (1, 12, 0, 1024, "")
-	TNT1 AAAAAAAAAAAAAAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
-	TNT1 AAAAAA 0 A_CustomMissile("FireBallExpFX", random(1,40), random(75,-75), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAA 0 A_CustomMissile("FireBallExpFX", random(1,40), random(-75,75), random (0, 360), 2, random (0, 160))
-    TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,25), random(15,-15), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,25), random(15,-15), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(0,30)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(45,70)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(90,120)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(135,165)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(180, 210)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(225, 260)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(270, 300)) 
-    TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(305, 320)) 
-    TNT1 AAAAAAAA 0 A_CustomMissile("GoreBloodSpawner", random(1,45), random(60,-60), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAAAA 0 A_CustomMissile("GoreBloodSpawner", random(1,45), random(-60,60), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,50), random(0,-50), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,50), random(0,50), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAAA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAAA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, 20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_BossDeath
-    Stop
+	Pain:
+		TNT1 A 0 A_Jump(78, "Pain2")
+		SPP1 A 2 A_Pain
+		SPP1 BCDEFGHIKL 2
+		Goto See
+	Pain2:
+		SPP2 A 2 A_Pain
+		SPP2 BCDEFGHIKLMNOPQRSTUVWX 2
+		Goto See
+	Death:
+		TNT1 A 0
+		SPP2 A 2 A_Scream
+		SPP2 BCDEFGHIKLMNOPQRSTUVWX 2
+		SPT1 ABCDEFGH 2
+		SPT1 HI 2
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_PlaySound("Sphinx/Exp", 1)
+		TNT1 A 0 A_Quake (1, 12, 0, 1024, "")
+		TNT1 AAAAAAAAAAAAAAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
+		TNT1 AAAAAA 0 A_CustomMissile("FireBallExpFX", random(1,40), random(75,-75), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("FireBallExpFX", random(1,40), random(-75,75), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,25), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,25), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(0,30)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(45,70)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(90,120)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(135,165)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(180, 210)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(225, 260)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(270, 300)) 
+		TNT1 AA 0 A_CustomMissile("SphinxFlames1", random(12,24), 0, random(305, 320)) 
+		TNT1 AAAAAAAA 0 A_CustomMissile("GoreBloodSpawner", random(1,45), random(60,-60), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAAAA 0 A_CustomMissile("GoreBloodSpawner", random(1,45), random(-60,60), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,50), random(0,-50), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,50), random(0,50), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAAA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAAA 0 A_CustomMissile("BloodGiblet", random(10,50), random(0, 20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_BossDeath
+		Stop
     }
 }
 
@@ -143,8 +144,8 @@ ACTOR SphinxFireBall
 	TNT1 A 0 A_Quake (1, 12, 0, 1024, "")
 	TNT1 AAAAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
 	TNT1 AAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
-	TNT1 AAA 0 A_CustomMissile("EnemyFireBallExpFX", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("EnemyFireBallExpFX", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("FireBallExpFX", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("FireBallExpFX", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160))
 	TNT1 A 0 A_CustomMissile("EnemyExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
     TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160))
 	TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160))
@@ -380,7 +381,7 @@ ACTOR SphinxFloorHugger
 	States
 	{
 	Spawn:
-	    TNT1 A 0 NoDelay
+	    HBFR A 0 NoDelay
 	    HBFR A 0 A_PlaySound("Sphinx/HuggerLoop",CHAN_WEAPON,0.50,1)
 		HBFR A 0 A_SeekerMissile(255,255, SMF_LOOK)
 	    HBFR AAA 1 Bright A_SpawnItemEx("SphinxFloorRipperTrail",0,0,0,0,0,0,0,2)

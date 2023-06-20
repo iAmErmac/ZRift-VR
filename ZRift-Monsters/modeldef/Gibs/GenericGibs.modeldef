@@ -1,0 +1,116 @@
+Model Giblets1
+{
+   Path "models/Gibs/misc"
+   Model 0 "Gib1.md2"
+   Skin 0 "Gib1.png"
+   Scale 0.14 0.14 0.14
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame GIB1 A 0 "IdleA1"
+   
+}
+
+Model Giblets2
+{
+   Path "models/Gibs/misc"
+   Model 0 "Gib2.md2"
+   Skin 0 "Gib2.png"
+   Scale 0.22 0.22 0.22
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame GIB2 A 0 "IdleA1"
+   
+}
+
+Model Giblets3
+{
+   Path "models/Gibs/misc"
+   Model 0 "Gib3.md2"
+   Skin 0 "Gib3.png"
+   Scale 0.20 0.20 0.20
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame GIB3 A 0 "IdleA1"
+   
+}
+
+//ScorpionGore
+
+
+Model ScorpionGib1
+{
+   Path "models/Gibs/misc"
+   Model 0 "ScorpGib1.md2"
+   Skin 0 "ScorpGib1.png"
+   Scale 0.30 0.30 0.30
+   AngleOffset -90
+   PITCHFROMMOMENTUM
+
+//IdleA
+   Frame GIB4 A 0 "IdleA1"
+   
+}
+
+//AlienGore
+
+Model AlienGib1
+{
+  Path "Models/Gibs/ChasmAliens"
+  Model 0 "GIB-GenericAlien01.md2"
+  Skin 0 "GIB-GenericAlien01-skin.png"
+  OFFSET 0 0 0	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0           //angle
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	        //roll Up-Down
+  Scale 0.4 0.4 0.4         //Scale
+
+  Frame GI02 A 0 "Idle1"   //Can use as Idle
+}
+
+Model AlienGib2
+{
+  Path "Models/Gibs/ChasmAliens"
+  Model 0 "GIB-GenericAlien02.md2"
+  Skin 0 "GIB-GenericAlien02-skin.png"
+  OFFSET 0 0 0	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0           //angle
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	        //roll Up-Down
+  Scale 0.4 0.4 0.4         //Scale
+
+  Frame GI02 B 0 "Idle1"   //Can use as Idle
+}
+
+Model AlienGib3
+{
+  Path "Models/Gibs/ChasmAliens"
+  Model 0 "GIB-GenericAlien03.md2"
+  Skin 0 "GIB-GenericAlien03-skin.png"
+  OFFSET 0 0 0	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0           //angle
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	        //roll Up-Down
+  Scale 0.4 0.4 0.4         //Scale
+
+  Frame GI02 C 0 "Idle1"   //Can use as Idle
+}
+
+Model AlienGib4
+{
+  Path "Models/Gibs/ChasmAliens"
+  Model 0 "GIB-GenericAlien04.md2"
+  Skin 0 "GIB-GenericAlien04-skin.png"
+  OFFSET 0 0 0	        //X-Left/Right Y-Depth Z-Up/Down
+  AngleOffset 0           //angle
+  PitchOffset 0		    //pitch Left Right
+  RollOffset 0  	        //roll Up-Down
+  Scale 0.4 0.4 0.4         //Scale
+
+  Frame GI02 D 0 "Idle1"   //Can use as Idle
+}

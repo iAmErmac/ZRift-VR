@@ -1,6 +1,6 @@
 Model ChasmSawBlade
 {
-   Path "models/effects"   	
+   Path "models/weapons"   	
    Model 0 "PlayerSaw.md2"   
    Skin 0 "PlayerSaw.png"    
    Scale 0.25 0.25 0.25  
@@ -16,7 +16,7 @@ Model ChasmSawBlade
 
 Model ChasmSawBlade
 {
-   Path "models/effects"   	
+   Path "models/weapons"   	
    Model 0 "PlayerSaw.md2"   
    Skin 0 "PlayerSaw.png"    
    Scale 0.25 0.25 0.25  

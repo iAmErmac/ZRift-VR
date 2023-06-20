@@ -23,7 +23,7 @@ Class SupplyPackDecider : Actor
 		Stop;
 	DropPack:
 	    TNT1 A 0;
-		TNT1 A 0 BRIGHT A_CustomMissile("SupplyPackProjectile", 10, 0, random (0, 360), 2, random (0, 160));
+		TNT1 A 0 BRIGHT A_SpawnProjectile("SupplyPackProjectile", 10, 0, random (0, 360), 2, random (0, 160));
 		TNT1 A 0;
 		Goto Death;
 	}
@@ -388,7 +388,7 @@ Class ChasmPowerStrength : PowerStrength
 	Default
 	{
 	Powerup.Duration 1;
-	Powerup.Color "255, 0, 0", 0.20;
+	Powerup.Color "ff 00 00", 0.20;
 	+INVENTORY.HUBPOWER;
 	}
 }

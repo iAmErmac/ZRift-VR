@@ -27,10 +27,11 @@ Actor ChasmBanshee Replaces LostSoul
 	RenderStyle Add
 	MinMissileChance 10000
 	Tag "Banshee"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
+	    BANS A 0
         BANS ABCDEFGHIJKLMNOP 1 A_Look
         Loop
     See:
@@ -43,22 +44,22 @@ Actor ChasmBanshee Replaces LostSoul
 		BANS D 20 A_SkullAttack
 		BANS EFGHIJKLMNOP 1 A_Stop
 		Goto Missile+9
-  Pain:
-    BANS F 2 A_Pain
-    BANS EF 2
-    Goto See
-  Death:
-    TNT1 A 0
-	TNT1 A 0 A_Scream
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_PlaySound("Banshee/Explode", 7)
-	TNT1 AAA 0 A_CustomMissile("BoomFlare", 30, 0, random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("ExplosionFlare", random(20,40), random(18,-18), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("ExplosionFX", random(20,40), random(16,-16), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("ExplosionFX", random(20,40), random(16,-16), random (0, 360), 2, random (0, 160))
-    TNT1 AA 0 A_CustomMissile("ExplosionSmokeSpawner", random(20,40), random(15,-15), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("ExplosionSmokeSpawner", random(20,40), random(15,-15), random (0, 360), 2, random (0, 160))
-	Stop
+	Pain:
+		BANS F 2 A_Pain
+		BANS EF 2
+		Goto See
+	Death:
+		TNT1 A 0
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Banshee/Explode", 7)
+		TNT1 AAA 0 A_CustomMissile("EnemyBoomFlare", 30, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFlare", random(20,40), random(18,-18), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(20,40), random(16,-16), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("EnemyExplosionFX", random(20,40), random(16,-16), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(20,40), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(20,40), random(15,-15), random (0, 360), 2, random (0, 160))
+		Stop
     }
 }
 

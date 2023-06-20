@@ -24,36 +24,30 @@ Actor ChasmHound
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_Jump(100, "Idle1SittoStand")
+	    MH00 A 0 NoDelay
+		MH00 A 0 A_Jump(100, "Idle1SittoStand")
         MH00 ABCDEFGHIJKLMNOPQRSTUWXYZ 4 A_Look
         MH01 ABCDE 4 A_Look
         Loop
-
     Idle:
         MH00 ABCDEFGHIJKLMNOPQRSTUWXYZ 4 A_Look
         MH01 ABCDE 4 A_Look
         TNT1 A 0 A_Jump(100, "Idle1SittoStand")
         loop
-
 	Idle1SittoStand:
 		MH04 ABCDEFGHIJK 4 A_Look
 		Goto Idle1
-
     Idle1:
 		MH02 ABCDEFGHIJKLMNOPQRSTUWXYZ 4 A_Look
         MH03 ABCDE 4 A_Look
         TNT1 A 0 A_Jump(100, "Idle1Standtosit")
         loop
-
     Idle1Standtosit:
         MH04 LMNOPQRSTU 4 A_look
         Goto Idle
-
     See:
         MH05 IJKLMOP 2 A_Chase
         Loop
-
 	Melee:
 	    TNT1 A 0 A_PlaySound("Hound/Attack", 1)
 		MH06 ABC 2 A_FaceTarget
@@ -64,30 +58,38 @@ Actor ChasmHound
         MH06 N 0 A_CustomBulletAttack(1, 1, 1, 6, "HoundMeleePuff", 50, CBAF_AIMFACING)
         MH06 OPQ 2 A_FaceTarget
         Goto See
-
-
-  Pain:
-    MH07 A 2 A_Pain
-    MH07 BCDEFGHIJKL 3 
-    Goto See
-
-  Death:
-    MH08 A 2
-    MH08 B 2 A_Scream
-    MH08 C 2 A_NoBlocking
-	MH08 DEF 2
-    MH08 F 2 A_PlaySound("Hound/Fall", 4)
-    MH08 GHIJKL 2
-    MH08 L -1
-    Stop
-
-  Raise:
-    TNT1 A 0 A_CustomMissile("EnemyRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	MH01 A 1 A_SetTranslucent(0.10, 0)
-	MH01 ABCDEFGHJIKL 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		MH07 A 2 A_Pain
+		MH07 BCDEFGHIJKL 3 
+		Goto See
+	Death:
+		MH08 A 2
+		MH08 B 2 A_Scream
+		MH08 C 2 A_NoBlocking
+		MH08 DEF 2
+		MH08 F 2 A_PlaySound("Hound/Fall", 4)
+		MH08 GHIJKL 2
+		MH08 L -1
+		Stop
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 7)
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(45,60), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(45,60), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(40,55), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(40,55), random(0, 20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("EnemyRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		MH01 A 1 A_SetTranslucent(0.10, 0)
+		MH01 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+		Goto See
     }
 }
+
 actor HoundMeleePuff
 {
   +NOBLOCKMAP

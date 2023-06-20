@@ -40,8 +40,8 @@ Class ChasmPistol : Weapon Replaces Pistol
 	Fire:
 		RIGX A 0 BRIGHT A_PlaySound("ChasmRifle/Fire",1, 1.0);
 		TNT1 A 0 A_FireBullets(1.6, 1.1, 1, random(9,11), "ChasmBulletPuff");
-		RIGX A 0 BRIGHT A_FireCustomMissile("ChasmTracer",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
-		TNT1 AAAA 0 A_FireCustomMissile("BarrelSmokeSpawnRifle",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
+		RIGX A 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
+		TNT1 AAAA 0 A_FireProjectile("BarrelSmokeSpawnRifle",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
 		RIGX B 1 BRIGHT;
 		TNT1 A 0 A_SetPitch(pitch-0.80);
 		TNT1 A 0 A_SetAngle(angle-0.1);

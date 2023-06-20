@@ -21,16 +21,17 @@ Actor ChasmViking Replaces HellKnight
 	BloodColor "Red"
 	BloodType "RedBlood", "RedBlood"
 	Tag "Viking"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_Jump(10, "Idle1")
+	    VKI1 A 0 NoDelay
+		VKI1 A 0 A_Jump(10, "Idle1")
         VKI1 ABCDEFGHIJKLMNOPQ 2 A_Look
         Loop
 	Idle1:
-	    TNT1 A 0
-	    TNT1 A 0 A_PlaySound("Viking/Idle",3)
+	    VKI1 Q 0
+	    VKI1 Q 0 A_PlaySound("Viking/Idle",3)
 		VKI1 Q 1 A_Look
 		Goto Spawn
     See:
@@ -67,51 +68,51 @@ Actor ChasmViking Replaces HellKnight
 		VKA3 K 2
 		VKA3 LMNOPQRS 2
 	    Goto See
-  Pain:
-    VKP1 A 2 A_Pain
-    VKP1 BCDEFGHI 2
-    Goto See
-  Death:
-    TNT1 A 0 A_Jump(78, "Death1")
-    VKD1 A 2
-    VKD1 B 2 A_Scream
-    VKD1 C 2 A_NoBlocking
-	VKD1 EFGHIJKLMNOPQRS 2
-	TNT1 A 0 A_PlaySound("MongA/Fall", 4)
-    VKD1 TUVWX 2
-    VKD1 X -1
-    Stop
-  Death1:
-    VKD2 A 2
-    VKD2 B 2 A_Scream
-    VKD2 C 2 A_NoBlocking
-	VKD2 EFG 2
-	TNT1 A 0 A_PlaySound("MongA/Fall", 4)
-    VKD2 HIJKLMNOPQRSTUVWXY 2
-    VKD2 Y -1
-    Stop
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  XDeath:
-    TNT1 A 0
-	TNT1 A 0 A_NoBlocking
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-    TNT1 A 0 A_CustomMissile("VikingHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("VikingArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("VikingArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
-    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
-	Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	VKI1 A 1 A_SetTranslucent(0.10, 0)
-	VKI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		VKP1 A 2 A_Pain
+		VKP1 BCDEFGHI 2
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(78, "Death1")
+		VKD1 A 2
+		VKD1 B 2 A_Scream
+		VKD1 C 2 A_NoBlocking
+		VKD1 EFGHIJKLMNOPQRS 2
+		TNT1 A 0 A_PlaySound("MongA/Fall", 4)
+		VKD1 TUVWX 2
+		VKD1 X -1
+		Stop
+	Death1:
+		VKD2 A 2
+		VKD2 B 2 A_Scream
+		VKD2 C 2 A_NoBlocking
+		VKD2 EFG 2
+		TNT1 A 0 A_PlaySound("MongA/Fall", 4)
+		VKD2 HIJKLMNOPQRSTUVWXY 2
+		VKD2 Y -1
+		Stop
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("VikingHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("VikingArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("VikingArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+		Stop
+		Raise:
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		VKI1 A 1 A_SetTranslucent(0.10, 0)
+		VKI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+		Goto See
     }
 }
 
@@ -150,7 +151,7 @@ ACTOR VikingShield
   States
   {
   Spawn:
-  	TNT1 A 0 NoDelay
+  	VIAX A 0 NoDelay
     VIAX A 1 Bright A_SpawnItemEx("PunAxeTrail",0,0,0,0,0,0,0,2)
     Loop
   Death:
@@ -186,17 +187,17 @@ ACTOR VikingArm1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI14 A 0 A_JumpIf(waterlevel > 1, "Splash")
         LI14 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI14 A 0 A_Scream
+	    LI14 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI14 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI14 AAAAA 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI14 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI14 A 5 A_SetTranslucent(0.8)
@@ -206,7 +207,7 @@ ACTOR VikingArm1
        LI14 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI14 A 0
         Stop
     }
 }
@@ -231,17 +232,17 @@ ACTOR VikingArm2
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI14 B 0 A_JumpIf(waterlevel > 1, "Splash")
         LI14 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI14 B 0 A_Scream
+	    LI14 B 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI14 B 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI14 BBBBB 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI14 B 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI14 B 5 A_SetTranslucent(0.8)
@@ -251,7 +252,7 @@ ACTOR VikingArm2
        LI14 B 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI14 B 0
         Stop
     }
 }
@@ -276,17 +277,17 @@ ACTOR VikingHead
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI14 C 0 A_JumpIf(waterlevel > 1, "Splash")
         LI14 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI14 C 0 A_Scream
+	    LI14 C 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI14 C 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI14 CCCCC 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI14 C 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI14 C 5 A_SetTranslucent(0.8)
@@ -296,7 +297,7 @@ ACTOR VikingHead
        LI14 C 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI14 C 0
         Stop
     }
 }

@@ -24,12 +24,13 @@ Actor ChasmPhantomLesser
 	BloodType "RedBlood", "RedBlood"
 	Species "Fantasy"
 	Tag "Lesser Phantom"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
+	    PLW1 A 0 NoDelay
         PLW1 ABCDEF 2 A_Look
-		TNT1 A 0 A_PlaySound("Phantom/Fly", 4, 0.40)
+		PLW1 A 0 A_PlaySound("Phantom/Fly", 4, 0.40)
 		PLW1 GHIJKL 2 A_Look
         Loop
     See:
@@ -37,7 +38,8 @@ Actor ChasmPhantomLesser
 		TNT1 A 0 A_PlaySound("Phantom/Fly", 4, 0.40)
 		PLW1 GHIJKL 2 A_Chase
         Loop
-	Missile: TNT1 A 0 A_Jump (256, "Missile1", "Missile2")
+	Missile:
+		TNT1 A 0 A_Jump (256, "Missile1", "Missile2")
 	Missile1:
 		PLA1 ABCDEFGHIJKLMNOP 2 A_FaceTarget
 		TNT1 A 0 A_PlaySound("Phantom/Fire", 1)
@@ -62,40 +64,39 @@ Actor ChasmPhantomLesser
 		PLA1 Q 2 BRIGHT
 		PLA1 RSTUVWXY 1
 		Goto See
-  Pain:
-    PLP1 A 2 A_Pain
-    PLP1 BCDEFGHIJKLM 2
-    Goto See
-  Death:
-    PLP1 M 1 A_SetTranslucent(0.90)
-	PLP1 M 1 A_SetTranslucent(0.85)
-	PLP1 M 1 A_SetTranslucent(0.80)
-	PLP1 M 1 A_SetTranslucent(0.75)
-	TNT1 A 0 A_SetTranslucent(0.70)
-    PLP1 L 1 A_Scream
-	PLP1 L 1 A_SetTranslucent(0.65)
-	PLP1 L 1 A_SetTranslucent(0.60)
-	PLP1 L 1 A_SetTranslucent(0.55)
-	PLP1 K 1 A_SetTranslucent(0.50)
-    PLP1 K 3 A_NoBlocking
-	PLP1 J 4
-	PLP1 IHG 4
-	PLP1 F 6
-	TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-	TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, 20), random (0, 360), 2, random (0, 160))
-    TNT1 A 0 A_PainDie("BatMonster")
-	Stop
+	Pain:
+		PLP1 A 2 A_Pain
+		PLP1 BCDEFGHIJKLM 2
+		Goto See
+	Death:
+		PLP1 M 1 A_SetTranslucent(0.90)
+		PLP1 M 1 A_SetTranslucent(0.85)
+		PLP1 M 1 A_SetTranslucent(0.80)
+		PLP1 M 1 A_SetTranslucent(0.75)
+		TNT1 A 0 A_SetTranslucent(0.70)
+		PLP1 L 1 A_Scream
+		PLP1 L 1 A_SetTranslucent(0.65)
+		PLP1 L 1 A_SetTranslucent(0.60)
+		PLP1 L 1 A_SetTranslucent(0.55)
+		PLP1 K 1 A_SetTranslucent(0.50)
+		PLP1 K 3 A_NoBlocking
+		PLP1 J 4
+		PLP1 IHG 4
+		PLP1 F 6
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("GoreBloodSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("GoreSpawner", random(10,40), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("BloodGiblet", random(10,40), random(0, 20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_PainDie("BatMonster")
+		Stop
     }
 }
 
 ACTOR PhantomLanceSmall : PhantomLance
 {
-
   Damage 4
   Scale 0.75
 }

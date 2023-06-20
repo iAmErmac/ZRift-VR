@@ -3,7 +3,7 @@ Model POST_NORMAL1
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "POST_Normal.png"
+  SurfaceSkin 0 0 "Post_Normal.png"
   SurfaceSkin 0 1 "SKULL.png"   
   SurfaceSkin 0 2 "HEART.png"   
   
@@ -22,7 +22,7 @@ Model POST_NORMAL2
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "POST_Normal.png"
+  SurfaceSkin 0 0 "Post_Normal.png"
   SurfaceSkin 0 1 "SKULL.png"   
   SurfaceSkin 0 2 "HEART.png"   
   
@@ -40,7 +40,7 @@ Model POST_NORMAL3
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "POST_Normal.png"
+  SurfaceSkin 0 0 "Post_Normal.png"
   SurfaceSkin 0 1 "SKULL.png"   
   SurfaceSkin 0 2 "HEART.png"   
   
@@ -61,7 +61,7 @@ Model POST_RED1
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "POST_Red.png"
+  SurfaceSkin 0 0 "Post_Red.png"
   SurfaceSkin 0 1 "SKULL-GOLD.png"   
   SurfaceSkin 0 2 "HEART-GOLD.png"   
   
@@ -80,7 +80,7 @@ Model POST_RED2
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "POST_Red.png"
+  SurfaceSkin 0 0 "Post_Red.png"
   SurfaceSkin 0 1 "SKULL-GOLD.png"   
   SurfaceSkin 0 2 "HEART-GOLD.png"   
   
@@ -100,7 +100,7 @@ Model POST_RED3
 {
   Path "Models/"   
   Model 0 "Post.md3"   
-  SurfaceSkin 0 0 "POST_Red.png"
+  SurfaceSkin 0 0 "Post_Red.png"
   SurfaceSkin 0 1 "SKULL-GOLD.png"   
   SurfaceSkin 0 2 "HEART-GOLD.png"   
   

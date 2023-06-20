@@ -1,94 +1,91 @@
 Model ChasmBanshee
 {
-   Path "models/monsters"   	
-   Model 0 "Banshee.md2"   
-   Skin 0 "Banshee.png"    
+   Path "models/Monsters/Banshee"
+   Model 0 "Banshee.md2"
+   Skin 0 "Banshee.png"
    Scale 2.5 2.5 2.5
    OFFSET 0 0 40
    AngleOffset 0
-   PitchOffset 0	
+   PitchOffset 0
    RollOffset 0
 
 //IdleA
-   Frame BANS A 0 "Banshee1" 
-   Frame BANS B 0 "Banshee2"   
-   Frame BANS C 0 "Banshee3"   
-   Frame BANS D 0 "Banshee4"   
-   Frame BANS E 0 "Banshee5"   
-   Frame BANS F 0 "Banshee6"   
-   Frame BANS G 0 "Banshee7"   
-   Frame BANS H 0 "Banshee8"   
-   Frame BANS I 0 "Banshee9"   
-   Frame BANS J 0 "Banshee10"   
-   Frame BANS K 0 "Banshee11"   
-   Frame BANS L 0 "Banshee12"   
-   Frame BANS M 0 "Banshee13"   
-   Frame BANS N 0 "Banshee14"   
-   Frame BANS O 0 "Banshee15"   
-   Frame BANS P 0 "Banshee16"    
-   
+   Frame BANS A 0 "Banshee1"
+   Frame BANS B 0 "Banshee2"
+   Frame BANS C 0 "Banshee3"
+   Frame BANS D 0 "Banshee4"
+   Frame BANS E 0 "Banshee5"
+   Frame BANS F 0 "Banshee6"
+   Frame BANS G 0 "Banshee7"
+   Frame BANS H 0 "Banshee8"
+   Frame BANS I 0 "Banshee9"
+   Frame BANS J 0 "Banshee10"
+   Frame BANS K 0 "Banshee11"
+   Frame BANS L 0 "Banshee12"
+   Frame BANS M 0 "Banshee13"
+   Frame BANS N 0 "Banshee14"
+   Frame BANS O 0 "Banshee15"
+   Frame BANS P 0 "Banshee16"
 }
 
 Model HereticChasmBanshee
 {
-   Path "models/monsters"   	
-   Model 0 "Banshee.md2"   
-   Skin 0 "Banshee.png"    
+   Path "models/Monsters/Banshee"
+   Model 0 "Banshee.md2"
+   Skin 0 "Banshee.png"
    Scale 2.5 2.5 2.5
    OFFSET 0 0 40
    AngleOffset 0
-   PitchOffset 0	
+   PitchOffset 0
    RollOffset 0
 
 //IdleA
-   Frame BANS A 0 "Banshee1" 
-   Frame BANS B 0 "Banshee2"   
-   Frame BANS C 0 "Banshee3"   
-   Frame BANS D 0 "Banshee4"   
-   Frame BANS E 0 "Banshee5"   
-   Frame BANS F 0 "Banshee6"   
-   Frame BANS G 0 "Banshee7"   
-   Frame BANS H 0 "Banshee8"   
-   Frame BANS I 0 "Banshee9"   
-   Frame BANS J 0 "Banshee10"   
-   Frame BANS K 0 "Banshee11"   
-   Frame BANS L 0 "Banshee12"   
-   Frame BANS M 0 "Banshee13"   
-   Frame BANS N 0 "Banshee14"   
-   Frame BANS O 0 "Banshee15"   
-   Frame BANS P 0 "Banshee16"    
-   
+   Frame BANS A 0 "Banshee1"
+   Frame BANS B 0 "Banshee2"
+   Frame BANS C 0 "Banshee3"
+   Frame BANS D 0 "Banshee4"
+   Frame BANS E 0 "Banshee5"
+   Frame BANS F 0 "Banshee6"
+   Frame BANS G 0 "Banshee7"
+   Frame BANS H 0 "Banshee8"
+   Frame BANS I 0 "Banshee9"
+   Frame BANS J 0 "Banshee10"
+   Frame BANS K 0 "Banshee11"
+   Frame BANS L 0 "Banshee12"
+   Frame BANS M 0 "Banshee13"
+   Frame BANS N 0 "Banshee14"
+   Frame BANS O 0 "Banshee15"
+   Frame BANS P 0 "Banshee16"
 }
 
 Model HereticChasmBansheeAlpha
 {
-   Path "models/monsters"   	
-   Model 0 "Banshee.md2"   
-   Skin 0 "Banshee.png"    
+   Path "models/Monsters/Banshee"
+   Model 0 "Banshee.md2"
+   Skin 0 "Banshee.png"
    Scale 3 3 3
    OFFSET 0 0 40
    AngleOffset 0
-   PitchOffset 0	
+   PitchOffset 0
    RollOffset 0
 
 //IdleA
-   Frame BANS A 0 "Banshee1" 
-   Frame BANS B 0 "Banshee2"   
-   Frame BANS C 0 "Banshee3"   
-   Frame BANS D 0 "Banshee4"   
-   Frame BANS E 0 "Banshee5"   
-   Frame BANS F 0 "Banshee6"   
-   Frame BANS G 0 "Banshee7"   
-   Frame BANS H 0 "Banshee8"   
-   Frame BANS I 0 "Banshee9"   
-   Frame BANS J 0 "Banshee10"   
-   Frame BANS K 0 "Banshee11"   
-   Frame BANS L 0 "Banshee12"   
-   Frame BANS M 0 "Banshee13"   
-   Frame BANS N 0 "Banshee14"   
-   Frame BANS O 0 "Banshee15"   
-   Frame BANS P 0 "Banshee16"    
-   
+   Frame BANS A 0 "Banshee1"
+   Frame BANS B 0 "Banshee2"
+   Frame BANS C 0 "Banshee3"
+   Frame BANS D 0 "Banshee4"
+   Frame BANS E 0 "Banshee5"
+   Frame BANS F 0 "Banshee6"
+   Frame BANS G 0 "Banshee7"
+   Frame BANS H 0 "Banshee8"
+   Frame BANS I 0 "Banshee9"
+   Frame BANS J 0 "Banshee10"
+   Frame BANS K 0 "Banshee11"
+   Frame BANS L 0 "Banshee12"
+   Frame BANS M 0 "Banshee13"
+   Frame BANS N 0 "Banshee14"
+   Frame BANS O 0 "Banshee15"
+   Frame BANS P 0 "Banshee16"
 }
 
 

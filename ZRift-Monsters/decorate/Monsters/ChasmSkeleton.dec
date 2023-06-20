@@ -1,7 +1,7 @@
 Actor SkellyBoisSpawner : RandomSpawner replaces BaronOfHell
 {
-dropitem "ChasmSkeletonGuy",255, 10
-dropitem "ChasmSkeletonGuy2",255, 8
+	dropitem "ChasmSkeleton",255, 10
+	dropitem "ChasmSkeleton2",255, 8
 }
 
 Actor ChasmSkeleton Replaces Revenant
@@ -26,141 +26,136 @@ Actor ChasmSkeleton Replaces Revenant
     Obituary "%o was killed by a Skeletal Knight."
     BloodType "ArmorBlood"
 	Tag "Deathknight"
-  States
-{
-
-  Spawn:
-        TNT1 A 0 NoDelay
-        TNT1 A 0 A_Jump (255, "SpawnNormal")
-        loop
-  SpawnNormal:
-        TNT1 A 0 A_Jump(10, "Idle1")
-    	SKID ABCDEFGHIJKLMNOPQR 4 A_Look
-     	loop
-  	Idle1:
-	    TNT1 A 0 A_PlaySound("Skeleton/Idle",3)
+	
+	States
+	{
+	Spawn:
+		SKID A 0 NoDelay
+		SKID A 0 A_Jump (255, "SpawnNormal")
+		loop
+	SpawnNormal:
+		SKID A 0 A_Jump(10, "Idle1")
+		SKID ABCDEFGHIJKLMNOPQR 4 A_Look
+		loop
+	Idle1:
+		TNT1 A 0 A_PlaySound("Skeleton/Idle",3)
 		SKID R 1 A_Look
 		Goto SpawnNormal
-  See:
+	See:
 		SKSE A 1 A_FaceTarget 
-        SKSE ABCDEFGHIJKLMNOPQRSTUVW 2
-    	Goto Walking
-  Walking:
-    	SKWA ABCDEFG 3 A_Chase
+		SKSE ABCDEFGHIJKLMNOPQRSTUVW 2
+		Goto Walking
+	Walking:
+		SKWA ABCDEFG 3 A_Chase
 		TNT1 A 0 A_PlaySound("Skeleton/Walk", 4)
 		SKWA HIJKLMN 3 A_Chase
 		TNT1 A 0 A_PlaySound("Skeleton/Walk", 4)
 		TNT1 A 0 A_Jump (20, "Scream")
-    	loop
-  Scream:
-        SKSE A 1 A_FaceTarget 
+		loop
+	Scream:
+		SKSE A 1 A_FaceTarget 
 		TNT1 A 0 A_PlaySound("Skeleton/Active", 3, 0.50)
-        SKSE ABCDEFGHIJKLMNOPQRSTUVW 2
-        goto Walking		
-  Missile:
-        SKAC A 1 A_FaceTarget 
+		SKSE ABCDEFGHIJKLMNOPQRSTUVW 2
+		goto Walking		
+	Missile:
+		SKAC A 1 A_FaceTarget 
 		TNT1 A 0 A_PlaySound("Skeleton/Ranged1", 1)
-	    SKAC BCDEFGH 2
+		SKAC BCDEFGH 2
 		TNT1 A 0 A_PlaySound("Skeleton/Ranged2", 1)
 		DKNT G 0 A_CustomMissile("SkeletonBall",36,0,0)
 		DKNT G 0 A_CustomMissile("SkeletonBall",36,0,9)
 		DKNT G 0 A_CustomMissile("SkeletonBall",36,0,-9)
-        SKAC IJKLMNOPQR 2
-   	    goto Walking
-  Melee:
-        TNT1 A 0 A_Jump (100, "MeleeAltC")
-        TNT1 A 0 A_Jump (75, "MeleeAltB")
-        TNT1 A 0 A_Jump (150, "MeleeAltA")
-        loop
-  MeleeAltA:
-        SKAA ABCDE 1 A_FaceTarget 
+		SKAC IJKLMNOPQR 2
+		goto Walking
+	Melee:
+		TNT1 A 0 A_Jump (100, "MeleeAltC")
+		TNT1 A 0 A_Jump (75, "MeleeAltB")
+		TNT1 A 0 A_Jump (150, "MeleeAltA")
+		loop
+	MeleeAltA:
+		SKAA ABCDE 1 A_FaceTarget 
 		TNT1 A 0 A_PlaySound("Skeleton/Melee", 1)
-        SKAA FGHIJ 2
-        SKAA K 2 A_CustomBulletAttack(1, 1, 1, random(10,20), "SkeletonStabPuff", 50, CBAF_AIMFACING)
-        SKAA LMNOPQ 2
-   	    goto Walking
-  MeleeAltC:
-        SKAB ABCDE 1 A_FaceTarget 
+		SKAA FGHIJ 2
+		SKAA K 2 A_CustomBulletAttack(1, 1, 1, random(10,20), "SkeletonStabPuff", 50, CBAF_AIMFACING)
+		SKAA LMNOPQ 2
+		goto Walking
+	MeleeAltC:
+		SKAB ABCDE 1 A_FaceTarget 
 		TNT1 A 0 A_PlaySound("Skeleton/Melee", 1)
-	    SKAB EFG 2
-        SKAB H 2 A_CustomBulletAttack(1, 1, 1, random(10,20), "SkeletonStabPuff", 50, CBAF_AIMFACING)
-        SKAB IJKLMNOPQR 2
-   	    goto Walking
-  MeleeAltC:
-        SKAC ABCDE 1 A_FaceTarget 
+		SKAB EFG 2
+		SKAB H 2 A_CustomBulletAttack(1, 1, 1, random(10,20), "SkeletonStabPuff", 50, CBAF_AIMFACING)
+		SKAB IJKLMNOPQR 2
+		goto Walking
+	MeleeAltC:
+		SKAC ABCDE 1 A_FaceTarget 
 		TNT1 A 0 A_PlaySound("Skeleton/Melee", 1)
-        SKAC FGH 2
-        SKAC I 2 A_CustomBulletAttack(1, 1, 1, random(10,20), "SkeletonStabPuff", 50, CBAF_AIMFACING)
-        SKAC JKLMNOPQR 2
-   	    goto Walking
-  Pain:
-        TNT1 A 0 A_Jump (100, "PainA")
-        TNT1 A 0 A_Jump (50, "PainB")
-        TNT1 A 0 A_Jump (100, "PainC")
-        loop
-  PainA:
-        TNT1 A 0 A_Pain
-        SKPA ABCDEFGHIJKL 2
-        Goto Walking
-  PainB:
-        TNT1 A 0 A_Pain
-        SKPB ABCDEFGHIJKL 2
-        Goto Walking
-  PainC:
-        TNT1 A 0 A_Pain
-        SKPC ABCDEFGHIJKL 2
-        Goto Walking
-  Death:
-        SKDE A 1 A_Scream 
+		SKAC FGH 2
+		SKAC I 2 A_CustomBulletAttack(1, 1, 1, random(10,20), "SkeletonStabPuff", 50, CBAF_AIMFACING)
+		SKAC JKLMNOPQR 2
+		goto Walking
+	Pain:
+		TNT1 A 0 A_Jump (100, "PainA")
+		TNT1 A 0 A_Jump (50, "PainB")
+		TNT1 A 0 A_Jump (100, "PainC")
+		loop
+	PainA:
+		TNT1 A 0 A_Pain
+		SKPA ABCDEFGHIJKL 2
+		Goto Walking
+	PainB:
+		TNT1 A 0 A_Pain
+		SKPB ABCDEFGHIJKL 2
+		Goto Walking
+	PainC:
+		TNT1 A 0 A_Pain
+		SKPC ABCDEFGHIJKL 2
+		Goto Walking
+	Death:
+		SKDE A 1 A_Scream 
 		TNT1 A 0 A_PlaySound("Skeleton/Break", 4)
-        SKDE BC 2 A_FaceTarget
-        SKDE DEFGHIJKL 2 
+		SKDE BC 2 A_FaceTarget
+		SKDE DEFGHIJKL 2 
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_PlaySound("Skeleton/Fall", 4)
 		SKDE MNOPQRSTUV 2
 		TNT1 A 0 A_BossDeath
-        SKDE W -1
-        Stop
-   Death.Explosive:
-        TNT1 A 0
+		SKDE W -1
+		Stop
+	Death.Explosive:
+		TNT1 A 0
 		Goto XDeath
-   XDeath:
-        TNT1 A 0 A_BossDeath
-        TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(20,28), random(15,-15), random (0, 360), 2, random (0, 160))
-        TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(20,28), random(-15,15), random (0, 360), 2, random (0, 160))
-        TNT1 A 0 A_PlaySound("Skeleton/Break", 4)
+	XDeath:
+		TNT1 A 0 A_BossDeath
+		TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(20,28), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(20,28), random(-15,15), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound("Skeleton/Break", 4)
 		TNT1 AAAAAAAA 0 A_CustomMissile("SkeletonBone", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
 		TNT1 AA 0 A_CustomMissile("SkeletonShard", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
 		TNT1 A 0 A_CustomMissile("SkeletonHead", random(40,55), random(20,-20), random (0, 360), 2, random (0, 160))
-	    TNT1 A 0 A_CustomMissile("SkeletonArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
-	    TNT1 A 0 A_CustomMissile("SkeletonArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("SkeletonArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("SkeletonArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
 		Stop
-  }
+	}
 }
-
-
 
 Actor ChasmSkeleton2 : ChasmSkeleton
 {
-  Obituary "%o was killed by a Skeletal Crimson Deathknight."
-  DropItem "LaserBoltAmmo", 100
-  Tag "Crimson Deathknight"
-  Health 300
-  States
-{	
-  Missile:
+	Obituary "%o was killed by a Skeletal Crimson Deathknight."
+	DropItem "Cell", 100
+	Tag "Crimson Deathknight"
+	Health 300
+	States
+	{
+	Missile:
 		SKAA ABCDE 1 A_FaceTarget 
 		TNT1 A 0 A_PlaySound("Skeleton/Ranged1", 1)
-        SKAA FGHIJK 2
-        TNT1 A 0 A_PlaySound("Skeleton/Ranged3", 1)
+		SKAA FGHIJK 2
+		TNT1 A 0 A_PlaySound("Skeleton/Ranged3", 1)
 		DKNT G 0 A_CustomMissile("SkeletonLance",36,0,0)
-        SKAA LMNOPQ 2
-   	    goto Walking
-  }
+		SKAA LMNOPQ 2
+		goto Walking
+	}
 }
-
-
-
 
 actor SkeletonStabPuff
 {
@@ -204,8 +199,8 @@ ACTOR SkeletonBall
     Loop
   Death:
 	TNT1 A 0 A_Scream
-	TNT1 AAA 0 A_CustomMissile("LaserExpFX", random(1,8), random(5,-5), random (0, 360), 2, random (0, 160))
-	TNT1 AAAA 0 A_CustomMissile("ExplosionFlare", random(1,8), random(10,-10), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("StratosLaserExpFX", random(1,8), random(5,-5), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(10,-10), random (0, 360), 2, random (0, 160))
 	TNT1 A 0 A_CustomMissile("EnemyExplosionSparkSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
     TNT1 AA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
 	Stop
@@ -255,7 +250,7 @@ ACTOR SkeletonLance
   Death:
 	TNT1 A 0 A_Scream
 	TNT1 AAAAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(35,45), random(1,4), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
-	TNT1 AAAAA 0 A_CustomMissile("ExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
+	TNT1 AAAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
 	TNT1 AAAA 0 A_CustomMissile("HammerExplosionFX", random(1,3), random(10,-10), random (0, 360), 2, random (0, 160))
 	TNT1 AAAA 0 A_CustomMissile("HammerExplosionFX", random(3,6), random(18,-18), random (0, 360), 2, random (0, 160))
 	TNT1 AAAA 0 A_CustomMissile("HammerExplosionFX", random(6,9), random(10,-10), random (0, 360), 2, random (0, 160))
@@ -287,17 +282,17 @@ ACTOR SkeletonBone
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GI01 A 0 A_JumpIf(waterlevel > 1, "Splash")
         GI01 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    GI01 A 0 A_Scream
+	    GI01 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   GI01 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        GI01 AAAAA 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       GI01 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        GI01 A 5 A_SetTranslucent(0.8)
@@ -307,7 +302,7 @@ ACTOR SkeletonBone
        GI01 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        GI01 A 0
         Stop
     }
 }
@@ -332,17 +327,17 @@ ACTOR SkeletonShard
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GI01 B 0 A_JumpIf(waterlevel > 1, "Splash")
         GI01 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    GI01 B 0 A_Scream
+	    GI01 B 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   GI01 B 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        GI01 BBBBB 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       GI01 B 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        GI01 B 5 A_SetTranslucent(0.8)
@@ -352,7 +347,7 @@ ACTOR SkeletonShard
        GI01 B 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        GI01 B 0
         Stop
     }
 }
@@ -377,17 +372,17 @@ ACTOR SkeletonArm1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI12 A 0 A_JumpIf(waterlevel > 1, "Splash")
         LI12 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI12 A 0 A_Scream
+	    LI12 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI12 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI12 AAAAA 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI12 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI12 A 5 A_SetTranslucent(0.8)
@@ -397,7 +392,7 @@ ACTOR SkeletonArm1
        LI12 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI12 A 0
         Stop
     }
 }
@@ -422,17 +417,17 @@ ACTOR SkeletonArm2
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI12 B 0 A_JumpIf(waterlevel > 1, "Splash")
         LI12 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI12 B 0 A_Scream
+	    LI12 B 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI12 B 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI12 BBBBB 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI12 B 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI12 B 5 A_SetTranslucent(0.8)
@@ -442,7 +437,7 @@ ACTOR SkeletonArm2
        LI12 B 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI12 B 0
         Stop
     }
 }
@@ -467,17 +462,17 @@ ACTOR SkeletonHead
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI12 C 0 A_JumpIf(waterlevel > 1, "Splash")
         LI12 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    LI12 C 0 A_Scream
+	    LI12 C 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   LI12 C 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        LI12 CCCCC 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       LI12 C 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        LI12 C 5 A_SetTranslucent(0.8)
@@ -487,7 +482,7 @@ ACTOR SkeletonHead
        LI12 C 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        LI12 C 0
         Stop
     }
 }

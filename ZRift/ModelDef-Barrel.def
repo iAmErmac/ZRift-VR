@@ -1,6 +1,6 @@
 Model ChasmBarrel
 {
-   Path "models/monsters"   	
+   Path "models/items"   	
    Model 0 "Barrel.md2"   
    Skin 0 "Barrel.png"    
    Scale 0.26 0.26 0.26  

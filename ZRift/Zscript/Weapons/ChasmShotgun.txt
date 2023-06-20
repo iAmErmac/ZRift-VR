@@ -105,12 +105,12 @@ Class ChasmShotgun : Weapon Replaces Shotgun
 	Fire:
 		SHTX A 0 BRIGHT A_PlaySound("ChasmShotgun/Fire",1, 1.0);
 		TNT1 A 0 A_FireBullets(7.6, 1.1, 12, random(5,6), "ChasmBulletPuff");
-		SHTX AAAAA 0 BRIGHT A_FireCustomMissile("ChasmTracer",frandom(-7.6,7.1),0,6,2,0,frandom(-1.1,0.9));
+		SHTX AAAAA 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-7.6,7.1),0,6,2,0,frandom(-1.1,0.9));
 		SHTX B 1 BRIGHT;
-		TNT1 AA 0 A_FireCustomMissile("BarrelSmokeSpawnShotguns",frandom(-1.6,1.1),0,5,2,0,frandom(-1.1,0.9));
-		SHTX AAAAA 0 BRIGHT A_FireCustomMissile("ChasmTracer",frandom(7.6,-7.1),0,6,2,0,frandom(1.1,-0.9));
+		TNT1 AA 0 A_FireProjectile("BarrelSmokeSpawnShotguns",frandom(-1.6,1.1),0,5,2,0,frandom(-1.1,0.9));
+		SHTX AAAAA 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(7.6,-7.1),0,6,2,0,frandom(1.1,-0.9));
 		SHTX C 1 BRIGHT;
-		TNT1 AA 0 A_FireCustomMissile("BarrelSmokeSpawnShotguns",frandom(1.6,-1.1),0,5,2,0,frandom(1.1,-0.9));
+		TNT1 AA 0 A_FireProjectile("BarrelSmokeSpawnShotguns",frandom(1.6,-1.1),0,5,2,0,frandom(1.1,-0.9));
 		TNT1 A 0 A_SetPitch(pitch-3.00);
 		TNT1 A 0 A_SetAngle(angle-0.1);
 		SHTX D 1 A_Recoil(0.2);

@@ -22,14 +22,15 @@ Actor ChasmScorpy
 	BloodType "RedBlood", "RedBlood"
 	MaxTargetRange 256
 	Tag "Scorpion"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
+	    SCW1 A 0 NoDelay
         SCW1 AB 10 A_Look
         Loop
     See:
-	    TNT1 A 0 A_PlaySound("Scorpy/Walk", 4)
+	    SCW1 A 0 A_PlaySound("Scorpy/Walk", 4)
         SCW1 ABCD 2 A_Chase
 		TNT1 A 0 A_PlaySound("Scorpy/Walk", 4)
 		SCW1 EFGH 2 A_Chase
@@ -48,39 +49,39 @@ Actor ChasmScorpy
 		SCJ1 CDEFGHI 3
         SCA1 A 20 A_Stop
 		Goto Missile+9
-  Pain:
-    SCP1 A 2 A_Pain
-    SCP1 BCDEF 2 
-    Goto See
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  Death:
-    TNT1 A 0
-    SCD1 A 2 A_Scream
-    SCD1 B 2
-    SCD1 C 2 A_NoBlocking
-	SCD1 D 3
-    SCD1 EFGH 3
-    SCD1 H -1
-    Stop
-  XDeath:
-    TNT1 A 0
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-    TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
-   	TNT1 AA 0 A_CustomMissile("ScorpGibSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AA 0 A_CustomMissile("ScorpGibSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-   Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	SCW1 A 1 A_SetTranslucent(0.10, 0)
-	SCW1 AAAAAAAAAAAA 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		SCP1 A 2 A_Pain
+		SCP1 BCDEF 2 
+		Goto See
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	Death:
+		TNT1 A 0
+		SCD1 A 2 A_Scream
+		SCD1 B 2
+		SCD1 C 2 A_NoBlocking
+		SCD1 D 3
+		SCD1 EFGH 3
+		SCD1 H -1
+		Stop
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("ScorpGibSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile("ScorpGibSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		SCW1 A 1 A_SetTranslucent(0.10, 0)
+		SCW1 AAAAAAAAAAAA 2 A_FadeIn(0.1)
+		Goto See
     }
 }
 
@@ -111,17 +112,17 @@ ACTOR ScorpionGib1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    GIB4 A 0 A_JumpIf(waterlevel > 1, "Splash")
         GIB4 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
-	    TNT1 A 0 A_Scream
-	    TNT1 A 0
+	    GIB4 A 0 A_Scream
+	    GIB4 A 0
 		Goto Splat
     Splat:
-	   TNT1 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
+	   GIB4 A 0 A_ChangeFlag("ROLLSPRITE", FALSE)
        GIB4 AAAAA 5
-       TNT1 A 0 A_Jump(28, "Vanish")
+       GIB4 A 0 A_Jump(28, "Vanish")
 		Loop
    Vanish:
        GIB4 A 5 A_SetTranslucent(0.8)
@@ -131,7 +132,7 @@ ACTOR ScorpionGib1
        GIB4 A 5 A_SetTranslucent(0.2)
        Stop	
      Splash:
-        TNT1 A 0
+        GIB4 A 0
         Stop
     }
 }

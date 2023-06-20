@@ -21,20 +21,21 @@ Actor ChasmPunisher2
 	BloodColor "Red"
 	BloodType "RedBlood", "RedBlood"
 	Tag "Punisher2"
+	
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_Jump(10, "Idle1")
-		TNT1 A 0 A_Jump(10, "Idle2")
+	    FGI1 A 0 NoDelay
+		FGI1 A 0 A_Jump(10, "Idle1")
+		FGI1 A 0 A_Jump(10, "Idle2")
         FGI1 ABCDEFGHIJKLMNOPQR 2 A_Look
         Loop
 	Idle1:
-	    TNT1 A 0 A_PlaySound("FatGuy/Idle",3)
+	    FGI2 A 0 A_PlaySound("FatGuy/Idle",3)
 	    FGI2 ABCDEFGHIJKLMNOPQRSTUVWXY 2 A_Look
 		Goto Spawn
 	Idle2:
-	    TNT1 A 0 A_PlaySound("FatGuy/Idle",3)
+	    FGI3 A 0 A_PlaySound("FatGuy/Idle",3)
 	    FGI3 ABCDEFGHIJKLMNOPQRSTUVWX 2 A_Look
 		Goto Spawn
     See:
@@ -87,60 +88,60 @@ Actor ChasmPunisher2
 		FGA4 K 4
 		FGA4 LMNOPQRS 2 A_FaceTarget
 		Goto See
-  Pain:
-    TNT1 A 0 A_Jump(50, "Pain1")
-	TNT1 A 0 A_Jump(50, "Pain2")
-    FGP1 A 2 A_Pain
-    FGP1 BCDE 2
-    Goto See
-  Pain1:
-	FGP2 A 2 A_Pain
-    FGP2 BCDEFGHIJKLMNOPQRSTU 2
-    Goto See
-  Pain2:
-	FGP3 A 2 A_Pain
-    FGP3 BCDEFGHIJKLMNOPQ 2
-    Goto See
-  Death:
-    TNT1 A 0 A_Jump(90, "Death2")
-    FGD1 A 2
-    FGD1 B 2 A_Scream
-    FGD1 C 2 A_NoBlocking
-    FGD1 DEFGHIJ 2
-	TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
-	FGD1 KLMNOPQRSTUVWX 2
-    FGD1 X -1
-    Stop
-  Death2:
-    FGD2 A 2
-    FGD2 B 2 A_Scream
-    FGD2 C 2 A_NoBlocking
-    FGD2 DEFGHI 2
-	TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
-	FGD2 JKLMNOPQRSTUVWX 2
-    FGD2 X -1
-    Stop
-  Death.Explosive:
-    TNT1 A 0
-	Goto XDeath
-  XDeath:
-    TNT1 A 0
-	TNT1 A 0 A_NoBlocking
-    TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
-	TNT1 A 0 A_CustomMissile("FatGuyArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("FatGuyArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
-	TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
-	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
-    Stop
-  Raise:
-    TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
-	FGI1 A 1 A_SetTranslucent(0.10, 0)
-	FGI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
-  Goto See
+	Pain:
+		TNT1 A 0 A_Jump(50, "Pain1")
+		TNT1 A 0 A_Jump(50, "Pain2")
+		FGP1 A 2 A_Pain
+		FGP1 BCDE 2
+		Goto See
+	Pain1:
+		FGP2 A 2 A_Pain
+		FGP2 BCDEFGHIJKLMNOPQRSTU 2
+		Goto See
+	Pain2:
+		FGP3 A 2 A_Pain
+		FGP3 BCDEFGHIJKLMNOPQ 2
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(90, "Death2")
+		FGD1 A 2
+		FGD1 B 2 A_Scream
+		FGD1 C 2 A_NoBlocking
+		FGD1 DEFGHIJ 2
+		TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
+		FGD1 KLMNOPQRSTUVWX 2
+		FGD1 X -1
+		Stop
+	Death2:
+		FGD2 A 2
+		FGD2 B 2 A_Scream
+		FGD2 C 2 A_NoBlocking
+		FGD2 DEFGHI 2
+		TNT1 A 0 A_PlaySound("LionGuy/Fall", 4)
+		FGD2 JKLMNOPQRSTUVWX 2
+		FGD2 X -1
+		Stop
+	Death.Explosive:
+		TNT1 A 0
+		Goto XDeath
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("Flesh/Gib", 4)
+		TNT1 A 0 A_CustomMissile("FatGuyArm1", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("FatGuyArm2", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,-20), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAA 0 A_CustomMissile("GoreSpawner", random(10,25), random(0,20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, -20), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(10,20), random(0, 20), random (0, 360), 2, random (0, 160))
+		Stop
+	Raise:
+		TNT1 A 0 A_CustomMissile("PhantomRezFX", 1, 5, random (0, 180), 2, random (0, 90))
+		FGI1 A 1 A_SetTranslucent(0.10, 0)
+		FGI1 ABCDEFGHJIKL 2 A_FadeIn(0.1)
+		Goto See
     }
 }
 

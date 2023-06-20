@@ -17,49 +17,32 @@ ACTOR ChasmWorm
   PainSound "IMP1l/pain"
   DeathSound "IMP1l/death"
   ActiveSound "IMP1l/active"
-
   Obituary "$OB_IMP1L" // "%o was spooked by a lost soul."
+  
   States
   {
   Spawn:
-    TNT1 A 0 NoDelay
+    FR10 A 0 NoDelay
     FR10 ABCDEFGHIJKLMNOPQ 2
 	Goto Idle 
-
-    Idle:
+  Idle:
     FR_4 JKLMNOPQRS 4 A_Look
     FR_8 ABCDEF 4 A_Look
     Loop
-
   See:
     TNT1 A 0 A_Jump (64, "See2" )
     Goto See1
-
   See1:
     FR_0 ABCDEFGHIJKLMN 1 A_FaceTarget
     FR_0 O 1 Bright A_CustomBulletAttack(2, 2, 1, 5)
     FR_0 PQRSTUVWXY 1 A_FaceTarget
     Goto See 
-
   See2:
     FR_3 ABCDEFGHIJKLMNOPQ 2 A_FaceTarget
     FR_3 R 2 Bright A_CustomBulletAttack(2, 2, 1, 5) 
     FR_3 STUVWXYZ 2 A_FaceTarget
     FR_4 ABCDEFGHIJKLMNOPQRS 2 A_FaceTarget 
     Goto See
-
-//  Missile:
-//    IMP2 ABCDEFGHIJKLMNOPQ 1 Bright A_FaceTarget
-//    IMP2 R 2 Bright A_TroopAttack
-//    IMP2 STU 2 Bright
-//    Goto See
-
-//  Melee:
-//    IMP3 ABCDEFGHIJKLMNOPQR 1 Bright A_FaceTarget
-//    IMP3 STUVWXY 2 Bright A_SkullAttack
-//    IMP4 ABCDEFGHIJKLM 2 Bright
-//    Goto See
-
   Pain:
     FR11 ABCDEFGHIJKLMNOPQRSTU 3 Bright
     TNT1 A 0 A_NoBlocking
@@ -67,14 +50,24 @@ ACTOR ChasmWorm
     FR12 ABCD 15 Bright A_Pain
     TNT1 A 0 A_SetSolid
     Goto See
-
-//  Death:
-//    IMP1 A 2 Bright
-//    IMP1 B 2 Bright A_Scream
-//    IMP1 C 2 Bright
-//    IMP1 D 2 Bright A_NoBlocking
-//    IMP1 EFGHIJKLM 2
-//    IMP1 N -1
-//    Stop
+  Death:
+    FR11 ABCDEFGHIJKLMNOPQRSTU 3 Bright
+    TNT1 A 0 A_Scream
+    TNT1 A 0 A_NoBlocking
+    FR11 VWXYZ 4 Bright A_Pain
+    FR12 ABC 15 Bright A_Pain
+    FR12 D -1
+    Stop
+  XDeath:
+	TNT1 A 0
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_PlaySound("Flesh/Gib", 7)
+	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(45,60), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_CustomMissile("GoreBloodSpawner", random(45,60), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(40,55), random(0,-20), random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile("GoreSpawner", random(40,55), random(0,20), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(40,55), random(0, -20), random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile("BloodGiblet", random(40,55), random(0, 20), random (0, 360), 2, random (0, 160))
+	Stop
   }
 }

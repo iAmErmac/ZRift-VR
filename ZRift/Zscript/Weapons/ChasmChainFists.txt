@@ -130,19 +130,19 @@ Class ChasmSawPuff : Actor
 	{
 	Spawn:
 		TNT1 A 0;
-		TNT1 A 0 A_CustomMissile("BulletRic", 4, 0, random (0, 360), 2, random (0, 160));
-		TNT1 A 0 A_CustomMissile("BulletSmoke", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("BulletRic", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("BulletSmoke", 4, 0, random (0, 360), 2, random (0, 160));
 		TNT1 A 0 BRIGHT A_SpawnDebris("BulletSparks");
 		Stop;
 	Crash:
-		TNT1 A 0 A_CustomMissile("BulletRic", 4, 0, random (0, 360), 2, random (0, 160));
-		TNT1 A 0 A_CustomMissile("BulletSmoke", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("BulletRic", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 A 0 A_SpawnProjectile("BulletSmoke", 4, 0, random (0, 360), 2, random (0, 160));
 		TNT1 A 0 BRIGHT A_SpawnDebris("BulletSparks");
 		Stop;
 	Melee:
 		TNT1 A 0;
 		TNT1 A 0 A_PlaySound("ChainFist/Hit");
-		TNT1 AA 0 A_CustomMissile("BulletSmoke", 4, 0, random (0, 360), 2, random (0, 160));
+		TNT1 AA 0 A_SpawnProjectile("BulletSmoke", 4, 0, random (0, 360), 2, random (0, 160));
 		Stop;
 	}
 }

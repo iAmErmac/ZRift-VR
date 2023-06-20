@@ -12,7 +12,7 @@ Actor ChasmTurret Replaces StealthChaingunGuy
     +FLOORCLIP
 	+DONTHARMSPECIES
 	+NOBLOODDECALS
-	+NOBLOOD 
+	+NOBLOOD
     SeeSound "Turret/See"
     PainSound "Turret/Pain"
     DeathSound "Turret/Death"
@@ -21,22 +21,23 @@ Actor ChasmTurret Replaces StealthChaingunGuy
 	BloodType "ArmorBlood"
 	Species "Mong"
 	Tag "Mong Turret"
+	
     States
     {
-	 Spawn:
-	    TNT1 A 0 NoDelay
-		TNT1 A 0 A_SpawnItemEx("ChasmTurretBase")
+	Spawn:
+		TUTX A 0 NoDelay
+		TUTX A 0 A_SpawnItemEx("ChasmTurretBase")
 		TUTX A 1
-		Looking:
-	    TNT1 A 0 A_Jump(78, "LookAround")
-        TUTX ABCDEFG 2 A_Look
-        Loop
+	Looking:
+		TNT1 A 0 A_Jump(78, "LookAround")
+		TUTX ABCDEFG 2 A_Look
+		Loop
 	LookAround:
-	    TUTX ABCDEFGHIJKLMNOPQRSTUVWX 2 A_Look
+		TUTX ABCDEFGHIJKLMNOPQRSTUVWX 2 A_Look
 		Goto Looking
-    See:
-        TUTX ABCDEFG 2 A_Chase(0, "Missile", CHF_NODIRECTIONTURN | CHF_DONTMOVE | CHF_NORANDOMTURN | CHF_NOPOSTATTACKTURN)
-        Loop
+		See:
+		TUTX ABCDEFG 2 A_Chase(0, "Missile", CHF_NODIRECTIONTURN | CHF_DONTMOVE | CHF_NORANDOMTURN | CHF_NOPOSTATTACKTURN)
+		Loop
 	Missile:
 		TUTY AAAAAA 5 A_FaceTarget
 		TNT1 A 0 A_PlaySound("Turret/Fire", 1)
@@ -55,30 +56,30 @@ Actor ChasmTurret Replaces StealthChaingunGuy
 		TUTY B 2 BRIGHT
 		TUTY CDEFGH 2 A_FaceTarget
 		Goto See
-  Pain:
-    TUTZ A 2 A_Pain
-    TUTZ BCDEF 2
-    Goto See
-  Death:
-    TNT1 A 0
-    TNT1 A 0 Radius_Quake(2, 4, 0, 10, 0)
-    TNT1 AAAAAAAAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
-    TNT1 AAAAAAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
-    TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFX", random(1,40), random(15,-15), random (0, 360), 2, random (0, 160))
-    TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFX", random(1,40), random(15,-15), random (0, 360), 2, random (0, 160))
-    TNT1 A 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
-    TNT1 AAAAAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160))
-    TNT1 AAAAAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160))
-    TNT1 AAA 0 A_CustomMissile("EnemyBigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160))
-    TNT1 AAA 0 A_CustomMissile("EnemyBigExplosionSmokeSpawner", random(1,12), random(1,-1), random (0, 360), 2, random (0, 160))
-	TNT1 A 0 A_Explode
-	TUTW A 2 A_Scream
-    TUTW B 2
-    TUTW C 2 A_NoBlocking
-    TUTW DEFG 2
-	TUTW HIJ 2
-    TUTW J -1
-    Stop
+	Pain:
+		TUTZ A 2 A_Pain
+		TUTZ BCDEF 2
+		Goto See
+	Death:
+		TNT1 A 0
+		TNT1 A 0 Radius_Quake(2, 4, 0, 10, 0)
+		TNT1 AAAAAAAAAA 0 A_CustomMissile("EnemyExplosionFlare", random(1,8), random(18,-18), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAAAAAA 0 A_SpawnParticle ("Orange", SPF_FULLBRIGHT | SPF_RELATIVE, random(30,60), random(2,5), frandom(0,360), 0,0,0, frandom(0.2,12.0),frandom(-0.2,0.2),frandom(-6.0,6.0), 0,0,-0.1, 0.98, -1)
+		TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFX", random(1,40), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile("EnemyExplosionFX", random(1,40), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,8), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,11), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAAAAA 0 A_CustomMissile("EnemyExplosionSmokeSpawner", random(1,-11), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("EnemyBigExplosionSmokeSpawner", random(1,-12), random(15,-15), random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile("EnemyBigExplosionSmokeSpawner", random(1,12), random(1,-1), random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_Explode
+		TUTW A 2 A_Scream
+		TUTW B 2
+		TUTW C 2 A_NoBlocking
+		TUTW DEFG 2
+		TUTW HIJ 2
+		TUTW J -1
+		Stop
     }
 }
 
@@ -87,7 +88,7 @@ ACTOR ChasmTurretBase
   Radius 10
   Height 42
   Mass 10000
-Speed 1
+  Speed 1
   -SOLID
   -SHOOTABLE
   +NOBLOOD

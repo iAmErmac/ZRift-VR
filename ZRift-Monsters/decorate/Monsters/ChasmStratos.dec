@@ -1,8 +1,8 @@
 Actor MongGuysSpawner : RandomSpawner replaces ShotgunGuy
 {
-dropitem "ChasmStratos",255, 5
-dropitem "ShotgunGrunt",255, 10
-dropitem "ChasmTurret", 255, 1
+	dropitem "ChasmStratos",255, 5
+	dropitem "ShotgunGrunt",255, 10
+	dropitem "ChasmTurret", 255, 1
 }
 
 Actor ChasmStratos
@@ -21,8 +21,8 @@ Actor ChasmStratos
 	+NOGRAVITY
 	+DROPOFF
 	+SPAWNFLOAT
-	Dropitem "LaserBoltAmmo", 50
-	DropItem ChasmShotgun
+	Dropitem "Cell", 50
+	DropItem "Shotgun"
 	Dropitem "SupplyPackDecider"
     SeeSound "MongB/See"
     PainSound "MongB/Pain"
@@ -36,8 +36,8 @@ Actor ChasmStratos
     States
     {
     Spawn:
-	    TNT1 A 0 NoDelay
-	    TNT1 A 0 A_Jump(10, "Loopty")
+	    MSI1 A 0 NoDelay
+	    MSI1 A 0 A_Jump(10, "Loopty")
         MSI1 ABCDEFGHIJKLMNOP 2 A_Look
         Loop
 	Loopty:
@@ -220,7 +220,7 @@ ACTOR StratosLeg1
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI15 A 0 A_JumpIf(waterlevel > 1, "Splash")
         LI15 A 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
@@ -265,7 +265,7 @@ ACTOR StratosLeg2
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI15 B 0 A_JumpIf(waterlevel > 1, "Splash")
         LI15 B 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
@@ -310,7 +310,7 @@ ACTOR StratosHead
     States
     {
     Spawn:
-	    TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+	    LI15 C 0 A_JumpIf(waterlevel > 1, "Splash")
         LI15 C 3 {A_SpawnItemEx("GoreTrail",0,0,0,0,0,0,0,2);A_SetRoll(roll+random(500.0,5000.0), SPF_INTERPOLATE);}
         Loop
 	Death:
