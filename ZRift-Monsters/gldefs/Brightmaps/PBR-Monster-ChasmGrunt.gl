@@ -1,0 +1,7 @@
+//////////////////////////
+//Chasm Monster Grunt Brightmap
+////////////////////////// 
+
+material texture "models/monsters/MongGrunt.png" {
+	brightmap "materials/monsters/MongGrunt_brightmap.png"        
+}

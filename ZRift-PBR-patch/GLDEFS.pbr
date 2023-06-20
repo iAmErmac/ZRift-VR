@@ -1,6 +1,5 @@
 //weapons
 
-#Include gldefs/PBR-Weapon-Fists.gl
 #Include gldefs/PBR-Weapon-Chainfist.gl
 #Include gldefs/PBR-Weapon-DoomChainfist.gl
 #Include gldefs/PBR-Weapon-Rifle.gl
@@ -13,13 +12,6 @@
 #Include gldefs/PBR-Weapon-Destroyer.gl
 #Include gldefs/PBR-Weapon-Mine.gl
 
-//items
-
-#Include gldefs/PBR-Items.gl
-
 //monsters
 
 #Include gldefs/PBR-Monster-ChasmGrunt.gl
-#Include gldefs/PBR-Monster-ChasmLieut.gl
-#Include gldefs/PBR-Monster-ChasmStratos.gl
-#Include gldefs/PBR-Monsters-Others.gl

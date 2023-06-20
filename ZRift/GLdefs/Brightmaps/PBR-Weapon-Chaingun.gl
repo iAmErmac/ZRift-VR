@@ -1,0 +1,46 @@
+//////////////////////////
+//Chasm Chaingun Brightmap Firstperson
+
+material texture "models/weapons/VulcanIdle1.png" {
+	brightmap "materials/weapons/VulcanIdle1_brightmap.png"        
+}
+
+//////////////////////////
+//Chasm Chaingun Fire Brightmap Firstperson
+
+material texture "materials/weapon-animdefs/vulcanfire1.png" {
+	brightmap "materials/weapons/VulcanFire_brightmap.png"        
+}
+material texture "materials/weapon-animdefs/vulcanfire2.png" {
+	brightmap "materials/weapons/VulcanFire_brightmap.png"        
+}
+
+material texture "materials/weapon-animdefs/vulcanfire3.png" {
+	brightmap "materials/weapons/VulcanFire_brightmap.png"        
+}
+
+material texture "materials/weapon-animdefs/vulcanfire4.png" {
+	brightmap "materials/weapons/VulcanFire_brightmap.png"        
+}
+
+material texture "materials/weapon-animdefs/vulcanfire5.png" {
+	brightmap "materials/weapons/VulcanFire_brightmap.png"        
+}
+
+//////////////////////////
+// Weapon Pickup Light
+pulselight Pickuplight-Chaingun
+{
+    color 0.8 0.8 0.6
+    offset 0.0 5.0 0.0
+    size 25
+    secondarySize 15
+    interval 1
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmChaingun
+{
+	frame CHNXA  { light Pickuplight-Chaingun }
+    }

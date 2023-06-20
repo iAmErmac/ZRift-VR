@@ -1,9 +1,3 @@
-//////////////////////////
-//Chasm Rifle Brightmap
-
-material texture "models/weapons/Rifle/Rifle.png" {
-	brightmap "materials/weapons/RifleWeapon_brightmap.png"
-}
 
 //////////////////////////
 //Chasm Rifle PBR (specular workflow)

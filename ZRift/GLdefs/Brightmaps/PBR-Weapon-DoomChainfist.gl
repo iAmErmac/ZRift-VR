@@ -1,0 +1,31 @@
+//////////////////////////
+//Chasm Chainfist Brightmap Firstperson
+
+material texture "models/weapons/Doomchainfist/DoomChainfist.png" {
+	brightmap "models/weapons/Doomchainfist/DoomChainfist_brightmap.png"        
+}
+material texture "models/weapons/Doomchainfist/Chainfist_active.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
+}
+material texture "models/weapons/Doomchainfist/Chainfist_active1.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
+}
+
+
+//////////////////////////
+// Weapon Pickup Light
+pulselight Pickuplight-ChainfistDoom
+{
+    color 0.8 0.1 0.1
+    offset 0.0 5.0 0.0
+    size 25
+    secondarySize 15
+    interval 1
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmDoomChainFist
+{
+	frame CHFYA  { light Pickuplight-ChainfistDoom }
+    }

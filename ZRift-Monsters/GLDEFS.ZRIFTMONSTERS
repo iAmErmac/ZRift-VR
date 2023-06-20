@@ -3,3 +3,10 @@
 #Include gldefs/Monsters/ChasmLieut.gl
 #Include gldefs/Monsters/ChasmStratos.gl
 #Include gldefs/monsters/HexenMummyLord.gl
+
+//Monster Brightmaps
+
+#Include gldefs/Brightmaps/PBR-Monster-ChasmGrunt.gl
+#Include gldefs/Brightmaps/PBR-Monster-ChasmLieut.gl
+#Include gldefs/Brightmaps/PBR-Monster-ChasmStratos.gl
+#Include gldefs/Brightmaps/PBR-Monsters-Others.gl

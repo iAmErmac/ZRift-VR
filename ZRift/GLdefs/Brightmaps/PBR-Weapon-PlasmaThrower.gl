@@ -1,0 +1,35 @@
+//////////////////////////
+//Chasm Plasmathrower Brightmap Firstperson
+
+material texture "models/weapons/FlakgunView-Green.png" {
+	brightmap "materials/weapons/FlakgunView-Green_brightmap.png"
+}
+
+
+//////////////////////////
+//Chasm Shotgun Brightmap Thirdperson
+
+material texture "models/weapons/FlakgunPickup-Green.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+
+
+//////////////////////////
+// Weapon Pickup Light
+pulselight Pickuplight-PlasmaThrower
+{
+    color 0.2 0.2 0.8
+    offset 0.0 5.0 0.0
+    size 25
+    secondarySize 15
+    interval 1
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmPlasmaThrower
+{
+	frame PLWXZ  { light Pickuplight-PlasmaThrower }
+    }
+    
+

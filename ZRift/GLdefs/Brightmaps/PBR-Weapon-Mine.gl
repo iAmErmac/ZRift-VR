@@ -1,0 +1,36 @@
+//////////////////////////
+//Chasm Mine Brightmap Firstperson/Pickup
+
+material texture "models/weapons/MineWeapon.png" {
+	brightmap "materials/weapons/MineWeapon_brightmap.png"
+}
+
+
+//////////////////////////
+// Weapon Light
+pulselight Pickuplight-Mine
+{
+    color 0.5 0.0 0.0
+    offset 0.0 5.0 0.0
+    size 25
+    secondarySize 15
+    interval 1
+    attenuate 1
+    dontlightself 0
+    }
+    
+object ChasmMine
+{
+	frame MINX { light Pickuplight-Mine }
+    }
+
+
+object ChasmMineBase
+{
+	frame MINX { light Pickuplight-Mine }
+    }
+
+
+
+
+

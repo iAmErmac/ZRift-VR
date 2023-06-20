@@ -5,3 +5,22 @@
 #Include gldefs/FX-Torch.gl
 #Include gldefs/FX-Lamps.gl
 #Include gldefs/FX-Candles.gl
+
+//items
+
+#Include gldefs/Brightmaps/PBR-Items.gl
+
+//weapons
+
+#Include gldefs/Brightmaps/PBR-Weapon-Fists.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Chainfist.gl
+#Include gldefs/Brightmaps/PBR-Weapon-DoomChainfist.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Rifle.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Shotgun.gl
+#Include gldefs/Brightmaps/PBR-Weapon-PlasmaThrower.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Chasmsaw.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Chaingun.gl
+#Include gldefs/Brightmaps/PBR-Weapon-RocketLauncher.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Xbow.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Destroyer.gl
+#Include gldefs/Brightmaps/PBR-Weapon-Mine.gl
