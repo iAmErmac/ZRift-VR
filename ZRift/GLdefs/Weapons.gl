@@ -1,0 +1,19 @@
+material texture "models/weapons/VR/Newfists.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Pistol.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Rifle.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Quakeshotgun.png"
+{
+	shader "shaders/SimSun.fp"
+}

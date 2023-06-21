@@ -1,62 +1,23 @@
 Model Chasmpistol
 {
-   Path "models/weapons/Doompistol"   	
-   Model 0 "PistolAnim.md3"   
-   SurfaceSkin 0 0 "PistolFists.png"  
-   SurfaceSkin 0 1 "Pistol.png"
-   SurfaceSkin 0 2 "Pistol.png" 
-   OFFSET 6 -18 -10	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0              //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 90             //roll Up-Down  
-   Scale -0.08 0.06 0.07   //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"   	
+	Model 0 "Pistol.md3"
+	Skin 0 "Pistol.png"
+	Scale -1.0 1.0 1.0
+	Offset -3.0 -25.0 0.0
+	ZOffset -8.0
 
-//Idle
-  
-   FrameIndex RIGX Z 0 0
-   
-}
+	//Idle
+	FrameIndex RIGX A 0 0
 
-Model Chasmpistol
-{
-   Path "models/weapons/Doompistol"   	
-   Model 0 "PistolAnim.md3"   
-   SurfaceSkin 0 0 "PistolFists.png"  
-   SurfaceSkin 0 1 "Pistol.png"
-   SurfaceSkin 0 2 "Pistol.png"
-   OFFSET 6 -18 -10	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 90 //roll Up-Down  
-   Scale -0.08 0.06 0.07   //Scale (negative value is to mirror left right)
+	//Firing   	
+	FrameIndex RIGX B 0 1 
 
-
-//Firing
-   FrameIndex RIGX A 0 0    	
-   FrameIndex RIGX B 0 1      
-}
-
-Model ChasmPistol
-{
-   Path "models/weapons/Doompistol"
-   Model 0 "PistolAnim.md3"   
-   SurfaceSkin 0 0 "PistolFists.png"  
-   SurfaceSkin 0 1 "Pistol.png"
-   SurfaceSkin 0 2 "Pistol.png"
-   OFFSET 6 -18 -10	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 90 //roll Up-Down  
-   Scale -0.08 0.06 0.07   //Scale (negative value is to mirror left right)
-
-//Recoil  
-   FrameIndex RIGX C 0 2   
-   FrameIndex RIGX D 0 3
-   FrameIndex RIGX E 0 4
-   FrameIndex RIGX F 0 5
-   FrameIndex RIGX G 0 6
-   FrameIndex RIGX H 0 7
-   FrameIndex RIGX I 0 8
-   FrameIndex RIGX J 0 9
-     
+	//Recoil  
+	FrameIndex RIGX C 0 2   
+	FrameIndex RIGX D 0 3
+	FrameIndex RIGX E 0 4
+	FrameIndex RIGX F 0 5
+	FrameIndex RIGX G 0 6
+	FrameIndex RIGX H 0 7
 }

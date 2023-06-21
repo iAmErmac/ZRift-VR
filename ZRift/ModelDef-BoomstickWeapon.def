@@ -1,60 +1,24 @@
 Model ChasmBoomstick
 {
-   Path "models/weapons/boomstick"   	
-   Model 0 "Boomstick.md3"   
-   SurfaceSkin 0 0 "Quakeshotgun.png"  
-   SurfaceSkin 0 1 "Hands.png"  //hands
-   OFFSET 5 -15 -10	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0              //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 90             //roll Up-Down  
-   Scale -0.08 0.06 0.08   //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR" 	
+	Model 0 "Boomstick.md3"   
+	Skin 0 "Quakeshotgun.png"
+	Scale -1.1 1.1 1.1
+	Offset -3.0 -25.0 0.0
+	ZOffset -8.0
 
-//Idle
-  
-   FrameIndex RIFB Z 0 0
-   
-}
+	//Idle
+	FrameIndex RIFB A 0 0
 
-Model ChasmBoomstick
-{
-   Path "models/weapons/rifle"   	
-   Path "models/weapons/boomstick"   	
-   Model 0 "Boomstick.md3"   
-   SurfaceSkin 0 0 "Quakeshotgun.png"  
-   SurfaceSkin 0 1 "Hands.png"  //hands
-   OFFSET 5 -15 -10	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0              //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 90             //roll Up-Down  
-   Scale -0.08 0.06 0.08   //Scale (negative value is to mirror left right)
+	//Firing
+	FrameIndex RIFB B 0 1
 
-
-//Firing
-   FrameIndex RIFB A 0 0    	
-   FrameIndex RIFB B 0 1      
-}
-
-Model ChasmBoomstick
-{
-   Path "models/weapons/boomstick"   	
-   Model 0 "Boomstick.md3"   
-   SurfaceSkin 0 0 "Quakeshotgun.png"  
-   SurfaceSkin 0 1 "Hands.png"  //hands
-   OFFSET 5 -15 -10	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0              //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 90             //roll Up-Down  
-   Scale -0.08 0.06 0.08   //Scale (negative value is to mirror left right)
-
-//Recoil  
-   FrameIndex RIFB C 0 2   
-   FrameIndex RIFB D 0 3
-   FrameIndex RIFB E 0 4
-   FrameIndex RIFB F 0 5
-   FrameIndex RIFB G 0 6
-   FrameIndex RIFB H 0 7
-   FrameIndex RIFB I 0 8
-   FrameIndex RIFB J 0 9
-     
+	//Recoil  
+	FrameIndex RIFB C 0 2
+	FrameIndex RIFB D 0 3
+	FrameIndex RIFB E 0 4
+	FrameIndex RIFB F 0 5
+	FrameIndex RIFB G 0 6
+	FrameIndex RIFB H 0 7
+	FrameIndex RIFB I 0 8
 }

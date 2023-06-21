@@ -12,6 +12,8 @@
 
 //weapons
 
+#Include gldefs/Weapons.gl
+
 #Include gldefs/Brightmaps/PBR-Weapon-Fists.gl
 #Include gldefs/Brightmaps/PBR-Weapon-Chainfist.gl
 #Include gldefs/Brightmaps/PBR-Weapon-DoomChainfist.gl
