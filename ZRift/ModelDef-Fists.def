@@ -1,59 +1,21 @@
 Model ChasmFists
 {
-  Path "Models/Weapons/"   
+  Path "Models/Weapons/VR"   
   Model 0 "NewFists.md3"   
   SurfaceSkin 0 0 "NewFists.png"
   SurfaceSkin 0 0 "NewFists.png" 
-  OFFSET -30 125 -400       //X-Left/Right Y-Depth Z-Up/Down
-  AngleOffset 0            //Angle Offset 
-  PitchOffset -8	       //pitch up-down
-  RollOffset 0             //roll left-right
-  Scale 5.0 6.0 5.0        //Scale Size
-    
+  Scale -1.0 1.0 1.0
+  Offset -3.0 -24.0 0.0
+  ZOffset -12.0
   
-  //Chasm Fists 12 Frames WE00
-
-
   FrameIndex WE00 A 0 0 //idle
-  FrameIndex WE00 B 0 1 
-  FrameIndex WE00 C 0 2
-  FrameIndex WE00 D 0 3
-  FrameIndex WE00 E 0 4
-  FrameIndex WE00 F 0 5
-  FrameIndex WE00 G 0 6
-  FrameIndex WE00 H 0 7
-  FrameIndex WE00 I 0 8
-  FrameIndex WE00 J 0 9
-  FrameIndex WE00 K 0 10
-  FrameIndex WE00 L 0 11
-  FrameIndex WE00 M 0 12
-  FrameIndex WE00 N 0 13 
-  FrameIndex WE00 O 0 14
-  FrameIndex WE00 P 0 15
-  FrameIndex WE00 Q 0 16
-  FrameIndex WE00 R 0 17
-  FrameIndex WE00 S 0 18
-  FrameIndex WE00 T 0 19
-  FrameIndex WE00 U 0 20
-  FrameIndex WE00 V 0 21
-  FrameIndex WE00 W 0 22
   
   //Attack1
-  FrameIndex WE01 A 0 29
-  FrameIndex WE01 B 0 30
-  FrameIndex WE01 C 0 31
-  FrameIndex WE01 D 0 32
-  FrameIndex WE01 E 0 33 //hit
-  FrameIndex WE01 F 0 34
-  FrameIndex WE01 G 0 35
-  
-  //Attack2   
-  FrameIndex WE02 A 0 35
-  FrameIndex WE02 B 0 36
-  FrameIndex WE02 C 0 37
-  FrameIndex WE02 D 0 38 //hit
-  FrameIndex WE02 E 0 39 
-  FrameIndex WE02 F 0 40
-  FrameIndex WE02 G 0 41
+  FrameIndex WE01 A 0 1
+  FrameIndex WE01 B 0 2
+  FrameIndex WE01 C 0 3
+  FrameIndex WE01 D 0 4 //hit
+  FrameIndex WE01 E 0 5
+  FrameIndex WE01 F 0 6
 }
 
