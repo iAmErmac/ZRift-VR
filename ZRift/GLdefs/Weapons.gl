@@ -17,3 +17,23 @@ material texture "models/weapons/VR/Quakeshotgun.png"
 {
 	shader "shaders/SimSun.fp"
 }
+
+material texture "models/weapons/VR/Chainfist.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Chainfist_active.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Chainfist_active1.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/DoomChainfist.png"
+{
+	shader "shaders/SimSun.fp"
+}

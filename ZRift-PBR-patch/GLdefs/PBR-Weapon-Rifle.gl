@@ -8,3 +8,11 @@ material texture "models/weapons/Rifle/Rifle.png" {
 	specularlevel 5
 	disablefullbright
 }
+
+material texture "models/weapons/VR/Rifle.png" {
+    normal "materials/weapons/RifleWeapon_normal.png" 
+    specular "materials/weapons/RifleWeapon_specular.png"
+    glossiness 10
+	specularlevel 5
+	disablefullbright
+}

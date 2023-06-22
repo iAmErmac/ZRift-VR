@@ -25,6 +25,30 @@ material texture "models/weapons/Chainfist_active1.png" {
 	//disablefullbright
 }
 
+material texture "models/weapons/VR/Chainfist.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
+material texture "models/weapons/VR/Chainfist_active.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
+material texture "models/weapons/VR/Chainfist_active1.png" {
+    normal "materials/weapons/Chainfist_normal.png" 
+    specular "materials/weapons/Chainfist_specular.png"
+    glossiness 10
+	specularlevel 5
+	//disablefullbright
+}
+
 material texture "models/weapons/Chainfist_pickup.png" {
     normal "materials/weapons/Chainfist_normal.png" 
     specular "materials/weapons/Chainfist_specular.png"
