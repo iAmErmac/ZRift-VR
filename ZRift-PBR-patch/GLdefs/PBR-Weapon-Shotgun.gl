@@ -18,3 +18,19 @@ material texture "models/weapons/ShotgunPickup.png" {
 	specularlevel 5
 	disablefullbright
 }
+
+material texture "models/weapons/VR/Shotgun.png" {
+    normal "materials/weapons/ShotgunWeapon_normal.png" 
+    specular "materials/weapons/ShotgunWeapon_specular.png"
+    glossiness 5
+	specularlevel 5
+	disablefullbright
+}
+
+material texture "models/weapons/VR/Shotgun2.png" {
+    normal "materials/weapons/ShotgunWeapon_normal.png" 
+    specular "materials/weapons/ShotgunWeapon_specular.png"
+    glossiness 5
+	specularlevel 5
+	disablefullbright
+}

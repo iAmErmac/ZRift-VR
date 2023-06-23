@@ -1,53 +1,80 @@
 Model ChasmShotgun
 {
-   Path "models/weapons/shotgun_new"   	
-   Model 0 "Shotgun.md3"   
-   SurfaceSkin 0 0 "Shotgun.png"  //Shotgun
-   SurfaceSkin 0 1 "Shotgun.png"  //Hand
-   SurfaceSkin 0 2 "Shotgun.png"  //Grip
-   SurfaceSkin 0 3 "Shotgun.png"  //Shell 1
-   SurfaceSkin 0 4 "Shotgun.png"  //Shell 2
-   SurfaceSkin 0 5 "Shotgun.png"  // No Muzzle
-   OFFSET 10 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset 0         //angle  
-   PitchOffset 5		     //pitch Left Right
-   RollOffset 90 	     //roll Up-Down  
-   Scale -0.1 0.08 0.1    //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"
+	Model 0 "Shotgun.md3"
+	SurfaceSkin 0 0 "Shotgun.png"  //Shotgun
+	SurfaceSkin 0 1 "Shotgun.png"  //Grip
+	SurfaceSkin 0 2 "Shotgun2.png"  //No Shell 1
+	SurfaceSkin 0 3 "Shotgun2.png"  //No Shell 2
+	SurfaceSkin 0 4 "Shotgun2.png"  //No Muzzle flash
+	Scale -0.8 0.8 0.8
+	Offset -3.0 -38.0 0.0
+	ZOffset -8.0
 
-   FrameIndex SHTX A 0 32 
-   FrameIndex SHTX B 0 0
-   FrameIndex SHTX C 0 1
-   FrameIndex SHTX D 0 2 
-   FrameIndex SHTX E 0 3
-   FrameIndex SHTX F 0 4
-   FrameIndex SHTX G 0 5
-   FrameIndex SHTX H 0 6
-   FrameIndex SHTX I 0 7
-   FrameIndex SHTX J 0 8
-   FrameIndex SHTX K 0 9
-   FrameIndex SHTX L 0 10
-   FrameIndex SHTX M 0 11
-   FrameIndex SHTX N 0 12
-   FrameIndex SHTX O 0 13
-   FrameIndex SHTX P 0 14
-   FrameIndex SHTX Q 0 15
-   FrameIndex SHTX R 0 16
-   FrameIndex SHTX S 0 17
-   FrameIndex SHTX T 0 18
-   FrameIndex SHTX U 0 19
-   FrameIndex SHTX V 0 20
-   FrameIndex SHTX W 0 21
-   FrameIndex SHTX X 0 22
-   FrameIndex SHTX Y 0 23
-   FrameIndex SHTX Z 0 24
-   FrameIndex SHTY A 0 25
-   FrameIndex SHTY B 0 26
-   FrameIndex SHTY C 0 27
-   FrameIndex SHTY D 0 28
-   FrameIndex SHTY E 0 29
-   FrameIndex SHTY F 0 30
-   FrameIndex SHTY G 0 31
-   FrameIndex SHTW Z 0 32
-
+	FrameIndex SHTX A 0 32 
+	FrameIndex SHTX D 0 2 
+	FrameIndex SHTX E 0 3
+	FrameIndex SHTX F 0 4
+	FrameIndex SHTX G 0 5
+	FrameIndex SHTX H 0 6
+	FrameIndex SHTX I 0 7
+	FrameIndex SHTX J 0 8
+	FrameIndex SHTX K 0 9
+	FrameIndex SHTX L 0 10
+	FrameIndex SHTX M 0 11
+	FrameIndex SHTX N 0 12
+	FrameIndex SHTX O 0 13
+	FrameIndex SHTX P 0 14
+	FrameIndex SHTX Q 0 15
+	FrameIndex SHTX R 0 16
+	FrameIndex SHTY A 0 25
+	FrameIndex SHTY B 0 26
+	FrameIndex SHTY C 0 27
+	FrameIndex SHTY D 0 28
+	FrameIndex SHTY E 0 29
+	FrameIndex SHTY F 0 30
+	FrameIndex SHTY G 0 31
+	FrameIndex SHTW Z 0 32
 }
 
+//Fire (muzzle flash)
+Model ChasmShotgun
+{
+	Path "models/weapons/VR"
+	Model 0 "Shotgun.md3"
+	SurfaceSkin 0 0 "Shotgun.png"  //Shotgun
+	SurfaceSkin 0 1 "Shotgun.png"  //Grip
+	SurfaceSkin 0 2 "Shotgun2.png"  //No Shell 1
+	SurfaceSkin 0 3 "Shotgun2.png"  //No Shell 2
+	SurfaceSkin 0 4 "Shotgun.png"  //Muzzle flash
+	Scale -0.8 0.8 0.8
+	Offset -3.0 -38.0 0.0
+	ZOffset -8.0
+
+	FrameIndex SHTX B 0 0
+	FrameIndex SHTX C 0 1
+}
+
+//Eject shells
+Model ChasmShotgun
+{
+	Path "models/weapons/VR"
+	Model 0 "Shotgun.md3"
+	SurfaceSkin 0 0 "Shotgun.png"  //Shotgun
+	SurfaceSkin 0 1 "Shotgun.png"  //Grip
+	SurfaceSkin 0 2 "Shotgun.png"  //Shell 1
+	SurfaceSkin 0 3 "Shotgun.png"  //Shell 2
+	SurfaceSkin 0 4 "Shotgun2.png"  //No Muzzle flash
+	Scale -0.8 0.8 0.8
+	Offset -3.0 -38.0 0.0
+	ZOffset -8.0
+	
+	FrameIndex SHTX S 0 17
+	FrameIndex SHTX T 0 18
+	FrameIndex SHTX U 0 19
+	FrameIndex SHTX V 0 20
+	FrameIndex SHTX W 0 21
+	FrameIndex SHTX X 0 22
+	FrameIndex SHTX Y 0 23
+	FrameIndex SHTX Z 0 24
+}
