@@ -1,50 +1,63 @@
 Model ChasmChaingun
 {
-   Path "models/weapons"   	
-   Model 0 "VulcanFix.md2"   
-   Skin 0 "VulcanIdle1.png"
-   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"
+	Model 0 "Vulcan.md3"
+	Skin 0 "Vulcan.png"
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -30.0 0.0
+	ZOffset -8.0
 
-//Idle
-   Frame VULX Z 0 "FireA5"    	
+	//Idle
+	FrameIndex VULX Z 0 0   	
 }
 
 Model ChasmChaingun
 {
-   Path "models/weapons"   	
-   Model 0 "VulcanFix.md2"   
-   Skin 0 "VulcanFire1.png"
-   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"
+	Model 0 "Vulcan.md3"
+	Skin 0 "Vulcan.png"
+	Model 1 "Vulcan_mf.md3"
+	Skin 1 "VulcanFire1.png"
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -30.0 0.0
+	ZOffset -8.0
 
-//Firing
-   Frame VULX A 0 "FireA1"    	
-   Frame VULX B 0 "FireA2"    
-   Frame VULX C 0 "FireA3"    
-   Frame VULX D 0 "FireA4"    	
+	//Firing
+	FrameIndex VULX A 0 1
+	FrameIndex VULX A 1 0
 }
 
 Model ChasmChaingun
 {
-   Path "models/weapons"   	
-   Model 0 "VulcanFix.md2"   
-   Skin 0 "VulcanIdle1.png"
-   OFFSET 4 -18 -8	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"
+	Model 0 "Vulcan.md3"
+	SurfaceSkin 0 0 "Vulcan.png"
+	SurfaceSkin 0 1 "Vulcan.png"
+	SurfaceSkin 0 2 "Vulcan.png"
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -30.0 0.0
+	ZOffset -8.0
 
-//Select
-   Frame VULZ A 0 "FireA2"    	
-   Frame VULZ B 0 "FireA3"    
-   Frame VULZ C 0 "FireA4"    
-   Frame VULZ D 0 "FireA5"    	
+	//Firing
+	FrameIndex VULX C 0 3
+   
+	SurfaceSkin 0 2 "VulcanFire.png"
+	FrameIndex VULX B 0 2
+	FrameIndex VULX D 0 4
+}
+
+Model ChasmChaingun
+{
+	Path "models/weapons/VR"
+	Model 0 "Vulcan.md3"
+	Skin 0 "Vulcan.png"
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -30.0 0.0
+	ZOffset -8.0
+
+	//Select
+	FrameIndex VULZ A 0 1
+	FrameIndex VULZ B 0 2
+	FrameIndex VULZ C 0 3
+	FrameIndex VULZ D 0 4
 }

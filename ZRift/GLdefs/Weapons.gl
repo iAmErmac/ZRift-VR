@@ -37,3 +37,23 @@ material texture "models/weapons/VR/DoomChainfist.png"
 {
 	shader "shaders/SimSun.fp"
 }
+
+material texture "models/weapons/VR/Shotgun.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Shotgun2.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/Vulcan.png"
+{
+	shader "shaders/SimSun.fp"
+}
+
+material texture "models/weapons/VR/VulcanFire.png"
+{
+	shader "shaders/SimSun.fp"
+}
