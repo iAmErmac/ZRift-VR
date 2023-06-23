@@ -15,12 +15,14 @@ Model ChasmDoomChainFist
 	FrameIndex CHF2 D 0 3
 
 	FrameIndex CHF2 E 0 4
+	FrameIndex CHF2 J 0 9 
+	FrameIndex CHF2 K 0 10
+	
+	SurfaceSkin 0 1 "Chainfist_active1.png"
 	FrameIndex CHF2 F 0 5 
 	FrameIndex CHF2 G 0 6
 	FrameIndex CHF2 H 0 7
 	FrameIndex CHF2 I 0 8
-	FrameIndex CHF2 J 0 9 
-	FrameIndex CHF2 K 0 10
 }
   
 

@@ -57,3 +57,8 @@ material texture "models/weapons/VR/VulcanFire.png"
 {
 	shader "shaders/SimSun.fp"
 }
+
+material texture "models/weapons/VR/GrenadeWeapon.png"
+{
+	shader "shaders/SimSun.fp"
+}

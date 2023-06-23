@@ -1,65 +1,42 @@
 Model ChasmRocketL
 {
-   Path "models/weapons"   	
-   Model 0 "GrenadeWeapon.md2"   
-   Skin 0 "GrenadeWeapon.png"
-   OFFSET -1 -18 -9	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"
+	Model 0 "GrenadeWeapon.md3"
+	Skin 0 "GrenadeWeapon.png"
+	Scale -1.0 1.0 1.0
+	Offset 0.0 -27.0 0.0
+	ZOffset -8.0
 
-//Idle
-   Frame GREX Z 0 "IdleA1"
-}
+	//Idle
+	FrameIndex GREX Z 0 0
 
-Model ChasmRocketL
-{
-   Path "models/weapons"   	
-   Model 0 "GrenadeWeapon.md2"   
-   Skin 0 "GrenadeFire1.png"
-   OFFSET -1 -18 -9	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
+	//Firing
+	FrameIndex GREX A 0 1
 
-//Firing
-   Frame GREX A 0 "FireA1"    	    
-}
-
-Model ChasmRocketL
-{
-   Path "models/weapons"   	
-   Model 0 "GrenadeWeapon.md2"   
-   Skin 0 "GrenadeWeapon.png"
-   OFFSET -1 -18 -9	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset 0		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.1 0.1 0.1    //Scale (negative value is to mirror left right)
-
-//Recoil
-   Frame GREX B 0 "FireA2"    
-   Frame GREX C 0 "FireA3"  
-   Frame GREX D 0 "FireA4" 
-   Frame GREX E 0 "FireA5" 
-   Frame GREX F 0 "FireA6" 
-   Frame GREX G 0 "FireA7" 
-   Frame GREX H 0 "FireA8"
-   Frame GREX I 0 "FireA9" 
-   Frame GREX J 0 "FireA10" 
-   Frame GREX K 0 "FireA11" 
-   Frame GREX L 0 "FireA12" 
-   Frame GREX M 0 "FireA13" 
-   Frame GREX N 0 "FireA14" 
-   Frame GREX O 0 "FireA15" 
-   Frame GREX P 0 "FireA16"
-   Frame GREX Q 0 "FireA17" 
-   Frame GREX R 0 "FireA18" 
-   Frame GREX S 0 "FireA19" 
-   Frame GREX T 0 "FireA20" 
-   Frame GREX U 0 "FireA21" 
-   Frame GREX V 0 "FireA22" 
-   Frame GREX W 0 "FireA23"
+	//Recoil
+	FrameIndex GREX B 0 2
+	FrameIndex GREX C 0 3
+	FrameIndex GREX D 0 4
+	FrameIndex GREX E 0 5
+	FrameIndex GREX F 0 6
+	FrameIndex GREX G 0 7
+	FrameIndex GREX H 0 8
+	FrameIndex GREX I 0 9
+	FrameIndex GREX J 0 10
+	FrameIndex GREX K 0 11
+	FrameIndex GREX L 0 12
+	FrameIndex GREX M 0 13
+	FrameIndex GREX N 0 14
+	FrameIndex GREX O 0 15
+	FrameIndex GREX P 0 16
+	
+	NOINTERPOLATION
+	
+	FrameIndex GREX Q 0 17
+	FrameIndex GREX R 0 18
+	FrameIndex GREX S 0 19
+	FrameIndex GREX T 0 20
+	FrameIndex GREX U 0 21
+	FrameIndex GREX V 0 22
+	FrameIndex GREX W 0 23
 }

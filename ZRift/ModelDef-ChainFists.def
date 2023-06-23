@@ -29,7 +29,7 @@ Model ChasmChainFist
 {
 	Path "Models/Weapons/VR"
 	Model 0 "Chainfist.md3"
-	Skin 0 "Chainfist.png"
+	Skin 0 "Chainfist_active.png"
 	Scale -1.2 1.2 1.2
 	Offset -2.0 -25.0 0.0
 	ZOffset -11.0
