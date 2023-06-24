@@ -23,6 +23,7 @@ Class ChasmRocketL : Weapon Replaces RocketLauncher
 	States
 	{
 	Spawn:
+		TNT1 A 0 NoDelay;
 		GRNX A -1;
 		Stop;
 	Ready:

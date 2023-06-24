@@ -24,6 +24,7 @@ Class ChasmPistol : Weapon Replaces Pistol
 	States
 	{
 	Spawn:
+		TNT1 A 0 NoDelay;
 		RIGX A -1;
 		Stop;
 	Ready:

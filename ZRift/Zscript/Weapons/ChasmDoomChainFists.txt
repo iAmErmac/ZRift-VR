@@ -17,8 +17,9 @@ Class ChasmDoomChainFist : Weapon
 	States
 	{
 	Spawn:
-		CHFY A 1;
-		loop;
+		TNT1 A 0 NoDelay;
+		CHFY A -1;
+		Stop;
 	Ready:
 		CHF2 F 0 A_PlaySound("ChainFist/Idle", 6, 1, 1);
 		CHF2 FGHI 2 A_WeaponReady; //Idle

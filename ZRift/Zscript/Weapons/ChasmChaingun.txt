@@ -21,6 +21,7 @@ Class ChasmChaingun : Weapon Replaces Chaingun
 	States
 	{
 	Spawn:
+		TNT1 A 0 NoDelay;
 		CHNX A -1;
 		Stop;
 	Ready:

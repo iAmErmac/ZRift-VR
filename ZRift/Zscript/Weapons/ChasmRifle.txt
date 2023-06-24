@@ -24,6 +24,7 @@ Class ChasmRifle : Weapon Replaces Pistol
 	States
 	{
 	Spawn:
+		TNT1 A 0 NoDelay;
 		RIFX A -1;
 		Stop;
 	Ready:

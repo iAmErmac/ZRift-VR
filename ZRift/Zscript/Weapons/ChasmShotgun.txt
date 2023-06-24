@@ -86,6 +86,7 @@ Class ChasmShotgun : Weapon Replaces Shotgun
 	States
 	{
 	Spawn:
+		TNT1 A 0 NoDelay;
 		SHGX A -1;
 		Stop;
 	Ready:

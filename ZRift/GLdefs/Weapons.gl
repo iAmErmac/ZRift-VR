@@ -62,3 +62,8 @@ material texture "models/weapons/VR/GrenadeWeapon.png"
 {
 	shader "shaders/SimSun.fp"
 }
+
+material texture "models/weapons/VR/XbowIdle1.png"
+{
+	shader "shaders/SimSun.fp"
+}
