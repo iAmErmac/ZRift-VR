@@ -82,3 +82,8 @@ material texture "models/weapons/VR/DiscWeapon.png"
 {
 	shader "shaders/SimSun.fp"
 }
+
+material texture "models/weapons/VR/MineWeapon.png"
+{
+	shader "shaders/SimSun.fp"
+}

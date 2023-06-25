@@ -30,28 +30,24 @@ Class ChasmMineWeapon : Weapon
 		MINX N -1;
 		Stop;
 	Ready:
-		MINX N 1 A_WeaponReady;
+		MINX A 1 A_WeaponReady;
 		Loop;
 	Select:
-		TNT1 A 0 SetPlayerProperty(0,1,2);
-		MINX EFGHIJKLM 1;
-		Goto Ready;
+		MINX A 0 SetPlayerProperty(0,1,2);
+		MINX A 1 A_Raise;
+		Wait;
 	Deselect:
-		MINX N 1 A_Lower;
+		MINX A 1 A_Lower;
 		Loop;
 	Fire:
-		TNT1 A 0;
-		MINX ABCD 2;
-		TNT1 A 0 A_PlaySound("ChasmMine/Fire",1);
-		MINX E 4 BRIGHT A_FireProjectile("ChasmMine",0,1);
-		MINX FGHIJKLM 1;
+		MINX L 0 A_PlaySound("ChasmMine/Fire",1);
+		MINX L 0 BRIGHT A_FireProjectile("ChasmMine",0,1);
+		MINX L 35;
 		Goto Ready;
 	AltFire:
-		TNT1 A 0;
-		MINX ABCD 2;
-		TNT1 A 0 A_PlaySound("ChasmMine/Fire",1);
-		MINX E 8 BRIGHT A_FireProjectile("ChasmMine2",0,1);
-		MINX FGHIJKLM 1;
+		MINX L 0 A_PlaySound("ChasmMine/Fire",1);
+		MINX L 0 BRIGHT A_FireProjectile("ChasmMine2",0,1);
+		MINX L 20;
 		Goto Ready;
 	}
 }

@@ -4,8 +4,8 @@ Model ChasmDestroyer
 	Model 0 "MegaDestroyer.md3"
 	Skin 0 "MegaDestroyer.png"
 	Scale -1.1 1.1 1.1
-	Offset -3.0 -16.0 0.0
-	ZOffset -8.0
+	Offset -3.0 -20.0 0.0
+	ZOffset -3.0
 
 	//Idle/Ready State1
 	FrameIndex MEGZ Z 0 0

@@ -5,6 +5,10 @@ material texture "models/weapons/MineWeapon.png" {
 	brightmap "materials/weapons/MineWeapon_brightmap.png"
 }
 
+material texture "models/weapons/VR/MineWeapon.png" {
+	brightmap "materials/weapons/MineWeapon_brightmap.png"
+}
+
 
 //////////////////////////
 // Weapon Light
