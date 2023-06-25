@@ -27,31 +27,29 @@ Class ChasmSaw : Weapon
 	Ready:
 		DISX Z 1 A_WeaponReady;
 		Loop;
+	ReadyEmpty:
+		DISX D 1 A_WeaponReady;
+		DISX D 0 A_JumpIfInventory("SawBlade", 1, "ReloadReady");
+		Loop;
+	ReloadReady:
+		DISX EFG 2;
+		Goto Ready;
 	Select:
-		TNT1 A 0 SetPlayerProperty(0,1,2);
-		DISX CBA 2;
+		DISX E 0 SetPlayerProperty(0,1,2);
+		DISX EFG 2;
 		Goto Ready;
 	Deselect:
 		DISX Z 1 A_Lower;
 		Loop;
 	Fire:
-		TNT1 A 0 A_Jump(100, "Fire2");
-		DISX ABC 1;
-		TNT1 A 0 A_PlaySound("ChasmSaw/Fire",1);
+		DISX C 1;
+		DISX C 0 A_PlaySound("ChasmSaw/Fire",1);
 		DISX C 0 BRIGHT A_FireProjectile("ChasmSawBlade");
-		TNT1 A 2;
-		DISX DA 1;
-		DISX A 1;
-		TNT1 A 0 BRIGHT A_ReFire;
-		Goto Ready;
-	Fire2:
-		DISX EFG 1;
-		TNT1 A 0 A_PlaySound("ChasmSaw/Fire",1);
-		DISX G 0 BRIGHT A_FireProjectile("ChasmSawBlade");
-		TNT1 A 2;
-		DISX HA 1;
-		DISX A 1;
-		TNT1 A 0 BRIGHT A_ReFire;
+		DISX D 10;
+		DISX D 0 A_JumpIfInventory("SawBlade", 1, 1);
+		Goto ReadyEmpty;
+		DISX EFG 2;
+		DISX A 0 A_ReFire;
 		Goto Ready;
 	}
 }

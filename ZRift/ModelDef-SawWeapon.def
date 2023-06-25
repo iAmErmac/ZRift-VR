@@ -1,25 +1,53 @@
 Model ChasmSaw
 {
-   Path "models/weapons"   	
-   Model 0 "DiscWeapon.md2"   
-   Skin 0 "DiscWeapon.png"    
-   OFFSET 3 -15 -8	         //X-Left/Right Y-Depth Z-Up/Down
-   AngleOffset -90         //angle  
-   PitchOffset -5		     //pitch Left Right
-   RollOffset 0  	     //roll Up-Down  
-   Scale -0.15 0.15 0.15    //Scale (negative value is to mirror left right)
+	Path "models/weapons/VR"
+	Model 0 "DIscLauncher.md3"
+	Skin 0 "DiscWeapon.png"
+	Model 1 "DiscWeapon.md3"
+	Skin 1 "DiscWeapon.png"
+	Scale -1.0 1.0 1.0
+	Offset -2.0 -17.0 0.0
+	ZOffset -11.0
 
-//FireA
+	//Idle
+	FrameIndex DISX Z 0 0	FrameIndex DISX Z 1 0
+	
+	//Reload
+	FrameIndex DISX E 0 0	FrameIndex DISX E 1 4
+	FrameIndex DISX F 0 0	FrameIndex DISX F 1 5
+	FrameIndex DISX G 0 0	FrameIndex DISX G 1 6
+}
 
-   Frame DISX A 0 "FireA1"    	
-   Frame DISX B 0 "FireA2"    
-   Frame DISX C 0 "FireA3"    
-   Frame DISX D 0 "FireA4" 
-   Frame DISX E 0 "FireA5" 
-   Frame DISX F 0 "FireA6" 
-   Frame DISX G 0 "FireA7" 
-   Frame DISX H 0 "FireA8"
+Model ChasmSaw
+{
+	Path "models/weapons/VR"
+	Model 0 "DIscLauncher.md3"
+	Skin 0 "DiscWeapon.png"
+	Scale -1.0 1.0 1.0
+	Offset -2.0 -19.0 0.0
+	ZOffset -11.0
+	
+	NOINTERPOLATION
 
-   Frame DISX Z 0 "IdleA1" 
-   
+	//Launch
+	FrameIndex DISX D 0 0
+}
+
+Model ChasmSaw
+{
+	Path "models/weapons/VR"
+	Model 0 "DIscLauncher.md3"
+	Skin 0 "DiscWeapon.png"
+	Model 1 "DiscWeapon.md3"
+	Skin 1 "DiscWeapon.png"
+	Model 2 "DIscSpark.md3"
+	Skin 2 "DiscWeapon2.png"
+	Scale -1.0 1.0 1.0
+	Offset -2.0 -17.0 0.0
+	ZOffset -11.0
+
+	//Fire
+	FrameIndex DISX A 0 0	FrameIndex DISX A 1 1	FrameIndex DISX A 2 0
+	FrameIndex DISX B 0 0	FrameIndex DISX B 1 2	FrameIndex DISX B 2 0
+	FrameIndex DISX C 0 0	FrameIndex DISX C 1 3	FrameIndex DISX C 2 0
 }

@@ -5,8 +5,8 @@ Model ChasmFists
   SurfaceSkin 0 0 "NewFists.png"
   SurfaceSkin 0 0 "NewFists.png" 
   Scale -1.0 1.0 1.0
-  Offset -2.0 -22.0 0.0
-  ZOffset -13.0
+  Offset -2.0 -20.0 0.0
+  ZOffset -14.0
   
   FrameIndex WE00 A 0 0 //idle
   
