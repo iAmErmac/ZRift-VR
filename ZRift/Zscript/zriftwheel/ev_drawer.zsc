@@ -8,7 +8,7 @@ Extend Class Py_WeaponWheelEventHandler
 		let indicatorTex = TexMan.CheckForTexture("graphics/zriftwheel/indicator_wheel.png",TexMan.Type_MiscPatch);
 		let selTex = TexMan.CheckForTexture("graphics/zriftwheel/sel_bg.png",TexMan.Type_MiscPatch);
 		
-		if(!searchedWeps||wheelShow.Size()==0)
+		if(!searchedWeps || wheelShow.Size()==0)
 		{
 			return;
 		}
@@ -28,10 +28,9 @@ Extend Class Py_WeaponWheelEventHandler
 		for(int i = 0;i<wheelShow.Size();i++)
 		{
 			Vector2 textPos = (cos(((double(i+1)/wheelShow.Size())*360)+180)*128, sin((double(i+1)/wheelShow.Size())*360)*128);
-			//Console.Printf(""..);
 			TextureID wepIcon = wheelWeapons[wheelShow[i]].weaponIcon;
-			int screenPosX = (circleX+textPos.x);//wheelScaleX[i];
-			int screenPosY = (circleY+textPos.y);//wheelScaleY[i];
+			int screenPosX = int(circleX+textPos.x);//wheelScaleX[i];
+			int screenPosY = int(circleY+textPos.y);//wheelScaleY[i];
 			Vector2 imageScale = TexMan.GetScaledSize(wepIcon);
 			imageScale.x *= wheelWeapons[wheelShow[i]].weaponScale.x;
 			imageScale.y *= wheelWeapons[wheelShow[i]].weaponScale.y*1.2;
@@ -57,7 +56,7 @@ Extend Class Py_WeaponWheelEventHandler
 					DTA_DestWidth, int(imageScale.x), DTA_DestHeight, int(imageScale.y),
 					DTA_CenterOffset, true, DTA_TranslationIndex, icons_renderstyle==Style_Translucent ? Translation.GetID('lightenwep') : 0,
 					DTA_Alpha, 0.75*alphaFade, DTA_LegacyRenderStyle, icons_renderstyle);
-					screen.DrawText (SmallFont, Font.CR_WHITE, screenPosX-SmallFont.StringWidth(wepName)/2, screenPosY, wepName, DTA_VirtualWidth, 640, DTA_VirtualHeight, 480, DTA_Alpha, actuallyHas&&noIcon ? 1.0*alphaFade : 0.0);
+					screen.DrawText (SmallFont, Font.CR_WHITE, screenPosX-SmallFont.StringWidth(wepName)/2, screenPosY, wepName, DTA_VirtualWidth, 640, DTA_VirtualHeight, 480, DTA_Alpha, actuallyHas && noIcon ? 1.0*alphaFade : 0.0);
 				}
 			
 			//screen.DrawText (SmallFont, Font.CR_UNTRANSLATED, circleX+textPos.x-SmallFont.StringWidth(wepName)/2, circleY+textPos.y, wepName, DTA_VirtualWidth, 640, DTA_VirtualHeight, 480);
@@ -65,7 +64,6 @@ Extend Class Py_WeaponWheelEventHandler
 		}
 		circleX/=2;
 		circleY/=2;
-		//int curSelMod = wheelShow[currentSelection];
 		Font fnt = "SmallFont";
 		if( players[0].mo.FindInventory(wheelWeapons[curSelMod].weaponClass) )
 		{
@@ -108,11 +106,12 @@ Extend Class Py_WeaponWheelEventHandler
 		}
 		else
 		{
-			screen.DrawText (SmallFont, Font.CR_BLACK, circleX-SmallFont.StringWidth("Locked")/2, circleY-fnt.GetHeight()/2, "Locked", DTA_VirtualWidth, 320, DTA_VirtualHeight, 240, DTA_Alpha, 1.0*alphaFade);
+			screen.DrawText (SmallFont, Font.CR_BLACK, circleX-SmallFont.StringWidth("???")/2, circleY-fnt.GetHeight()/2, "???", DTA_VirtualWidth, 320, DTA_VirtualHeight, 240, DTA_Alpha, 1.0*alphaFade);
 		}
+		
 		//screen.DrawTexture(TexMan.CheckForTexture("UNKNA0",TexMan.Type_MiscPatch), true, circleX+realMouse.x*0.8, circleY+realMouse.y*0.8, DTA_VirtualWidth, 320, DTA_VirtualHeight, 240, DTA_CenterOffset, true, DTA_Alpha, 0.5);
 		screen.DrawTexture (selTex, true, circleX+realMouse.x*0.8, circleY+realMouse.y*0.8, DTA_VirtualWidth, 320, DTA_VirtualHeight, 240, DTA_Alpha, 0.5*alphaFade);//, DTA_DestWidth, 32, DTA_DestHeight, 32);
-		screen.DrawTexture (selTex, true, circleX+fakeMouse.x*0.8, circleY+fakeMouse.y*0.8, DTA_VirtualWidth, 320, DTA_VirtualHeight, 240, DTA_Alpha, 0.4*alphaFade/*, DTA_DestWidth, 32, DTA_DestHeight, 32*/, DTA_TranslationIndex, Translation.GetID('reddenwep'));
+		screen.DrawTexture (selTex, true, circleX+fakeMouse.x*0.8, circleY+fakeMouse.y*0.8, DTA_VirtualWidth, 320, DTA_VirtualHeight, 240, DTA_Alpha, 0.5*alphaFade/*, DTA_DestWidth, 32, DTA_DestHeight, 32*/, DTA_TranslationIndex, Translation.GetID('reddenwep'));
 		//screen.DrawText (SmallFont, Font.CR_BLUE, 0, 0, fakeMouse.x.."", DTA_VirtualWidth, 320, DTA_VirtualHeight, 240);
 	}
 }

@@ -1,3 +1,28 @@
 [default enu]
 
 PWW_MenuTitle = "Zrift Weapon Wheel Options";
+
+PWW_WheelButton = "Open Weapon Wheel";
+PWW_WheelButton_text = "Bind weaponwheel button";
+
+PWW_WheelFreeze = "Freeze when wheel is open";
+PWW_WheelFreeze_text = "Monsters, projectiles, and the player will freeze";
+PWW_WheelFreeze_text2 = "in place while the wheel is open";
+
+PWW_WheelGodMode = "Invulnerable during Freeze";
+PWW_WheelGodMode_text = "Player will be invulnerable during Time Freeze";
+
+PWW_WheelSlowmo = "Use slow-mo instead";
+PWW_WheelSlowmo_text = "Slow-mo mode will use Bullet-Time-X if loaded before this mod";
+PWW_WheelSlowmo_text2 = "Without Bullet-Time-X powerups and environment will not slow down";
+
+PWW_WheelSound = "Use slow-mo sound";
+PWW_WheelSoundFade = "Fade music when wheel is open";
+PWW_WheelSound_text = "Fades the music out when you open the weapon wheel (require map restart)";
+PWW_WheelSound_text2 = "Warning: Doesn't play well with MIDIs or any mod controlling volume";
+
+PWW_Credit_Line1 = "Zrift Weapon wheel mod is based on PyWeaponWheel_v0.3 mod by DrPyspy";
+PWW_Credit_Line2 = "Modified for Zrift Chasm in Doom by HAL9000";
+PWW_Credit_Line3 = "VR Enhancements by Ermac";
+
+PWW_Version = "Weapon Wheel Version: 0.5-vr";

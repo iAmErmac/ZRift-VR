@@ -1,6 +1,6 @@
 [enu default]
 
-OPTMNU_SPAWNER = "Item Replacement";
+OPTMNU_SPAWNER = "Item Replacements";
 OPTMNU_REPLACE_ITEM = "Replace Items";
 OPTMNU_REPLACE_NOTE = "Level restart is required for this options to take effect";
 OPTMNU_ZRIFTCREDITS = "Zrift Credits";

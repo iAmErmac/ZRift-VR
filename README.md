@@ -24,9 +24,6 @@
 * Option to turn off item replacements
 
 ## Planned Mod updates
-* Modify weapon wheel for VR
-* Modify/adjust Weapon models for VR
-* Option to turn off monster replacements
 * Make playable with Hexen/Strife/Chex
 
 ## Quick note
@@ -73,6 +70,9 @@ To install:
 
 * [Hyper-V:](https://github.com/iAmErmac/Hyper-V)
   - Enables a lot of VR focused features such as positional melee attacks and item pulling
+
+* [Bullet Time X:](https://www.moddb.com/games/doom-ii/addons/bullet-time-x)
+  - SLows down time. Enhances the time freeze effect from the weapon wheel
   
 * [DamNums:](https://forum.zdoom.org/viewtopic.php?t=55048)
   - DamNums is a pretty simple concept: shoot monsters and little numbers pop out that tell you how much damage you did

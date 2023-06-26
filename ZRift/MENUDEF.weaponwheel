@@ -4,14 +4,6 @@ AddOptionMenu "OptionsMenu"
 	//Submenu "$PWW_MenuTitle", "PyWheelMenu"
 }
 
-OptionValue Py_Inverted
-{
-	0, "No"
-	1, "Invert X"
-	2, "Invert Y"
-	3, "Invert X/Y"
-}
-
 OptionMenu "PyWheelMenu"
 {
 	Title "$PWW_MenuTitle"
@@ -19,40 +11,36 @@ OptionMenu "PyWheelMenu"
 	StaticText ""
 	StaticText ""
         
-	Control "Open Weapon Wheel", "+pyweaponwheel"
-	StaticText ""
-	PWWStaticText "Bind weaponwheel button"
+	Control "$PWW_WheelButton", "pyweaponwheel"
+	PWWStaticText "$PWW_WheelButton_text"
+    StaticText ""
+    
+	Option "$PWW_WheelFreeze", "py_weaponwheel_freeze", "OnOff"
+	PWWStaticText "$PWW_WheelFreeze_text"
+	PWWStaticText "$PWW_WheelFreeze_text2"
+    StaticText ""
+	
+	Option "$PWW_WheelGodMode", "py_weaponwheel_invul", "OnOff", py_weaponwheel_freeze
+	PWWStaticText "$PWW_WheelGodMode_text"
+    StaticText ""
+    
+	Option "$PWW_WheelSlowmo", "py_weaponwheel_slowmo", "OnOff", py_weaponwheel_freeze
+	PWWStaticText "$PWW_WheelSlowmo_text"
+	PWWStaticText "$PWW_WheelSlowmo_text2"
+    StaticText ""
+	
+	Option "$PWW_WheelSound", "py_weaponwheel_slow_sound", "OnOff", py_weaponwheel_freeze
     StaticText ""
         
-    Option "Slow time when wheel is open", "py_weaponwheel_freeze", "OnOff"   
-    StaticText ""
-        
-    PWWStaticText "Slow down time when wheel is open"
-    PWWStaticText "Monsters, projectiles, and the player will slow down a bit"
-    PWWStaticText "(Experimental, Default value is OFF)"
-    StaticText ""
-        
-    Option "Invert wheel controls", "py_weaponwheel_invert", "Py_Inverted"
-    StaticText ""
-        
-    PWWStaticText "There are four options for inverted controls: "
-	PWWStaticText "OFF , inverted X axis ,inverted Y axis ,inverted XY axis"
-    StaticText ""
-        
-    Option "Fade music when wheel is open", "py_weaponwheel_musicfade", "OnOff"
-    StaticText ""
-    PWWStaticText "Fade music options require map restart."
-    PWWStaticText "Fades the music out when you open the weapon wheel."
-	PWWStaticText "Warning: Doesn't play well with MIDIs, or other"
-	PWWStaticText "mods that mess with the music volume. Beware."
+    Option "$PWW_WheelSoundFade", "py_weaponwheel_musicfade", "OnOff"
+    PWWStaticText "$PWW_WheelSound_text"
+	PWWStaticText "$PWW_WheelSound_text2"
     StaticText ""
     StaticText ""
-    StaticText "Zrift Weapon wheel mod is based on PyWeaponWheel_v0.3 mod by DrPyspy"
-    StaticText "Modified for Zrift Chasm in Doom by HAL9000"
+    StaticText "$PWW_Credit_Line1"
+    StaticText "$PWW_Credit_Line2"
+    StaticText "$PWW_Credit_Line3"
     StaticText ""
-    StaticText ""
-    StaticText ""
-    StaticText ""
-    PWWStaticText "Weapon Wheel Version: 0.3"
+    PWWStaticText "$PWW_Version"
 }
 
