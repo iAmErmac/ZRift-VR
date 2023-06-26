@@ -18,3 +18,11 @@ material texture "models/weapons/FlakgunPickup-Green.png" {
 	specularlevel 5
 	disablefullbright
 }
+
+material texture "models/weapons/VR/Flakgun.png" {
+    normal "materials/weapons/FlakgunPickup-Green_normal.png" 
+    specular "materials/weapons/FlakgunPickup-Green_specular.png"
+    glossiness 10
+	specularlevel 5
+	disablefullbright
+}

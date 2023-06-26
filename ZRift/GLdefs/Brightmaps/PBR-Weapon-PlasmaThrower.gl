@@ -13,6 +13,10 @@ material texture "models/weapons/FlakgunPickup-Green.png" {
 	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
 }
 
+material texture "models/weapons/VR/Flakgun.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+
 
 //////////////////////////
 // Weapon Pickup Light

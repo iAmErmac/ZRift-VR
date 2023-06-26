@@ -1,0 +1,6 @@
+Texture "models/weapons/VR/FlakGun.png"
+    pic "models/weapons/VR/FlakGun1.png" tics 5
+    pic "models/weapons/VR/FlakGun2.png" tics 5
+    pic "models/weapons/VR/FlakGun3.png" tics 5
+    pic "models/weapons/VR/FlakGun4.png" tics 5
+    pic "models/weapons/VR/FlakGun5.png" tics 5
