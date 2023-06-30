@@ -1,8 +1,23 @@
 //////////////////////////
 //Chasm Plasmathrower Brightmap Firstperson
 
-material texture "models/weapons/FlakgunView-Green.png" {
-	brightmap "materials/weapons/FlakgunView-Green_brightmap.png"
+material texture "models/weapons/VR/Flakgun.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+material texture "models/weapons/VR/Flakgun1.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+material texture "models/weapons/VR/Flakgun2.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+material texture "models/weapons/VR/Flakgun3.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+material texture "models/weapons/VR/Flakgun4.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
+}
+material texture "models/weapons/VR/Flakgun5.png" {
+	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
 }
 
 
@@ -10,10 +25,6 @@ material texture "models/weapons/FlakgunView-Green.png" {
 //Chasm Shotgun Brightmap Thirdperson
 
 material texture "models/weapons/FlakgunPickup-Green.png" {
-	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
-}
-
-material texture "models/weapons/VR/Flakgun.png" {
 	brightmap "materials/weapons/FlakgunPickup-Green_brightmap.png"
 }
 

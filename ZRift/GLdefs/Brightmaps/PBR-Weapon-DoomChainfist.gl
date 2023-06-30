@@ -1,20 +1,9 @@
 //////////////////////////
 //Chasm Chainfist Brightmap Firstperson
 
-material texture "models/weapons/Doomchainfist/DoomChainfist.png" {
-	brightmap "models/weapons/Doomchainfist/DoomChainfist_brightmap.png"        
-}
-material texture "models/weapons/Doomchainfist/Chainfist_active.png" {
-	brightmap "materials/weapons/Chainfist_brightmap.png"        
-}
-material texture "models/weapons/Doomchainfist/Chainfist_active1.png" {
-	brightmap "materials/weapons/Chainfist_brightmap.png"        
-}
-
 material texture "models/weapons/VR/DoomChainfist.png" {
 	brightmap "models/weapons/Doomchainfist/DoomChainfist_brightmap.png"        
 }
-
 
 //////////////////////////
 // Weapon Pickup Light

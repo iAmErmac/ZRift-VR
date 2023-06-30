@@ -1,0 +1,3 @@
+Texture "models/weapons/VR/MegaDestroyer2.png"
+    pic "models/weapons/VR/MegaDestroyer.png" tics 14
+    pic "models/weapons/VR/MegaDestroyer2.png" tics 11

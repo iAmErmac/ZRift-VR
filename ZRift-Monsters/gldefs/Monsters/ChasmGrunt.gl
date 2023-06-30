@@ -1,10 +1,36 @@
 //MONG GRUNT
 material texture "Models/Monsters/MongGrunt/MongGrunt.png"  
 {
-    normal "Models/Monsters/MongGrunt/materials/MongGrunt_normal.png" 
-    specular "Models/Monsters/MongGrunt/materials/MongGrunt_specular.png"
-    brightmap "Models/Monsters/MongGrunt/materials/MongGrunt_brightmap.png"  
+    normal "Materials/Monsters/MongGrunt_normal.png" 
+    specular "Materials/Monsters/MongGrunt_specular.png"
+    brightmap "Materials/Monsters/MongGrunt_brightmap.png"  
     glossiness 5
 	specularlevel 5
 }
 
+material texture "Models/Monsters/MongGrunt/AssaultGrunt.png"  
+{
+    normal "Materials/Monsters/MongGrunt_normal.png" 
+    specular "Materials/Monsters/MongGrunt_specular.png"
+    brightmap "Materials/Monsters/MongGrunt_brightmap.png"  
+    glossiness 5
+	specularlevel 5
+}
+
+material texture "Models/Monsters/MongGrunt/MedicGrunt.png"  
+{
+    normal "Materials/Monsters/MongGrunt_normal.png" 
+    specular "Materials/Monsters/MongGrunt_specular.png"
+    brightmap "Materials/Monsters/MongGrunt_brightmap.png"  
+    glossiness 5
+	specularlevel 5
+}
+
+material texture "Models/Monsters/MongGrunt/ShotgunGrunt.png"  
+{
+    normal "Materials/Monsters/MongGrunt_normal.png" 
+    specular "Materials/Monsters/MongGrunt_specular.png"
+    brightmap "Materials/Monsters/MongGrunt_brightmap.png"  
+    glossiness 5
+	specularlevel 5
+}

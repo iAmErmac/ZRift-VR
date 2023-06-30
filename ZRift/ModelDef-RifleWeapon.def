@@ -1,7 +1,7 @@
 Model ChasmRifle
 {
-	Path "models/weapons/VR"   	
-	Model 0 "Rifle.md3"   
+	Path "models/weapons/VR"
+	Model 0 "Rifle.md3"
 	Skin 0 "Rifle.png"
 	Scale -0.9 0.9 0.9
 	Offset -2.0 -25.0 0.0

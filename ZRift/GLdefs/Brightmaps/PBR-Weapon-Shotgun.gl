@@ -1,10 +1,6 @@
 //////////////////////////
 //Chasm Shotgun Brightmap Firstperson
 
-material texture "models/weapons/Shotgun_new/Shotgun.png" {
-	brightmap "materials/weapons/ShotgunWeapon_brightmap.png"
-}
-
 material texture "models/weapons/VR/Shotgun.png" {
 	brightmap "materials/weapons/ShotgunWeapon_brightmap.png"
 }

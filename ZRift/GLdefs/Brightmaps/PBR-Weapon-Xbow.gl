@@ -1,16 +1,13 @@
 //////////////////////////
 //Chasm Xbow Brightmap 
 
-material texture "models/weapons/XbowCharge1.png" {
+material texture "models/weapons/VR/XbowCharge1.png" {
 	brightmap "materials/weapons/XbowCharge1_brightmap.png"
 }
-material texture "models/weapons/XbowCharge2.png" {
+material texture "models/weapons/VR/XbowCharge2.png" {
 	brightmap "materials/weapons/XbowCharge2_brightmap.png"
 }
-material texture "models/weapons/XbowFire1.png" {
-	brightmap "materials/weapons/XbowCharge2_brightmap.png"
-}
-material texture "models/weapons/XbowIdle1.png" {
+material texture "models/weapons/VR/XbowCharge0.png" {
 	brightmap "materials/weapons/XbowIdle1_brightmap.png"
 }
 

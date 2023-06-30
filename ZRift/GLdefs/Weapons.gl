@@ -73,11 +73,6 @@ material texture "models/weapons/VR/MegaDestroyer.png"
 	shader "shaders/SimSun.fp"
 }
 
-material texture "models/weapons/VR/MegaDestroyer2.png"
-{
-	shader "shaders/SimSun.fp"
-}
-
 material texture "models/weapons/VR/DiscWeapon.png"
 {
 	shader "shaders/SimSun.fp"

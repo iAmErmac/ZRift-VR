@@ -41,7 +41,9 @@ Class ChasmCrossbow : Weapon Replaces PlasmaRifle
 		CROY A 1 BRIGHT;
 		CROX A 1 BRIGHT;
 		CROX B 0 A_PlaySound("ChasmCrossBow/Fire",1, 1.0);
+		CROX A 0 A_GunFlash();
 		CROX A 0 A_FireProjectile("ChasmLaserBolt",0,1,5,5);
+		CROX A 0 A_FireProjectile("MuzzleFlashVulcan");
 		CROX AA 0 A_FireProjectile("BarrelSmokeSpawnShotguns",frandom(-5.6,5.1),0,5,1,0,frandom(-1.1,0.9));
 		//CROX A 0 A_SetPitch(pitch-1.50);
 		//CROX A 0 A_SetAngle(angle-0.1);
@@ -73,7 +75,9 @@ Class ChasmCrossbow : Weapon Replaces PlasmaRifle
 		CROY A 1 BRIGHT;
 		CROX A 1 BRIGHT;
 		CROX A 0 A_PlaySound("ChasmCrossBow/RicFire",1, 1.0);
+		CROX A 0 A_GunFlash();
 		CROX A 0 A_FireProjectile("ChasmLaserBoltRipper",0,1,5,5);
+		CROX A 0 A_FireProjectile("MuzzleFlashVulcan");
 		CROX AA 0 A_FireProjectile("BarrelSmokeSpawnShotguns",frandom(-5.6,5.1),0,5,1,0,frandom(-1.1,0.9));
 		//CROX A 0 A_SetPitch(pitch-1.50);
 		//CROX A 0 A_SetAngle(angle-0.1);
@@ -102,6 +106,10 @@ Class ChasmCrossbow : Weapon Replaces PlasmaRifle
 		CROX FGHIJK 2 BRIGHT;
 		CROX L 3;
 		Goto Ready;
+	Flash:
+		TNT1 A 4 A_Light2;
+		TNT1 A 3 A_Light1;
+		Goto LightDone;
 	}
 }
 
@@ -129,6 +137,13 @@ Class ChasmLaserBolt : Actor
 	{
 	Spawn:
 		TNT1 A 0 NoDelay;
+		TNT1 A 0 A_AttachLight("tracerlight"
+							, DynamicLight.PointLight
+							, "Yellow"
+							, 30
+							, 0
+							, DYNAMICLIGHT.LF_DONTLIGHTSELF
+							);
 		CRS1 X 1 BRIGHT;
 		CRS1 X 1 Bright A_SpawnItemEx("ChasmLaserBoltRing",0,0,0,0,0,0,0,2);
 		CRS1 X 1 BRIGHT;
@@ -261,6 +276,13 @@ Class ChasmLaserBoltRipper : Actor
 	{
 	Spawn:
 		TNT1 A 0 NoDelay;
+		TNT1 A 0 A_AttachLight("tracerlight"
+							, DynamicLight.PointLight
+							, "Yellow"
+							, 30
+							, 0
+							, DYNAMICLIGHT.LF_DONTLIGHTSELF
+							);
 		CRS1 Z 1 BRIGHT;
 		CRS1 Z 1 Bright A_SpawnItemEx("ChasmLaserBoltRing",0,0,0,0,0,0,0,2);
 		CRS1 Z 1 BRIGHT;

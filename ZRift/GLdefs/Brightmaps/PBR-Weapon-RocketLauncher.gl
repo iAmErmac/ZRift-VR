@@ -1,8 +1,8 @@
 //////////////////////////
 //Chasm Grenade Brightmap Firstperson
 
-material texture "models/weapons/GrenadeWeapon.png" {
-	brightmap "materials/weapons/GrenadeWeapon_brightmap.png"
+material texture "models/weapons/VR/GrenadeWeapon.png" {
+	brightmap "materials/weapons/GrenadeLauncher_brightmap.png"
 }
 
 

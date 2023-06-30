@@ -2,7 +2,7 @@
 //Chasm Monster STRATOS Brightmap
 ////////////////////////// 
 
-material texture "models/monsters/Stratos.png" {
+material texture "models/monsters/MongStratos/Stratos.png" {
 	brightmap "materials/monsters/Stratos_brightmap.png"        
 }
 

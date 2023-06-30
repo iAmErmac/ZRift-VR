@@ -39,16 +39,18 @@ Class ChasmPistol : Weapon Replaces Pistol
 		Loop;
 	Fire:
 		RIGX A 0 BRIGHT A_PlaySound("ChasmRifle/Fire",1, 1.0);
+		RIGX A 0 A_GunFlash;
 		RIGX A 0 A_FireBullets(1.6, 1.1, 1, random(9,11), "ChasmBulletPuff");
 		RIGX A 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
+		RIGX A 0 A_FireProjectile("MuzzleFlashSpawnRifle");
 		RIGX AAAA 0 A_FireProjectile("BarrelSmokeSpawnRifle",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
 		RIGX B 1 BRIGHT;
 		//RIGX B 0 A_SetPitch(pitch-0.80);
 		//RIGX B 0 A_SetAngle(angle-0.1);
-		RIGX C 1 ; //A_Recoil(0.2);
+		RIGX C 1 BRIGHT; //A_Recoil(0.2);
 		//RIGX C 0 A_SetPitch(pitch-0.60);
 		//RIGX C 0 A_SetAngle(angle-0.1);
-		RIGX D 1 ; //A_Recoil(0.2);
+		RIGX D 1 BRIGHT; //A_Recoil(0.2);
 		//RIGX D 0 A_SetPitch(pitch-0.30);
 		//RIGX D 0 A_SetAngle(angle-0.1);
 		RIGX E 1 ; //A_Recoil(0.2);
@@ -65,5 +67,8 @@ Class ChasmPistol : Weapon Replaces Pistol
 		//RIGX H 0 A_SetAngle(angle+0.1);
 		RIGX A 8;
 		Goto Ready;
+	Flash:
+		TNT1 A 7 A_Light1;
+		Goto LightDone;
 	}
 }

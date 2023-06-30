@@ -41,7 +41,7 @@ Model ChasmSaw
 	Model 1 "DiscWeapon.md3"
 	Skin 1 "DiscWeapon.png"
 	Model 2 "DIscSpark.md3"
-	Skin 2 "DiscWeapon2.png"
+	Skin 2 "DiscWeapon.png"
 	Scale -1.0 1.0 1.0
 	Offset -2.0 -17.0 0.0
 	ZOffset -11.0

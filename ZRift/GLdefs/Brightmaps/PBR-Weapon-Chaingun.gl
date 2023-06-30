@@ -1,29 +1,17 @@
 //////////////////////////
 //Chasm Chaingun Brightmap Firstperson
 
-material texture "models/weapons/VulcanIdle1.png" {
-	brightmap "materials/weapons/VulcanIdle1_brightmap.png"        
+material texture "models/weapons/VR/Vulcan.png" {
+	brightmap "materials/weapons/Vulcan_brightmap.png"        
+}
+material texture "models/weapons/VR/VulcanFire.png" {
+	brightmap "materials/weapons/Vulcan_brightmap.png"        
 }
 
 //////////////////////////
 //Chasm Chaingun Fire Brightmap Firstperson
 
-material texture "materials/weapon-animdefs/vulcanfire1.png" {
-	brightmap "materials/weapons/VulcanFire_brightmap.png"        
-}
-material texture "materials/weapon-animdefs/vulcanfire2.png" {
-	brightmap "materials/weapons/VulcanFire_brightmap.png"        
-}
-
-material texture "materials/weapon-animdefs/vulcanfire3.png" {
-	brightmap "materials/weapons/VulcanFire_brightmap.png"        
-}
-
-material texture "materials/weapon-animdefs/vulcanfire4.png" {
-	brightmap "materials/weapons/VulcanFire_brightmap.png"        
-}
-
-material texture "materials/weapon-animdefs/vulcanfire5.png" {
+material texture "models/weapons/VR/vulcanfire1.png" {
 	brightmap "materials/weapons/VulcanFire_brightmap.png"        
 }
 

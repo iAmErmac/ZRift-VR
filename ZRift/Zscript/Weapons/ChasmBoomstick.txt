@@ -39,19 +39,21 @@ Class ChasmBoomstick : Weapon Replaces Pistol
 		Loop;
 	Fire:
 		RIFB A 0 BRIGHT A_PlaySound("ChasmStick/Fire",1, 1.0);
+		RIFB A 0 A_GunFlash;
 		RIFB A 0 A_FireBullets(1.6, 1.1, 1, random(9,11), "ChasmBulletPuff");
 		RIFB A 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
 		RIFB A 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-1.7,1.1),0,6,1,0,frandom(-1.1,0.9));
 		RIFB A 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-1.5,1.1),0,6,1,0,frandom(-1.1,0.9));
 		RIFB A 0 BRIGHT A_FireProjectile("ChasmTracer",frandom(-1.4,1.1),0,6,1,0,frandom(-1.1,0.9));
+		RIFB A 0 A_FireProjectile("MuzzleFlashSpawnRifle");
 		RIFB AAAA 0 A_FireProjectile("BarrelSmokeSpawnRifle",frandom(-1.6,1.1),0,6,1,0,frandom(-1.1,0.9));
 		RIFB B 1 BRIGHT;
 		//RIFB B 0 A_SetPitch(pitch-0.80);
 		//RIFB B 0 A_SetAngle(angle-0.1);
-		RIFB C 1 ; //A_Recoil(0.2);
+		RIFB C 1 BRIGHT; //A_Recoil(0.2);
 		//RIFB C 0 A_SetPitch(pitch-0.60);
 		//RIFB C 0 A_SetAngle(angle-0.1);
-		RIFB D 1 ; //A_Recoil(0.2);
+		RIFB D 1 BRIGHT; //A_Recoil(0.2);
 		//RIFB D 0 A_SetPitch(pitch-0.30);
 		//RIFB D 0 A_SetAngle(angle-0.1);
 		RIFB E 1 ; //A_Recoil(0.2);
@@ -68,6 +70,9 @@ Class ChasmBoomstick : Weapon Replaces Pistol
 		//RIFB H 0 A_SetAngle(angle+0.1);
 		RIFB I 12;
 		Goto Ready;
+	Flash:
+		TNT1 A 7 A_Light1;
+		Goto LightDone;
 	}
 }
 

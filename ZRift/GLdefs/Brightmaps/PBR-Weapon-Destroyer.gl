@@ -1,14 +1,14 @@
 //////////////////////////
 //Chasm Destroyer Brightmap 
 
-material texture "models/weapons/MDFire1.png" {
-	brightmap "materials/weapons/MDFire1_brightmap.png"
+material texture "models/weapons/VR/MegaDestroyer.png" {
+	brightmap "materials/weapons/MegaDestroyer_brightmap.png"
 }
-material texture "models/weapons/MDIdle1.png" {
-	brightmap "materials/weapons/MDIdle1_brightmap.png"
+material texture "models/weapons/VR/MegaDestroyer2.png" {
+	brightmap "materials/weapons/MegaDestroyer2_brightmap.png"
 }
-material texture "models/weapons/MDIdle2.png" {
-	brightmap "materials/weapons/MDIdle2_brightmap.png"
+material texture "models/weapons/VR/MegaDestroyer3.png" {
+	brightmap "materials/weapons/MegaDestroyer2_brightmap.png"
 }
 
 //////////////////////////

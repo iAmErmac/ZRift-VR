@@ -2,6 +2,6 @@
 //Chasm Monster Grunt Brightmap
 ////////////////////////// 
 
-material texture "models/monsters/MongGrunt.png" {
+material texture "models/monsters/MongGrunt/MongGrunt.png" {
 	brightmap "materials/monsters/MongGrunt_brightmap.png"        
 }

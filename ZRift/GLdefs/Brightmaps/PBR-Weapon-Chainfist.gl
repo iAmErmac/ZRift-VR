@@ -1,19 +1,6 @@
 //////////////////////////
 //Chasm Chainfist Brightmap Firstperson
 
-material texture "models/weapons/Chainfist.png" {
-	brightmap "materials/weapons/Chainfist_brightmap.png"        
-}
-material texture "models/weapons/Chainfist_active.png" {
-	brightmap "materials/weapons/Chainfist_brightmap.png"        
-}
-material texture "models/weapons/Chainfist_active1.png" {
-	brightmap "materials/weapons/Chainfist_brightmap.png"        
-}
-material texture "models/weapons/Chainfist_pickup.png" {
-	brightmap "materials/weapons/Chainfist_brightmap.png"        
-}
-
 material texture "models/weapons/VR/Chainfist.png" {
 	brightmap "materials/weapons/Chainfist_brightmap.png"
 }
@@ -22,6 +9,9 @@ material texture "models/weapons/VR/Chainfist_active.png" {
 }
 material texture "models/weapons/VR/Chainfist_active1.png" {
 	brightmap "materials/weapons/Chainfist_brightmap.png"
+}
+material texture "models/weapons/Chainfist_pickup.png" {
+	brightmap "materials/weapons/Chainfist_brightmap.png"        
 }
 
 //////////////////////////

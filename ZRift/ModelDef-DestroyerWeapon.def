@@ -2,15 +2,14 @@ Model ChasmDestroyer
 {
 	Path "models/weapons/VR"
 	Model 0 "MegaDestroyer.md3"
-	Skin 0 "MegaDestroyer.png"
+	SurfaceSkin 0 0 "MegaDestroyer.png"
+	SurfaceSkin 0 1 "MegaDestroyer2.png"
 	Scale -1.1 1.1 1.1
 	Offset -3.0 -20.0 0.0
 	ZOffset -3.0
 
 	//Idle/Ready State1
 	FrameIndex MEGZ Z 0 0
-	
-	Skin 0 "MegaDestroyer2.png"
 
 	//Idle/Ready State2
 	FrameIndex MEGZ Y 0 0
@@ -18,14 +17,14 @@ Model ChasmDestroyer
 	//Charge1
 	FrameIndex MEGY A 0 0
 	
-	Skin 0 "MegaDestroyer3.png"
+	SurfaceSkin 0 1 "MegaDestroyer3.png"
 
 	//Firing
 	FrameIndex MEGY B 0 1
 	FrameIndex MEGY C 0 2
 	FrameIndex MEGY D 0 3
 	
-	Skin 0 "MegaDestroyer2.png"
+	SurfaceSkin 0 1 "MegaDestroyer2.png"
 	
 	//Recoil
 	FrameIndex MEGY D 0 4
@@ -39,8 +38,6 @@ Model ChasmDestroyer
 	FrameIndex MEGY L 0 12
 	FrameIndex MEGY M 0 13
 	FrameIndex MEGY N 0 14
-	
-	Skin 0 "MegaDestroyer.png"
 
 	//RecoilPt2
 	FrameIndex MEGY O 0 15

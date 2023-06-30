@@ -1,8 +1,8 @@
 //////////////////////////
 //Chasm Saw Brightmap Firstperson/Pickup
 
-material texture "models/weapons/DiscWeapon.png" {
-	brightmap "materials/weapons/DiscWeapon_brightmap.png"
+material texture "models/weapons/VR/DiscWeapon.png" {
+	brightmap "materials/weapons/DiscWeaponFire_brightmap.png"
 }
 
 

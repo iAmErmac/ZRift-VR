@@ -41,12 +41,12 @@ Class ChasmMineWeapon : Weapon
 		Loop;
 	Fire:
 		MINX L 0 A_PlaySound("ChasmMine/Fire",1);
-		MINX L 0 BRIGHT A_FireProjectile("ChasmMine",0,1);
+		MINX L 0 A_FireProjectile("ChasmMine",0,1);
 		MINX L 35;
 		Goto Ready;
 	AltFire:
 		MINX L 0 A_PlaySound("ChasmMine/Fire",1);
-		MINX L 0 BRIGHT A_FireProjectile("ChasmMine2",0,1);
+		MINX L 0 A_FireProjectile("ChasmMine2",0,1);
 		MINX L 20;
 		Goto Ready;
 	}

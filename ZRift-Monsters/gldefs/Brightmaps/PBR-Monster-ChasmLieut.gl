@@ -2,7 +2,7 @@
 //Chasm Monster Lieutenant Brightmap
 ////////////////////////// 
 
-material texture "models/monsters/Lieutenant.png" {
+material texture "models/monsters/MongStratos/Lieutenant.png" {
 	brightmap "materials/monsters/Lieutenant_brightmap.png"        
 }
 
