@@ -5,7 +5,7 @@ Model ChasmChaingun
 	Skin 0 "Vulcan.png"
 	Scale -1.0 1.0 1.0
 	Offset 0.0 -30.0 0.0
-	ZOffset -8.0
+	ZOffset -4.0
 
 	//Idle
 	FrameIndex VULX Z 0 0   	
@@ -20,7 +20,7 @@ Model ChasmChaingun
 	Skin 1 "VulcanFire1.png"
 	Scale -1.0 1.0 1.0
 	Offset 0.0 -30.0 0.0
-	ZOffset -8.0
+	ZOffset -4.0
 
 	//Firing
 	FrameIndex VULX A 0 1
@@ -36,7 +36,7 @@ Model ChasmChaingun
 	SurfaceSkin 0 2 "Vulcan.png"
 	Scale -1.0 1.0 1.0
 	Offset 0.0 -30.0 0.0
-	ZOffset -8.0
+	ZOffset -4.0
 
 	//Firing
 	FrameIndex VULX C 0 3
@@ -53,7 +53,7 @@ Model ChasmChaingun
 	Skin 0 "Vulcan.png"
 	Scale -1.0 1.0 1.0
 	Offset 0.0 -30.0 0.0
-	ZOffset -8.0
+	ZOffset -4.0
 
 	//Select
 	FrameIndex VULZ A 0 1

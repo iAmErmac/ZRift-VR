@@ -5,7 +5,7 @@ Model ChasmPlasmaThrower
 	Skin 0 "FlakGun.png"
 	Scale -1.2 1.2 1.2
 	Offset -3.0 -21.0 0.0
-	ZOffset -8.0
+	ZOffset -4.0
 
 	FrameIndex PLW1 A 0 0
 	FrameIndex PLW1 B 0 1

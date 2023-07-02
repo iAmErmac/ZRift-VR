@@ -6,7 +6,7 @@ Model ChasmCrossbow
 	SurfaceSkin 0 1 "XbowCharge0.png"
 	SurfaceSkin 0 2 "XBowIdle1.png"
 	Scale -1.2 1.2 1.2
-	Offset -3.0 -8.0 0.0
+	Offset -3.0 -6.0 0.0
 	ZOffset -8.0
 
 	//Idle1
@@ -21,7 +21,7 @@ Model ChasmCrossbow
 	SurfaceSkin 0 1 "XbowCharge0.png"
 	SurfaceSkin 0 2 "XBowFire1.png"
 	Scale -1.2 1.2 1.2
-	Offset -3.0 -8.0 0.0
+	Offset -3.0 -6.0 0.0
 	ZOffset -8.0
 
 	//Charge1
@@ -58,7 +58,7 @@ Model ChasmCrossbow
 	SurfaceSkin 0 1 "XbowCharge0.png"
 	SurfaceSkin 0 2 "XBowIdle1.png"
 	Scale -1.2 1.2 1.2
-	Offset -3.0 -8.0 0.0
+	Offset -3.0 -6.0 0.0
 	ZOffset -8.0
 
 	//Recoil3

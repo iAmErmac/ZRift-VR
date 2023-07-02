@@ -6,8 +6,8 @@ Model ChasmSaw
 	Model 1 "DiscWeapon.md3"
 	Skin 1 "DiscWeapon.png"
 	Scale -1.0 1.0 1.0
-	Offset -2.0 -17.0 0.0
-	ZOffset -11.0
+	Offset -2.0 -21.0 0.0
+	ZOffset -7.0
 
 	//Idle
 	FrameIndex DISX Z 0 0	FrameIndex DISX Z 1 0
@@ -24,8 +24,8 @@ Model ChasmSaw
 	Model 0 "DIscLauncher.md3"
 	Skin 0 "DiscWeapon.png"
 	Scale -1.0 1.0 1.0
-	Offset -2.0 -19.0 0.0
-	ZOffset -11.0
+	Offset -2.0 -21.0 0.0
+	ZOffset -7.0
 	
 	NOINTERPOLATION
 
@@ -43,8 +43,8 @@ Model ChasmSaw
 	Model 2 "DIscSpark.md3"
 	Skin 2 "DiscWeapon.png"
 	Scale -1.0 1.0 1.0
-	Offset -2.0 -17.0 0.0
-	ZOffset -11.0
+	Offset -2.0 -21.0 0.0
+	ZOffset -7.0
 
 	//Fire
 	FrameIndex DISX A 0 0	FrameIndex DISX A 1 1	FrameIndex DISX A 2 0

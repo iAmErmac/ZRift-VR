@@ -5,7 +5,7 @@ Model ChasmRocketL
 	Skin 0 "GrenadeWeapon.png"
 	Scale -1.0 1.0 1.0
 	Offset 0.0 -27.0 0.0
-	ZOffset -8.0
+	ZOffset -6.0
 
 	//Idle
 	FrameIndex GREX Z 0 0

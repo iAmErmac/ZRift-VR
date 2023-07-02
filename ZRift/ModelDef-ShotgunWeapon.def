@@ -8,8 +8,8 @@ Model ChasmShotgun
 	SurfaceSkin 0 3 "Shotgun2.png"  //No Shell 2
 	SurfaceSkin 0 4 "Shotgun2.png"  //No Muzzle flash
 	Scale -0.8 0.8 0.8
-	Offset -3.0 -40.0 0.0
-	ZOffset -8.0
+	Offset -3.0 -42.0 0.0
+	ZOffset -4.0
 
 	FrameIndex SHTX A 0 32 
 	FrameIndex SHTX D 0 2 
@@ -48,8 +48,8 @@ Model ChasmShotgun
 	SurfaceSkin 0 3 "Shotgun2.png"  //No Shell 2
 	SurfaceSkin 0 4 "Shotgun.png"  //Muzzle flash
 	Scale -0.8 0.8 0.8
-	Offset -3.0 -40.0 0.0
-	ZOffset -8.0
+	Offset -3.0 -42.0 0.0
+	ZOffset -4.0
 
 	FrameIndex SHTX B 0 0
 	FrameIndex SHTX C 0 1
@@ -66,8 +66,8 @@ Model ChasmShotgun
 	SurfaceSkin 0 3 "Shotgun.png"  //Shell 2
 	SurfaceSkin 0 4 "Shotgun2.png"  //No Muzzle flash
 	Scale -0.8 0.8 0.8
-	Offset -3.0 -40.0 0.0
-	ZOffset -8.0
+	Offset -3.0 -42.0 0.0
+	ZOffset -4.0
 	
 	FrameIndex SHTX S 0 17
 	FrameIndex SHTX T 0 18

@@ -4,8 +4,8 @@ Model Chasmpistol
 	Model 0 "Pistol.md3"
 	Skin 0 "Pistol.png"
 	Scale -1.05 1.05 1.05
-	Offset -4.0 -23.0 0.0
-	ZOffset -10.0
+	Offset -4.0 -25.0 0.0
+	ZOffset -6.0
 
 	//Idle
 	FrameIndex RIGX A 0 0

@@ -4,8 +4,8 @@ Model ChasmBoomstick
 	Model 0 "Boomstick.md3"   
 	Skin 0 "Quakeshotgun.png"
 	Scale -1.1 1.1 1.1
-	Offset -3.0 -22.0 0.0
-	ZOffset -8.0
+	Offset -3.0 -24.0 0.0
+	ZOffset -4.0
 
 	//Idle
 	FrameIndex RIFB A 0 0

@@ -5,8 +5,8 @@ Model ChasmFists
   SurfaceSkin 0 0 "NewFists.png"
   SurfaceSkin 0 0 "NewFists.png" 
   Scale -1.0 1.0 1.0
-  Offset -2.0 -20.0 0.0
-  ZOffset -14.0
+  Offset -2.0 -22.0 0.0
+  ZOffset -10.0
   
   FrameIndex WE00 A 0 0 //idle
   
@@ -19,3 +19,23 @@ Model ChasmFists
   FrameIndex WE01 F 0 6
 }
 
+Model ChasmOffhandFist
+{
+  Path "Models/Weapons/VR"   
+  Model 0 "NewFists.md3"   
+  SurfaceSkin 0 0 "NewFists.png"
+  SurfaceSkin 0 0 "NewFists.png" 
+  Scale -1.0 1.0 1.0
+  Offset -2.0 -22.0 0.0
+  ZOffset -10.0
+  
+  FrameIndex WE00 A 0 0 //idle
+  
+  //Attack1
+  FrameIndex WE01 A 0 1
+  FrameIndex WE01 B 0 2
+  FrameIndex WE01 C 0 3
+  FrameIndex WE01 D 0 4 //hit
+  FrameIndex WE01 E 0 5
+  FrameIndex WE01 F 0 6
+}
