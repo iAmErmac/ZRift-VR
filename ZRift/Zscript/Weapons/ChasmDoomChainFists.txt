@@ -12,6 +12,7 @@ Class ChasmDoomChainFist : Weapon
 	Inventory.PickupMessage "You got the ChainFist 9000!";
 	Obituary "%o was cut down by %k's Chain Fist.";
 	Inventory.Icon "HUSAW2";
+	+WEAPON.OFFHANDWEAPON;
 	}
 	
 	States
