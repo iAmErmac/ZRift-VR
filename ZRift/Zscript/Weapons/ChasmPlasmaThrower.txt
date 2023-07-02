@@ -134,6 +134,13 @@ Class PlasmaFlame : Actor
 	{
 	Spawn:
 		TNT1 A 0 NoDelay;
+		TNT1 A 0 A_AttachLight("tracerlight"
+							, DynamicLight.PointLight
+							, "32 5C A8"
+							, 60
+							, 0
+							, DYNAMICLIGHT.LF_DONTLIGHTSELF | DYNAMICLIGHT.LF_ATTENUATE
+							);
 		PLB1 A 2 Bright A_SetRoll(frandom(-360.0,360.0));
 		TNT1 A 0 A_CustomRailgun (0, 0, "", "White", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
 		TNT1 A 0 A_CustomRailgun (0, 0, "", "Blue", RGF_SILENT | RGF_FULLBRIGHT, 0, 25, "MDHarmlessPuff", frandom(0,359), frandom(-70,70), random(8,12), random(1,10), 0.2, 0, "None", -8);
@@ -411,6 +418,13 @@ Class PlasmaSparks : Actor
     {
     Spawn:
 	    TNT1 A 0 NoDelay;
+		TNT1 A 0 A_AttachLight("tracerlight"
+							, DynamicLight.PointLight
+							, "32 5C A8"
+							, 60
+							, 0
+							, DYNAMICLIGHT.LF_DONTLIGHTSELF | DYNAMICLIGHT.LF_ATTENUATE
+							);
         PLBA AAA 1 A_SpawnItemEx("PlasmaSparksTrail",0,0,0,0,0,0,0,2);
         Loop;
 	Death:
